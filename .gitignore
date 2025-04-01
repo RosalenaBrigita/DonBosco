@@ -1,0 +1,24 @@
+# Ignore folder yang tidak perlu di GitHub
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Ignore setting project lokal (VS Code, Rider, dll.)
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.unityproj
+*.userprefs
+
+# Ignore file yang dibuat saat running Unity
+*.pidb
+*.suo
+*.ilk
+*.pdb
+*.opendb
+*.VC.db
