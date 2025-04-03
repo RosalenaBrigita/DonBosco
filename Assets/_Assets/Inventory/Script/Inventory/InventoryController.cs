@@ -6,13 +6,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using DonBosco.SaveSystem;
+using DonBosco;
+using System.Threading.Tasks;
 
 namespace Inventory
 {
-    public class InventoryController : MonoBehaviour
+    public class InventoryController : MonoBehaviour, ISaveLoad
     {
         [SerializeField]
-        private UIInventoryPage inventoryUI;
+        public UIInventoryPage inventoryUI;
 
         [SerializeField]
         private InventorySO inventoryData;
@@ -43,6 +46,7 @@ namespace Inventory
 
         private void Start()
         {
+            SaveManager.Instance.Subscribe(this);
             PrepareUI();
             PrepareInventoryData();
 
@@ -57,6 +61,11 @@ namespace Inventory
             {
                 Debug.LogError("DialogueManager not found in scene!");
             }
+        }
+
+        private void OnDestroy()
+        {
+            SaveManager.Instance.Unsubscribe(this);
         }
 
         private void Update()
@@ -84,13 +93,27 @@ namespace Inventory
 
         private void UpdateInventoryUI(Dictionary<int, InventoryItem> inventoryState)
         {
+            if (inventoryUI == null)
+            {
+                Debug.LogError("Inventory UI is not initialized!");
+                return;
+            }
+
             inventoryUI.ResetAllItems();
+
             foreach (var item in inventoryState)
             {
-                inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage,
-                    item.Value.quantity);
+                if (item.Value.item != null) // Hindari akses ke item yang null
+                {
+                    inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
+                }
+                else
+                {
+                    Debug.LogWarning($"Item di slot {item.Key} kosong atau rusak.");
+                }
             }
         }
+
 
         private void PrepareUI()
         {
@@ -222,5 +245,25 @@ namespace Inventory
         {
             return inventoryData;
         }
+
+        public async Task Save(SaveData saveData)
+        {
+            saveData.inventoryItems = new List<InventoryItem>(inventoryData.GetCurrentInventoryState().Values);
+            await Task.CompletedTask;
+        }
+
+        public async Task Load(SaveData saveData)
+        {
+            if (saveData.inventoryItems != null)
+            {
+                inventoryData.Initialize();
+                foreach (var item in saveData.inventoryItems)
+                {
+                    inventoryData.AddItem(item);
+                }
+            }
+            await Task.CompletedTask;
+        }
+
     }
 }

@@ -57,7 +57,7 @@ namespace DonBosco.Character
 
         private void Start()
         {
-            Debug.Log("Allowed Scenes: " + string.Join(", ", allowedScenes));
+            //Debug.Log("Allowed Scenes: " + string.Join(", ", allowedScenes));
             CheckScene();
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
@@ -89,7 +89,7 @@ namespace DonBosco.Character
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-            Debug.Log("Scene changed to: " + scene.name);
+            //Debug.Log("Scene changed to: " + scene.name);
             CheckScene();
         }
 
@@ -100,7 +100,7 @@ namespace DonBosco.Character
             for (int i = 0; i < SceneManager.sceneCount; i++)
             {
                 Scene scene = SceneManager.GetSceneAt(i);
-                Debug.Log($"Checking loaded scene: {scene.name}");
+                //Debug.Log($"Checking loaded scene: {scene.name}");
 
                 if (Array.Exists(allowedScenes, s => s.Equals(scene.name, StringComparison.OrdinalIgnoreCase)))
                 {
@@ -110,7 +110,7 @@ namespace DonBosco.Character
             }
 
             canShoot = foundAllowedScene;
-            Debug.Log($"Final Can Shoot: {canShoot}");
+            //Debug.Log($"Final Can Shoot: {canShoot}");
 
             // Sembunyikan atau tampilkan weapon berdasarkan scene
             aimTransform.gameObject.SetActive(canShoot);

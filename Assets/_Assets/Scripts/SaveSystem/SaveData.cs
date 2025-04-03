@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Inventory.Model;
 using DonBosco.ItemSystem;
 using DonBosco.Quests;
 
@@ -23,7 +23,7 @@ namespace DonBosco
         #endregion
 
         #region Quest
-        
+
         public QuestData[] questData;
         #endregion
 
@@ -32,7 +32,13 @@ namespace DonBosco
         public int[] quizAnswers;
         #endregion
 
-        
+        #region Inventory
+        public List<InventoryItem> inventoryItems;
+        #endregion
+
+        #region Object
+        public List<ObjectStateData> objectStates = new List<ObjectStateData>();
+        #endregion 
 
         #region Analytics
         public float timeSpentInGame;
@@ -44,6 +50,19 @@ namespace DonBosco
         public string ToJson()
         {
             return JsonUtility.ToJson(this);
+        }
+    }
+
+    [System.Serializable]
+    public class ObjectStateData
+    {
+        public string objectID;
+        public bool isDisabled;
+
+        public ObjectStateData(string id, bool disabled)
+        {
+            objectID = id;
+            isDisabled = disabled;
         }
     }
 }

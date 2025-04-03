@@ -158,6 +158,22 @@ namespace Inventory.Model
         {
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
         }
+
+        public void LoadInventory(List<InventoryItem> savedItems)
+        {
+            Initialize(); // Reset inventory sebelum load
+
+            for (int i = 0; i < savedItems.Count; i++)
+            {
+                if (!savedItems[i].IsEmpty)
+                {
+                    inventoryItems[i] = savedItems[i];
+                }
+            }
+
+            InformAboutChange(); // Beritahu UI untuk update
+        }
+
     }
 
     [Serializable]

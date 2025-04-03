@@ -7933,10 +7933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 83082368}
   inventoryData: {fileID: 11400000, guid: 90230b147ccaa374bafc3b06b2522943, type: 2}
-  initialItems:
-  - quantity: 2
-    item: {fileID: 11400000, guid: 20a4d7130f851724989358894e0f73b4, type: 2}
-    itemState: []
+  initialItems: []
   dropClip: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!114 &1046878831
@@ -8194,7 +8191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e26f7c4861f574e9de60eb5be21e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonPrefab: {fileID: 0}
+  buttonPrefab: {fileID: 4793697726644630043, guid: 6ce9c113be1fc194183d04f6b33673d2, type: 3}
 --- !u!114 &1052082006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9356,7 +9353,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218393480}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c7b0693c74148c449d1261dae8ff547, type: 3}
   m_Name: 
@@ -11898,19 +11895,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 19.7949
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.66365
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

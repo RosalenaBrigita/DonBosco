@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DonBosco.API;
 using UnityEngine;
+using Inventory;
+using Inventory.Model;
 
 #if UNITY_EDITOR
 using UnityEngine.SceneManagement;
@@ -27,14 +29,14 @@ namespace DonBosco.SaveSystem
         public bool HasSaveData { get; private set; }
         private bool isDispatching = false;
 
-        private void Awake() 
+        private void Awake()
         {
             instance = this;
 
             //Try to load the game in the beginning
             HasSaveData = ReadSaveDataLocal();
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             for(int i = 0; i < SceneManager.sceneCount; i++)
             {
                 Scene scene = SceneManager.GetSceneAt(i);
@@ -44,23 +46,88 @@ namespace DonBosco.SaveSystem
                     return;
                 }
             }
-            #endif
+#endif
             loadData.ExecuteLoadScene(() => loadData.AddToLoad());
         }
 
+        // Menyimpan status objek interaktif
+        public void SetObjectDisabled(string objectID, bool isDisabled)
+        {
+            if (string.IsNullOrEmpty(objectID))
+            {
+                Debug.LogWarning($"SetObjectDisabled gagal: objectID kosong.");
+                return;
+            }
 
+            if (saveData == null)
+                saveData = new SaveData();
+
+            if (saveData.objectStates == null)
+                saveData.objectStates = new List<ObjectStateData>();
+
+            // Cek apakah objectID sudah ada dalam list
+            ObjectStateData existingObject = saveData.objectStates.Find(obj => obj.objectID == objectID);
+
+            if (existingObject != null)
+            {
+                existingObject.isDisabled = isDisabled;
+            }
+            else
+            {
+                saveData.objectStates.Add(new ObjectStateData(objectID, isDisabled));
+            }
+        }
+
+
+        public bool IsObjectDisabled(string objectID)
+        {
+            if (string.IsNullOrEmpty(objectID))
+                return false;
+
+            if (saveData == null || saveData.objectStates == null)
+                return false;
+
+            ObjectStateData objectState = saveData.objectStates.Find(obj => obj.objectID == objectID);
+            return objectState != null && objectState.isDisabled;
+        }
 
         public async Task SaveGame()
         {
-            saveData = new SaveData();
-            for(int i = 0; i < listeners.Count; i++)
+            // Pastikan saveData tidak null
+            if (saveData == null)
+            {
+                saveData = new SaveData();
+                Debug.LogWarning("saveData masih null, membuat instance baru.");
+            }
+
+            for (int i = 0; i < listeners.Count; i++)
             {
                 await listeners[i].Save(saveData);
             }
+
+            if (InventoryController.Instance != null)
+            {
+                saveData.inventoryItems = new List<InventoryItem>(InventoryController.Instance.GetInventorySO().GetCurrentInventoryState().Values);
+            }
+
+            if (saveData.objectStates == null)
+                saveData.objectStates = new List<ObjectStateData>();
+
+            foreach (var obj in FindObjectsOfType<GameObject>())
+            {
+                if (!obj.activeSelf) // Jika objek tidak aktif, simpan statusnya
+                {
+                    SetObjectDisabled(obj.name, true);
+                }
+            }
+
+            Debug.Log($"[SaveGame] Saving {saveData.objectStates.Count} disabled objects.");
+
             string json = saveData.ToJson();
             WriteSaveDataLocal(json);
             await Task.CompletedTask;
         }
+
 
         /// <summary>
         /// Load the game from the save file
@@ -70,10 +137,22 @@ namespace DonBosco.SaveSystem
         {
             try
             {
-                for(int i = 0; i < listeners.Count; i++)
+                for (int i = 0; i < listeners.Count; i++)
                 {
                     await listeners[i].Load(saveData);
                 }
+
+                if (saveData.inventoryItems != null && InventoryController.Instance != null)
+                {
+                    InventoryController.Instance.GetInventorySO().Initialize();
+                    InventoryController.Instance.inventoryUI.InitializeInventoryUI(InventoryController.Instance.GetInventorySO().Size);
+
+                    await Task.Delay(100); // Beri waktu UI untuk refresh
+
+                    InventoryController.Instance.GetInventorySO().LoadInventory(saveData.inventoryItems);
+                    Debug.Log($"Inventory Loaded: {saveData.inventoryItems.Count} items");
+                }
+
                 return true;
             }
             catch (System.ArgumentException e)
@@ -83,14 +162,13 @@ namespace DonBosco.SaveSystem
             }
         }
 
-        
         /// <summary>
         /// Delete the save data from the local file when new game is started
         /// </summary>
         public void DeleteSaveData()
         {
             string path;
-            if(string.IsNullOrEmpty(currentAccountID))
+            if (string.IsNullOrEmpty(currentAccountID))
             {
                 // If the player is not logged in, delete the data from the default file
                 path = Application.persistentDataPath + FILENAME;
@@ -102,7 +180,7 @@ namespace DonBosco.SaveSystem
             }
 
             // Then delete the file
-            if(System.IO.File.Exists(path))
+            if (System.IO.File.Exists(path))
             {
                 System.IO.File.Delete(path);
                 HasSaveData = false;
@@ -110,7 +188,7 @@ namespace DonBosco.SaveSystem
             }
             else
             {
-                Debug.LogError("Filesave to delete does not exist: "+ path);
+                Debug.LogError("Filesave to delete does not exist: " + path);
             }
         }
 
@@ -122,29 +200,29 @@ namespace DonBosco.SaveSystem
         private void WriteSaveDataLocal(string json)
         {
             string path;
-            if(string.IsNullOrEmpty(currentAccountID))
+            if (string.IsNullOrEmpty(currentAccountID))
             {
-                // If the player is not logged in, save the data to the default file
                 path = Application.persistentDataPath + FILENAME;
             }
             else
             {
-                // If the player is logged in, save the data to the file based on the account id
                 path = Application.persistentDataPath + "/" + currentAccountID + ".dat";
             }
-            
-            //Create a binary formatter which can read binary files
-            BinaryFormatter formatter = new BinaryFormatter();
-            
-            //JSON String into binary
-            if(System.IO.File.Exists(path))
+
+            try
             {
-                System.IO.File.Delete(path);
+                // Gunakan StreamWriter untuk menulis file dengan encoding UTF-8 tanpa BOM
+                using (var writer = new System.IO.StreamWriter(path, false, new System.Text.UTF8Encoding(false)))
+                {
+                    writer.Write(json);
+                }
+
+                HasSaveData = true;
             }
-            System.IO.FileStream file = System.IO.File.Create(path);
-            formatter.Serialize(file, json);
-            file.Close();
-            HasSaveData = true;
+            catch (System.Exception e)
+            {
+                Debug.LogError($"Error saat menulis save file: {e}");
+            }
         }
 
         /// <summary>
@@ -154,26 +232,46 @@ namespace DonBosco.SaveSystem
         public bool ReadSaveDataLocal()
         {
             saveData = null;
-
             string path = Application.persistentDataPath + FILENAME;
-            if(System.IO.File.Exists(path))
+
+            if (System.IO.File.Exists(path))
             {
                 try
                 {
-                    BinaryFormatter formatter = new BinaryFormatter();
-                    System.IO.FileStream file = System.IO.File.Open(path, System.IO.FileMode.Open);
-                    string jsonState = (string)formatter.Deserialize(file);
-                    file.Close();
-                    saveData = JsonUtility.FromJson<SaveData>(jsonState);
-                    HasSaveData = true;
-                    GameEventsManager.Instance.miscEvents.ChangeData(saveData);
-                    return true;
+                    // Gunakan StreamReader untuk membaca file dengan encoding UTF-8 tanpa BOM
+                    using (var reader = new System.IO.StreamReader(path, new System.Text.UTF8Encoding(false)))
+                    {
+                        string jsonState = reader.ReadToEnd();
+
+                        if (string.IsNullOrEmpty(jsonState))
+                        {
+                            Debug.LogError("Save file is empty.");
+                            return false; // Kembalikan false jika file kosong
+                        }
+
+                        saveData = JsonUtility.FromJson<SaveData>(jsonState);
+                        HasSaveData = true;
+
+                        if (saveData.objectStates == null)
+                            saveData.objectStates = new List<ObjectStateData>();
+
+                        Debug.Log($"Loaded SaveData: {saveData.objectStates.Count} objects disabled.");
+
+                        foreach (var obj in saveData.objectStates)
+                        {
+                            Debug.Log($"Loaded object: {obj.objectID}, isDisabled: {obj.isDisabled}");
+                        }
+
+                        GameEventsManager.Instance.miscEvents.ChangeData(saveData);
+                        return true;
+                    }
                 }
                 catch (System.Exception e)
                 {
-                    Debug.LogError(e);
+                    Debug.LogError($"Error saat membaca save file: {e}");
                 }
             }
+
             HasSaveData = false;
             return false;
         }
@@ -189,7 +287,7 @@ namespace DonBosco.SaveSystem
 
             string fileName = "/" + id + ".dat";
             string path = Application.persistentDataPath + fileName;
-            if(System.IO.File.Exists(path))
+            if (System.IO.File.Exists(path))
             {
                 try
                 {
@@ -216,7 +314,7 @@ namespace DonBosco.SaveSystem
         #region Subscription
         public void Subscribe(ISaveLoad saveLoad)
         {
-            if(isDispatching)
+            if (isDispatching)
             {
                 Debug.LogError($"{saveLoad} is trying to subscribe while dispatching");
                 return;
@@ -226,7 +324,7 @@ namespace DonBosco.SaveSystem
 
         public void Unsubscribe(ISaveLoad saveLoad)
         {
-            if(isDispatching)
+            if (isDispatching)
             {
                 Debug.LogError($"{saveLoad} is trying to unsubscribe while dispatching");
                 return;
