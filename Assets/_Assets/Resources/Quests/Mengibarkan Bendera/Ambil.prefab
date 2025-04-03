@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questStepInfo: {fileID: 11400000, guid: fb6a8b4896fd9014c8ea772e9fd395d8, type: 2}
-  scene: MAP_JALAN 1
+  scene: MAP_RUMAHKARMANtes
   requiredItems:
   - {fileID: 11400000, guid: 269856a73bf7c874a9c2341ea08a8f72, type: 2}
   - {fileID: 11400000, guid: 69334bf07b9b59b46aa68d80e7b05d0f, type: 2}
+  finishDelay: 0.1

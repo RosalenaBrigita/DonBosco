@@ -208,7 +208,7 @@ namespace DonBosco.SaveSystem
             {
                 path = Application.persistentDataPath + "/" + currentAccountID + ".dat";
             }
-
+            Debug.Log($"<color=green>[Save System] Menyimpan data ke:</color> <b>{path}</b>");
             try
             {
                 // Gunakan StreamWriter untuk menulis file dengan encoding UTF-8 tanpa BOM

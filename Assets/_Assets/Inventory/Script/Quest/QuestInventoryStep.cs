@@ -7,44 +7,61 @@ namespace DonBosco.Quests
 {
     public class QuestInventoryStep : QuestStep
     {
-        [SerializeField] private List<QuestItemSO> requiredItems; // Daftar item yang dibutuhkan
+        [SerializeField] private List<QuestItemSO> requiredItems;
+        private bool isQuestCompleted = false; // Flag untuk menghentikan update
 
-        protected override void SetQuestStepState(string state)
+        private void Update()
         {
-            // Tidak diperlukan untuk inventory quest
+            if (!isQuestCompleted) // Cek hanya jika quest belum selesai
+            {
+                CheckInventory();
+            }
         }
 
-        public bool CheckRequiredItems()
+        private void CheckInventory()
         {
-            // Ambil state inventory dari InventorySO
-            InventorySO inventory = InventoryController.Instance.GetInventorySO();
-            Dictionary<int, InventoryItem> inventoryState = inventory.GetCurrentInventoryState();
+            if (AreRequiredItemsPresent())
+            {
+                Debug.Log("[Quest] Semua item terkumpul!");
+                FinishQuestStep();
+                isQuestCompleted = true; // Set flag agar tidak dipanggil lagi
+            }
+        }
+
+        private bool AreRequiredItemsPresent()
+        {
+            if (requiredItems == null || requiredItems.Count == 0)
+                return true;
+
+            if (InventoryController.Instance == null)
+            {
+                Debug.LogWarning("[Quest] InventoryController tidak ditemukan");
+                return false;
+            }
+
+            var inventory = InventoryController.Instance.GetInventorySO();
+            if (inventory == null) return false;
+
+            var inventoryState = inventory.GetCurrentInventoryState();
+            int itemsFound = 0;
 
             foreach (var requiredItem in requiredItems)
             {
-                bool itemFound = false;
+                if (requiredItem == null) continue;
 
-                // Periksa apakah inventory memiliki item yang cocok dengan yang dibutuhkan
-                foreach (var item in inventoryState.Values)
+                foreach (var slot in inventoryState.Values)
                 {
-                    if (item.item == requiredItem && item.quantity > 0)
+                    if (!slot.IsEmpty && slot.item != null && slot.item.ID == requiredItem.ID)
                     {
-                        itemFound = true;
+                        itemsFound++;
                         break;
                     }
                 }
-
-                if (!itemFound)
-                {
-                    Debug.Log($"Item {requiredItem.name} belum ada di inventory.");
-                    return false; // Jika salah satu item tidak ada, quest step tidak bisa selesai
-                }
             }
 
-            // Jika semua item ditemukan, bisa menyelesaikan quest step
-            Debug.Log("Semua item ditemukan! Menyelesaikan quest step.");
-            FinishQuestStep();
-            return true;
+            return itemsFound == requiredItems.Count;
         }
+
+        protected override void SetQuestStepState(string state) { }
     }
 }

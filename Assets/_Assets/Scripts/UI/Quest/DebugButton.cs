@@ -6,6 +6,6 @@ public class DebugButton : MonoBehaviour
 {
     public void TesAja()
     {
-        Debug.Log("keklik kok mnies");
+        //Debug.Log("keklik kok mnies");
     }
 }
