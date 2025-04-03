@@ -29,6 +29,8 @@ namespace DonBosco.SaveSystem
         public bool HasSaveData { get; private set; }
         private bool isDispatching = false;
 
+        private string lastLoadedScene = "";
+
         private void Awake()
         {
             instance = this;
@@ -48,6 +50,22 @@ namespace DonBosco.SaveSystem
             }
 #endif
             loadData.ExecuteLoadScene(() => loadData.AddToLoad());
+        }
+
+        private void OnEnable()
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+
+        private void OnDisable()
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            lastLoadedScene = scene.name; // Update dengan scene terakhir yang dimuat
+            Debug.Log($"Scene terakhir yang dimuat: {lastLoadedScene}");
         }
 
         // Menyimpan status objek interaktif
@@ -104,6 +122,22 @@ namespace DonBosco.SaveSystem
             {
                 await listeners[i].Save(saveData);
             }
+
+            // Cek semua scene yang sedang aktif
+            string sceneToSave = lastLoadedScene; // Ambil nama scene yang sedang dimainkan
+
+            for (int i = 0; i < SceneManager.sceneCount; i++)
+            {
+                Scene scene = SceneManager.GetSceneAt(i);
+
+                if (scene.name == "SewingMinigame")
+                {
+                    sceneToSave = "MAP_RUMAHKARMANtes"; // Jika sedang di SewingMinigame, paksa save ke Rumah Karman
+                    break;
+                }
+            }
+
+            saveData.currentScene = sceneToSave;
 
             if (InventoryController.Instance != null)
             {

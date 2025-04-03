@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Kibar 3
   m_EditorClassIdentifier: 
   questInfo: {fileID: 11400000, guid: 86e126fa58a89034a843da277c1a0d72, type: 2}
-  taskName: Kibarkan bendera di rumah Pak Darto
+  taskName: Kibarkan bendera di Rumah Pak Darto
   taskDescription: 

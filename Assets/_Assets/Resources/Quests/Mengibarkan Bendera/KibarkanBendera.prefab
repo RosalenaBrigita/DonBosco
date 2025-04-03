@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 62081810198311258}
   - component: {fileID: 1967840160665085129}
   m_Layer: 0
-  m_Name: Jahit Bendera
+  m_Name: KibarkanBendera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d250fbbcb7db94ab8ba891306a61dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questStepInfo: {fileID: 11400000, guid: 553a250f13201be46bebba10014107bf, type: 2}
-  scene: MAP_RUMAHKARMANtes
+  questStepInfo: {fileID: 11400000, guid: e0dabc78f0f44cf4db90d44f31efc046, type: 2}
+  scene: MAP_JALAN 1

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace DonBosco.Character
 {
@@ -48,11 +49,29 @@ namespace DonBosco.Character
         private void Awake() 
         {
             rb = GetComponent<Rigidbody2D>();
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
         private void Start()
         {
             playerAimWeapon = GetComponent<PlayerAimWeapon>();
+        }
+
+        private void OnDestroy()
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded; // Hapus event listener saat objek dihancurkan
+        }
+
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            if (scene.name == "SewingMinigame")
+            {
+                this.enabled = false; // Nonaktifkan script jika di scene SewingMinigame
+            }
+            else
+            {
+                this.enabled = true; // Aktifkan kembali jika di scene lain
+            }
         }
 
         void OnEnable()

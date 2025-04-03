@@ -49,8 +49,16 @@ namespace DonBosco
         public async void BackToMainMenu()
         {
             await Transition.FadeIn();
+            // **Cek apakah SewingMinigame masih menyimpan referensi kamera**
+            SewingMinigame sewingGame = FindObjectOfType<SewingMinigame>();
+            if (sewingGame != null)
+            {
+                Debug.Log("okelah bro");
+                sewingGame.ChangeMapInput();
+            }
+
             //Save game if in Explore mode, otherwise don't save
-            if(GameManager.GameMode == GameMode.Explore)
+            if (GameManager.GameMode == GameMode.Explore)
             {
                 await SaveManager.Instance.SaveGame();
             }
@@ -66,7 +74,6 @@ namespace DonBosco
             MainMenuManager.Instance.InitMainMenu();
             SceneLoader.Instance.UnloadCurrentSceneInstantly();
         }
-
 
         public async void Retry()
         {

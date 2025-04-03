@@ -965,6 +965,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571559831}
   m_CullTransparentMesh: 1
+--- !u!1 &607268756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 607268758}
+  - component: {fileID: 607268757}
+  m_Layer: 0
+  m_Name: GameModeChanger Explore
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &607268757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607268756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a377d451031a9b049865bee5ae63f463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameMode: 0
+--- !u!4 &607268758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607268756}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &741003836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,10 +1167,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesToLoad:
-  - MAP_RUMAHKARMAN
+  - MAP_RUMAHKARMANtes
   scenesToUnload:
   - SewingMinigame
-  resumeGameOnLoadDone: 1
+  resumeGameOnLoadDone: 0
 --- !u!1 &931694063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,9 +1551,9 @@ MonoBehaviour:
           m_StringArgument: Flag
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1376663493}
-        m_TargetAssemblyTypeName: SewingMinigame, Assembly-CSharp
-        m_MethodName: ChangeMapInput
+      - m_Target: {fileID: 851425224}
+        m_TargetAssemblyTypeName: DonBosco.SceneLoaderAgent, Assembly-CSharp
+        m_MethodName: ExecuteLoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1518,9 +1563,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 851425224}
-        m_TargetAssemblyTypeName: DonBosco.SceneLoaderAgent, Assembly-CSharp
-        m_MethodName: ExecuteLoadScene
+      - m_Target: {fileID: 607268757}
+        m_TargetAssemblyTypeName: DonBosco.GameModeChanger, Assembly-CSharp
+        m_MethodName: ChangeGameMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1376663493}
+        m_TargetAssemblyTypeName: SewingMinigame, Assembly-CSharp
+        m_MethodName: ChangeMapInput
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1581,6 +1638,79 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 342389103338511140, guid: 05bb1c44c5221f74284b2346043b94cb, type: 3}
+--- !u!1 &1185973460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185973463}
+  - component: {fileID: 1185973462}
+  - component: {fileID: 1185973461}
+  m_Layer: 0
+  m_Name: GameModeChanger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1185973461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185973460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff01606efd7e1cd489b70519433741d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  awakeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1185973462}
+        m_TargetAssemblyTypeName: DonBosco.GameModeChanger, Assembly-CSharp
+        m_MethodName: ChangeGameMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1185973462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185973460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a377d451031a9b049865bee5ae63f463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameMode: 1
+--- !u!4 &1185973463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185973460}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1242698415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,7 +1855,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1329834673}
   - component: {fileID: 1329834672}
-  - component: {fileID: 1329834671}
   - component: {fileID: 1329834674}
   m_Layer: 0
   m_Name: Camera
@@ -1734,14 +1863,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1329834671
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329834670}
-  m_Enabled: 1
 --- !u!20 &1329834672
 Camera:
   m_ObjectHideFlags: 0
@@ -2700,3 +2821,5 @@ SceneRoots:
   - {fileID: 931694066}
   - {fileID: 2021761165}
   - {fileID: 851425223}
+  - {fileID: 1185973463}
+  - {fileID: 607268758}

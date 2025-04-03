@@ -20,8 +20,10 @@ MonoBehaviour:
   event_no: 4
   questSteps:
   - {fileID: 2011212861416116154, guid: 58cf87c00f5e03643a753b2bf9418c81, type: 3}
-  - {fileID: 1967840160665085129, guid: d0e0136deb749b24cbfadc7f111ca087, type: 3}
-  prequisiteQuests:
-  - {fileID: 0}
+  - {fileID: 2011212861416116154, guid: 95b5fccf562bfe146b18e84078c4dc64, type: 3}
+  - {fileID: 1967840160665085129, guid: b1db3b689f0f45b48bca9d7e1e3a6e27, type: 3}
+  - {fileID: 1967840160665085129, guid: 135516b4e49b7a34f81bcd92c9d5a6c6, type: 3}
+  - {fileID: 1967840160665085129, guid: 6456827eea2e1ad4cab8439de63e601f, type: 3}
+  prequisiteQuests: []
   rewardName: 
   rewardItems: []
