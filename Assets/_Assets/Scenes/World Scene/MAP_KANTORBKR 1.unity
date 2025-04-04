@@ -161,7 +161,7 @@ Transform:
   m_GameObject: {fileID: 66539946}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50.3, y: -25.4, z: 0}
+  m_LocalPosition: {x: -50.3, y: -27.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -298,7 +298,7 @@ Transform:
   m_GameObject: {fileID: 361251341}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53.6599, y: -19.870468, z: 0.016055644}
+  m_LocalPosition: {x: -53.6599, y: -21.970469, z: 0.016055644}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -460,7 +460,7 @@ Transform:
   m_GameObject: {fileID: 430636183}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 890.96564, y: 555.58716, z: 1.4210514}
+  m_LocalPosition: {x: 890.96564, y: 553.4872, z: 1.4210514}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -889,7 +889,7 @@ Transform:
   m_GameObject: {fileID: 529998635}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51.17, y: -20.979998, z: 0}
+  m_LocalPosition: {x: -51.17, y: -23.079998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1049,8 +1049,8 @@ Transform:
   m_GameObject: {fileID: 532975184}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51.3281, y: -44.8444, z: 0}
-  m_LocalScale: {x: 2.3952174, y: 1.9301876, z: 1}
+  m_LocalPosition: {x: -51.3281, y: -46.019997, z: 0}
+  m_LocalScale: {x: 1.97, y: -0.18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1176,7 +1176,7 @@ Transform:
   m_GameObject: {fileID: 568257806}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51.17, y: -20.979998, z: 0}
+  m_LocalPosition: {x: -51.17, y: -23.079998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2535,9 +2535,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesToLoad:
-  - MAP_JALAN
+  - MAP_JALAN 1
   scenesToUnload:
-  - MAP_KANTORBKR
+  - MAP_KANTORBKR 1
   resumeGameOnLoadDone: 1
 --- !u!4 &1125261088
 Transform:
@@ -4329,7 +4329,7 @@ Transform:
   m_GameObject: {fileID: 1310737313}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.41, y: -15.959999, z: 0}
+  m_LocalPosition: {x: -40.41, y: -18.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4608,7 +4608,7 @@ Transform:
   m_GameObject: {fileID: 1362048194}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -96.17, y: -28.259998, z: 0}
+  m_LocalPosition: {x: -96.17, y: -30.359999, z: 0}
   m_LocalScale: {x: 8.544882, y: 5.5712776, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7125,7 +7125,7 @@ Transform:
   m_GameObject: {fileID: 1811078541}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1104.1501, y: 1895.022, z: 1.1050278}
+  m_LocalPosition: {x: 1104.1501, y: 1892.922, z: 1.1050278}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11290,7 +11290,7 @@ Transform:
   m_GameObject: {fileID: 2135746700}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.46, y: -31.949999, z: 0}
+  m_LocalPosition: {x: -41.46, y: -34.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11310,7 +11310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1589567350928346472, guid: 8da20c4dacbda6b49ba30c3a46bf1078, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.759998
+      value: -18.859999
       objectReference: {fileID: 0}
     - target: {fileID: 1589567350928346472, guid: 8da20c4dacbda6b49ba30c3a46bf1078, type: 3}
       propertyPath: m_LocalPosition.z

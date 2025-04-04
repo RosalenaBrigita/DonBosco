@@ -19,7 +19,10 @@ MonoBehaviour:
   event_no: 1
   questSteps:
   - {fileID: 4762044872833661129, guid: d09448acb0500e646bb8ba6672496cd1, type: 3}
-  - {fileID: 1696280914427731037, guid: c97eed9dff4c00743838656dc1c7c1d1, type: 3}
+  - {fileID: 8970729488056024198, guid: 1142724648cdd8142a7dffbda32dfa13, type: 3}
+  - {fileID: 4762044872833661129, guid: 381141e9744e8b740ab6afe18f12942d, type: 3}
+  - {fileID: 4762044872833661129, guid: 99c976fc4863fd5498bb0305aa2e60ca, type: 3}
+  - {fileID: 4762044872833661129, guid: 5a21650b822227243af125a1260ceeb7, type: 3}
   prequisiteQuests: []
   rewardName: 
   rewardItems: []

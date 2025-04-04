@@ -161,7 +161,7 @@ Transform:
   m_GameObject: {fileID: 66539946}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.87, y: 2.86, z: 0}
+  m_LocalPosition: {x: 45.87, y: -1.6, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -837,6 +837,8 @@ MonoBehaviour:
     questConditions: []
     sceneLoaderAgent: {fileID: 1125261087}
     playerPositionTeleporter: {fileID: 0}
+  defaultQuestConditions: []
+  warningPanel: {fileID: 0}
 --- !u!1 &568257806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,10 +1011,7 @@ MonoBehaviour:
       questState: 1
       questStepIndex: 3
     knotPath: GiveSelebaran
-    requiredItems:
-    - {fileID: 11400000, guid: a99c62a0a594a0b418b62dcde493fd93, type: 2}
-    questStepInfo: {fileID: 11400000, guid: eaa00212a77df144aa6a967a763af8b4, type: 2}
-    dialogueQuestBehaviour: 2
+    questStepActions: []
     onDialogueDone:
       m_PersistentCalls:
         m_Calls: []
@@ -2301,7 +2300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesToLoad:
-  - MAP_JALAN
+  - MAP_JALAN 1
   scenesToUnload:
   - MAP_KANTORBKR
   resumeGameOnLoadDone: 1
@@ -4231,6 +4230,134 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1372640749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1372640753}
+  - component: {fileID: 1372640752}
+  - component: {fileID: 1372640751}
+  - component: {fileID: 1372640750}
+  m_Layer: 0
+  m_Name: InteractDoorKarman
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1372640750
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372640749}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1372640751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372640749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59dd30588340b1a49b1ca34b0cc445d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportInfos: []
+  defaultTeleportInfo:
+    questConditions: []
+    sceneLoaderAgent: {fileID: 1125261087}
+    playerPositionTeleporter: {fileID: 0}
+  defaultQuestConditions: []
+  warningPanel: {fileID: 0}
+--- !u!114 &1372640752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372640749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbae7cb8fe3a9a74eb978210c4560855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1372640751}
+        m_TargetAssemblyTypeName: DonBosco.MapTransporter, Assembly-CSharp
+        m_MethodName: TransportPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  disableInputMoveOnEnter: 1
+  objectID: doorJalanBkr
+  isDestroyable: 0
+--- !u!4 &1372640753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372640749}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 44.88, y: -20.28, z: 0.34171075}
+  m_LocalScale: {x: 2.32, y: 0.36, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1479468417
 GameObject:
   m_ObjectHideFlags: 0
@@ -10690,7 +10817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2062847692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10975,3 +11102,4 @@ SceneRoots:
   - {fileID: 3738328661302344020}
   - {fileID: 568257809}
   - {fileID: 1811078543}
+  - {fileID: 1372640753}
