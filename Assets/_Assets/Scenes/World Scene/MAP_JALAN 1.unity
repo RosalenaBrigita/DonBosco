@@ -46426,12 +46426,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: dialogueQuestConversations.Array.data[0].questStepActions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: dialogueQuestConversations.Array.data[0].conditions.Array.data[0].questStepIndex
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: dialogueQuestConversations.Array.data[0].questStepActions.Array.data[0].questStepInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 4fdb27a39babc17498e6cc87c4bfc499, type: 2}
+    - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: dialogueQuestConversations.Array.data[0].onDialogueDone.m_PersistentCalls.m_Calls.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: dialogueQuestConversations.Array.data[0].questStepActions.Array.data[0].dialogueQuestBehaviour
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: dialogueQuestConversations.Array.data[0].onDialogueDone.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -83386,9 +83398,8 @@ GameObject:
   - component: {fileID: 244978942}
   - component: {fileID: 244978940}
   - component: {fileID: 244978944}
-  - component: {fileID: 244978945}
   m_Layer: 7
-  m_Name: NPC (1)
+  m_Name: Pak darto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83430,7 +83441,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.66, y: 2.8369143}
+    oldSize: {x: 2.0191371, y: 3.1666667}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -83480,7 +83491,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: -545200045, guid: e7ca9f8b07fd6f14e96bd23963c24308, type: 3}
+  m_Sprite: {fileID: -427445203, guid: 1a1b4384ff250f442be50ff787a07bd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83501,7 +83512,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.46, y: -12.15, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83525,8 +83536,9 @@ MonoBehaviour:
       questState: 0
       questStepIndex: 0
     knotPath: MengibarkanBendera
-    questStepInfo: {fileID: 11400000, guid: fb6a8b4896fd9014c8ea772e9fd395d8, type: 2}
-    dialogueQuestBehaviour: 0
+    questStepActions:
+    - questStepInfo: {fileID: 11400000, guid: fb6a8b4896fd9014c8ea772e9fd395d8, type: 2}
+      dialogueQuestBehaviour: 0
     onDialogueDone:
       m_PersistentCalls:
         m_Calls: []
@@ -83542,27 +83554,6 @@ MonoBehaviour:
       questStepIndex: 0
     knotPath: MengibarkanBenderaDone
   externalFunctions: []
---- !u!95 &244978945
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 244978939}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e60c8209989f39b4597b2e158f142636, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &252683118
 GameObject:
   m_ObjectHideFlags: 0
@@ -90178,7 +90169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520385438}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6cf0738c0919dd4493e35ffa1087566, type: 3}
   m_Name: 
@@ -90212,9 +90203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesToLoad:
-  - MAP_KANTORBKR
+  - MAP_KANTORBKR 1
   scenesToUnload:
-  - MAP_JALAN
+  - MAP_JALAN 1
   resumeGameOnLoadDone: 1
 --- !u!1 &545155722
 GameObject:
@@ -97151,6 +97142,8 @@ MonoBehaviour:
     questConditions: []
     sceneLoaderAgent: {fileID: 503052245}
     playerPositionTeleporter: {fileID: 503052246}
+  defaultQuestConditions: []
+  warningPanel: {fileID: 0}
 --- !u!114 &774273704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100073,6 +100066,134 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &896294162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 896294166}
+  - component: {fileID: 896294165}
+  - component: {fileID: 896294164}
+  - component: {fileID: 896294163}
+  m_Layer: 0
+  m_Name: InteractDoorBKR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &896294163
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896294162}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &896294164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896294162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59dd30588340b1a49b1ca34b0cc445d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportInfos: []
+  defaultTeleportInfo:
+    questConditions: []
+    sceneLoaderAgent: {fileID: 520385441}
+    playerPositionTeleporter: {fileID: 0}
+  defaultQuestConditions: []
+  warningPanel: {fileID: 0}
+--- !u!114 &896294165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896294162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbae7cb8fe3a9a74eb978210c4560855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 896294164}
+        m_TargetAssemblyTypeName: DonBosco.MapTransporter, Assembly-CSharp
+        m_MethodName: TransportPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  disableInputMoveOnEnter: 1
+  objectID: doorBKR
+  isDestroyable: 0
+--- !u!4 &896294166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896294162}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -50.04, y: -44.3, z: 0.34171075}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &955684339
 GameObject:
   m_ObjectHideFlags: 0
@@ -100419,8 +100540,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: dialogueQuestConversations.Array.data[0].questStepActions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: dialogueQuestConversations.Array.data[0].questStepActions.Array.data[0].questStepInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: e0dabc78f0f44cf4db90d44f31efc046, type: 2}
+    - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: dialogueQuestConversations.Array.data[0].onDialogueDone.m_PersistentCalls.m_Calls.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: dialogueQuestConversations.Array.data[0].questStepActions.Array.data[0].dialogueQuestBehaviour
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: dialogueQuestConversations.Array.data[0].onDialogueDone.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -111773,6 +111906,8 @@ MonoBehaviour:
     questConditions: []
     sceneLoaderAgent: {fileID: 520385441}
     playerPositionTeleporter: {fileID: 520385439}
+  defaultQuestConditions: []
+  warningPanel: {fileID: 0}
 --- !u!114 &1375952455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117290,6 +117425,8 @@ MonoBehaviour:
     questConditions: []
     sceneLoaderAgent: {fileID: 503052245}
     playerPositionTeleporter: {fileID: 0}
+  defaultQuestConditions: []
+  warningPanel: {fileID: 0}
 --- !u!114 &1671511138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121120,11 +121257,23 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: dialogueQuestConversations.Array.data[0].questStepActions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: dialogueQuestConversations.Array.data[0].conditions.Array.data[0].questStepIndex
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: dialogueQuestConversations.Array.data[0].questStepActions.Array.data[0].questStepInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 09236c3fd0a5b2243ae11a1d25ba5a4f, type: 2}
+    - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: dialogueQuestConversations.Array.data[0].onDialogueDone.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: dialogueQuestConversations.Array.data[0].questStepActions.Array.data[0].dialogueQuestBehaviour
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5678620103011271242, guid: 01713e0c682394e459461541c843fd65, type: 3}
@@ -149008,6 +149157,7 @@ SceneRoots:
   - {fileID: 1595779133}
   - {fileID: 1903930712}
   - {fileID: 1671511139}
+  - {fileID: 896294166}
   - {fileID: 1052779527}
   - {fileID: 45096808}
   - {fileID: 1750555568}
