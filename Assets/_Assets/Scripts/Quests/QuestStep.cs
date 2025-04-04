@@ -25,6 +25,12 @@ namespace DonBosco.Quests
             if (!isFinished)
             {
                 isFinished = true;
+                // Cek apakah questId valid
+                if (string.IsNullOrEmpty(questId))
+                {
+                    Debug.Log("QuestStep gagal diselesaikan karena questId NULL atau kosong!");
+                    return;
+                }
                 GameEventsManager.Instance.questEvents.AdvanceQuest(questId);
                 Destroy(this.gameObject);
             }

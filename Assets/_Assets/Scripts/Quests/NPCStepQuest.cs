@@ -53,18 +53,22 @@ namespace DonBosco.Quests
 
         private void StartDialogueQuestConversation()
         {
-            switch (currentDialogueQuestConversation.dialogueQuestBehaviour)
+            foreach (var action in currentDialogueQuestConversation.questStepActions)
             {
-                case DialogueQuestBehaviour.StartQuest:
-                    GameEventsManager.Instance.questEvents.StartQuest(currentDialogueQuestConversation.questStepInfo.questInfo.id);
-                    break;
-                case DialogueQuestBehaviour.AdvanceQuest:
-                    GameEventsManager.Instance.questEvents.AdvanceQuest(currentDialogueQuestConversation.questStepInfo.questInfo.id);
-                    break;
-                case DialogueQuestBehaviour.FinishQuest:
-                    GameEventsManager.Instance.questEvents.FinishQuest(currentDialogueQuestConversation.questStepInfo.questInfo.id);
-                    break;
+                switch (action.dialogueQuestBehaviour)
+                {
+                    case DialogueQuestBehaviour.StartQuest:
+                        GameEventsManager.Instance.questEvents.StartQuest(action.questStepInfo.questInfo.id);
+                        break;
+                    case DialogueQuestBehaviour.AdvanceQuest:
+                        GameEventsManager.Instance.questEvents.AdvanceQuest(action.questStepInfo.questInfo.id);
+                        break;
+                    case DialogueQuestBehaviour.FinishQuest:
+                        GameEventsManager.Instance.questEvents.FinishQuest(action.questStepInfo.questInfo.id);
+                        break;
+                }
             }
+
 
             DialogueManager.Instance.OnDialogueEnded += OnDialogueEnded;
 

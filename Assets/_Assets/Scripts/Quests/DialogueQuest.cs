@@ -87,17 +87,20 @@ namespace DonBosco.Quests
 
         private void StartDialogueQuestConversation()
         {
-            switch (currentDialogueQuestConversation.dialogueQuestBehaviour)
+            foreach (var questStepAction in currentDialogueQuestConversation.questStepActions)
             {
-                case DialogueQuestBehaviour.StartQuest:
-                    GameEventsManager.Instance.questEvents.StartQuest(currentDialogueQuestConversation.questStepInfo.questInfo.id);
-                    break;
-                case DialogueQuestBehaviour.AdvanceQuest:
-                    GameEventsManager.Instance.questEvents.AdvanceQuest(currentDialogueQuestConversation.questStepInfo.questInfo.id);
-                    break;
-                case DialogueQuestBehaviour.FinishQuest:
-                    GameEventsManager.Instance.questEvents.FinishQuest(currentDialogueQuestConversation.questStepInfo.questInfo.id);
-                    break;
+                switch (questStepAction.dialogueQuestBehaviour)
+                {
+                    case DialogueQuestBehaviour.StartQuest:
+                        GameEventsManager.Instance.questEvents.StartQuest(questStepAction.questStepInfo.questInfo.id);
+                        break;
+                    case DialogueQuestBehaviour.AdvanceQuest:
+                        GameEventsManager.Instance.questEvents.AdvanceQuest(questStepAction.questStepInfo.questInfo.id);
+                        break;
+                    case DialogueQuestBehaviour.FinishQuest:
+                        GameEventsManager.Instance.questEvents.FinishQuest(questStepAction.questStepInfo.questInfo.id);
+                        break;
+                }
             }
 
             DialogueManager.Instance.OnDialogueEnded += OnDialogueEnded;
@@ -195,9 +198,15 @@ namespace DonBosco.Quests
     {
         public QuestCondition[] conditions;
         public string knotPath;
+        public List<QuestStepAction> questStepActions; // Menggunakan List dari pasangan (QuestStepInfoSO, DialogueQuestBehaviour)
+        public UnityEvent onDialogueDone;
+    }
+
+    [System.Serializable]
+    public class QuestStepAction
+    {
         public QuestStepInfoSO questStepInfo;
         public DialogueQuestBehaviour dialogueQuestBehaviour;
-        public UnityEvent onDialogueDone;
     }
 
     [System.Serializable]

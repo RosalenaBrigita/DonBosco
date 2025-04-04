@@ -4242,8 +4242,7 @@ MonoBehaviour:
       questState: 1
       questStepIndex: 1
     knotPath: MenjahitBenderaMinigame
-    questStepInfo: {fileID: 11400000, guid: fb6a8b4896fd9014c8ea772e9fd395d8, type: 2}
-    dialogueQuestBehaviour: 0
+    questStepActions: []
     onDialogueDone:
       m_PersistentCalls:
         m_Calls:
@@ -4379,6 +4378,7 @@ GameObject:
   - component: {fileID: 1295533281}
   - component: {fileID: 1295533284}
   - component: {fileID: 1295533285}
+  - component: {fileID: 1295533286}
   m_Layer: 0
   m_Name: radio
   m_TagString: Untagged
@@ -4507,13 +4507,46 @@ MonoBehaviour:
       questState: 0
       questStepIndex: 0
     knotPath: 
-    questStepInfo: {fileID: 11400000, guid: b0d7aff84993a234dba77f9c8f3b139e, type: 2}
-    dialogueQuestBehaviour: 0
+    questStepActions:
+    - questStepInfo: {fileID: 11400000, guid: 18dad2a721648e44d80aa1cd2b23dfb0, type: 2}
+      dialogueQuestBehaviour: 2
+    - questStepInfo: {fileID: 11400000, guid: b0d7aff84993a234dba77f9c8f3b139e, type: 2}
+      dialogueQuestBehaviour: 0
     onDialogueDone:
       m_PersistentCalls:
         m_Calls: []
   conversationStates: []
   externalFunctions: []
+--- !u!114 &1295533286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295533280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbae7cb8fe3a9a74eb978210c4560855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  disableInputMoveOnEnter: 0
+  objectID: 
+  isDestroyable: 0
 --- !u!1 &1356289562
 GameObject:
   m_ObjectHideFlags: 0
