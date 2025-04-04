@@ -46489,9 +46489,21 @@ PrefabInstance:
       propertyPath: dialogueQuestConversations.Array.data[0].onDialogueDone.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7225430722985437973, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: m_Name
+      value: bendera2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225430722985437973, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: m_TagString
+      value: SaveableObject
+      objectReference: {fileID: 0}
     - target: {fileID: 8362432830782721394, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: m_Name
       value: Bendera
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362432830782721394, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: m_TagString
+      value: SaveableObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -100466,9 +100478,21 @@ PrefabInstance:
       propertyPath: dialogueQuestConversations.Array.data[0].onDialogueDone.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7225430722985437973, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: m_Name
+      value: bendera1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225430722985437973, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: m_TagString
+      value: SaveableObject
+      objectReference: {fileID: 0}
     - target: {fileID: 8362432830782721394, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: m_Name
       value: Bendera (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362432830782721394, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: m_TagString
+      value: SaveableObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -111499,6 +111523,60 @@ Transform:
   - {fileID: 1142730002}
   m_Father: {fileID: 545155723}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1337655582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1337655584}
+  - component: {fileID: 1337655583}
+  m_Layer: 0
+  m_Name: ObjectActivator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1337655583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337655582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c63a3fa5af6be54c89867ff698f01d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questObjects:
+  - questId: MengibarkanBendera
+    objectsToEnable:
+    - {fileID: 1052779528}
+    - {fileID: 45096809}
+    - {fileID: 1750555569}
+    collidersToDisable:
+    - {fileID: 1052779529}
+    - {fileID: 45096810}
+    - {fileID: 1750555570}
+--- !u!4 &1337655584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337655582}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.63, y: -4.2799997, z: 0.13627486}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1338796778
 GameObject:
   m_ObjectHideFlags: 0
@@ -121107,11 +121185,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7225430722985437973, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: m_Name
-      value: bendera
+      value: bendera3
       objectReference: {fileID: 0}
     - target: {fileID: 7225430722985437973, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7225430722985437973, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: m_TagString
+      value: SaveableObject
       objectReference: {fileID: 0}
     - target: {fileID: 7947009782483471359, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: m_Color.b
@@ -121132,6 +121214,10 @@ PrefabInstance:
     - target: {fileID: 8362432830782721394, guid: 01713e0c682394e459461541c843fd65, type: 3}
       propertyPath: m_Name
       value: Bendera (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362432830782721394, guid: 01713e0c682394e459461541c843fd65, type: 3}
+      propertyPath: m_TagString
+      value: SaveableObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -148925,3 +149011,4 @@ SceneRoots:
   - {fileID: 1052779527}
   - {fileID: 45096808}
   - {fileID: 1750555568}
+  - {fileID: 1337655584}

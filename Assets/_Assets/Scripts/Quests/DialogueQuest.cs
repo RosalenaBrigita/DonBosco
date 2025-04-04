@@ -9,7 +9,6 @@ using DonBosco.ItemSystem;
 
 namespace DonBosco.Quests
 {
-    [RequireComponent(typeof(Collider2D))]
     public class DialogueQuest : MonoBehaviour, IInteractable
     {
         [SerializeField] protected TextAsset dialogue;
@@ -17,10 +16,23 @@ namespace DonBosco.Quests
         [SerializeField] protected ConversationState[] conversationStates;
         [SerializeField] protected ExternalFunction[] externalFunctions;
 
+        private Collider2D _collider;
         private DialogueQuestConversation currentDialogueQuestConversation;
         private ConversationState currentState;
 
         public bool IsInteractable { get; set; } = true;
+
+        private void Awake()
+        {
+            _collider = GetComponent<Collider2D>();
+
+            // Jika collider tidak ada, tambahkan Collider2D secara otomatis
+            if (_collider == null)
+            {
+                _collider = gameObject.AddComponent<BoxCollider2D>();
+                Debug.Log("DialogueQuest: Collider2D otomatis ditambahkan karena tidak ada.");
+            }
+        }
 
         public virtual void Interact()
         {
@@ -34,6 +46,12 @@ namespace DonBosco.Quests
 
         private void StartDialogue()
         {
+            if (_collider == null)
+            {
+                Debug.LogWarning("DialogueQuest: Collider tidak ditemukan, interaksi dibatalkan.");
+                return;
+            }
+
             if (dialogue == null)
             {
                 Debug.LogError("No dialogue or knot path assigned to NPC");

@@ -38,6 +38,7 @@ namespace DonBosco
 
         #region Object
         public List<ObjectStateData> objectStates = new List<ObjectStateData>();
+        public List<ActivationStateData> activationStates = new List<ActivationStateData>();
         #endregion 
 
         #region Analytics
@@ -65,4 +66,20 @@ namespace DonBosco
             isDisabled = disabled;
         }
     }
+
+    [System.Serializable]
+    public class ActivationStateData
+    {
+        public string objectID;
+        public bool isActivated; // Status aktif/nonaktif GameObject
+        public bool isColliderActive; // Status Collider2D
+
+        public ActivationStateData(string id, bool activated, bool colliderActive)
+        {
+            objectID = id;
+            isActivated = activated;
+            isColliderActive = colliderActive;
+        }
+    }
+
 }
