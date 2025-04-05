@@ -3,7 +3,7 @@ EXTERNAL Quiz(id_answer)
 #speaker:Kapten Soengkono #audio:null #portrait:null
 Sabar dulu, Nak. Sebelum kita bicara soal tugas, aku ingin tahu... Kau sudah paham apa itu BKR dan kenapa organisasi ini dibentuk?
 * [BKR adalah Barisan Kesatuan Rakyat]
-    ~ Quiz("9_1")
+    ~ Quiz("1_1")
     #speaker:Karman #audio:null #portrait:null
     BKR adalah Barisan Kesatuan Rakyat yang dibentuk untuk menjaga keamanan rakyat setelah proklamasi.
     #speaker:Kapten Soengkono #audio:null #portrait:null
@@ -12,7 +12,7 @@ Sabar dulu, Nak. Sebelum kita bicara soal tugas, aku ingin tahu... Kau sudah pah
     -> SejarahBKR
 
 * [Barisan Kemanusiaan Republik]
-    ~ Quiz("9_2")
+    ~ Quiz("1_2")
     #speaker:Karman #audio:null #portrait:null
     BKR adalah Barisan Kemanusiaan Republik, kelompok pemuda yang dilatih oleh Jepang untuk menjaga ketertiban.
     #speaker:Kapten Soengkono #audio:null #portrait:null

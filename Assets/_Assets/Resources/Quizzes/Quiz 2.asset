@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e8c4910fe3a07344bede3706b6ac9e2, type: 3}
   m_Name: Quiz 2
   m_EditorClassIdentifier: 
-  question: Untuk apa pasukan Belanda ingin datang ke kota Surabaya?
+  question: Selebaran apa?
   answers:
-  - Menjemput tahanan dan interniran
-  - Menjalin hubungan dengan Indonesia
-  correctAnswer: 1
+  - menyerah
+  - ancaman
+  correctAnswer: 2
   points: 20
+  quizType: 0
+  moralEffect: 0

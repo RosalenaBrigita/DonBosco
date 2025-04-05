@@ -76,16 +76,24 @@ public class QuizManager : MonoBehaviour, ISaveLoad
     public async Task Load(SaveData saveData)
     {
         GetQuizResources();
-        
-        if(saveData != null)
-        {
-            int[] quizAnswers = saveData.quizAnswers;
 
-            for (int i = 0; i < quizAnswers.Length; i++)
+        if (saveData != null)
+        {
+            int[] loadedAnswers = saveData.quizAnswers;
+            int count = Mathf.Min(this.quizAnswers.Length, loadedAnswers.Length);
+
+            for (int i = 0; i < count; i++)
             {
-                this.quizAnswers[i] = quizAnswers[i];
+                this.quizAnswers[i] = loadedAnswers[i];
+            }
+
+            // Untuk quiz yang baru ditambahkan (misalnya quiz ke-10), default-in jadi 0 (belum dijawab)
+            for (int i = count; i < this.quizAnswers.Length; i++)
+            {
+                this.quizAnswers[i] = 0;
             }
         }
+
         await Task.CompletedTask;
     }
 

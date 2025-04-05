@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e8c4910fe3a07344bede3706b6ac9e2, type: 3}
   m_Name: Quiz 1
   m_EditorClassIdentifier: 
-  question: Foto siapa yang ada di selebaran tersebut?
+  question: Apakah kau tahu apa itu BKR dan kenapa organisasi ini dibentuk?
   answers:
-  - Jendral Belanda
-  - Ratu Belanda
-  correctAnswer: 2
+  - 'BKR adalah Barisan Kesatuan Rakyat '
+  - BKR adalah Barisan Kemanusiaan Republik
+  correctAnswer: 1
   points: 20
+  quizType: 0
+  moralEffect: 0
