@@ -6,6 +6,7 @@ using Ink.Runtime;
 using UnityEngine.EventSystems;
 using System;
 using System.Threading.Tasks;
+using DonBosco.Quests;
 
 namespace DonBosco.Dialogue
 {
@@ -428,6 +429,7 @@ namespace DonBosco.Dialogue
 
             // go back to default audio
             SetCurrentAudioInfo(defaultAudioInfo.id);
+            CheckAndStartQuestFromInk();
             OnDialogueEnded?.Invoke();
         }
 
@@ -800,10 +802,41 @@ namespace DonBosco.Dialogue
         /// Usage: GetInstance().SetVariableState()["variableName"] = value;
         /// </summary>
         /// <returns>VariableState, This function cant be chained</returns>
-        public VariablesState SetVariableState() 
+
+        public void SetInkVariable(string variableName, object newValue)
         {
-            return currentStory.state.variablesState;
+            if (currentStory != null)
+            {
+                var variableState = currentStory.state.variablesState;
+
+                var currentValue = variableState.GetVariableWithName(variableName);
+
+                if (currentValue != null)
+                {
+                    if (currentValue is StringValue && newValue is string stringValue)
+                    {
+                        variableState.SetGlobal(variableName, new StringValue(stringValue));
+                    }
+                    else if (currentValue is IntValue && newValue is int intValue)
+                    {
+                        variableState.SetGlobal(variableName, new IntValue(intValue));
+                    }
+                    else if (currentValue is BoolValue && newValue is bool boolValue)
+                    {
+                        variableState.SetGlobal(variableName, new BoolValue(boolValue));
+                    }
+                    else
+                    {
+                        Debug.LogError($"Type mismatch saat set Ink variable '{variableName}': tipe sekarang {currentValue.GetType()}, nilai baru bertipe {newValue.GetType()}");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning($"Variable '{variableName}' tidak ditemukan di Ink state.");
+                }
+            }
         }
+
 
         // This method will get called anytime the application exits.
         // Depending on your game, you may want to save variable state in other places.
@@ -812,6 +845,27 @@ namespace DonBosco.Dialogue
         //     dialogueVariables.SaveVariables();
         // }
 
+        private void CheckAndStartQuestFromInk()
+        {
+            if (dialogueVariables.GetVariable("start_quest", out string questId))
+            {
+                if (!string.IsNullOrEmpty(questId))
+                {
+                    Debug.Log($"Starting quest from Ink: {questId}");
+                    if (QuestManager.Instance.GetQuestById(questId) != null)
+                    {
+                        QuestManager.Instance.StartQuest(questId);
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Quest ID '{questId}' tidak ditemukan!");
+                    }
+
+                    // Reset supaya tidak memulai quest berulang kali jika dialog dipanggil ulang
+                    dialogueVariables.SetVariable("start_quest", "");
+                }
+            }
+        }
 
 
         private void PrepareForDialogue(bool isStarting)

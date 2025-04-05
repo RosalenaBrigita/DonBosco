@@ -1,4 +1,5 @@
 EXTERNAL Quiz(id_answer)
+INCLUDE ../Quests/QuestData.ink
 
 #speaker:Moestopo #audio:null #portrait:null
 Aku belum mendapat informasi lebih lanjut tentang selebaran yang dijatuhkan pesawat Sekutu. Apa kau tahu tentang itu?
@@ -42,10 +43,27 @@ Di sanalah mereka menyimpan persenjataan paling canggih yang mereka miliki, dan 
     Sebelum kita bergerak, ada satu hal lagi yang perlu kau pahami, Karman. Sebelum menyerang Gudang Don Bosco, kita harus belajar dari penyerangan yang sudah berhasil. 
     Di dua lokasi penting—Gudang Sambongan dan Kaliasin—pemuda kita berhasil merebut senjata dari Jepang. 
     Di sana, kita belajar banyak taktik yang bisa kita gunakan untuk operasi besar ini.
-    #speaker:Moestopo #audio:null #portrait:null
-    * Jadi, kita perlu mempelajari bagaimana mereka melakukannya, Bung?
+    #speaker:Karman #audio:null #portrait:null
+    Jadi, kita perlu mempelajari bagaimana mereka melakukannya, Bung?
     #speaker:Moestopo #audio:null #portrait:null
     Betul. Aku ingin kau berbicara dengan warga yang menyaksikan penyerangan dan dengan Polisi Istimewa yang terlibat. 
     Mereka akan memberikan wawasan berharga tentang bagaimana mereka mengatasi situasi tersebut. Ini akan membantu kita merencanakan serangan ke Gudang Don Bosco dengan lebih matang.
+* [ke Kaliasin]
+    -> KaliasinBranch
+* [ke Sambongan]
+    -> SambonganBranch
+
+=== KaliasinBranch ===
+#speaker:Karman #audio:null #portrait:null
+Baik aku akan cari informasi di Kaliasin
+~ start_quest = "InformasiKaliasin"
 -> END
+
+=== SambonganBranch ===
+#speaker:Karman #audio:null #portrait:null
+Baik aku akan cari informasi di Sambongan
+~ start_quest = "InformasiSambongan"
+-> END
+
+
     

@@ -1325,7 +1325,7 @@ MonoBehaviour:
   defaultTeleportInfo:
     questConditions: []
     sceneLoaderAgent: {fileID: 1125261087}
-    playerPositionTeleporter: {fileID: 0}
+    playerPositionTeleporter: {fileID: 1125261089}
   defaultQuestConditions: []
   warningPanel: {fileID: 0}
 --- !u!1 &568257806
@@ -2818,6 +2818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1125261088}
   - component: {fileID: 1125261087}
+  - component: {fileID: 1125261089}
   m_Layer: 0
   m_Name: MAP_JALAN
   m_TagString: Untagged
@@ -2857,6 +2858,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430636184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1125261089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125261086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cf0738c0919dd4493e35ffa1087566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportPosition: {x: -34, y: -37, z: 0}
 --- !u!1 &1289386135
 GameObject:
   m_ObjectHideFlags: 0

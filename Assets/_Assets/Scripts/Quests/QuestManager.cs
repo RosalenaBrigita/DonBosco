@@ -74,7 +74,7 @@ namespace DonBosco.Quests
 
 
         #region Events
-        private void StartQuest(string id)
+        public void StartQuest(string id)
         {
             Quest quest = GetQuestById(id);
             spawnedQuestSteps.Add(quest.InstantiateCurrentQuestStep());

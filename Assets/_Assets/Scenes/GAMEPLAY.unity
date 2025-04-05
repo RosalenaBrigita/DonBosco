@@ -3658,7 +3658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &379981576
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8551,7 +8551,7 @@ MonoBehaviour:
     m_Bits: 256
   weaponSoundEffect: 1
   allowedScenes:
-  - n
+  - MAP_DB_EXTERIOR
 --- !u!1 &1052082003
 GameObject:
   m_ObjectHideFlags: 0
@@ -12437,19 +12437,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 19.7949
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.66365
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15583,7 +15583,7 @@ Transform:
   m_GameObject: {fileID: 1876365413}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.67, y: 0.138, z: 0}
+  m_LocalPosition: {x: 1.76, y: 0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16773,7 +16773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1b4d188768cd47b1561aabd1c0db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingScene: MAP_RUMAHKARMANtes
+  startingScene: MAP_DB_EXTERIOR
 --- !u!4 &2075377686
 Transform:
   m_ObjectHideFlags: 0

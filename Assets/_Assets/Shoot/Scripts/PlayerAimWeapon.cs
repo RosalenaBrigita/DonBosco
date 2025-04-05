@@ -197,14 +197,15 @@ namespace DonBosco.Character
                 Debug.LogError("Bullet tidak memiliki Rigidbody2D!", bullet);
             }
 
-            Bullet bulletComponent = bullet.GetComponent<Bullet>();
+            PlayerBullet bulletComponent = bullet.GetComponent<PlayerBullet>();
             if (bulletComponent != null)
             {
                 bulletComponent.SetDamageMask(enemyLayer);
+                bulletComponent.SetOwner(gameObject); // optional, buat hindari kena diri sendiri
             }
             else
             {
-                Debug.LogWarning("Bullet tidak memiliki komponen Bullet!", bullet);
+                Debug.LogWarning("Bullet tidak memiliki komponen PlayerBullet!", bullet);
             }
 
             if (aimAnimator != null) aimAnimator.SetTrigger("Shoot");

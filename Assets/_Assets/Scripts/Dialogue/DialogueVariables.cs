@@ -126,5 +126,81 @@ namespace DonBosco.Dialogue
             }
         }
 
+        public bool GetVariable(string variableName, out string value)
+        {
+            if (variables.TryGetValue(variableName, out Ink.Runtime.Object varValue))
+            {
+                if (varValue is StringValue strVal)
+                {
+                    value = strVal.value;
+                    return true;
+                }
+                else
+                {
+                    value = varValue.ToString();
+                    return true;
+                }
+            }
+            value = null;
+            return false;
+        }
+
+        public void SetVariable(string variableName, string newValue)
+        {
+            if (variables.ContainsKey(variableName))
+            {
+                var currentVal = variables[variableName];
+
+                Ink.Runtime.Object newVal;
+
+                Debug.Log($"[SetVariable] Variable: {variableName}, Current Type: {currentVal.GetType()}, New Value: {newValue}");
+
+                if (currentVal is Ink.Runtime.StringValue)
+                {
+                    newVal = new Ink.Runtime.StringValue(newValue);
+                }
+                else if (currentVal is Ink.Runtime.BoolValue)
+                {
+                    if (bool.TryParse(newValue, out bool boolVal))
+                    {
+                        newVal = new Ink.Runtime.BoolValue(boolVal);
+                    }
+                    else
+                    {
+                        Debug.LogError($"[SetVariable] Failed to parse '{newValue}' as Bool for variable '{variableName}'");
+                        return;
+                    }
+                }
+                else if (currentVal is Ink.Runtime.IntValue)
+                {
+                    if (int.TryParse(newValue, out int intVal))
+                    {
+                        newVal = new Ink.Runtime.IntValue(intVal);
+                    }
+                    else
+                    {
+                        Debug.LogError($"[SetVariable] Failed to parse '{newValue}' as Int for variable '{variableName}'");
+                        return;
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning($"[SetVariable] Unhandled variable type {currentVal.GetType()} for variable '{variableName}'");
+                    return;
+                }
+
+                variables[variableName] = newVal;
+                globalVariablesStory.variablesState.SetGlobal(variableName, newVal);
+
+                Debug.Log($"[SetVariable] Successfully set '{variableName}' to '{newVal}'");
+            }
+            else
+            {
+                Debug.LogWarning($"[SetVariable] Variable '{variableName}' not found in Ink variable list.");
+            }
+        }
+
+
+
     }
 }
