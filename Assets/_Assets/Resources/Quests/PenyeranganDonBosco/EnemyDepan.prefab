@@ -1,0 +1,1012 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6186302768880654208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3444022686317210623}
+  - component: {fileID: 5318096704056530784}
+  - component: {fileID: 5108497880235118661}
+  m_Layer: 0
+  m_Name: EnemyDepan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3444022686317210623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186302768880654208}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3, y: -0.2, z: -0.0069130016}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2858867068596993233}
+  - {fileID: 7835378037877083723}
+  - {fileID: 1720222696852008497}
+  - {fileID: 812457131856082414}
+  - {fileID: 6357749954894260809}
+  - {fileID: 1848955332305206825}
+  - {fileID: 3221834046191326989}
+  - {fileID: 8937367499084980559}
+  - {fileID: 8576494347196365014}
+  - {fileID: 7021227531635721936}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5318096704056530784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186302768880654208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 424c9c59869c0fa41bf781eabb97968b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questStepInfo: {fileID: 11400000, guid: 24bad2aec2a544946aeb36312a11e68b, type: 2}
+  scene: MAP_DB_EXTERIOR 1
+  enemiesToKill: 10
+  OnQuestComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5108497880235118661}
+        m_TargetAssemblyTypeName: DonBosco.SceneLoaderAgent, Assembly-CSharp
+        m_MethodName: ExecuteLoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5108497880235118661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186302768880654208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3e915d770ac02499984fcad2078d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenesToLoad:
+  - MAP_JALAN 1
+  scenesToUnload:
+  - MAP_DB_EXTERIOR 1
+  resumeGameOnLoadDone: 1
+--- !u!1001 &1028311399082538576
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3444022686317210623}
+    m_Modifications:
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_Name
+      value: TentaraJepang (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270128567598671965, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: fireRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: scanRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: unpreferedRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+--- !u!4 &6357749954894260809 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+  m_PrefabInstance: {fileID: 1028311399082538576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1720222696852008496
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3444022686317210623}
+    m_Modifications:
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_Name
+      value: TentaraJepang (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270128567598671965, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: fireRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: scanRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: unpreferedRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+--- !u!4 &1720222696852008497 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+  m_PrefabInstance: {fileID: 1720222696852008496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1848955332305206824
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3444022686317210623}
+    m_Modifications:
+    - target: {fileID: 2716345598712063782, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: startState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_Name
+      value: TentaraJepang (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270128567598671965, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: fireRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: scanRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: unpreferedRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+--- !u!4 &1848955332305206825 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+  m_PrefabInstance: {fileID: 1848955332305206824}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3060723994754956630
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3444022686317210623}
+    m_Modifications:
+    - target: {fileID: 2716345598712063782, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: startState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_Name
+      value: TentaraJepang (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270128567598671965, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: fireRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: scanRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: unpreferedRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -26.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+--- !u!4 &8937367499084980559 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+  m_PrefabInstance: {fileID: 3060723994754956630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3967215110528817865
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3444022686317210623}
+    m_Modifications:
+    - target: {fileID: 2716345598712063782, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: startState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_Name
+      value: TentaraJepang (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270128567598671965, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: fireRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: scanRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: unpreferedRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+--- !u!4 &7021227531635721936 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+  m_PrefabInstance: {fileID: 3967215110528817865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4234178515172938322
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3444022686317210623}
+    m_Modifications:
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_Name
+      value: TentaraJepang (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270128567598671965, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: fireRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: scanRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: unpreferedRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+--- !u!4 &7835378037877083723 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+  m_PrefabInstance: {fileID: 4234178515172938322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6717230265060911607
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3444022686317210623}
+    m_Modifications:
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_Name
+      value: TentaraJepang (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270128567598671965, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: fireRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: scanRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: unpreferedRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+--- !u!4 &812457131856082414 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+  m_PrefabInstance: {fileID: 6717230265060911607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8201816133246902472
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3444022686317210623}
+    m_Modifications:
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_Name
+      value: TentaraJepang
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270128567598671965, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: fireRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: scanRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: unpreferedRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+--- !u!4 &2858867068596993233 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+  m_PrefabInstance: {fileID: 8201816133246902472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8576494347196365013
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3444022686317210623}
+    m_Modifications:
+    - target: {fileID: 2716345598712063782, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: startState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_Name
+      value: TentaraJepang (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270128567598671965, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: fireRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: scanRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: unpreferedRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -26.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+--- !u!4 &8576494347196365014 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+  m_PrefabInstance: {fileID: 8576494347196365013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8847401579386014484
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3444022686317210623}
+    m_Modifications:
+    - target: {fileID: 2716345598712063782, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: startState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_Name
+      value: TentaraJepang (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3507232958595968346, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270128567598671965, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: fireRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: scanRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466075832651102727, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: unpreferedRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -22.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+--- !u!4 &3221834046191326989 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
+  m_PrefabInstance: {fileID: 8847401579386014484}
+  m_PrefabAsset: {fileID: 0}
