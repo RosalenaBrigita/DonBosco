@@ -71,5 +71,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Assets/Scenes/World Scene/MAP_KANTORPOLISI.unity
     guid: 8a97d10478228ee46b9bd62d60deb08e
+  - enabled: 1
+    path: Assets/_Assets/Scenes/World Scene/MAP_DB_EXTERIOR 1.unity
+    guid: 85abbc8f9fbb2704a9a55810d0b12aa4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2ea68e328b9896345b249167d5c7c22b, type: 2}
