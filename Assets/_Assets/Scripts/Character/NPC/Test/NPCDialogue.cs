@@ -32,7 +32,7 @@ namespace DonBosco.Character.NPC.Test
         }
 
 
-        private void StartDialogue()
+        public void StartDialogue()
         {
             if(dialogue == null)
             {
