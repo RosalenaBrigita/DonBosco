@@ -1206,6 +1206,13 @@ MonoBehaviour:
     isLoop: 0
     playOnAwake: 0
     volume: 0.744
+  - audioType: 0
+    source: {fileID: 0}
+    clipName: collect
+    audioClip: {fileID: 8300000, guid: 892f627d9b34934479706cec9a55281d, type: 3}
+    isLoop: 0
+    playOnAwake: 0
+    volume: 0.744
   fadeDuration: 1
 --- !u!4 &1485057706
 Transform:
