@@ -77,34 +77,21 @@ public class QuizManager : MonoBehaviour, ISaveLoad
     {
         GetQuizResources();
 
-        // Pastikan data ada
-        if (saveData == null || saveData.quizAnswers == null)
+        if (saveData != null)
         {
-            Debug.LogWarning("QuizManager: saveData atau quizAnswers null, inisialisasi default.");
+            int[] loadedAnswers = saveData.quizAnswers;
+            int count = Mathf.Min(this.quizAnswers.Length, loadedAnswers.Length);
 
-            // Inisialisasi default (anggap semua belum dijawab)
-            quizAnswers = new int[quizSOs.Length];
-            for (int i = 0; i < quizAnswers.Length; i++)
+            for (int i = 0; i < count; i++)
             {
-                quizAnswers[i] = 0;
+                this.quizAnswers[i] = loadedAnswers[i];
             }
 
-            await Task.CompletedTask;
-            return;
-        }
-
-        // Kalau datanya ada
-        int[] loadedAnswers = saveData.quizAnswers;
-        int count = Mathf.Min(this.quizAnswers.Length, loadedAnswers.Length);
-
-        for (int i = 0; i < count; i++)
-        {
-            this.quizAnswers[i] = loadedAnswers[i];
-        }
-
-        for (int i = count; i < this.quizAnswers.Length; i++)
-        {
-            this.quizAnswers[i] = 0;
+            // Untuk quiz yang baru ditambahkan (misalnya quiz ke-10), default-in jadi 0 (belum dijawab)
+            for (int i = count; i < this.quizAnswers.Length; i++)
+            {
+                this.quizAnswers[i] = 0;
+            }
         }
 
         await Task.CompletedTask;

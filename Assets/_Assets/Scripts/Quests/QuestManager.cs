@@ -271,11 +271,6 @@ namespace DonBosco.Quests
 
         public async Task Load(SaveData saveData)
         {
-            if (saveData.questData == null)
-            {
-                Debug.Log("No quest data found in saveData.");
-                return;
-            }
             loadedQuests.Clear();
             if (saveData != null)
             {

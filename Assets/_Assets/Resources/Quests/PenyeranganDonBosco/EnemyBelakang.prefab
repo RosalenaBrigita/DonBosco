@@ -35,9 +35,9 @@ Transform:
   - {fileID: 5011694863565652540}
   - {fileID: 5436473772857003805}
   - {fileID: 4325862772097653764}
-  - {fileID: 8014950348772109919}
+  - {fileID: 4126663686712635975}
   - {fileID: 167848543458581770}
-  - {fileID: 2525943295359394136}
+  - {fileID: 8463385380305763662}
   - {fileID: 5436118171815205037}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenesToLoad:
-  - MAP_JALAN 1
+  - TacticalWarMinigame
   scenesToUnload:
   - MAP_DB_EXTERIOR 1
   resumeGameOnLoadDone: 1
@@ -451,7 +451,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
---- !u!4 &2525943295359394136 stripped
+--- !u!4 &8463385380305763662 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
   m_PrefabInstance: {fileID: 2525943295359394135}
@@ -823,7 +823,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
---- !u!4 &8014950348772109919 stripped
+--- !u!4 &4126663686712635975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6232427880156421145, guid: 5f64ce2759f7904429927b0394c9cf54, type: 3}
   m_PrefabInstance: {fileID: 8014950348772109918}

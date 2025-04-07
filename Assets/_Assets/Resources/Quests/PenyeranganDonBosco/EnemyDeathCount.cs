@@ -35,7 +35,9 @@ namespace DonBosco.Quests
             }
             if(currentEnemiesKilled >= enemiesToKill)
             {
-                InstantFinishQuest();
+                //InstantFinishQuest();
+                //OnQuestComplete?.Invoke();
+                FinishQuestStep();
                 OnQuestComplete?.Invoke();
             }
         }
