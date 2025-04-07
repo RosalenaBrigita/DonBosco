@@ -77,5 +77,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Assets/Scenes/TacticalWarMinigame.unity
     guid: 1fa1fbaa3f16d18479ff2f67556c1eef
+  - enabled: 1
+    path: Assets/_Assets/Scenes/Timeline_TacticalWar.unity
+    guid: cb47faa3a4d4d2347bc5bb62086423b2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2ea68e328b9896345b249167d5c7c22b, type: 2}

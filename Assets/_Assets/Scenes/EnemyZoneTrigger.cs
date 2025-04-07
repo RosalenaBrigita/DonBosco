@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 using DonBosco.Audio;
+using DonBosco.UI;
+using DonBosco.Character;
+using DonBosco.SaveSystem;
 
 public enum ZoneType
 {
@@ -25,6 +28,12 @@ public class EnemyZoneTrigger2D : MonoBehaviour
 
     private bool triggered = false;
 
+    private async void Start()
+    {
+        // Simpan kondisi awal ketika minigame dimulai
+        await SaveManager.Instance.SaveGame();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (triggered) return;
@@ -38,7 +47,6 @@ public class EnemyZoneTrigger2D : MonoBehaviour
             if (zoneType == ZoneType.Enemy && totalPrajurit < enemyOrVisuals.Length)
             {
                 Debug.Log("Jumlah prajurit tidak cukup untuk zona musuh.");
-                return;
             }
 
             // Hentikan gerakan prajurit sementara
@@ -59,21 +67,68 @@ public class EnemyZoneTrigger2D : MonoBehaviour
     {
         if (zoneType == ZoneType.Enemy)
         {
-            // Mainkan suara tembakan dan delay tiap musuh
-            for (int i = 0; i < enemyOrVisuals.Length; i++)
-            {
-                if (AudioManager.Instance != null)
-                    AudioManager.Instance.Play("22calgun");
+            FriendlyUnit[] allPrajurit = FindObjectsOfType<FriendlyUnit>();
+            int totalPrajurit = allPrajurit.Length;
+            int jumlahMusuh = enemyOrVisuals.Length;
 
-                yield return new WaitForSeconds(actionDelay);
+            if (totalPrajurit < jumlahMusuh)
+            {
+                // Tembakan sebanyak jumlah prajurit
+                for (int i = 0; i < totalPrajurit; i++)
+                {
+                    if (AudioManager.Instance != null)
+                        AudioManager.Instance.Play("22calgun");
+
+                    yield return new WaitForSeconds(actionDelay);
+                }
+
+                // Hentikan gerakan sebelum dihancurkan
+                foreach (FriendlyUnit prajurit in allPrajurit)
+                {
+                    prajurit.canMove = false;
+                    NavMeshAgent agent = prajurit.GetComponent<NavMeshAgent>();
+                    if (agent != null) agent.ResetPath();
+                }
+
+                // Hancurkan prajurit
+                for (int i = 0; i < totalPrajurit; i++)
+                {
+                    if (allPrajurit[i] != null)
+                        Destroy(allPrajurit[i].gameObject);
+                }
+
+                // Game Over
+                yield return new WaitForSeconds(1f); // kasih delay biar efeknya terasa
+                PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
+                if (playerHealth != null)
+                {
+                    playerHealth.TriggerDeath();
+                }
+;
+                yield break; // keluar dari coroutine, gak lanjut apa-apa lagi
             }
-
-            // Hancurkan musuh
-            foreach (GameObject enemy in enemyOrVisuals)
+            else
             {
-                if (enemy != null) Destroy(enemy);
+                // Tembakan sebanyak jumlah musuh
+                for (int i = 0; i < jumlahMusuh; i++)
+                {
+                    if (AudioManager.Instance != null)
+                        AudioManager.Instance.Play("22calgun");
+
+                    yield return new WaitForSeconds(actionDelay);
+                }
+
+                // Hancurkan musuh
+                foreach (GameObject enemy in enemyOrVisuals)
+                {
+                    if (enemy != null)
+                        Destroy(enemy);
+                }
+
+                // Semua prajurit selamat
             }
         }
+
         else if (zoneType == ZoneType.Recruit)
         {
             if (AudioManager.Instance != null)

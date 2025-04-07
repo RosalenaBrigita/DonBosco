@@ -88,7 +88,10 @@ namespace DonBosco.Character
             gameOverPanel.SetActive(true);
         }
 
-
+        public void TriggerDeath()
+        {
+            Die();
+        }
 
         #region SaveLoad
         public Task Load(SaveData saveData)

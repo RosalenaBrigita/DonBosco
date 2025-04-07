@@ -109,6 +109,7 @@ namespace DonBosco
     public enum GameMode
     {
         Explore,
-        Battle
+        Battle,
+        Minigame
     }
 }

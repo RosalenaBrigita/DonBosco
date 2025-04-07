@@ -29,7 +29,7 @@ namespace DonBosco.SaveSystem
         public bool HasSaveData { get; private set; }
         private bool isDispatching = false;
 
-        private string lastLoadedScene = "";
+        public string lastLoadedScene = "";
 
         private void Awake()
         {
@@ -169,6 +169,10 @@ namespace DonBosco.SaveSystem
         /// <returns>True if the save file exists</returns>
         public async Task<bool> LoadGame()
         {
+            if (saveData == null)
+            {
+                saveData = new SaveData();
+            }
             try
             {
                 for (int i = 0; i < listeners.Count; i++)

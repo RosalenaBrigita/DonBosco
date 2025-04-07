@@ -254,6 +254,12 @@ namespace Inventory
 
         public async Task Load(SaveData saveData)
         {
+            if (saveData == null)
+            {
+                Debug.LogWarning("SaveData is null, skip loading inventory");
+                return;
+            }
+
             if (saveData.inventoryItems != null)
             {
                 inventoryData.Initialize();
@@ -262,8 +268,11 @@ namespace Inventory
                     inventoryData.AddItem(item);
                 }
             }
+
             await Task.CompletedTask;
         }
+
+
 
     }
 }
