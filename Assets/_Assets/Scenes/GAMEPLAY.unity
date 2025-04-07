@@ -16773,7 +16773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1b4d188768cd47b1561aabd1c0db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingScene: MAP_RUMAHKARMANtes
+  startingScene: TacticalWarMinigame
 --- !u!4 &2075377686
 Transform:
   m_ObjectHideFlags: 0
