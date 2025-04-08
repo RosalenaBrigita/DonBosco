@@ -83,5 +83,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Assets/Scenes/World Scene/CUTSCENE_PENYERANGAN.unity
     guid: 13bf22e951bf99444b32a8de751c4894
+  - enabled: 1
+    path: Assets/_Assets/Scenes/Story/Arc1/Ending/MAP_DONBOSCO.unity
+    guid: 964b99c2a0ee7c842b0f56feac4bce4f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2ea68e328b9896345b249167d5c7c22b, type: 2}

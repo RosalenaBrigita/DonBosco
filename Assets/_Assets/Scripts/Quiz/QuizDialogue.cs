@@ -54,14 +54,6 @@ public class QuizDialogue : MonoBehaviour
         int quizId = int.Parse(answerSplit[0]);
         int quizAnswer = int.Parse(answerSplit[1]);
 
-        QuizSO quiz = QuizManager.Instance.QuizSOs[quizId - 1];
-
-        if (quiz.quizType == QuizType.DiplomacyMoral)
-        {
-            int effect = (quiz.correctAnswer == quizAnswer) ? quiz.moralEffect : -quiz.moralEffect;
-            MoralBarManager.Instance.UpdateMoral(effect);
-        }
-
         QuizManager.Instance.SaveAnswer(quizId, quizAnswer);
     }
 }

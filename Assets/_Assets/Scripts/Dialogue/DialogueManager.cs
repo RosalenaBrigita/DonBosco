@@ -444,12 +444,20 @@ namespace DonBosco.Dialogue
                 }
                 string nextLine = currentStory.Continue();
                 // handle case where the last line is an external function
-                if (nextLine.Equals("") && !currentStory.canContinue)
+                if (string.IsNullOrWhiteSpace(nextLine))
                 {
-                    StartCoroutine(ExitDialogueMode());
+                    if (!currentStory.canContinue)
+                    {
+                        StartCoroutine(ExitDialogueMode());
+                    }
+                    else
+                    {
+                        // Skip tampilin teks kosong, langsung lanjut
+                        ContinueStory();
+                    }
                 }
                 // otherwise, handle the normal case for continuing the story
-                else 
+                else
                 {
                     // handle tags
                     HandleTags(currentStory.currentTags);

@@ -3,55 +3,110 @@ EXTERNAL getCurrentMoral()
 
 {getCurrentMoral()}
 
-#speaker:Bung Tomo #portrait:null
-"Karman, bagaimana kita akan masuk ke ruangan negosiasi?"
+#speaker: Bung Tomo #portrait: null
+Karman, bagaimana kita akan menyapa Komandan Jepang saat kita masuk nanti?
 
-* [Membuka pintu dengan kasar]
-    ~ Quiz("6_1")
-    Karman memberi isyarat kepada M. Yasin untuk membuka pintu dengan keras. Suara bantingan pintu menggema, membuat suasana langsung memanas.
-    -> Diplomacy2
+* [Langsung menuntut dengan nada tinggi]  
+    ~ Quiz("4_1")
+    -> setelahQuiz4_1
 
-* [Menghormati dan ketuk pintu]
-    ~ Quiz("6_2")
-    Karman menyarankan untuk mengetuk pintu dengan tenang. M. Yasin mengetuk pintu tiga kali sebelum melangkah masuk dengan sikap penuh keyakinan.
-    -> Diplomacy2
+* [Memberi salam militer dan perkenalan tegas]  
+    ~ Quiz("4_2")
+    -> setelahQuiz4_2
+
+=== setelahQuiz4_1 ===
+#speaker:null #portrait: null
+(Karman melangkah cepat ke tengah ruangan tanpa basa-basi, lalu bicara keras) 
+#speaker:Karman #portrait: null
+Kami datang untuk satu hal: penyerahan senjata. Tidak ada waktu untuk diskusi panjang.  
+#speaker: Komandan Jepang #portrait: null  
+Nada keras itu tidak pantas dalam perundingan. Jika kalian tidak datang untuk berbicara dengan kepala dingin, maka lebih baik kalian pergi.  
+#speaker:null #portrait: null
+(Bung Tomo menatap Karman sejenak, wajahnya menegang)
+#speaker: Bung Tomo #portrait: null
+Karman... kita di sini bukan untuk cari ribut.  
+-> Diplomacy2
+
+=== setelahQuiz4_2 ===
+#speaker:null #portrait: null
+(Karman berdiri tegap dan memberi salam singkat dengan nada sopan namun jelas) 
+#speaker:Karman #portrait: null
+Saya Karman, bersama Bung Tomo dan M. Yasin. Kami datang sebagai wakil pemuda Surabaya, untuk mencari penyelesaian damai.    
+#speaker: Komandan Jepang #portrait: null  
+Sikap kalian mencerminkan kehormatan. Silakan duduk. Saya akan dengarkan maksud kedatangan ini. 
+#speaker:null #portrait: null
+(M. Yasin mengangguk pelan pada Karman)
+#speaker:M. Yasin #portrait: null
+Pendekatan yang tepat. Kita butuh kepala dingin agar berhasil. 
+-> Diplomacy2
+
 
 === Diplomacy2 ===
-Komandan Jepang melihat ke arah kalian dengan ekspresi serius.
+#speaker: Komandan Jepang #portrait: null
+Silakan duduk. Sikap ini menunjukkan bahwa kalian datang untuk berbicara.
 
-#speaker:Komandan Jepang #portrait:null
-"Silakan duduk. Sikap ini menunjukkan bahwa kalian datang untuk berbicara."
+* [Bersikap tegas namun sopan]  
+    ~ Quiz("5_1")
+    -> setelahQuiz5_1
 
-* [Bersikap tegas namun sopan]
-    ~ Quiz("7_1")
-    M. Yasin menjelaskan tuntutan dengan nada tegas namun tetap menghormati posisi lawan. Komandan Jepang mempertimbangkan opsi ini dengan serius.
-    -> Diplomacy3
+* [Mengancam dengan nada keras]  
+    ~ Quiz("5_2")
+    -> setelahQuiz5_2
 
-* [Mengancam dengan nada keras]
-    ~ Quiz("7_2")
-    Bung Tomo menggebrak meja dan berbicara dengan nada keras, menuntut semua senjata segera diserahkan.
-    Komandan Jepang tampak tidak senang, dan suasana semakin tegang.
-    -> Diplomacy3
+=== setelahQuiz5_1 ===
+#speaker: M. Yasin #portrait: null
+Kami mewakili rakyat Surabaya yang sedang berjuang mempertahankan kemerdekaan. Kami meminta senjata dan perbekalan diserahkan secara damai, tanpa perlawanan.
+#speaker: Komandan Jepang #portrait: null
+Tuntutan yang langsung dan jelas. Sikap kalian membuat saya berpikir untuk mendengarkan lebih jauh.
+#speaker: null #portrait: null
+(Komandan Jepang menyilangkan tangan di depan dada, memperhatikan kalian dengan serius)
+-> Diplomacy3
+
+=== setelahQuiz5_2 ===
+#speaker: Bung Tomo #portrait: null
+Jika kalian tidak menyerahkan senjata sekarang juga, rakyat Surabaya akan bertindak sendiri!
+#speaker: Komandan Jepang #portrait: null
+Nada seperti itu hanya akan membawa kita ke jalan buntu.
+#speaker: null #portrait: null
+(Komandan Jepang terlihat tegang, tangannya perlahan menyentuh gagang pedangnya)
+-> Diplomacy3
+
 
 === Diplomacy3 ===
-#speaker:Komandan Jepang #portrait:null
-"Permintaan kalian sangat besar. Namun, kami masih memiliki perintah dari atasan."
+#speaker: Komandan Jepang #portrait: null
+Permintaan kalian sangat besar. Namun, kami masih memiliki perintah dari atasan.
 
-* [Bernegosiasi dan menawarkan kompromi]
-    ~ Quiz("8_1")
-    "Kami hanya meminta persenjataan agar rakyat kami dapat melindungi diri dari ancaman luar. Kami tidak akan membahayakan pasukan Jepang yang ada di sini."
-    Komandan Jepang mulai melunak.
-    -> PilihanDiplomasiAkhir
+* [Bernegosiasi dan menawarkan kompromi]  
+    ~ Quiz("6_1")
+    -> setelahQuiz6_1
 
-* [Menekan dengan lebih agresif]
-    ~ Quiz("8_2")
-    "Jika kalian menolak, rakyat Surabaya akan mengambilnya dengan cara mereka sendiri!"
-    Komandan Jepang terlihat semakin defensif.
-    -> PilihanDiplomasiAkhir
+* [Menekan dengan lebih agresif]  
+    ~ Quiz("6_2")
+    -> setelahQuiz6_2
+
+=== setelahQuiz6_1 ===
+#speaker: Karman #portrait: null
+Kami tidak ingin konflik. Senjata itu untuk mempertahankan rakyat kami dari ancaman luar. Kami tidak akan mengganggu pasukan Jepang yang masih bertugas di sini.
+#speaker: Komandan Jepang #portrait: null
+Hm... kalian tahu cara berbicara seperti diplomat sejati. Itu sikap yang terhormat.
+#speaker: null #portrait: null
+(Komandan Jepang menghela napas panjang, mulai melunak)
+-> PilihanDiplomasiAkhir
+
+=== setelahQuiz6_2 ===
+#speaker: Bung Tomo #portrait: null
+Jika kalian menolak, rakyat Surabaya akan mengambil apa yang mereka butuhkan—dengan paksa jika perlu.
+#speaker: Komandan Jepang #portrait: null
+Apakah kalian datang membawa ancaman? Ini bukan cara untuk berbicara!
+#speaker: null #portrait: null
+(Suasana ruangan berubah mencekam. Beberapa perwira Jepang di belakang komandan mulai gelisah)
+-> PilihanDiplomasiAkhir
+
 
 === PilihanDiplomasiAkhir ===
 #speaker:Komandan Bataliyon Jepang #portrait:null
-"Saya tidak bisa menyerahkan semuanya. Namun, saya bisa memberikan sebagian dari senjata dan perbekalan yang ada di gudang ini. Itu adalah tawaran terbaik saya."
+Saya tidak bisa menyerahkan semuanya. Namun, saya bisa memberikan sebagian dari senjata dan perbekalan yang ada di gudang ini. Itu adalah tawaran terbaik saya.
+
 * [Tetap Meminta Semua]
     -> PilihTetapMeminta
 
@@ -62,14 +117,16 @@ Komandan Jepang melihat ke arah kalian dengan ekspresi serius.
 ~ temp moral = getCurrentMoral()
 
 { moral >= 50: 
-    Narasi: "Setelah berpikir panjang, Komandan Bataliyon akhirnya mengangguk dengan berat hati."
+ #speaker: null #portrait: null
+    Setelah berpikir panjang, Komandan Bataliyon akhirnya mengangguk dengan berat hati.
     #speaker:Komandan Bataliyon Jepang #portrait:null
-    "Baiklah. Semua akan menjadi milik kalian."
+    Baiklah. Semua akan menjadi milik kalian.
     -> EndingSuksesTotal
 - else: 
-    Narasi: "Komandan Bataliyon berdiri dengan amarah."
+     #speaker: null #portrait: null
+    (Komandan Bataliyon berdiri dengan amarah)
     #speaker:Komandan Bataliyon Jepang #portrait:null
-    "Tidak ada lagi yang perlu dibicarakan! Keluar dari ruangan ini sekarang!"
+    Tidak ada lagi yang perlu dibicarakan! Keluar dari ruangan ini sekarang!
     -> EndingGagal
 }
 
@@ -102,9 +159,4 @@ Narasi: "Negosiasi berjalan sulit, tetapi setidaknya kalian mendapatkan sesuatu 
 
 === EndingGagal ===
 Narasi: "Negosiasi gagal total. Tidak ada senjata atau perbekalan yang didapat. Kalian harus mencari cara lain untuk menghadapi situasi ini."
--> END
-
-
-=== Ending_Tragis ===
-Komandan Jepang menolak tuntutan dengan keras, dan salah satu prajurit BKR kehilangan kesabaran, menyebabkan bentrokan senjata terjadi di dalam ruangan.
 -> END

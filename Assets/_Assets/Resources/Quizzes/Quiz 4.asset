@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e8c4910fe3a07344bede3706b6ac9e2, type: 3}
   m_Name: Quiz 4
   m_EditorClassIdentifier: 
-  question: Seberapa besar persenjataan yang diambil oleh para pejuang?
+  question: Karman, bagaimana kita akan masuk ke ruangan negosiasi?
   answers:
-  - Semua jenis persenjataan
-  - Beberapa senapan dan amunisi
-  correctAnswer: 1
-  points: 20
+  - Membuka pintu dengan kasar
+  - Menghormati dan ketuk pintu
+  correctAnswer: 2
+  points: 0
+  quizType: 1
+  moralEffect: 30

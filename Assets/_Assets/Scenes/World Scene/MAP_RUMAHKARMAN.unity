@@ -890,6 +890,8 @@ MonoBehaviour:
     questConditions: []
     sceneLoaderAgent: {fileID: 1125261087}
     playerPositionTeleporter: {fileID: 0}
+  defaultQuestConditions: []
+  warningPanel: {fileID: 0}
 --- !u!1 &689683906
 GameObject:
   m_ObjectHideFlags: 0
