@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using DonBosco.Character;
+using DonBosco.SaveSystem;
 
 namespace DonBosco
 {
@@ -32,13 +33,14 @@ namespace DonBosco
 
         private GameObject logicCamera;
 
-        void Start()
+        private async void Start()
         {
             SetupLineRenderer();
             GenerateSewingPath();
             UpdateGuideVisibility();
+
             finalPanel.SetActive(false); // Pastikan final panel tidak aktif di awal
-            infoPanel.SetActive(true); // Info panel aktif di awal
+            infoPanel.SetActive(true);   // Info panel aktif di awal
 
             logicCamera = GameObject.Find("Main Camera"); // Simpan referensi kamera
             if (logicCamera != null)
@@ -46,7 +48,8 @@ namespace DonBosco
                 logicCamera.SetActive(false);
             }
 
-            
+            // Save saat minigame dimulai
+            await SaveManager.Instance.SaveGame();
         }
 
         void SetupLineRenderer()

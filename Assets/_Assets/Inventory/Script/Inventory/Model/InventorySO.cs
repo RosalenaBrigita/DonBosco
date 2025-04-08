@@ -111,14 +111,17 @@ namespace Inventory.Model
             {
                 if (inventoryItems[itemIndex].IsEmpty)
                     return;
+
                 int reminder = inventoryItems[itemIndex].quantity - amount;
+
                 if (reminder <= 0)
                     inventoryItems[itemIndex] = InventoryItem.GetEmptyItem();
                 else
                     inventoryItems[itemIndex] = inventoryItems[itemIndex]
                         .ChangeQuantity(reminder);
 
-                InformAboutChange();
+                CompactInventory(); //  Tambahkan ini biar langsung geser slot
+                InformAboutChange(); //  Supaya UI ikut update
             }
         }
 
@@ -157,6 +160,25 @@ namespace Inventory.Model
         private void InformAboutChange()
         {
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
+        }
+
+        private void CompactInventory()
+        {
+            for (int i = 0; i < inventoryItems.Count - 1; i++)
+            {
+                if (inventoryItems[i].IsEmpty)
+                {
+                    for (int j = i + 1; j < inventoryItems.Count; j++)
+                    {
+                        if (!inventoryItems[j].IsEmpty)
+                        {
+                            inventoryItems[i] = inventoryItems[j];
+                            inventoryItems[j] = InventoryItem.GetEmptyItem();
+                            break;
+                        }
+                    }
+                }
+            }
         }
 
         public void LoadInventory(List<InventoryItem> savedItems)

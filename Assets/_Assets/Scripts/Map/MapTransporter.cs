@@ -39,7 +39,7 @@ namespace DonBosco
             teleportInfo.sceneLoaderAgent.ExecuteLoadScene();
             if (teleportInfo.playerPositionTeleporter != null)
             {
-                teleportInfo.playerPositionTeleporter.TeleportPlayer();
+                StartCoroutine(DelayedTeleport(teleportInfo.playerPositionTeleporter));
             }
         }
 
@@ -109,6 +109,12 @@ namespace DonBosco
             {
                 warningPanel.SetActive(true);
             }
+        }
+
+        private IEnumerator DelayedTeleport(PlayerPositionTeleporter teleporter)
+        {
+            yield return new WaitForSeconds(0.5f); // Delay 0.5 detik
+            teleporter.TeleportPlayer();
         }
     }
 
