@@ -236,6 +236,10 @@ namespace DonBosco.Dialogue
             
             OnDialogueStarted?.Invoke();
 
+            // Cek quest "MengibarkanBendera"
+            bool isCompleted = QuestManager.Instance.GetQuestById("MengibarkanBendera")?.IsQuestCompleted() ?? false;
+            SetInkVariable("quest_MengibarkanBendera_completed", isCompleted);
+
             ContinueStory();
 
             return instance;
@@ -291,6 +295,10 @@ namespace DonBosco.Dialogue
             layoutAnimator.Play("default");
             
             OnDialogueStarted?.Invoke();
+
+            // Cek quest "MengibarkanBendera"
+            bool isCompleted = QuestManager.Instance.GetQuestById("MengibarkanBendera")?.IsQuestCompleted() ?? false;
+            SetInkVariable("quest_MengibarkanBendera_completed", isCompleted);
 
             ContinueStory();
 
@@ -351,6 +359,10 @@ namespace DonBosco.Dialogue
             layoutAnimator.Play("default");
             
             OnDialogueStarted?.Invoke();
+
+            // Cek quest "MengibarkanBendera"
+            bool isCompleted = QuestManager.Instance.GetQuestById("MengibarkanBendera")?.IsQuestCompleted() ?? false;
+            SetInkVariable("quest_MengibarkanBendera_completed", isCompleted);
 
             return instance;
         }

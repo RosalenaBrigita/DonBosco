@@ -12441,19 +12441,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 19.7949
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.66365
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16777,7 +16777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1b4d188768cd47b1561aabd1c0db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingScene: MAP_RUMAHKARMAN
+  startingScene: MAP_RUMAHKARMANtes
 --- !u!4 &2075377686
 Transform:
   m_ObjectHideFlags: 0
