@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DonBosco.Dialogue;
 
 namespace DonBosco.Character
 {
@@ -28,12 +29,14 @@ namespace DonBosco.Character
             healthSO.OnDeath -= Die;
         }
 
-        private void Start() 
+        private void Start()
         {
             currentState = startState;
+            if (CompareTag("Ally"))
+            {
+                CheckInkBonusEffects();
+            }
         }
-
-
 
         private void Update() 
         {
@@ -93,6 +96,19 @@ namespace DonBosco.Character
         {
             healthSO.TakeDamage(damage);
             gameObject.GetComponent<NPCAttack>().GetAttacked(source);
+        }
+
+        void CheckInkBonusEffects()
+        {
+            var dialogueManager = DialogueManager.GetInstance();
+
+            if (dialogueManager.GetVariableState("set_health_bonus") is Ink.Runtime.BoolValue boolVal && boolVal.value)
+            {
+                float before = healthSO.CurrentHealth;
+                healthSO.RegenHealth(15f);
+                float after = healthSO.CurrentHealth;
+                Debug.Log($"[HEALTH BONUS] Sebelum: {before}, Sesudah: {after}");
+            }
         }
     }
 

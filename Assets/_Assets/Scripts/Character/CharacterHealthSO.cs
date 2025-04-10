@@ -13,6 +13,12 @@ namespace DonBosco
         [SerializeField] private float currentHealth = 100f;
         [SerializeField] private float damageMultiplier = 1f;
 
+        public float CurrentHealth
+        {
+            get => currentHealth;
+            set => currentHealth = Mathf.Clamp(value, 0, maxHealth);
+        }
+
         private bool isDead = false;
 
         public event Action OnDeath;
