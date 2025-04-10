@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DonBosco.Audio;
 using UnityEngine;
+using DonBosco.Dialogue;
 
 namespace DonBosco.Character
 {
@@ -17,15 +18,20 @@ namespace DonBosco.Character
         private float fireTimer = 0f;
         public float FireTimer => fireTimer;
 
+        private float bonusDamage = 0f;
 
-        
+        private void Start()
+        {
+            CheckInkDamageBonus();
+        }
+
         public void Attack(float angle, Vector3 startPosition)
         {
             if(!readyToFire) return;
             Bullet bullet = Pooling.Instance.GetBullet();
             bullet.SetOwner(gameObject);
             bullet.SetAngle(angle);
-            bullet.SetDamage(bulletDamage);
+            bullet.SetDamage(bulletDamage + bonusDamage);
             bullet.SetStartPosition(startPosition);
             bullet.SetDamageMask(enemyLayer);
 
@@ -61,6 +67,19 @@ namespace DonBosco.Character
             {
                 fireTimer = 0f;
                 readyToFire = true;
+            }
+        }
+
+        private void CheckInkDamageBonus()
+        {
+            var dialogueManager = DialogueManager.GetInstance();
+
+            if (CompareTag("Ally") &&
+                dialogueManager.GetVariableState("set_damage_bonus") is Ink.Runtime.BoolValue boolDamage &&
+                boolDamage.value)
+            {
+                bonusDamage = 1f;
+                Debug.Log($"[DAMAGE BONUS] Base: {bulletDamage}, Bonus: {bonusDamage}, Total: {bulletDamage + bonusDamage}");
             }
         }
     }

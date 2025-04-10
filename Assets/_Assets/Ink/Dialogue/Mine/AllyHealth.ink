@@ -6,6 +6,7 @@ Kita harus prioritaskan apa?
     ~ set_health_bonus = true
     -> lanjut
 * [Fokus Latihan Pasukan]
+    ~ set_damage_bonus = true
     -> lanjut
     
 ===lanjut===
