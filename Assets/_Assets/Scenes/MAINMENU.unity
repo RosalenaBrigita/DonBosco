@@ -361,8 +361,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1817228804}
-        m_TargetAssemblyTypeName: DonBosco.API.Login, Assembly-CSharp
+      - m_Target: {fileID: 1292167384}
+        m_TargetAssemblyTypeName: LoginManager, Assembly-CSharp
         m_MethodName: OnLoginButtonClicked
         m_Mode: 1
         m_Arguments:
@@ -3781,20 +3781,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434837072}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1817228804}
-        m_TargetAssemblyTypeName: DonBosco.API.Login, Assembly-CSharp
+      - m_Target: {fileID: 1292167384}
+        m_TargetAssemblyTypeName: LoginManager, Assembly-CSharp
         m_MethodName: OnLogoutButtonClicked
         m_Mode: 1
         m_Arguments:
@@ -6295,10 +6283,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 434837072}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 1292167384}
+          m_TargetAssemblyTypeName: LoginManager, Assembly-CSharp
+          m_MethodName: CloseStatusModal
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7474,6 +7462,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244528542}
   m_CullTransparentMesh: 1
+--- !u!1 &1292167383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1292167385}
+  - component: {fileID: 1292167384}
+  m_Layer: 0
+  m_Name: LoginManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1292167384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292167383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bac9b105a9ceed46879e988d1b92b86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usernameInput: {fileID: 909497146}
+  passwordInput: {fileID: 1084095025}
+  alertText: {fileID: 1850053188}
+  statusText: {fileID: 1605519098}
+  usernameText: {fileID: 983811969}
+  loginModal: {fileID: 1577105883}
+  loginButton: {fileID: 533999864}
+  logoutButton: {fileID: 592622427}
+  statusModal: {fileID: 434837072}
+  statusBG: {fileID: 1122430792}
+--- !u!4 &1292167385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292167383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 766.40027, y: 207.84279, z: 15.229759}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1411612260
 GameObject:
   m_ObjectHideFlags: 0
@@ -9377,7 +9419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1817228804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11023,3 +11065,4 @@ SceneRoots:
   - {fileID: 769349988}
   - {fileID: 2137356372}
   - {fileID: 1791306348}
+  - {fileID: 1292167385}

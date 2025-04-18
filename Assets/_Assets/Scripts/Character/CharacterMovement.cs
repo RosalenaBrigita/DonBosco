@@ -76,14 +76,14 @@ namespace DonBosco.Character
 
         void OnEnable()
         {
-            GetComponent<PlayerItem>().OnPickup += PickupAnim;
+            //GetComponent<PlayerItem>().OnPickup += PickupAnim;
             InputManager.Instance.OnSprintPressed += OnSprintChanged;
             InputManager.Instance.OnDashPressed += Dash;
         }
 
         void OnDisable()
         {
-            GetComponent<PlayerItem>().OnPickup -= PickupAnim;
+           //GetComponent<PlayerItem>().OnPickup -= PickupAnim;
             InputManager.Instance.OnSprintPressed -= OnSprintChanged;
             InputManager.Instance.OnDashPressed -= Dash;
         }

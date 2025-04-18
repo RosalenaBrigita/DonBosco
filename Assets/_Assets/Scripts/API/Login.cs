@@ -113,7 +113,7 @@ namespace DonBosco.API
             formData.Add(new MultipartFormDataSection("password", hash));
 
             UnityWebRequest www = UnityWebRequest.Post(APIManager.baseURL + "loginPlayer.php", formData);
-
+            //UnityWebRequest www = UnityWebRequest.Post("http://localhost/DonBosco/loginPlayer.php", formData);
             return www;
         }
 

@@ -32,6 +32,15 @@ namespace DonBosco.Quests
             }
         }
 
+        void Start()
+        {
+            // Hanya buat questMap kalau belum ada
+            if (questMap == null || questMap.Count == 0)
+            {
+                questMap = CreateQuestMap();
+            }
+        }
+
         void OnEnable()
         {
             SaveManager.Instance.Subscribe(this);
@@ -65,10 +74,6 @@ namespace DonBosco.Quests
             }
         }
 
-
-        private void Start()
-        {
-        }
         #endregion
 
 
@@ -171,7 +176,7 @@ namespace DonBosco.Quests
             return false;
         }*/
 
-        private Dictionary<string, Quest> CreateQuestMap()
+        public Dictionary<string, Quest> CreateQuestMap()
         {
             Debug.Log("Creating Quest Map");
             // loads all QuestInfoSO Scriptable Objects under the Assets/Resources/Quests folder
@@ -252,9 +257,6 @@ namespace DonBosco.Quests
             }
             spawnedQuestSteps.Clear();
         }
-
-
-
 
         #region SaveLoad
         public async Task Save(SaveData saveData)

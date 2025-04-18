@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -7,6 +8,7 @@ using DonBosco.API;
 using UnityEngine;
 using Inventory;
 using Inventory.Model;
+using UnityEngine.Networking;
 
 //#if UNITY_EDITOR
 using UnityEngine.SceneManagement;
@@ -30,6 +32,8 @@ namespace DonBosco.SaveSystem
         private bool isDispatching = false;
 
         private string lastLoadedScene = "";
+        public bool isLoggedIn = false;  // True kalau user login
+        private string serverURL = "http://localhost/DonBosco/save_game.php"; 
 
         private void Awake()
         {
@@ -65,7 +69,7 @@ namespace DonBosco.SaveSystem
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             lastLoadedScene = scene.name; // Update dengan scene terakhir yang dimuat
-            Debug.Log($"Scene terakhir yang dimuat: {lastLoadedScene}");
+            //Debug.Log($"Scene terakhir yang dimuat: {lastLoadedScene}");
         }
 
         // Menyimpan status objek interaktif
@@ -158,11 +162,105 @@ namespace DonBosco.SaveSystem
             Debug.Log($"[SaveGame] Saving {saveData.objectStates.Count} disabled objects.");
 
             string json = saveData.ToJson();
-            WriteSaveDataLocal(json);
+
+            if (isLoggedIn && !string.IsNullOrEmpty(currentAccountID))
+            {
+                Debug.Log("Attempting cloud save...");
+                bool cloudSuccess = await SaveToCloud(json);
+
+                if (cloudSuccess)
+                {
+                    string cloudData = await LoadFromCloud();
+                    WriteSaveDataLocal(cloudData);
+                    Debug.Log("Cloud save successful");
+                }
+                else
+                {
+                    Debug.LogWarning("Cloud save failed, saving locally");
+                    WriteSaveDataLocal(json);
+                }
+            }
+            else
+            {
+                Debug.Log("Guest mode, saving locally");
+                WriteSaveDataLocal(json);
+            }
+
             await Task.CompletedTask;
         }
 
+        private async Task<bool> SaveToCloud(string jsonData)
+        {
+            try
+            {
+                // Pastikan jsonData valid
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    Debug.LogError("Invalid jsonData");
+                    return false;
+                }
 
+                // Buat payload manual untuk menghindari masalah serialisasi
+                string jsonPayload = $"{{\"user_id\":\"{currentAccountID}\",\"save_data\":{jsonData}}}";
+
+                Debug.Log("Sending JSON payload: " + jsonPayload);
+
+                using (UnityWebRequest request = new UnityWebRequest(serverURL, "POST"))
+                {
+                    byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonPayload);
+                    request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+                    request.downloadHandler = new DownloadHandlerBuffer();
+                    request.SetRequestHeader("Content-Type", "application/json");
+                    request.timeout = 10;
+
+                    var operation = request.SendWebRequest();
+
+                    while (!operation.isDone)
+                        await Task.Yield();
+
+                    string responseText = request.downloadHandler.text;
+                    Debug.Log("Server response: " + responseText);
+
+                    if (request.result != UnityWebRequest.Result.Success)
+                    {
+                        Debug.LogError($"Request error: {request.error}");
+                        return false;
+                    }
+
+                    try
+                    {
+                        var response = JsonUtility.FromJson<CloudResponse>(responseText);
+                        return response.status == "success";
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogError($"Response parsing error: {e.Message}");
+                        return false;
+                    }
+                }
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError($"SaveToCloud exception: {e}");
+                return false;
+            }
+        }
+
+        [System.Serializable]
+        private class CloudResponse
+        {
+            public string status;
+            public string message;
+        }
+
+        [System.Serializable]
+        private class CloudLoadResponse
+        {
+            public string status;
+            public SaveData save_data;
+            public string message;
+            public int user_id;
+        }
         /// <summary>
         /// Load the game from the save file
         /// </summary>
@@ -171,28 +269,153 @@ namespace DonBosco.SaveSystem
         {
             try
             {
-                for (int i = 0; i < listeners.Count; i++)
+                // Validasi awal
+                if (isLoggedIn && string.IsNullOrEmpty(currentAccountID))
                 {
-                    await listeners[i].Load(saveData);
+                    Debug.LogError("Cannot load - logged in but no account ID set");
+                    HasSaveData = false;
+                    return false;
                 }
 
+                bool loadSuccess = false;
+
+                // Untuk user yang login
+                if (HasSaveData && isLoggedIn && !string.IsNullOrEmpty(currentAccountID))
+                {
+                    Debug.Log("Attempting cloud load...");
+                    string cloudData = await LoadFromCloud();
+
+                    if (!string.IsNullOrEmpty(cloudData))
+                    {
+                        saveData = JsonUtility.FromJson<SaveData>(cloudData);
+
+                        if (saveData == null || string.IsNullOrEmpty(saveData.currentScene))
+                        {
+                            Debug.LogError("Invalid save data from cloud");
+                            HasSaveData = false;
+                            return false;
+                        }
+                        Debug.Log("Cloud load successful!");
+                        loadSuccess = true;
+                    }
+                    else // Fallback ke local save
+                    {
+                        Debug.Log("Falling back to local account save...");
+                        loadSuccess = ReadSaveDataAccount(currentAccountID);
+                    }
+                }
+                else // Untuk guest
+                {
+                    Debug.Log("Loading local guest save...");
+                    loadSuccess = ReadSaveDataLocal();
+                }
+
+                // Update status HasSaveData
+                HasSaveData = loadSuccess;
+
+                if (!loadSuccess)
+                {
+                    Debug.Log("No valid save data found");
+                    return false;
+                }
+
+                // Proses data yang telah dimuat
+                Debug.Log($"Processing save data for scene: {saveData.currentScene}");
+
+                // Memuat data ke semua sistem yang terdaftar
+                for (int i = 0; i < listeners.Count; i++)
+                {
+                    try
+                    {
+                        await listeners[i].Load(saveData);
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogError($"Error loading {listeners[i].GetType()}: {e}");
+                    }
+                }
+
+                // Handle inventory
                 if (saveData.inventoryItems != null && InventoryController.Instance != null)
                 {
-                    InventoryController.Instance.GetInventorySO().Initialize();
-                    InventoryController.Instance.inventoryUI.InitializeInventoryUI(InventoryController.Instance.GetInventorySO().Size);
-
-                    await Task.Delay(100); // Beri waktu UI untuk refresh
-
-                    InventoryController.Instance.GetInventorySO().LoadInventory(saveData.inventoryItems);
-                    Debug.Log($"Inventory Loaded: {saveData.inventoryItems.Count} items");
+                    try
+                    {
+                        InventoryController.Instance.GetInventorySO().Initialize();
+                        InventoryController.Instance.inventoryUI.InitializeInventoryUI(
+                            InventoryController.Instance.GetInventorySO().Size);
+                        await Task.Delay(100); // Beri waktu untuk UI
+                        InventoryController.Instance.GetInventorySO().LoadInventory(saveData.inventoryItems);
+                        Debug.Log($"Loaded {saveData.inventoryItems.Count} inventory items");
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogError($"Inventory load error: {e}");
+                    }
                 }
 
                 return true;
             }
-            catch (System.ArgumentException e)
+            catch (System.Exception e)
             {
-                Debug.LogError(e);
+                Debug.LogError($"LoadGame error: {e}");
+                HasSaveData = false;
                 return false;
+            }
+        }
+
+        private async Task<string> LoadFromCloud()
+        {
+            if (string.IsNullOrEmpty(currentAccountID) || currentAccountID == "0")
+            {
+                Debug.LogError("Invalid currentAccountID for cloud load");
+                return null;
+            }
+
+            try
+            {
+                WWWForm form = new WWWForm();
+                form.AddField("user_id", currentAccountID);
+
+                using (UnityWebRequest www = UnityWebRequest.Post(serverURL.Replace("save_game.php", "load_game.php"), form))
+                {
+                    www.timeout = 10;
+                    var operation = www.SendWebRequest();
+
+                    while (!operation.isDone)
+                        await Task.Yield();
+
+                    if (www.result != UnityWebRequest.Result.Success)
+                    {
+                        Debug.LogError($"Cloud load failed: {www.error}");
+                        return null;
+                    }
+
+                    string jsonResponse = www.downloadHandler.text;
+                    Debug.Log($"Raw cloud response: {jsonResponse}");
+
+                    // Langsung deserialize ke CloudLoadResponse
+                    var response = JsonUtility.FromJson<CloudLoadResponse>(jsonResponse);
+
+                    if (response == null || response.status != "success")
+                    {
+                        Debug.LogError($"Invalid cloud response: {response?.message}");
+                        return null;
+                    }
+
+                    if (response.user_id.ToString() != currentAccountID)
+                    {
+                        Debug.LogError($"Account ID mismatch! Expected {currentAccountID}, got {response.user_id}");
+                        return null;
+                    }
+
+                    // Kembalikan JSON string dari save_data
+                    return JsonUtility.ToJson(response.save_data);
+                }
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError($"LoadFromCloud exception: {e}");
+                return null;
             }
         }
 
@@ -201,19 +424,30 @@ namespace DonBosco.SaveSystem
         /// </summary>
         public void DeleteSaveData()
         {
-            string path;
-            if (string.IsNullOrEmpty(currentAccountID))
+            string path = "";
+
+            if (isLoggedIn)
             {
-                // If the player is not logged in, delete the data from the default file
-                path = Application.persistentDataPath + FILENAME;
+                // Jika pemain sudah login, hapus data berdasarkan ID akun
+                if (!string.IsNullOrEmpty(currentAccountID) && int.TryParse(currentAccountID, out int userId))
+                {
+                    DeleteCloudSave();
+                    path = Application.persistentDataPath + "/" + currentAccountID + ".dat";
+                }
+                else
+                {
+                    Debug.LogError("Current Account ID is null, empty, or not a valid number.");
+                    return;
+                }
+
             }
             else
             {
-                // If the player is logged in, delete the data from the file based on the account id
-                path = Application.persistentDataPath + "/" + currentAccountID + ".dat";
+                // Jika pemain belum login, hapus data dari file default
+                path = Application.persistentDataPath + "/" + FILENAME;
             }
 
-            // Then delete the file
+            // Hapus file jika ada
             if (System.IO.File.Exists(path))
             {
                 System.IO.File.Delete(path);
@@ -223,6 +457,39 @@ namespace DonBosco.SaveSystem
             else
             {
                 Debug.LogError("Filesave to delete does not exist: " + path);
+            }
+        }
+
+        public async Task<bool> DeleteCloudSave()
+        {
+            if (string.IsNullOrEmpty(currentAccountID))
+            {
+                Debug.LogWarning("Cannot delete: currentAccountID is null or empty");
+                return false;
+            }
+
+            using (UnityWebRequest www = UnityWebRequest.Post(serverURL.Replace("save_game.php", "delete_game.php"), ""))
+            {
+                WWWForm form = new WWWForm();
+                form.AddField("user_id", currentAccountID);
+
+                www.uploadHandler = new UploadHandlerRaw(form.data);
+                www.downloadHandler = new DownloadHandlerBuffer();
+                www.timeout = 10;
+
+                var operation = www.SendWebRequest();
+
+                while (!operation.isDone)
+                    await Task.Yield();
+
+                if (www.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.LogError($"Delete cloud save failed: {www.error}");
+                    return false;
+                }
+
+                Debug.Log("Cloud save deleted successfully.");
+                return true;
             }
         }
 
@@ -318,32 +585,43 @@ namespace DonBosco.SaveSystem
         public bool ReadSaveDataAccount(string id)
         {
             saveData = null;
+            string path = Application.persistentDataPath + "/" + id + ".dat";
 
-            string fileName = "/" + id + ".dat";
-            string path = Application.persistentDataPath + fileName;
             if (System.IO.File.Exists(path))
             {
                 try
                 {
-                    BinaryFormatter formatter = new BinaryFormatter();
-                    System.IO.FileStream file = System.IO.File.Open(path, System.IO.FileMode.Open);
-                    string jsonState = (string)formatter.Deserialize(file);
-                    file.Close();
-                    saveData = JsonUtility.FromJson<SaveData>(jsonState);
+                    string json = System.IO.File.ReadAllText(path);
+                    Debug.Log($"Loading from {path}\nData: {json}");
+
+                    saveData = JsonUtility.FromJson<SaveData>(json);
+
+                    if (saveData == null)
+                    {
+                        Debug.LogError("Failed to parse save data");
+                        return false;
+                    }
+
+                    // Inisialisasi list yang mungkin null
+                    if (saveData.objectStates == null)
+                        saveData.objectStates = new List<ObjectStateData>();
+                    if (saveData.inventoryItems == null)
+                        saveData.inventoryItems = new List<InventoryItem>();
+
                     HasSaveData = true;
-                    GameEventsManager.Instance.miscEvents.ChangeData(saveData);
                     return true;
                 }
                 catch (System.Exception e)
                 {
-                    Debug.LogError(e);
+                    Debug.LogError($"Error reading account save: {e}");
+                    // Coba hapus file corrupt
+                    try { System.IO.File.Delete(path); } catch { }
                 }
             }
+
             HasSaveData = false;
             return false;
         }
-
-
 
         #region Subscription
         public void Subscribe(ISaveLoad saveLoad)

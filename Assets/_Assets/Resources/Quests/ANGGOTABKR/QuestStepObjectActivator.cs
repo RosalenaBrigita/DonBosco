@@ -26,7 +26,10 @@ namespace DonBosco.Quests
             foreach (var stepObject in stepObjects)
             {
                 Quest quest = QuestManager.Instance.GetQuestById(stepObject.questId);
-                bool shouldActivate = quest != null && quest.currentStepIndex == stepObject.requiredStepIndex;
+
+                bool shouldActivate = quest != null
+                                      && quest.state == QuestState.Active // pastikan quest masih aktif
+                                      && quest.currentStepIndex == stepObject.requiredStepIndex;
 
                 foreach (var obj in stepObject.objectsToActivate)
                 {
