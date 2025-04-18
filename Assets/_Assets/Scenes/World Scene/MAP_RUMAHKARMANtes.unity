@@ -4981,6 +4981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 4900000, guid: bd35d639fab2445478e4e0e9e2fe16c0, type: 3}
+  npcID: 1
   dialogueQuestConversations:
   - conditions:
     - questInfo: {fileID: 11400000, guid: 4ed3a05648c4b8a42aeca74765528314, type: 2}
@@ -9414,6 +9415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 4900000, guid: 755f1ab2c8310944a8d819b5fd7f019c, type: 3}
+  npcID: 0
   dialogueQuestConversations:
   - conditions:
     - questInfo: {fileID: 11400000, guid: 86e126fa58a89034a843da277c1a0d72, type: 2}

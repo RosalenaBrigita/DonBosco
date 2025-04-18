@@ -6,12 +6,15 @@ using DonBosco.Character.NPC.Test;
 using System;
 using UnityEngine.Events;
 using DonBosco.ItemSystem;
+using UnityEngine.Networking;
 
 namespace DonBosco.Quests
 {
     public class DialogueQuest : MonoBehaviour, IInteractable
     {
         [SerializeField] protected TextAsset dialogue;
+        [SerializeField] private int npcID;
+        
         [SerializeField] protected DialogueQuestConversation[] dialogueQuestConversations;
         [SerializeField] protected ConversationState[] conversationStates;
         [SerializeField] protected ExternalFunction[] externalFunctions;
@@ -19,6 +22,9 @@ namespace DonBosco.Quests
         private Collider2D _collider;
         private DialogueQuestConversation currentDialogueQuestConversation;
         private ConversationState currentState;
+
+        private string dialogueUrl = "http://localhost/DonBosco/get_dialogue.php";
+        private bool dialogueLoaded = false;
 
         public bool IsInteractable { get; set; } = true;
 
@@ -46,42 +52,66 @@ namespace DonBosco.Quests
 
         private void StartDialogue()
         {
-            if (_collider == null)
+            if (!dialogueLoaded)
             {
-                Debug.LogWarning("DialogueQuest: Collider tidak ditemukan, interaksi dibatalkan.");
+                StartCoroutine(LoadDialogueFromServer());
                 return;
             }
 
-            if (dialogue == null)
+            ProceedDialogue();
+        }
+
+        IEnumerator LoadDialogueFromServer()
+        {
+            string url = $"{dialogueUrl}?npc_id={npcID}";
+            UnityWebRequest www = UnityWebRequest.Get(url);
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
             {
-                Debug.LogError("No dialogue or knot path assigned to NPC");
+                Debug.LogError("Error load dialogue: " + www.error);
             }
             else
             {
-                GetCurrentState();
+                InkWrapper result = JsonUtility.FromJson<InkWrapper>(www.downloadHandler.text);
+                if (!string.IsNullOrEmpty(result.ink_json))
+                {
+                    dialogue = new TextAsset(result.ink_json);
+                    dialogueLoaded = true;
+                    ProceedDialogue();
+                }
+            }
+        }
 
-                // Bind external functions
-                if (externalFunctions != null)
-                {
-                    for (int i = 0; i < externalFunctions.Length; i++)
-                    {
-                        ExternalFunction externalFunction = externalFunctions[i];
-                        DialogueManager.GetInstance().BindExternalFunction(externalFunction.functionName, (param) => externalFunction.onFunctionCalled?.Invoke(param));
-                    }
-                }
+        [Serializable]
+        private class InkWrapper
+        {
+            public string ink_json;
+        }
 
-                if (currentDialogueQuestConversation != null)
+        private void ProceedDialogue()
+        {
+            GetCurrentState();
+
+            if (externalFunctions != null)
+            {
+                foreach (var ef in externalFunctions)
                 {
-                    StartDialogueQuestConversation();
+                    DialogueManager.GetInstance().BindExternalFunction(ef.functionName, (param) => ef.onFunctionCalled?.Invoke(param));
                 }
-                else if (currentState.knotPath != null)
-                {
-                    DialogueManager.GetInstance().EnterDialogueMode(dialogue, currentState.knotPath);
-                }
-                else
-                {
-                    DialogueManager.GetInstance().EnterDialogueMode(dialogue);
-                }
+            }
+
+            if (currentDialogueQuestConversation != null)
+            {
+                StartDialogueQuestConversation();
+            }
+            else if (currentState.knotPath != null)
+            {
+                DialogueManager.GetInstance().EnterDialogueMode(dialogue, currentState.knotPath);
+            }
+            else
+            {
+                DialogueManager.GetInstance().EnterDialogueMode(dialogue);
             }
         }
 
