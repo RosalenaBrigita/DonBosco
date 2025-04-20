@@ -4981,13 +4981,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 4900000, guid: bd35d639fab2445478e4e0e9e2fe16c0, type: 3}
-  npcID: 1
+  npcID: 2
   dialogueQuestConversations:
   - conditions:
     - questInfo: {fileID: 11400000, guid: 4ed3a05648c4b8a42aeca74765528314, type: 2}
       questState: 0
       questStepIndex: 0
-    knotPath: 
+    knotPath: Quest_BergabungBKR
     questStepActions:
     - questStepInfo: {fileID: 11400000, guid: 18dad2a721648e44d80aa1cd2b23dfb0, type: 2}
       dialogueQuestBehaviour: 2
@@ -4996,7 +4996,12 @@ MonoBehaviour:
     onDialogueDone:
       m_PersistentCalls:
         m_Calls: []
-  conversationStates: []
+  conversationStates:
+  - questConditions:
+    - questInfo: {fileID: 11400000, guid: 4ed3a05648c4b8a42aeca74765528314, type: 2}
+      questState: 1
+      questStepIndex: 0
+    knotPath: Quest_PergiKeMarkasBKR
   externalFunctions: []
 --- !u!58 &1095827919
 CircleCollider2D:

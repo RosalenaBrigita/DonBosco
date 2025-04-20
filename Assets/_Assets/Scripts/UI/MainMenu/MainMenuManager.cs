@@ -1,52 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
 namespace DonBosco
 {
     public class MainMenuManager : MonoBehaviour
     {
         private static MainMenuManager instance;
-        public static MainMenuManager Instance { get { return instance; } }
+        public static MainMenuManager Instance => instance;
 
         [Header("References")]
         [SerializeField] private GameObject mainMenuCanvas;
         [SerializeField] private GameObject confirmationOverwriteSaveData;
         [SerializeField] private Button newGameButton;
         [SerializeField] private Button continueGameButton;
-
         [SerializeField] public UnityEvent onBackToMainMenu;
 
         void Awake()
         {
-            if(instance != null && instance != this)
+            if (instance != null && instance != this)
             {
-                Destroy(this.gameObject);
+                Destroy(gameObject);
+                return;
             }
-            else
-            {
-                instance = this;
-            }
+            instance = this;
         }
 
-        private void OnEnable() 
+        private void OnEnable()
         {
-            CheckProgress();
+            // Subscribe to save data updates
+            SaveSystem.SaveManager.OnSaveDataUpdated += UpdateMenuButtons;
+
+            // Initial check (will be updated again when cloud save finishes checking)
+            UpdateMenuButtons(SaveSystem.SaveManager.Instance.HasSaveData);
         }
 
+        private void OnDisable()
+        {
+            // Unsubscribe to prevent memory leaks
+            SaveSystem.SaveManager.OnSaveDataUpdated -= UpdateMenuButtons;
+        }
 
         public void DeleteSave()
         {
             SaveSystem.SaveManager.Instance.DeleteSaveData();
+            // No need to manually update buttons - event will handle it
         }
 
         public void StartNewGame()
         {
-            bool hasSaveData = SaveSystem.SaveManager.Instance.HasSaveData;
-            if(hasSaveData)
+            if (SaveSystem.SaveManager.Instance.HasSaveData)
             {
                 confirmationOverwriteSaveData.SetActive(true);
             }
@@ -55,7 +59,7 @@ namespace DonBosco
                 newGameButton.GetComponent<TransitionCaller>().TransitionFadeOut();
             }
         }
-        
+
         public void PlayGame()
         {
             mainMenuCanvas.SetActive(false);
@@ -63,27 +67,18 @@ namespace DonBosco
 
         public void InitMainMenu()
         {
-            CheckProgress();
             mainMenuCanvas.SetActive(true);
             onBackToMainMenu?.Invoke();
         }
 
-        public void CheckProgress()
+        // Renamed from CheckProgress for clarity
+        private void UpdateMenuButtons(bool hasSaveData)
         {
-            bool hasSaveData = SaveSystem.SaveManager.Instance.HasSaveData;
             continueGameButton.interactable = hasSaveData;
+            newGameButton.GetComponentInChildren<TMP_Text>().text = hasSaveData ? "New Game" : "Play";
 
-            switch(hasSaveData)
-            {
-                case true:
-                    newGameButton.GetComponentInChildren<TMP_Text>().text = "New Game";
-                    break;
-                case false:
-                    newGameButton.GetComponentInChildren<TMP_Text>().text = "Play";
-                    break;
-            }
+            Debug.Log($"Menu updated - Save exists: {hasSaveData}");
         }
-
 
         public void QuitGame()
         {

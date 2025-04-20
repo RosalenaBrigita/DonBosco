@@ -369,15 +369,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Main story Main story Main story Main story Main story '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ede7c4d6bbaf840499c54e12d3e73686, type: 2}
-  m_sharedMaterial: {fileID: -7658810758190167302, guid: ede7c4d6bbaf840499c54e12d3e73686, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 16708e62bf30e8e43a998ae2376dfbd2, type: 2}
+  m_sharedMaterial: {fileID: 8615520201176776104, guid: 16708e62bf30e8e43a998ae2376dfbd2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294925582
-  m_fontColor: {r: 0.05490196, g: 0.3647059, b: 1, a: 1}
+    rgba: 4282400832
+  m_fontColor: {r: 0.2509804, g: 0.2509804, b: 0.2509804, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -505,8 +505,8 @@ MonoBehaviour:
   m_text: 'Main story Main story Main story Main story Main story Main story Main
     story Main story '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ede7c4d6bbaf840499c54e12d3e73686, type: 2}
-  m_sharedMaterial: {fileID: -7658810758190167302, guid: ede7c4d6bbaf840499c54e12d3e73686, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 16708e62bf30e8e43a998ae2376dfbd2, type: 2}
+  m_sharedMaterial: {fileID: 8615520201176776104, guid: 16708e62bf30e8e43a998ae2376dfbd2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

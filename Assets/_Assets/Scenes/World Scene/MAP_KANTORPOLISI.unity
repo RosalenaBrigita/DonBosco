@@ -209,6 +209,8 @@ MonoBehaviour:
   questStepInfo: {fileID: 11400000, guid: 05d3615908226524f8b2c25c1028fc47, type: 2}
   scene: MAP_JALAN 1
   dialogue: {fileID: 4900000, guid: b072a0897c41df24b83717df7cddfec5, type: 3}
+  npcId: 0
+  useDatabaseDialogue: 1
   dialogueQuestConversations:
   - conditions:
     - questInfo: {fileID: 11400000, guid: 2c8b44cec50449c40b5de66be3074cdd, type: 2}
@@ -976,6 +978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizDialogue: {fileID: 4900000, guid: c23a7ffe4a51a304b8e277454bcd8621, type: 3}
   quizId: 2
+  npcId: 0
   OnQuizDone:
     m_PersistentCalls:
       m_Calls: []
@@ -993,6 +996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 4900000, guid: a10fd67f6f3ef104796acdad578c9267, type: 3}
+  npcID: 0
   dialogueQuestConversations:
   - conditions:
     - questInfo: {fileID: 11400000, guid: 4ed3a05648c4b8a42aeca74765528314, type: 2}
@@ -1522,6 +1526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 4900000, guid: a20f5da4eed26ed4fb09eb307e863254, type: 3}
+  npcID: 0
   dialogueQuestConversations:
   - conditions:
     - questInfo: {fileID: 11400000, guid: 4ed3a05648c4b8a42aeca74765528314, type: 2}
@@ -2069,6 +2074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 4900000, guid: 6018cb8b259e7054a93866c143d8e808, type: 3}
+  npcID: 12
   dialogueQuestConversations:
   - conditions:
     - questInfo: {fileID: 11400000, guid: c9aafd6c0fca8a54daed73550eb243f1, type: 2}
@@ -9757,6 +9763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizDialogue: {fileID: 4900000, guid: 1fe9d8501ece8e146b1937b955d3fd34, type: 3}
   quizId: 1
+  npcId: 0
   OnQuizDone:
     m_PersistentCalls:
       m_Calls: []

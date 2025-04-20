@@ -3,13 +3,20 @@ Apa yang kau butuhkan, Bung?
 -> END
 
 ===AntarPesan===
-#speaker:Moestopo #audio:null #portrait:null
-Karman, kau datang tepat waktu. Kapten Soengkono mengirim pesan, tapi situasi semakin mendesak. 
+#speaker:Moestopo #audio:null #portrait:moestopo
+Karman, kau datang tepat waktu. Aku sudah menunggu pesan dari Soengkono. Bagaimana situasi di markas?
+
+#speaker:Karman #audio:null #portrait:karman
+Banyak yang bersiap, Bung. Tapi juga banyak yang cemas. Pesawat-pesawat Sekutu mulai menebar ancaman.
+
+#speaker:Moestopo #audio:null #portrait:moestopo
+Ya… ini bukan waktu untuk lengah. Tapi juga bukan waktu untuk gegabah. Kita butuh tindakan yang bijak dan cepat.
 -> END
 
 ===Diplomasi===
 #speaker:Moestopo #audio:null #portrait:null
-Gudang Don Bosco sekarang dikepung oleh pemuda-pemuda kita. Tapi ingat baik-baik, lokasi itu dekat pemukiman penduduk. Kita tidak bisa bertindak gegabah.
+Gudang Don Bosco sekarang dikepung oleh pemuda-pemuda kita. 
+Tapi ingat baik-baik, lokasi itu dekat pemukiman penduduk. Kita tidak bisa bertindak gegabah.
 
 * [Apa maksudnya rumit, Bung?]
 #speaker:Moestopo #audio:null #portrait:null

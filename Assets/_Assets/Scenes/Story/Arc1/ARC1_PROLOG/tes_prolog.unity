@@ -7175,7 +7175,7 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -272438429103590781, guid: bd6d116dd2087f340bd5891a06953fda, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1139765934}
   - key: {fileID: -4333734731111280696, guid: bd6d116dd2087f340bd5891a06953fda, type: 2}
     value: {fileID: 1391656945}
   - key: {fileID: 6119410842919976030, guid: bd6d116dd2087f340bd5891a06953fda, type: 2}
@@ -8812,6 +8812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 4900000, guid: 755f1ab2c8310944a8d819b5fd7f019c, type: 3}
+  npcID: 0
   dialogueQuestConversations:
   - conditions:
     - questInfo: {fileID: 11400000, guid: 86e126fa58a89034a843da277c1a0d72, type: 2}
@@ -10037,6 +10038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 4900000, guid: bd35d639fab2445478e4e0e9e2fe16c0, type: 3}
+  npcID: 0
   dialogueQuestConversations:
   - conditions:
     - questInfo: {fileID: 11400000, guid: 4ed3a05648c4b8a42aeca74765528314, type: 2}

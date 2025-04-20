@@ -16,7 +16,7 @@ MonoBehaviour:
   questName: Persiapan merebut DonBosco
   questDescription: 
   initialState: 0
-  event_no: 3
+  event_no: 2
   questSteps:
   - {fileID: 8974361786646685076, guid: ff035d5e6b895a84399c6bcc59338fba, type: 3}
   prequisiteQuests: []

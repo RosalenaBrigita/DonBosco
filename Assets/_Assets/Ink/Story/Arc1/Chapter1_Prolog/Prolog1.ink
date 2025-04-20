@@ -1,23 +1,28 @@
 #speaker: #portrait:null #audio:null
-Tahun 1945. Indonesia baru saja memproklamasikan kemerdekaannya. Jakarta telah bersuara… tapi di Surabaya, perjuangan masih berlanjut.
-Kota ini dipenuhi semangat dan ketegangan. Jepang telah kalah, tapi pasukan mereka masih bertahan. Sementara itu, Belanda berusaha kembali merebut kekuasaan. Rakyat tak tinggal diam!
-Di sebuah rumah kecil, seorang pemuda bernama Karman mendengar suara radio tua. Berita yang ia dengar akan mengubah hidupnya selamanya…
+Tahun 1945. Indonesia baru saja memproklamasikan kemerdekaannya. Jakarta telah bersuara… namun di Surabaya, perjuangan belum usai.
+Kota ini dipenuhi semangat, harapan—dan ketegangan. Jepang memang telah menyerah, namun pasukannya masih berjaga. Di sisi lain, Belanda bersiap kembali menancapkan kuku kekuasaan.
+Rakyat tak tinggal diam. Semangat juang membara di dada pemuda-pemudi.
+Di sebuah rumah sederhana, seorang pemuda bernama Karman tengah termenung. Suara radio tua memecah keheningan.
+Kabar yang mengalir dari radio itu… akan mengubah hidupnya selamanya.
 -> END
 
 === part2 ===
 #speaker: #portrait:null #audio:null
-Suaranya serak, tapi penuh semangat: "Saudara-saudara... bangsa Indonesia telah merdeka!"
+bzzt bzzt...
+Saudara-saudara... bangsa Indonesia telah merdeka!
 
-Karman menatap kosong, seolah dunia baru saja berubah. Namun... suara radio itu belum selesai. Masih ada kabar yang harus ia dengar lebih jelas.
+Karman terdiam. Matanya menatap kosong ke arah radio. Dunia yang ia kenal... kini telah berubah.
 
-Dekati radio untuk mendengarkan lebih dekat. Gunakan tombol W, A, S, D untuk bergerak.
+Tapi... suara dari radio itu belum selesai. Ada kabar lain. Sesuatu yang mengusik hatinya.
 
-Langkahmu bukan sekadar jalan kaki. Kadang, sejarah butuh dilangkahi lebih cepat.
+Dekati radio untuk mendengarkan lebih dekat. Gunakan W, A, S, D untuk melangkah.
 
-Tahan Shift untuk berlari. 
-Tekan klik kanan untuk melakukan dash — saat kau butuh bergerak cepat!
+Ingat, langkahmu bukan sekadar gerak kaki. Terkadang, sejarah menuntut kita untuk bertindak cepat.
+Tahan Shift untuk berlari.
+Tekan klik kanan untuk melakukan dash — saat keadaan mendesak.
 
-Dan ingat... Tekan F untuk berinteraksi dengan objek, termasuk radio ini.  
-Siapa tahu... radio itu menyimpan kabar yang akan mengubah segalanya.
-
+Dan satu hal lagi... 
+Tekan F untuk berinteraksi dengan benda-benda di sekitarmu. Termasuk... radio tua itu.
+Siapa tahu, di balik derit mesin usangnya...
+Tersimpan kabar yang akan menggugah semangat juangmu.
 -> END

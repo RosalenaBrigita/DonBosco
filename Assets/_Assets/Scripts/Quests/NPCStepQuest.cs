@@ -2,17 +2,26 @@ using UnityEngine;
 using DonBosco.Character.NPC.Test;
 using DonBosco.Dialogue;
 using DonBosco.ItemSystem;
+using UnityEngine.Networking;
+using System.Collections;
 
 namespace DonBosco.Quests
 {
     public class NPCQuestStep : QuestStep, IInteractable
     {
-        [SerializeField] protected TextAsset dialogue;
+        [Header("Dialogue Sources")]
+        [SerializeField] protected TextAsset dialogue; // Fallback dialogue
+        [SerializeField] protected int npcId; // For database lookup
+        [SerializeField] protected bool useDatabaseDialogue = true;
+
+        [Header("Dialogue Configuration")]
         [SerializeField] protected DialogueQuestConversation[] dialogueQuestConversations;
         [SerializeField] protected ConversationState[] conversationStates;
 
         private DialogueQuestConversation currentDialogueQuestConversation;
         private ConversationState currentState;
+        private bool dialogueLoaded = false;
+        private string dialogueUrl = "http://localhost/DonBosco/get_dialogue.php";
 
         public bool IsInteractable { get; set; } = true;
 
@@ -28,26 +37,79 @@ namespace DonBosco.Quests
 
         private void StartDialogue()
         {
-            if (dialogue == null)
+            Debug.Log($"StartDialogue called - useDB: {useDatabaseDialogue}, loaded: {dialogueLoaded}");
+
+            if (useDatabaseDialogue && !dialogueLoaded)
             {
-                Debug.LogError("No dialogue or knot path assigned to NPC");
+                Debug.Log($"Attempting to load dialogue for NPC {npcId} from server");
+                StartCoroutine(LoadDialogueFromServer());
+                return;
             }
             else
             {
-                GetCurrentState();
+                Debug.Log($"Using local dialogue asset: {(dialogue != null ? dialogue.name : "NULL")}");
+            }
 
-                if (currentDialogueQuestConversation != null)
+            ProceedWithDialogue();
+        }
+
+        private IEnumerator LoadDialogueFromServer()
+        {
+            string url = $"{dialogueUrl}?npc_id={npcId}";
+            Debug.Log($"Loading from URL: {url}");
+
+            UnityWebRequest www = UnityWebRequest.Get(url);
+            yield return www.SendWebRequest();
+
+            Debug.Log($"Server response: {www.result}, Status: {www.responseCode}");
+
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"Raw response: {www.downloadHandler.text}");
+
+                NPCDialogueResponse response = JsonUtility.FromJson<NPCDialogueResponse>(www.downloadHandler.text);
+                if (!string.IsNullOrEmpty(response.ink_json))
                 {
-                    StartDialogueQuestConversation();
-                }
-                else if (currentState.knotPath != null)
-                {
-                    DialogueManager.GetInstance().EnterDialogueMode(dialogue, currentState.knotPath);
+                    dialogue = new TextAsset(response.ink_json);
+                    dialogueLoaded = true;
+                    Debug.Log($"Successfully loaded dialogue for NPC {npcId}. Text length: {response.ink_json.Length} chars");
                 }
                 else
                 {
-                    DialogueManager.GetInstance().EnterDialogueMode(dialogue);
+                    Debug.LogWarning("Server returned empty ink_json");
                 }
+            }
+            else
+            {
+                Debug.LogError($"Failed to load dialogue: {www.error}");
+            }
+
+            ProceedWithDialogue();
+        }
+
+        private void ProceedWithDialogue()
+        {
+            Debug.Log($"Proceeding with dialogue - Asset: {(dialogue != null ? "Exists" : "NULL")}");
+
+            if (dialogue == null)
+            {
+                Debug.LogError("Critical: No dialogue asset available");
+                return;
+            }
+
+            GetCurrentState();
+
+            if (currentDialogueQuestConversation != null)
+            {
+                StartDialogueQuestConversation();
+            }
+            else if (currentState.knotPath != null)
+            {
+                DialogueManager.GetInstance().EnterDialogueMode(dialogue, currentState.knotPath);
+            }
+            else
+            {
+                DialogueManager.GetInstance().EnterDialogueMode(dialogue);
             }
         }
 
@@ -69,7 +131,6 @@ namespace DonBosco.Quests
                 }
             }
 
-
             DialogueManager.Instance.OnDialogueEnded += OnDialogueEnded;
 
             if (currentDialogueQuestConversation.knotPath != null)
@@ -85,7 +146,7 @@ namespace DonBosco.Quests
         private void OnDialogueEnded()
         {
             DialogueManager.Instance.OnDialogueEnded -= OnDialogueEnded;
-            currentDialogueQuestConversation.onDialogueDone?.Invoke();
+            currentDialogueQuestConversation?.onDialogueDone?.Invoke();
         }
 
         private void GetCurrentState()
@@ -150,6 +211,12 @@ namespace DonBosco.Quests
 
         protected override void SetQuestStepState(string state)
         {
+        }
+
+        [System.Serializable]
+        private class NPCDialogueResponse
+        {
+            public string ink_json;
         }
     }
 }

@@ -59,6 +59,8 @@ public class LoginManager : MonoBehaviour
         statusText.text = "Logged out successfully.";
         SaveManager.Instance.isLoggedIn = false;
         SaveManager.Instance.currentAccountID = null;
+        // Start game data loading
+        UpdateUIAfterLogin();
     }
 
     IEnumerator LoginRequest(string username, string password)
@@ -122,7 +124,8 @@ public class LoginManager : MonoBehaviour
             PlayerPrefs.Save();
 
             // Start loading game data after successful login
-            yield return StartCoroutine(LoadAfterLogin());
+            UpdateUIAfterLogin();
+            //yield return StartCoroutine(LoadAfterLogin());
         }
         else
         {
@@ -203,7 +206,8 @@ public class LoginManager : MonoBehaviour
             statusModal.SetActive(false);
 
             // Start game data loading
-            yield return StartCoroutine(LoadAfterLogin());
+            UpdateUIAfterLogin();
+            //yield return StartCoroutine(LoadAfterLogin());
         }
         else
         {
@@ -214,19 +218,24 @@ public class LoginManager : MonoBehaviour
         }
     }
 
-    IEnumerator LoadAfterLogin()
+    private void UpdateUIAfterLogin()
     {
-        // Create a task and wait for it to complete
-        var loadTask = SaveManager.Instance.LoadGame();
-        while (!loadTask.IsCompleted)
-        {
-            yield return null;
-        }
-
-        Debug.Log(loadTask.Result ? "Game loaded successfully" : "Failed to load game");
+        // This will trigger the SaveManager to check for save data
+        SaveManager.Instance.InitializeSaveSystem();
     }
+        /*IEnumerator LoadAfterLogin()
+        {
+            // Create a task and wait for it to complete
+            var loadTask = SaveManager.Instance.LoadGame();
+            while (!loadTask.IsCompleted)
+            {
+                yield return null;
+            }
 
-    public void CloseStatusModal()
+            Debug.Log(loadTask.Result ? "Game loaded successfully" : "Failed to load game");
+        }*/
+
+        public void CloseStatusModal()
     {
         statusModal.SetActive(false);
         statusBG.raycastTarget = false;

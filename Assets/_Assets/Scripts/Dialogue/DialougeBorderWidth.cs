@@ -14,7 +14,7 @@ namespace DonBosco.Dialogue
         [SerializeField] private TextMeshProUGUI text;
         [SerializeField] private Image border;
         [Space(5)]
-        [SerializeField] private float offset = 20f;
+        [SerializeField] private float offset = 10f;
         [SerializeField] private float maxWidth = 600f;
 
         

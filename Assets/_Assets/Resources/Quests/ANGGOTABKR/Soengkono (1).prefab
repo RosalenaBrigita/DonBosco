@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571016279301307084}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51.17, y: -23.079998, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -54.78, y: -14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1457382524, guid: ffb358b4643304646a9b1c53bb75b43c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizDialogue: {fileID: 4900000, guid: 1fe9d8501ece8e146b1937b955d3fd34, type: 3}
   quizId: 1
+  npcId: 4
   OnQuizDone:
     m_PersistentCalls:
       m_Calls: []
@@ -187,6 +188,8 @@ MonoBehaviour:
   questStepInfo: {fileID: 11400000, guid: 8ef099f35b6b7eb4a848624b63374ecc, type: 2}
   scene: MAP_KANTORBKR 1
   dialogue: {fileID: 4900000, guid: a20f5da4eed26ed4fb09eb307e863254, type: 3}
+  npcId: 3
+  useDatabaseDialogue: 1
   dialogueQuestConversations:
   - conditions:
     - questInfo: {fileID: 11400000, guid: 4ed3a05648c4b8a42aeca74765528314, type: 2}

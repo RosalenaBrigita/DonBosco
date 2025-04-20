@@ -1,25 +1,28 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 using DonBosco.Dialogue;
 using UnityEngine.Events;
+using UnityEngine.Networking;
 using DonBosco.UI;
 
 public class QuizDialogue : MonoBehaviour
 {
     public bool IsInteractable { get; set; } = true;
-    [SerializeField] protected TextAsset quizDialogue;
+    [SerializeField] private TextAsset quizDialogue; // Fallback jika offline
     [SerializeField] private int quizId;
+    [SerializeField] private int npcId; // ID NPC untuk ambil dari database
 
     public UnityEvent OnQuizDone;
     [SerializeField] private bool hideUIScreenOnDone = false;
 
+    private string dialogueUrl = "http://localhost/DonBosco/get_dialogue.php";
+    private bool dialogueLoaded = false;
+
     public void StartDialogue()
     {
-        if(quizDialogue == null)
+        if (!dialogueLoaded)
         {
-            Debug.LogError("No dialogue or knot path assigned to NPC");
+            StartCoroutine(LoadDialogueFromServer());
         }
         else
         {
@@ -27,33 +30,53 @@ public class QuizDialogue : MonoBehaviour
         }
     }
 
+    private IEnumerator LoadDialogueFromServer()
+    {
+        string url = $"{dialogueUrl}?npc_id={npcId}&quiz_id={quizId}";
+        UnityWebRequest www = UnityWebRequest.Get(url);
+        yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogWarning("Using fallback dialogue: " + www.error);
+            CheckHasAnswered(); // Gunakan dialog offline
+        }
+        else
+        {
+            QuizDialogueResponse response = JsonUtility.FromJson<QuizDialogueResponse>(www.downloadHandler.text);
+            if (!string.IsNullOrEmpty(response.ink_json))
+            {
+                quizDialogue = new TextAsset(response.ink_json);
+                dialogueLoaded = true;
+                CheckHasAnswered();
+            }
+        }
+    }
+
+    [System.Serializable]
+    private class QuizDialogueResponse
+    {
+        public string ink_json;
+    }
+
     private void CheckHasAnswered()
     {
-        //If player has not answered the quiz, enter dialogue mode
-        if(!QuizManager.Instance.CheckHasAnswered(quizId))
+        if (!QuizManager.Instance.CheckHasAnswered(quizId))
         {
             DialogueManager.GetInstance().BindExternalFunction("Quiz", (answer) => SaveAnswer(answer));
-            DialogueManager.GetInstance().EnterDialogueMode(quizDialogue).OnDialogueDone((variable) => 
+            DialogueManager.GetInstance().EnterDialogueMode(quizDialogue).OnDialogueDone((variable) =>
             {
                 OnQuizDone.Invoke();
-
-                if(hideUIScreenOnDone)
-                {
-                    UIManager.Instance.HideScreenUI();
-                }
+                if (hideUIScreenOnDone) UIManager.Instance.HideScreenUI();
             });
-
         }
     }
 
     private void SaveAnswer(string answer)
     {
-        //Split string by underscore
         string[] answerSplit = answer.Split('_');
-        
         int quizId = int.Parse(answerSplit[0]);
         int quizAnswer = int.Parse(answerSplit[1]);
-
         QuizManager.Instance.SaveAnswer(quizId, quizAnswer);
     }
 }

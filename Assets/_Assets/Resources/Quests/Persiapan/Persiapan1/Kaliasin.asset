@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13af3672a81f57a488b9906d1211aa40, type: 3}
   m_Name: Kaliasin
   m_EditorClassIdentifier: 
-  questInfo: {fileID: 11400000, guid: dd95f13436f8e384ab23cf924ebe5d07, type: 2}
+  questInfo: {fileID: 11400000, guid: 2c8b44cec50449c40b5de66be3074cdd, type: 2}
   taskName: Ajak bicara pemuda di Kaliasin
   taskDescription: 

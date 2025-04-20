@@ -45,13 +45,21 @@ namespace DonBosco.Dialogue
                 StartTimeLine();
             }
         }
-    
+
 
         /// <summary>
         /// Start a dialogue and track the director to let it know when the dialogue is finished and to pause the timeline.
         /// </summary>
         public void StartDialogue(TextAsset dialogue, string knotPath = null)
         {
+            if (dialogue == null)
+            {
+                Debug.LogError("Tried to start null dialogue!");
+                return;
+            }
+
+            Debug.Log($"Starting dialogue: {dialogue.name}"); // Debug 4
+
             DialogueManager.Instance.OnDialogueEnded += OnDialogueEnded;
             InputManager.Instance.SetUIActionMap(true);
             DialogueManager.Instance.EnterDialogueModeFromTimeline(dialogue, knotPath);
