@@ -3672,6 +3672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 379981576}
+  - component: {fileID: 379981577}
   m_Layer: 5
   m_Name: ReloadBar
   m_TagString: Untagged
@@ -3699,6 +3700,18 @@ RectTransform:
   m_AnchoredPosition: {x: -822, y: -428}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &379981577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379981575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa583b2b13c407499d399922c47f587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &393055794
 GameObject:
   m_ObjectHideFlags: 0
@@ -16683,7 +16696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1b4d188768cd47b1561aabd1c0db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingScene: MAP_KANTORPOLISI
+  startingScene: MAP_DONBOSCO
 --- !u!4 &2075377686
 Transform:
   m_ObjectHideFlags: 0

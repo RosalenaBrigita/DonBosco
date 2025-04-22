@@ -1,10 +1,9 @@
 EXTERNAL Quiz(id_answer)
 EXTERNAL getCurrentMoral()
+INCLUDE ../Quests/QuestData.ink
 
-{getCurrentMoral()}
-
-#speaker: Bung Tomo #portrait: null
-Karman, bagaimana kita akan menyapa Komandan Jepang saat kita masuk nanti?
+#speaker: Soetomo #portrait: soetomo
+Karman, bagaimana kita akan menyapa Komandan Jepang?
 
 * [Langsung menuntut dengan nada tinggi]  
     ~ Quiz("4_1")
@@ -17,26 +16,26 @@ Karman, bagaimana kita akan menyapa Komandan Jepang saat kita masuk nanti?
 === setelahQuiz4_1 ===
 #speaker:null #portrait: null
 (Karman melangkah cepat ke tengah ruangan tanpa basa-basi, lalu bicara keras) 
-#speaker:Karman #portrait: null
+#speaker:Karman #portrait: karman
 Kami datang untuk satu hal: penyerahan senjata. Tidak ada waktu untuk diskusi panjang.  
 #speaker: Komandan Jepang #portrait: null  
 Nada keras itu tidak pantas dalam perundingan. Jika kalian tidak datang untuk berbicara dengan kepala dingin, maka lebih baik kalian pergi.  
 #speaker:null #portrait: null
 (Bung Tomo menatap Karman sejenak, wajahnya menegang)
-#speaker: Bung Tomo #portrait: null
+#speaker: Soetomo #portrait: soetomo
 Karman... kita di sini bukan untuk cari ribut.  
 -> Diplomacy2
 
 === setelahQuiz4_2 ===
 #speaker:null #portrait: null
 (Karman berdiri tegap dan memberi salam singkat dengan nada sopan namun jelas) 
-#speaker:Karman #portrait: null
+#speaker:Karman #portrait: karman
 Saya Karman, bersama Bung Tomo dan M. Yasin. Kami datang sebagai wakil pemuda Surabaya, untuk mencari penyelesaian damai.    
 #speaker: Komandan Jepang #portrait: null  
 Sikap kalian mencerminkan kehormatan. Silakan duduk. Saya akan dengarkan maksud kedatangan ini. 
 #speaker:null #portrait: null
 (M. Yasin mengangguk pelan pada Karman)
-#speaker:M. Yasin #portrait: null
+#speaker:M. Yasin #portrait: m_yasin
 Pendekatan yang tepat. Kita butuh kepala dingin agar berhasil. 
 -> Diplomacy2
 
@@ -54,7 +53,7 @@ Silakan duduk. Sikap ini menunjukkan bahwa kalian datang untuk berbicara.
     -> setelahQuiz5_2
 
 === setelahQuiz5_1 ===
-#speaker: M. Yasin #portrait: null
+#speaker: M. Yasin #portrait: m_yasin
 Kami mewakili rakyat Surabaya yang sedang berjuang mempertahankan kemerdekaan. Kami meminta senjata dan perbekalan diserahkan secara damai, tanpa perlawanan.
 #speaker: Komandan Jepang #portrait: null
 Tuntutan yang langsung dan jelas. Sikap kalian membuat saya berpikir untuk mendengarkan lebih jauh.
@@ -63,7 +62,7 @@ Tuntutan yang langsung dan jelas. Sikap kalian membuat saya berpikir untuk mende
 -> Diplomacy3
 
 === setelahQuiz5_2 ===
-#speaker: Bung Tomo #portrait: null
+#speaker: Soetomo #portrait: soetomo
 Jika kalian tidak menyerahkan senjata sekarang juga, rakyat Surabaya akan bertindak sendiri!
 #speaker: Komandan Jepang #portrait: null
 Nada seperti itu hanya akan membawa kita ke jalan buntu.
@@ -94,7 +93,7 @@ Hm... kalian tahu cara berbicara seperti diplomat sejati. Itu sikap yang terhorm
 -> PilihanDiplomasiAkhir
 
 === setelahQuiz6_2 ===
-#speaker: Bung Tomo #portrait: null
+#speaker: Soetomo #portrait: soetomo
 Jika kalian menolak, rakyat Surabaya akan mengambil apa yang mereka butuhkan—dengan paksa jika perlu.
 #speaker: Komandan Jepang #portrait: null
 Apakah kalian datang membawa ancaman? Ini bukan cara untuk berbicara!
@@ -104,8 +103,9 @@ Apakah kalian datang membawa ancaman? Ini bukan cara untuk berbicara!
 
 
 === PilihanDiplomasiAkhir ===
-#speaker:Komandan Bataliyon Jepang #portrait:null
-Saya tidak bisa menyerahkan semuanya. Namun, saya bisa memberikan sebagian dari senjata dan perbekalan yang ada di gudang ini. Itu adalah tawaran terbaik saya.
+#speaker:Komandan Jepang #portrait:null
+Saya tidak bisa menyerahkan semuanya. Namun, saya bisa memberikan sebagian dari senjata dan perbekalan yang ada di gudang ini. 
+Itu adalah tawaran terbaik saya.
 
 * [Tetap Meminta Semua]
     -> PilihTetapMeminta
@@ -118,14 +118,14 @@ Saya tidak bisa menyerahkan semuanya. Namun, saya bisa memberikan sebagian dari 
 
 { moral >= 50: 
  #speaker: null #portrait: null
-    Setelah berpikir panjang, Komandan Bataliyon akhirnya mengangguk dengan berat hati.
-    #speaker:Komandan Bataliyon Jepang #portrait:null
+    Setelah berpikir panjang, Komandan Jepang akhirnya mengangguk dengan berat hati.
+    #speaker:Komandan Jepang #portrait:null
     Baiklah. Semua akan menjadi milik kalian.
     -> EndingSuksesTotal
 - else: 
      #speaker: null #portrait: null
-    (Komandan Bataliyon berdiri dengan amarah)
-    #speaker:Komandan Bataliyon Jepang #portrait:null
+    (Komandan Jepang berdiri dengan amarah)
+    #speaker:Komandan Jepang #portrait:null
     Tidak ada lagi yang perlu dibicarakan! Keluar dari ruangan ini sekarang!
     -> EndingGagal
 }
@@ -134,29 +134,38 @@ Saya tidak bisa menyerahkan semuanya. Namun, saya bisa memberikan sebagian dari 
 ~ temp moral = getCurrentMoral()
 
 { moral >= 50:
-    Narasi: "Komandan Bataliyon mengangguk dengan lega."
-    #speaker:Komandan Bataliyon Jepang #portrait:null
-    "Kalian adalah negosiator yang bijaksana. Barang-barang akan diserahkan segera."
+ #speaker: null #portrait: null
+    Komandan Jepang mengangguk dengan lega.
+    #speaker:Komandan Jepang #portrait:null
+    Kalian adalah negosiator yang bijaksana. Barang-barang akan diserahkan segera."
     -> EndingSuksesSebagian
 - else:
-    Narasi: "Komandan Bataliyon tetap tampak tidak puas."
-    #speaker:Komandan Bataliyon Jepang #portrait:null
-    "Kalian beruntung saya tidak ingin menciptakan kekacauan. Ambil apa yang bisa kalian dapatkan, lalu pergi."
+    Komandan Jepang tetap tampak tidak puas.
+    #speaker:Komandan Jepang #portrait:null
+    Kalian beruntung saya tidak ingin menciptakan kekacauan. Ambil apa yang bisa kalian dapatkan, lalu pergi.
     -> EndingTerpaksa
 }
 
 === EndingSuksesTotal ===
-Narasi: "Kalian berhasil mendapatkan seluruh senjata dan perbekalan tanpa perlawanan. Ini adalah kemenangan diplomasi yang luar biasa!"
+ #speaker: null #portrait: null
+Kalian berhasil mendapatkan seluruh senjata dan perbekalan tanpa perlawanan. Ini adalah kemenangan diplomasi yang luar biasa!
+~ sukses_total = true
 -> END
 
 === EndingSuksesSebagian ===
-Narasi: "Sebagian perbekalan dan senjata kini berada di tangan kalian. Meskipun bukan kemenangan total, ini tetap pencapaian yang besar."
+ #speaker: null #portrait: null
+ Sebagian perbekalan dan senjata kini berada di tangan kalian. Meskipun bukan kemenangan total, ini tetap pencapaian yang besar.
+ ~ sukses_sebagian = true
 -> END
 
 === EndingTerpaksa ===
-Narasi: "Negosiasi berjalan sulit, tetapi setidaknya kalian mendapatkan sesuatu daripada tidak sama sekali. Ini adalah kompromi yang pahit."
+ #speaker: null #portrait: null
+Negosiasi berjalan sulit, tetapi setidaknya kalian mendapatkan sesuatu daripada tidak sama sekali. Ini adalah kompromi yang pahit.
+~ ending_terpaksa = true
 -> END
 
 === EndingGagal ===
-Narasi: "Negosiasi gagal total. Tidak ada senjata atau perbekalan yang didapat. Kalian harus mencari cara lain untuk menghadapi situasi ini."
+ #speaker: null #portrait: null
+Negosiasi gagal total. Tidak ada senjata atau perbekalan yang didapat. Kalian harus mencari cara lain untuk menghadapi situasi ini.
+~ ending_terpaksa = true
 -> END

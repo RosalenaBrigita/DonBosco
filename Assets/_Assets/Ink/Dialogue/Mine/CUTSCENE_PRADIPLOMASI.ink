@@ -1,3 +1,5 @@
+INCLUDE ../../Quests/QuestData.ink
+
 #speaker:null #portrait:null #audio:null
 Kini, Gudang Don Bosco bukan lagi hanya tempat penyimpanan senjata.
 Ia menjadi simbol harapan dan ketegangan. Di balik temboknya, tersimpan keputusan yang bisa mengubah arah perjuangan.
@@ -15,6 +17,8 @@ Kita sudah mencoba keberanian dalam senyapnya malam.
 Kini… kami akan mencoba keteguhan dalam kata-kata.
 #speaker:Soetomo #audio:null #portrait:soetomo
 Jika itu bisa mencegah satu nyawa melayang… maka layak untuk diperjuangkan.
+~ start_quest = "Diplomasi"
+
 -> END
 
 

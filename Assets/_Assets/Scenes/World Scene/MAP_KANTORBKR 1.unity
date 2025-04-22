@@ -5508,7 +5508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quizDialogue: {fileID: 4900000, guid: c23a7ffe4a51a304b8e277454bcd8621, type: 3}
   quizId: 2
-  npcId: 0
+  npcId: 9
   OnQuizDone:
     m_PersistentCalls:
       m_Calls: []
@@ -5526,7 +5526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 4900000, guid: a10fd67f6f3ef104796acdad578c9267, type: 3}
-  npcID: 0
+  npcID: 8
   dialogueQuestConversations:
   - conditions:
     - questInfo: {fileID: 11400000, guid: c8e969ed63bac4347a6abb821ed1605f, type: 2}
@@ -5540,35 +5540,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   conversationStates: []
-  externalFunctions:
-  - functionName: ChangeScene
-    onFunctionCalled:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2062847692}
-          m_TargetAssemblyTypeName: DonBosco.SceneLoaderAgent, Assembly-CSharp
-          m_MethodName: ExecuteLoadScene
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2062847693}
-          m_TargetAssemblyTypeName: DonBosco.PlayerPositionTeleporter, Assembly-CSharp
-          m_MethodName: TeleportPlayer
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  externalFunctions: []
 --- !u!61 &918444702
 BoxCollider2D:
   m_ObjectHideFlags: 0
