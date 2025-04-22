@@ -102,7 +102,7 @@ MonoBehaviour:
   ignoreMask:
     serializedVersion: 2
     m_Bits: 2116
-  damage: 20
+  damage: 4
   speed: 15
   lifeTime: 1
 --- !u!50 &7668021434735611208

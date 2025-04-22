@@ -1,4 +1,3 @@
-
 ===First===
 #speaker:null #portrait:null #audio:null
 Misi kita hari ini adalah menyelamatkan tawanan dari markas musuh. 

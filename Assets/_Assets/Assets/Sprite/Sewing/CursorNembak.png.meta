@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 442181f9bb5976a43b03cf78089430e5
+guid: 73cf2a2a9fe8ee64abac5a8204cbdbd0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 334
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soengkono 1_0
+      name: CursorNembak_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 210
-        width: 334
-        height: 334
+        x: 650
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99f43bb47932caf40b685759447ea257
-      internalID: -556942058
+      spriteID: 2ea7163b36c19f944833496e2f262409
+      internalID: -820460737
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Soengkono 1_0: -556942058
+      CursorNembak_0: -820460737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

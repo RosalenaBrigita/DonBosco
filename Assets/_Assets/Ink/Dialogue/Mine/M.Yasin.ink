@@ -1,12 +1,13 @@
 INCLUDE ../../Quests/QuestData.ink
 
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Kau butuh sesuatu?
 -> END
 
 ===AjakBicara===
-#speaker:M.Yasin #audio:null #portrait:null
-Karman... Terima kasih telah datang tepat waktu. Kami telah mendengar sepak terjangmu selama ini, dan kami percaya, darah juangmu akan menjadi nyala api dalam misi ini.
+#speaker:M.Yasin #audio:null #portrait:m_yasin
+Karman... Terima kasih telah datang tepat waktu. 
+Kami telah mendengar sepak terjangmu selama ini, dan kami percaya, darah juangmu akan menjadi nyala api dalam misi ini.
 
 Target kita jelas—Gudang Don Bosco. Tempat itu ibarat jantung bagi pasukan Jepang di Surabaya. 
 Jika berhasil kita rebut, maka bukan hanya senjata yang kita dapatkan, tapi juga harapan dan semangat bagi seluruh rakyat yang tengah berjuang.
@@ -14,7 +15,7 @@ Jika berhasil kita rebut, maka bukan hanya senjata yang kita dapatkan, tapi juga
 * [Apa yang harus saya lakukan, Pak Yasin?] -> BriefingTugas
 
 ===BriefingTugas===
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Kau akan tergabung dalam tim serbu. Kita ada tiga puluh orang—sebagian pemuda seperti dirimu, sebagian lagi bekas tentara KNIL dan laskar rakyat.
 
 Dibagi jadi dua tim: tim serbu dan tim logistik. Tim serbu akan bergerak cepat dan menyusup ke dalam gudang. 
@@ -26,34 +27,35 @@ Sebelum kita susun strategi penyerangan secara rinci, saya ingin kau memilih man
 * [Saya akan bantu memastikan kondisi kesehatan dan logistik pasukan.] -> PersiapanKesehatan
 
 ===PersiapanLatihan===
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Baik. Latihan senjata dan simulasi penyusupan akan sangat menentukan. 
 Pastikan mereka tahu kapan harus bergerak dan kapan harus diam. Gunakan waktu sebaik mungkin.
 
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Saya percayakan itu padamu.
 ~ start_quest = "LatihanMenembak"
 -> END
 
 ===PersiapanKesehatan===
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Langkah bijak. Banyak dari mereka kelelahan, ada pula yang terluka dari bentrokan sebelumnya. 
 Berikan obat, perban, dan semangat. Kondisi mereka bisa menentukan hasil malam ini.
 
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Saya percayakan itu padamu.
 ~ start_quest = "BagikanObat"
 -> END
 
 ===SetelahPersiapan===
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Karman. Saya sudah dengar laporan dari para kepala regu. Kerjamu tadi sangat membantu. Pasukan terlihat lebih siap dan moril mereka meningkat.
 
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Sebelum kita susun strategi akhir, ada hal yang perlu kau tahu.
+-> PembahasanLanjutan
 
 ===PembahasanLanjutan===
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Kita tidak bisa menyusun serangan besar-besaran layaknya tentara resmi. Maka kita bertumpu pada dua hal: kejutan dan kecepatan.
 
 Kita akan menyelinap diam-diam dan menyerang ketika mereka sedang lengah. Serangan kita akan berlangsung cepat, tak lebih dari satu jam. 
@@ -65,7 +67,7 @@ Dua truk akan ikut dari belakang, menunggu aba-aba untuk masuk dan mengangkut ap
 * [Bagaimana soal penjagaan musuh?] -> InfoPenjagaan
 
 ===InfoPenjagaan===
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Kita belum punya data lengkap. Tapi dari laporan yang dikirim intel kita, mereka sedang dalam masa transisi jaga. 
 Beberapa pasukan Heiho Jepang mulai direlokasi karena kekalahan di front Pasifik.
 
@@ -91,20 +93,21 @@ Tapi saat evakuasi nanti, kita butuh satu orang untuk memastikan tak ada senjata
 * [Saya bisa bantu mengatur logistik juga, Pak?] -> FokusTugas
 
 ===FokusTugas===
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Tidak, Karman. Fokusmu tetap di garis depan. Kau bagian dari tim serbu, dan kami butuh pemimpin muda yang berani di sana.
 
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Serahkan soal logistik pada kami. Mamahit dan timnya sudah hafal rute dan metode pengangkutan. 
 Kau bantu kami dengan membuka jalan, dan jika memungkinkan, kawal mereka saat kembali.
 
 #speaker:Mamahit #audio:null #portrait:null
-Benar itu. Kami akan berada beberapa menit di belakangmu. Begitu gudang dikuasai, kami masuk cepat, ambil semua yang bisa diangkut—senapan, peluru, dokumen, bahkan perlengkapan medis kalau ada.
+Benar itu. Kami akan berada beberapa menit di belakangmu. Begitu gudang dikuasai, kami masuk cepat, ambil semua yang bisa diangkut.
+Termasuk senapan, peluru, dokumen, bahkan perlengkapan medis kalau ada.
 
 #speaker:Mamahit #audio:null #portrait:null
 Tugasmu memastikan jalur masuk dan keluar aman. Jika kau berhasil, kami bisa bergerak tanpa suara dan tanpa darah.
 
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Kita akan berkumpul di sekitar kompleks Gudang Don Bosco pukul dua puluh dua. 
 Gunakan pakaian gelap, hindari suara, dan pastikan senjatamu tidak jatuh atau berbunyi saat bergerak.
 
@@ -113,36 +116,38 @@ Kita harus keluar dari area itu sebelum fajar menyingsing. Jika kita gagal, buka
 * [Dimengerti, Pak. Saya siap.] -> PenutupBriefing
 
 ===PenutupBriefing===
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Karman... Kau bukan lagi sekadar pemuda biasa. Kau bagian dari arus sejarah. 
 Jika kita berhasil malam ini, maka anak cucu kita akan mengingat bahwa kita pernah melawan—dengan darah dan nyawa.
 
 Berjuanglah bukan untuk nama, tapi untuk tanah air. Indonesia belum merdeka sepenuhnya...
 
-#speaker:M.Yasin #audio:null #portrait:null
+#speaker:M.Yasin #audio:null #portrait:m_yasin
 Ini saatnya. Serang mendadak dan jangan beri mereka waktu untuk bersiap. 
 Pemuda-pemuda kita sudah di posisi. Kau yang memimpin serangan ini, Karman.
 
 -> PilihStrategiAwal
 
 ===PilihStrategiAwal===
-* [Kita serang dari belakang. Itu jalur yang paling aman.]
-    #speaker:Karman #audio:null #portrait:null
+* [Kita serang dari belakang]
+    #speaker:Karman #audio:null #portrait:karman
     Kita serang dari belakang. Itu jalur yang paling aman.
     ~ start_quest = "SerangBelakang"
+    ~ questBelakang = true
     -> END
 
-* [Tidak, kita serang langsung dari depan! Ini akan menunjukkan keberanian kita.]
-    #speaker:Karman #audio:null #portrait:null
+* [Tidak, kita serang langsung dari depan!]
+    #speaker:Karman #audio:null #portrait:karman
     Tidak, kita serang langsung dari depan! Ini akan menunjukkan keberanian kita.
     ~ start_quest = "SerangDepan"
+    ~ questDepan = true
     -> END
 
 * [Kita tunggu sampai pagi untuk melihat situasi lebih jelas.]
-    #speaker:Karman #audio:null #portrait:null
+    #speaker:Karman #audio:null #portrait:karman
     Kita tunggu sampai pagi untuk melihat situasi lebih jelas.
 
-    #speaker:M.Yasin #audio:null #portrait:null
+    #speaker:M.Yasin #audio:null #portrait:m_yasin
     Kau yakin? Tapi pemuda kita sudah siap mengintai.
 
     -> KonfirmasiTungguPagi
@@ -155,14 +160,16 @@ Pemuda-pemuda kita sudah di posisi. Kau yang memimpin serangan ini, Karman.
 * [Tidak, saya ubah rencana.] -> PilihStrategiTanpaTunggu
 
 ===PilihStrategiTanpaTunggu===
-* [Kita serang dari belakang. Itu jalur yang paling aman.]
-    #speaker:Karman #audio:null #portrait:null
+* [Kita serang dari belakang]
+    #speaker:Karman #audio:null #portrait:karman
     Kita serang dari belakang. Itu jalur yang paling aman.
     ~ start_quest = "SerangBelakang"
+    ~ questBelakang = true
     -> END
 
-* [Tidak, kita serang langsung dari depan! Ini akan menunjukkan keberanian kita.]
-    #speaker:Karman #audio:null #portrait:null
+* [Tidak, kita serang langsung dari depan!]
+    #speaker:Karman #audio:null #portrait:karman
     Tidak, kita serang langsung dari depan! Ini akan menunjukkan keberanian kita.
     ~ start_quest = "SerangDepan"
+    ~ questDepan = true
     -> END

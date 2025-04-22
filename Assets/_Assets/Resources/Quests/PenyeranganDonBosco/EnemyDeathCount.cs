@@ -13,6 +13,9 @@ namespace DonBosco.Quests
         [Header("Settings")]
         [SerializeField] private int enemiesToKill = 5;
 
+        [Header("Player Input Enter")]
+        [SerializeField] private bool disableInput = true;
+
         private EnemyBehaviour[] enemies = null;
         private int currentEnemiesKilled = 0;
 
@@ -38,7 +41,16 @@ namespace DonBosco.Quests
                 //InstantFinishQuest();
                 //OnQuestComplete?.Invoke();
                 FinishQuestStep();
+                DisableInputPlayer();
                 OnQuestComplete?.Invoke();
+            }
+        }
+
+        private void DisableInputPlayer()
+        {
+            if (disableInput)
+            {
+                InputManager.Instance.SetMovementActionMap(false);
             }
         }
 

@@ -102,7 +102,7 @@ public class EnemyZoneTrigger2D : MonoBehaviour
                 PlayerHealth playerHealth = FindObjectOfType<PlayerHealth>();
                 if (playerHealth != null)
                 {
-                    playerHealth.TriggerDeath();
+                    //playerHealth.TriggerDeath();
                 }
 ;
                 yield break; // keluar dari coroutine, gak lanjut apa-apa lagi

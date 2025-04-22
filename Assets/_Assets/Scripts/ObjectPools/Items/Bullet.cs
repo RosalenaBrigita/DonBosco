@@ -8,7 +8,7 @@ namespace DonBosco
     {
         [SerializeField] private LayerMask ignoreMask;
         [Header("Settings")]
-        [SerializeField] float damage = 20f;
+        [SerializeField] float damage = 4f;
         [SerializeField] float speed = 10f;
         [SerializeField] float lifeTime = 5f;
 

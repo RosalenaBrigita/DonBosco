@@ -20,7 +20,9 @@ MonoBehaviour:
   initialState: 0
   event_no: 0
   questSteps:
-  - {fileID: 0}
+  - {fileID: 3937051968670524455, guid: 40eb863e2dc079a4a90a5d0707b32767, type: 3}
+  - {fileID: 6792467828875923798, guid: 96e15c47c2822c44a83c59b9ff36f43c, type: 3}
+  - {fileID: 4604700633267488563, guid: 4bb3a26701f41e146bd08788afe63ac8, type: 3}
   prequisiteQuests: []
   rewardName: 
   rewardItems: []

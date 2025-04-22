@@ -1,6 +1,6 @@
 #speaker:Prajurit #audio:null #portrait:null
 K-Karman! Kami menemukan ruangan tersembunyi di bawah lantai belakang gudang…
-#speaker:Karman #audio:null #portrait:null
+#speaker:Karman #audio:null #portrait:karman
 Ada apa? Apa kalian menemukan sisa pasukan musuh?
 #speaker:Prajurit #audio:null #portrait:null
 Bukan… kami menemukan seorang wanita. Tawanan. Dia terlihat sudah lama dikurung… kondisi fisiknya lemah. Tapi dia masih sadar.
@@ -18,6 +18,7 @@ Kalau begitu, kita jemput dia. Kita tak berperang hanya untuk merebut senjata…
 Di balik gudang yang penuh senjata, tersimpan kisah lain—kisah seorang tawanan yang hampir terlupakan oleh sejarah. 
 #speaker:null #audio:null #portrait:null
 Dan malam ini… dia tidak akan tertinggal.
+-> END
 
 
 

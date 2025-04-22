@@ -15,11 +15,12 @@ MonoBehaviour:
   <id>k__BackingField: SerangBelakang
   questName: Serang Gudang DonBosco dari Belakang
   questDescription: 
-  initialState: 0
+  initialState: 1
   event_no: 4
   questSteps:
   - {fileID: 1338016314422564785, guid: 5d44c99597a143745a044fe13c2722bf, type: 3}
   - {fileID: 8302763253290910103, guid: 48a591e8c01454344acb4f3167f9de78, type: 3}
+  - {fileID: 2232551023769523741, guid: eeb381d78ff3dac42bf3f0e14c496e51, type: 3}
   - {fileID: 2232551023769523741, guid: eeb381d78ff3dac42bf3f0e14c496e51, type: 3}
   prequisiteQuests: []
   rewardName: 

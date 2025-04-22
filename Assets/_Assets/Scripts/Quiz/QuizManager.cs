@@ -24,6 +24,10 @@ public class QuizManager : MonoBehaviour, ISaveLoad
         instance = this;
     }
 
+    void Start()
+    {
+        GetQuizResources();
+    }
 
     void OnEnable()
     {
