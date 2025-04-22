@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2232551023769523741}
   - component: {fileID: 2824546077715809961}
   m_Layer: 0
-  m_Name: QuestSandera
+  m_Name: 1QuestSandera 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc92ee43791cc34dbb826cfff697617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questStepInfo: {fileID: 11400000, guid: b2e3f31b1ce326c4cb62a4eaa9fd4bec, type: 2}
+  questStepInfo: {fileID: 11400000, guid: cb0ec4b2c81aee74b8b90a9b3e83b0c6, type: 2}
   scene: TacticalWarMinigame
 --- !u!114 &2824546077715809961
 MonoBehaviour:

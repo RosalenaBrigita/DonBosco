@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: SerangDepan
   m_EditorClassIdentifier: 
   <id>k__BackingField: SerangDepan
-  questName: Serang Gudang DonBosco dari Belakang
+  questName: Serang Gudang DonBosco dari Depan
   questDescription: 
-  initialState: 0
+  initialState: 1
   event_no: 4
   questSteps:
   - {fileID: 4024144134150100953, guid: 7b720c5e0e7ecc74e972819f30d2026d, type: 3}
   - {fileID: 5318096704056530784, guid: 182f8841bc0250e4c8d8cf4db28db59a, type: 3}
-  - {fileID: 2232551023769523741, guid: eeb381d78ff3dac42bf3f0e14c496e51, type: 3}
+  - {fileID: 2232551023769523741, guid: f6ce3df6fe7906d48b1da09b6b551b7e, type: 3}
   prequisiteQuests: []
   rewardName: 
   rewardItems: []

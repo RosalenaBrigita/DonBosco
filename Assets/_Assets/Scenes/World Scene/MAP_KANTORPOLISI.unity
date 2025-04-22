@@ -1199,6 +1199,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 783742192}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &296682049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 296682050}
+  - component: {fileID: 296682052}
+  - component: {fileID: 296682051}
+  m_Layer: 0
+  m_Name: MAP_DB_EXTERIOR 1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &296682050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296682049}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 430636184}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &296682051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296682049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6cf0738c0919dd4493e35ffa1087566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportPosition: {x: -1.11, y: 98.4, z: 0}
+--- !u!114 &296682052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296682049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3e915d770ac02499984fcad2078d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenesToLoad:
+  - MAP_DB_EXTERIOR 1
+  scenesToUnload:
+  - MAP_KANTORPOLISI
+  resumeGameOnLoadDone: 1
 --- !u!1 &309086411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1553,8 @@ Transform:
   m_Children:
   - {fileID: 1125261088}
   - {fileID: 1330276733}
+  - {fileID: 296682050}
+  - {fileID: 1662399341}
   - {fileID: 688832133}
   m_Father: {fileID: 783742192}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1920,35 +1985,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   conversationStates: []
-  externalFunctions:
-  - functionName: ChangeScene
-    onFunctionCalled:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: DonBosco.SceneLoaderAgent, Assembly-CSharp
-          m_MethodName: ExecuteLoadScene
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: DonBosco.PlayerPositionTeleporter, Assembly-CSharp
-          m_MethodName: TeleportPlayer
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  externalFunctions: []
 --- !u!1 &611818695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2821,8 +2858,14 @@ MonoBehaviour:
     - questInfo: {fileID: 11400000, guid: 3421827fd7c529848a6e31b285f246df, type: 2}
       questState: 1
       questStepIndex: 1
-    sceneLoaderAgent: {fileID: 1330276735}
-    playerPositionTeleporter: {fileID: 1330276734}
+    sceneLoaderAgent: {fileID: 296682052}
+    playerPositionTeleporter: {fileID: 296682051}
+  - questConditions:
+    - questInfo: {fileID: 11400000, guid: 17777b6fe33181c48b198d36cd1d9db7, type: 2}
+      questState: 3
+      questStepIndex: 0
+    sceneLoaderAgent: {fileID: 1662399342}
+    playerPositionTeleporter: {fileID: 0}
   defaultTeleportInfo:
     questConditions: []
     sceneLoaderAgent: {fileID: 1125261087}
@@ -10612,6 +10655,55 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1662399340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1662399341}
+  - component: {fileID: 1662399342}
+  m_Layer: 0
+  m_Name: CUTSCENE_TUNGGUPAGI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1662399341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662399340}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 430636184}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1662399342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662399340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3e915d770ac02499984fcad2078d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenesToLoad:
+  - CUTSCENE_TUNGGUPAGI
+  scenesToUnload:
+  - MAP_KANTORPOLISI
+  resumeGameOnLoadDone: 0
 --- !u!1 &1811078541
 GameObject:
   m_ObjectHideFlags: 0
@@ -14943,18 +15035,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ec89e0914a34ca45bcee669c2744eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 4900000, guid: b60d41f545c290a4dae61d7da36b96cb, type: 3}
-  conversationStates:
-  - questConditions:
-    - questInfo: {fileID: 11400000, guid: 229a64cd2680ca8438a6ad4dd89fbaef, type: 2}
-      questState: 1
-      questStepIndex: 0
-    knotPath: AntarBekal
-  - questConditions:
-    - questInfo: {fileID: 11400000, guid: 229a64cd2680ca8438a6ad4dd89fbaef, type: 2}
-      questState: 3
-      questStepIndex: 0
-    knotPath: 
+  dialogue: {fileID: 4900000, guid: 11f5a1a33a71e024b8b746587f06d873, type: 3}
+  conversationStates: []
 --- !u!61 &2135746702
 BoxCollider2D:
   m_ObjectHideFlags: 0

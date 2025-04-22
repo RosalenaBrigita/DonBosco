@@ -11,6 +11,11 @@ namespace DonBosco.Quests
             FinishQuestStep();
         }
 
+        public void FinishQuest()
+        {
+            InstantFinishQuest();
+        }
+
         protected override void SetQuestStepState(string state)
         {
             // Do nothing

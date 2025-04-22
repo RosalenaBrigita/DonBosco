@@ -44,14 +44,14 @@ GameObject:
   - component: {fileID: 191080996874192543}
   - component: {fileID: 1026020871551241852}
   - component: {fileID: 7146368881663380035}
-  - component: {fileID: 7977879553065362528}
-  - component: {fileID: 7765607241869628795}
-  - component: {fileID: 6266223248598097100}
-  - component: {fileID: 6780052060705511715}
-  - component: {fileID: -8499972851062775173}
+  - component: {fileID: 6268399701920253675}
+  - component: {fileID: 1881637902581583010}
+  - component: {fileID: 761827313336387692}
+  - component: {fileID: 231201574173314303}
+  - component: {fileID: 693004557380948444}
   m_Layer: 10
   m_Name: Pejuang
-  m_TagString: Ally
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,34 +212,7 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7977879553065362528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8243668852484910409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c76c2b46e99d3c4c92d728968fce93f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: 
---- !u!114 &7765607241869628795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8243668852484910409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb3128211a837814baa04f704b84bdf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingDirection: 0
-  followPlayerOnStart: 0
---- !u!114 &6266223248598097100
+--- !u!114 &6268399701920253675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,28 +229,14 @@ MonoBehaviour:
     m_Bits: 256
   rayLayer:
     serializedVersion: 2
-    m_Bits: 1963
+    m_Bits: 1979
   firePoint: {fileID: 9195448469237232839}
-  adjacentAlliesRange: 0.5
-  scanRange: 50
-  fireRange: 10
-  unpreferedRange: 5
+  adjacentAlliesRange: 1
+  scanRange: 45
+  fireRange: 15
+  unpreferedRange: 8
   aimDelay: 1
---- !u!114 &6780052060705511715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8243668852484910409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0421c1b3459a20646b1f4fed3576582a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startState: 2
-  healthSetting: {fileID: 11400000, guid: 89ebc56f4c2600849be651574e310d98, type: 2}
---- !u!114 &-8499972851062775173
+--- !u!114 &1881637902581583010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,3 +254,44 @@ MonoBehaviour:
   weaponSoundEffect: 1
   fireDelay: 1
   bulletDamage: 1
+--- !u!114 &761827313336387692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243668852484910409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0421c1b3459a20646b1f4fed3576582a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startState: 2
+  healthSetting: {fileID: 11400000, guid: 89ebc56f4c2600849be651574e310d98, type: 2}
+--- !u!114 &231201574173314303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243668852484910409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c76c2b46e99d3c4c92d728968fce93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 
+--- !u!114 &693004557380948444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8243668852484910409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3128211a837814baa04f704b84bdf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingDirection: 0
+  followPlayerOnStart: 0

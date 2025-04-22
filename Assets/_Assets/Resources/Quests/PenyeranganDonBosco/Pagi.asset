@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13af3672a81f57a488b9906d1211aa40, type: 3}
   m_Name: Pagi
   m_EditorClassIdentifier: 
-  questInfo: {fileID: 0}
-  taskName: 
+  questInfo: {fileID: 11400000, guid: 17777b6fe33181c48b198d36cd1d9db7, type: 2}
+  taskName: Pergi dan tunggu sampai pagi
   taskDescription: 

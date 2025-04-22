@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24448c2fc36e1f145b23ca5cf8fe5c18, type: 3}
-  m_Name: SerangBelakang
+  m_Name: TungguPagi
   m_EditorClassIdentifier: 
-  <id>k__BackingField: SerangBelakang
-  questName: Serang Gudang DonBosco dari Belakang
-  questDescription: 
+  <id>k__BackingField: TungguPagi
+  questName: Pergi mengintai Donbosco
+  questDescription: Pergi ke gedung Donbosco untuk melihat keadaan. Tapi jangan serang
+    karena kita akan menunggu hingga matahari terbit.
   initialState: 0
   event_no: 4
   questSteps:
-  - {fileID: 1338016314422564785, guid: 5d44c99597a143745a044fe13c2722bf, type: 3}
-  - {fileID: 8302763253290910103, guid: 48a591e8c01454344acb4f3167f9de78, type: 3}
-  - {fileID: 2232551023769523741, guid: eeb381d78ff3dac42bf3f0e14c496e51, type: 3}
+  - {fileID: 4024144134150100953, guid: 9838cf6291942894688c71c73556d08e, type: 3}
   prequisiteQuests: []
   rewardName: 
   rewardItems: []

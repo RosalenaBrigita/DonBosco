@@ -69,7 +69,7 @@ EditorBuildSettings:
     path: Assets/_Assets/Scenes/Timeline_TacticalWar.unity
     guid: cb47faa3a4d4d2347bc5bb62086423b2
   - enabled: 1
-    path: Assets/_Assets/Scenes/World Scene/CUTSCENE_PENYERANGAN.unity
+    path: Assets/_Assets/Scenes/World Scene/CUTSCENE/CUTSCENE_PENYERANGAN.unity
     guid: 13bf22e951bf99444b32a8de751c4894
   - enabled: 1
     path: Assets/_Assets/Scenes/Story/Arc1/Ending/MAP_DONBOSCO.unity
@@ -78,16 +78,16 @@ EditorBuildSettings:
     path: Assets/_Assets/Scenes/MinigameMenembak.unity
     guid: b9795df4b273a2f4a8db3b7dc35ecbd0
   - enabled: 1
-    path: Assets/_Assets/Scenes/World Scene/CUTSCENE_PRADIPLOMASI.unity
+    path: Assets/_Assets/Scenes/World Scene/CUTSCENE/CUTSCENE_PRADIPLOMASI.unity
     guid: 1489fa2fddfed0148ad226cb0ad9af04
   - enabled: 1
-    path: Assets/_Assets/Scenes/World Scene/CUTSCENE_PENGHARGAAN.unity
+    path: Assets/_Assets/Scenes/World Scene/CUTSCENE/CUTSCENE_PENGHARGAAN.unity
     guid: 47e0fa9c524374243a3eb2027c0fc349
   - enabled: 1
-    path: Assets/_Assets/Scenes/World Scene/CUTSCENE_AFTERPENYERANGAN.unity
+    path: Assets/_Assets/Scenes/World Scene/CUTSCENE/CUTSCENE_AFTERPENYERANGAN.unity
     guid: 77ff3012efda2dd4eb9e1e3de60e5188
   - enabled: 1
-    path: Assets/_Assets/Scenes/World Scene/CUTSCENE_TUNGGUPAGI.unity
+    path: Assets/_Assets/Scenes/World Scene/CUTSCENE/CUTSCENE_TUNGGUPAGI.unity
     guid: 1448ea4336b669d40a6c76ddef17e9ba
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2ea68e328b9896345b249167d5c7c22b, type: 2}
