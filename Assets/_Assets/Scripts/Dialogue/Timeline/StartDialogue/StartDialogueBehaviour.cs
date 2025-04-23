@@ -6,12 +6,13 @@ namespace DonBosco.Dialogue
 {
     public class StartDialogueBehaviour : PlayableBehaviour
     {
+        public TextAsset localDialogue; // Fallback dialogue
         public int npcID;
         public string knotPath;
         private bool isLoaded = false;
         private TextAsset loadedDialogue;
 
-        public bool IsReady() => isLoaded && loadedDialogue != null;
+        public bool IsReady() => isLoaded || localDialogue != null;
 
         public override void OnBehaviourPlay(Playable playable, FrameData info)
         {
@@ -20,48 +21,48 @@ namespace DonBosco.Dialogue
                 var timeline = Object.FindObjectOfType<DialogueTimeline>();
                 if (timeline != null)
                 {
-                    timeline.StartCoroutine(LoadDialogue(timeline));
+                    timeline.StartCoroutine(TryLoadDialogue(timeline));
                 }
             }
-            else if (loadedDialogue != null)
+            else if (IsReady())
             {
                 TriggerDialogue();
             }
         }
 
-        private IEnumerator LoadDialogue(DialogueTimeline timeline)
+        private IEnumerator TryLoadDialogue(DialogueTimeline timeline)
         {
-            Debug.Log($"Starting to load dialogue for NPC {npcID}");
-
-            yield return NPCToDialogueConverter.GetDialogueFromNPC(npcID, (dialogue) =>
+            // Attempt to load from database first
+            yield return NPCToDialogueConverter.GetDialogueFromNPC(npcID, (databaseDialogue) =>
             {
-                if (dialogue == null)
+                if (databaseDialogue != null)
                 {
-                    Debug.LogError($"Failed to load dialogue for NPC {npcID}");
-                    return;
+                    loadedDialogue = databaseDialogue;
+                    Debug.Log($"Successfully loaded dialogue from DB for NPC {npcID}");
+                }
+                else
+                {
+                    loadedDialogue = localDialogue;
+                    Debug.LogWarning($"Falling back to local dialogue for NPC {npcID}");
                 }
 
-                loadedDialogue = dialogue;
                 isLoaded = true;
-                Debug.Log($"Successfully loaded dialogue for NPC {npcID}");
-
                 TriggerDialogue();
             });
         }
 
         public void TriggerDialogue()
         {
-            if (loadedDialogue == null)
+            var dialogueToUse = loadedDialogue ?? localDialogue;
+
+            if (dialogueToUse == null)
             {
-                Debug.LogWarning($"Dialogue for NPC {npcID} not loaded yet");
+                Debug.LogError($"No dialogue available for NPC {npcID}");
                 return;
             }
 
             var timeline = Object.FindObjectOfType<DialogueTimeline>();
-            if (timeline != null)
-            {
-                timeline.StartDialogue(loadedDialogue, knotPath);
-            }
+            timeline?.StartDialogue(dialogueToUse, knotPath);
         }
     }
 }

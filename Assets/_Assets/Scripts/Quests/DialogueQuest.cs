@@ -40,47 +40,64 @@ namespace DonBosco.Quests
             }
         }
 
-        public virtual void Interact()
+        private void Start()
         {
-            StartDialogue();
-        }
-
-        public virtual void Interact(Item item)
-        {
-            StartDialogue();
-        }
-
-        private void StartDialogue()
-        {
-            if (!dialogueLoaded)
+            if (npcID > 0)
             {
-                StartCoroutine(LoadDialogueFromServer());
-                return;
+                StartCoroutine(PreloadDialogueFromServer());
+            }
+        }
+
+        IEnumerator PreloadDialogueFromServer()
+        {
+            // Skip jika npcID tidak valid
+            if (npcID <= 0)
+            {
+                dialogueLoaded = true;
+                yield break;
             }
 
-            ProceedDialogue();
-        }
-
-        IEnumerator LoadDialogueFromServer()
-        {
             string url = $"{dialogueUrl}?npc_id={npcID}";
             UnityWebRequest www = UnityWebRequest.Get(url);
             yield return www.SendWebRequest();
 
             if (www.result != UnityWebRequest.Result.Success)
             {
-                Debug.LogError("Error load dialogue: " + www.error);
+                Debug.LogWarning($"Gagal load dialog dari server (NPC {npcID}), pakai local: {www.error}");
             }
             else
             {
-                InkWrapper result = JsonUtility.FromJson<InkWrapper>(www.downloadHandler.text);
-                if (!string.IsNullOrEmpty(result.ink_json))
+                try
                 {
-                    dialogue = new TextAsset(result.ink_json);
-                    dialogueLoaded = true;
-                    ProceedDialogue();
+                    InkWrapper result = JsonUtility.FromJson<InkWrapper>(www.downloadHandler.text);
+                    if (!string.IsNullOrEmpty(result.ink_json))
+                    {
+                        // Gunakan dialog dari server jika valid
+                        dialogue = new TextAsset(result.ink_json);
+                        Debug.Log("FromServer");
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Data dialog kosong (NPC {npcID}), pakai local");
+                    }
+                }
+                catch (System.Exception e)
+                {
+                    Debug.LogWarning($"Gagal parsing dialog (NPC {npcID}), pakai local: {e.Message}");
                 }
             }
+
+            dialogueLoaded = true;
+        }
+
+        public virtual void Interact()
+        {
+            ProceedDialogue();
+        }
+
+        public virtual void Interact(Item item)
+        {
+            ProceedDialogue();
         }
 
         [Serializable]

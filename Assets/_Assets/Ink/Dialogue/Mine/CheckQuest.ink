@@ -1,5 +1,6 @@
 INCLUDE ../../Quests/QuestData.ink
-
+#speaker:Yudi #portrait:null
+ga mood
 {quest_MengibarkanBendera_completed:
     #speaker:Yudi
     Wah, keren! Kamu sudah berhasil mengibarkan bendera.

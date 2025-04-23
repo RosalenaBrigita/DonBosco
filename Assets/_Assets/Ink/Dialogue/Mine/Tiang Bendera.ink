@@ -15,6 +15,6 @@ Aku tidak bisa membiarkan tiang ini kosong. Bendera ini harus berkibar, seperti 
 Aku akan mengibarkannya dengan tanganku sendiri. Ini bukan hanya tugas... Ini kehormatan.
 #speaker:Karman #portrait:karman #audio:animal_crossing_mid
 Tidak perlu ragu... Ini hak kita. Ini hak negara kita.
-    * Kibarkan bendera
+    * [Kibarkan bendera]
 -> END    
 

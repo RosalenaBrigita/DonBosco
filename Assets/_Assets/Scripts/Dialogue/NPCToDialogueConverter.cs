@@ -9,18 +9,29 @@ public static class NPCToDialogueConverter
     public static IEnumerator GetDialogueFromNPC(int npcID, System.Action<TextAsset> callback)
     {
         string url = $"{dialogueUrl}?npc_id={npcID}";
-        UnityWebRequest www = UnityWebRequest.Get(url);
-        yield return www.SendWebRequest();
 
-        if (www.result != UnityWebRequest.Result.Success)
+        using (UnityWebRequest www = UnityWebRequest.Get(url))
         {
-            Debug.LogError("Error load dialogue: " + www.error);
-            callback(null);
-        }
-        else
-        {
-            var result = JsonUtility.FromJson<InkWrapper>(www.downloadHandler.text);
-            callback(new TextAsset(result.ink_json));
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogWarning($"Database load failed for NPC {npcID}: {www.error}");
+                callback(null);
+            }
+            else
+            {
+                try
+                {
+                    var result = JsonUtility.FromJson<InkWrapper>(www.downloadHandler.text);
+                    callback(new TextAsset(result.ink_json));
+                }
+                catch (System.Exception e)
+                {
+                    Debug.LogError($"Failed to parse dialogue for NPC {npcID}: {e.Message}");
+                    callback(null);
+                }
+            }
         }
     }
 

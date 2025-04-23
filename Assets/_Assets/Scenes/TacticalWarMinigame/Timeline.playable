@@ -1164,6 +1164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 0}
   npcID: 15
   knotPath: First
 --- !u!114 &11400000
@@ -1204,6 +1205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 0}
   npcID: 15
   knotPath: Second
 --- !u!114 &1255201377380159769
@@ -1259,6 +1261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 0}
   npcID: 15
   knotPath: Fifth
 --- !u!114 &2905653221219408256
@@ -1314,6 +1317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 0}
   npcID: 15
   knotPath: Fourth
 --- !u!114 &5733581403256461687
@@ -1586,5 +1590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  dialogue: {fileID: 0}
   npcID: 15
   knotPath: Third

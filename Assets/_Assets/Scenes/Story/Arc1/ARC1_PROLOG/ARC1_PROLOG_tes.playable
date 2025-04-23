@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  localDialogue: {fileID: 4900000, guid: 401c8193025f9d4439503581876949c3, type: 3}
   npcID: 1
   knotPath: part2
 --- !u!114 &-7427697167575583009
@@ -340,6 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  localDialogue: {fileID: 4900000, guid: 401c8193025f9d4439503581876949c3, type: 3}
   npcID: 1
   knotPath: 
 --- !u!114 &6119410842919976030

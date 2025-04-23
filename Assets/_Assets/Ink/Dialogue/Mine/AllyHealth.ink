@@ -4,9 +4,11 @@ INCLUDE ../../Quests/QuestData.ink
 Kita harus prioritaskan apa?
 * [Fokus Kesehatan Pasukan]
     ~ set_health_bonus = true
+    okedeh
     -> lanjut
 * [Fokus Latihan Pasukan]
     ~ set_damage_bonus = true
+    mang eak
     -> lanjut
     
 ===lanjut===
