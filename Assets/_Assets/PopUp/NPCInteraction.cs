@@ -1,4 +1,5 @@
 using UnityEngine;
+using DonBosco;
 
 public class NPCInteraction2D : MonoBehaviour
 {

@@ -43,13 +43,34 @@ Berikan obat, perban, dan semangat. Kondisi mereka bisa menentukan hasil malam i
 
 #speaker:M.Yasin #audio:null #portrait:m_yasin
 Saya percayakan itu padamu.
-~ start_quest = "BagikanObat"
+~ start_quest = "FokusKesehatan"
 -> END
 
-===SetelahPersiapan===
+===SetelahPersiapanMenembak===
 #speaker:M.Yasin #audio:null #portrait:m_yasin
-Karman. Saya sudah dengar laporan dari para kepala regu. Kerjamu tadi sangat membantu. Pasukan terlihat lebih siap dan moril mereka meningkat.
+Ah, Karman. Bagaimana latihan tadi?
+#speaker: Karman #portrait:karman
+Kemajuan cukup baik, Pak. Tembakan mereka sudah lebih terarah, tapi masih perlu latihan gerak sambil menembak.
+#speaker:M.Yasin #audio:null #portrait:m_yasin
+Sebelum kita susun strategi akhir, ada hal yang perlu kau tahu.
+-> PembahasanLanjutan
 
+===LaporKeMYasin===
+#speaker: M. Yasin #portrait:m_yasin
+Karman. Kondisi pasukan bagaimana?
+
+#speaker: Karman #portrait:karman
+Luka-luka kecil sudah diobati, Pak. Mereka juga baru makan. Tapi... (berhenti sejenak) Beberapa masih ragu. Pemuda B tadi bilang, dia khawatir ini bisa jadi makan terakhir mereka.
+
+#speaker: M. Yasin #portrait:m_yasin
+(mengangguk pelan) Itu wajar. Kau sudah beri mereka kehangatan. Sekarang... (menatap mata Karman) apa kau juga punya keraguan?
+#speaker: Karman #portrait:karman
+Tidak, Pak. Tapi... bisakah kita pastikan mereka semua pulang? Setidaknya, pulang dengan cerita.
+#speaker: M. Yasin #portrait:m_yasin
+(meletakkan tangan di bahu Karman) Itulah mengapa kau kutugaskan di logistik. Kau ingat mereka bukan sekadar angka.
+Besok, ceritakan pada mereka tentang malam ini-bagaimana kau mengantarkan nasi dan harapan.
+#speaker: Karman #portrait:karman
+(berdiri tegak) Siap, Pak.
 #speaker:M.Yasin #audio:null #portrait:m_yasin
 Sebelum kita susun strategi akhir, ada hal yang perlu kau tahu.
 -> PembahasanLanjutan

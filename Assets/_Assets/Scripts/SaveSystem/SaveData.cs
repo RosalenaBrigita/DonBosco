@@ -20,6 +20,7 @@ namespace DonBosco
 
         #region Game Data
         public string dialogueVariables = null;
+        public List<string> seenCharacterIDs = new List<string>();
         #endregion
 
         #region Quest

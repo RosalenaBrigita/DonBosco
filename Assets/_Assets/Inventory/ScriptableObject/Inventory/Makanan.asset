@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb95248e9a6526c43bcdfbbf81af15bc, type: 3}
+  m_Name: Makanan
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 0
+  <MaxStackSize>k__BackingField: 1
+  <Name>k__BackingField: Makanan
+  <Description>k__BackingField: Makanan dari bu Sarni. Dapat digunakan untuk menambah
+    Health Points.
+  <ItemImage>k__BackingField: {fileID: 21300000, guid: cf23c62eda067d548bd4a79dd0c44160, type: 3}
+  <DefaultParametersList>k__BackingField: []
+  healAmount: 3
+  <actionSFX>k__BackingField: {fileID: 0}

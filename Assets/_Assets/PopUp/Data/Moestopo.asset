@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920ba4a84b9da184d93945aac9ece5e2, type: 3}
+  m_Name: Moestopo
+  m_EditorClassIdentifier: 
+  characterID: Moestopo
+  characterName: Moestopo
+  characterImage: {fileID: 2065844294, guid: 67ac5c1a5701c784d947c9bc698f21ad, type: 3}
+  description: Dokter gigi yang menjadi komandan lapangan dan pendiri Barisan Pemberontakan
+    Rakyat Indonesia (BPRI). Ahli strategi pertempuran urban ini memimpin serangan
+    ke posisi Sekutu di Hotel Yamato, sambil tetap menjalankan praktik kedokterannya
+    selama pertempuran.
+  realImage: {fileID: 1306941400, guid: 41ef64d9c90fa514ab810d2732b6884c, type: 3}
+  sourceCredit: (militer.id)

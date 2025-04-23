@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterID: yasin
   characterName: M. Yasin
-  characterImage: {fileID: 21300000, guid: 909c8a4b307557443ba7f2f12da00fc7, type: 3}
+  characterImage: {fileID: 923729246, guid: d581488d034a1024fb61b9a2d2f0851e, type: 3}
   description: Komjen Pol (purn) Moehammad Jasin merupakan tokoh dari kalangan polisi,
     yang membentuk satuan Brigadir Mobil (Brimob) sebagai satuan elite dan tertua
     di Kepolisian RI. Ia Polisi yang memproklamasikan kepolisian Indonesia, kemudian
     beliau aktif dalam pertempuran 10 November di Suarabaya.
+  realImage: {fileID: 21300000, guid: 909c8a4b307557443ba7f2f12da00fc7, type: 3}
+  sourceCredit: (biografi-tokoh-ternama.blogspot.com)

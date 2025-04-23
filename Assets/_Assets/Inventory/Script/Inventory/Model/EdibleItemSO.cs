@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DonBosco;
 
 namespace Inventory.Model
 {
@@ -9,7 +10,7 @@ namespace Inventory.Model
     public class EdibleItemSO : ItemSO, IDestroyableItem, IItemAction
     {
         [SerializeField]
-        private List<ModifierData> modifiersData = new List<ModifierData>();
+        public float healAmount = 10f;
 
         public string ActionName => "Consume";
 
@@ -18,17 +19,19 @@ namespace Inventory.Model
 
         public bool PerformAction(GameObject character, List<ItemParameter> itemState = null)
         {
-            foreach (ModifierData data in modifiersData)
+            // Get the player events manager and trigger healing
+            if (GameEventsManager.Instance != null)
             {
-                data.statModifier.AffectCharacter(character, data.value);
+                GameEventsManager.Instance.playerEvents.PlayerHeal(healAmount);
+                return true;
             }
-            return true;
+            return false;
         }
     }
 
     public interface IDestroyableItem
     {
-
+        // Marker interface for items that are destroyed on use
     }
 
     public interface IItemAction
@@ -36,12 +39,5 @@ namespace Inventory.Model
         public string ActionName { get; }
         public AudioClip actionSFX { get; }
         bool PerformAction(GameObject character, List<ItemParameter> itemState);
-    }
-
-    [Serializable]
-    public class ModifierData
-    {
-        public CharacterStatModifierSO statModifier;
-        public float value;
     }
 }

@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Bung Tomo
   m_EditorClassIdentifier: 
   characterID: tomo
-  characterName: Bung Tomo
-  characterImage: {fileID: 21300000, guid: 2dd5e85b768cffc458c4a4103aff0bb8, type: 3}
-  description: Sutomo atau lebih dikenal dengan sapaan akrab rakyat sebagai Bung
-    Tomo merupakan seorang pahlawan yang mampu mengobarkan semangat para pejuang
-    demi mempertahankan kemerdekaan Indonesia. Sosoknya lekat sebagai seorang patriot
-    yang selalu berani melawan penjajah. Dia berjuang di jalur agitasi dan propaganda.
+  characterName: Soetomo
+  characterImage: {fileID: -1154991602, guid: 5fca2c4e6e796ba48b368d734293863c, type: 3}
+  description: Tokoh revolusioner yang membakar semangat perlawanan melalui siaran
+    radio. Pidato legendarisnya pada 9 November 1945 dengan pekik "Allahu Akbar!"
+    berhasil memobilisasi ribuan pemuda Surabaya. Sebagai mantan jurnalis, ia dengan
+    tegas menolak ultimatum Inggris untuk menyerahkan senjata.
+  realImage: {fileID: 21300000, guid: 2dd5e85b768cffc458c4a4103aff0bb8, type: 3}
+  sourceCredit: (hobbymiliter.com)

@@ -6,10 +6,13 @@ public class AddItem : MonoBehaviour
 {
     [SerializeField] private Items item; // Ambil data dari Item.cs
 
+    private bool wasAdded = false; // Add this flag
+
     public void AddItemToInventory()
     {
-        InventoryController inventoryController = GameObject.FindObjectOfType<InventoryController>();
+        if (wasAdded) return; // Prevent double execution
 
+        InventoryController inventoryController = GameObject.FindObjectOfType<InventoryController>();
         if (inventoryController == null)
         {
             Debug.LogWarning("InventoryController tidak ditemukan!");
@@ -23,6 +26,7 @@ public class AddItem : MonoBehaviour
             int remainder = inventoryData.AddItem(item.InventoryItem, item.Quantity);
             if (remainder == 0)
             {
+                wasAdded = true; // Mark as added
                 Debug.Log(item.Quantity + " " + item.InventoryItem.name + " telah ditambahkan ke inventory!");
             }
             else
@@ -34,5 +38,11 @@ public class AddItem : MonoBehaviour
         {
             Debug.LogWarning("InventoryData atau Item belum diassign!");
         }
+    }
+
+    // Reset when needed
+    public void ResetAddStatus()
+    {
+        wasAdded = false;
     }
 }

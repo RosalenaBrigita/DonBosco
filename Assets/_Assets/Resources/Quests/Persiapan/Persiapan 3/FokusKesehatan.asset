@@ -10,16 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24448c2fc36e1f145b23ca5cf8fe5c18, type: 3}
-  m_Name: BagikanObat
+  m_Name: FokusKesehatan
   m_EditorClassIdentifier: 
-  <id>k__BackingField: BagikanObat
+  <id>k__BackingField: FokusKesehatan
   questName: Periksa kondisi pasukan
   questDescription: Beberapa pasukan mengalami kelelahan dan luka ringan. Bantu distribusikan
     obat-obatan dan pastikan mereka siap untuk malam penyerbuan.
   initialState: 0
   event_no: 0
   questSteps:
-  - {fileID: 0}
+  - {fileID: 8781499115352855120, guid: 99d074d37bbc45a4e8a358c07ab67abc, type: 3}
+  - {fileID: 7187005035278949759, guid: 77b417c838a993d428a9fca77f7085c9, type: 3}
+  - {fileID: 7135603525305923660, guid: 04a1f36ade1673c4683a42c5cc2e2261, type: 3}
+  - {fileID: 8762474354676534817, guid: bf5342fd630fa684086d6a0e72da12fd, type: 3}
+  - {fileID: 1946433467449404756, guid: 042830d98c8059348a684efc2efab50f, type: 3}
   prequisiteQuests: []
   rewardName: 
   rewardItems: []

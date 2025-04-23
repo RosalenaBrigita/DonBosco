@@ -18,10 +18,11 @@ MonoBehaviour:
     penyerbuan Gudang Don Bosco. Koordinasikan latihan dan laporkan hasilnya ke M.
     Yasin.
   initialState: 0
-  event_no: 0
+  event_no: 3
   questSteps:
   - {fileID: 3937051968670524455, guid: 40eb863e2dc079a4a90a5d0707b32767, type: 3}
   - {fileID: 6792467828875923798, guid: 96e15c47c2822c44a83c59b9ff36f43c, type: 3}
+  - {fileID: 3475553008684036553, guid: a3a4ea7ed46a06d41a84583e7bc5ffda, type: 3}
   - {fileID: 4604700633267488563, guid: 4bb3a26701f41e146bd08788afe63ac8, type: 3}
   prequisiteQuests: []
   rewardName: 

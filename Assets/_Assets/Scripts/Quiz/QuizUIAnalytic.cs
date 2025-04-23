@@ -25,6 +25,10 @@ public class QuizUIAnalytic : MonoBehaviour
         for(int i=0; i<QuizManager.Instance.QuizSOs.Length; i++)
         {
             QuizSO quizSO = QuizManager.Instance.QuizSOs[i];
+
+            if (quizSO.quizType != QuizType.PointBased)
+                continue;
+
             int playerAnswer = QuizManager.Instance.QuizAnswers[i];
             QuizUIQuestion quizUIQuestion = Instantiate(answerPrefab, answerParent);
             quizUIQuestion.SetQuestion(quizSO, playerAnswer);

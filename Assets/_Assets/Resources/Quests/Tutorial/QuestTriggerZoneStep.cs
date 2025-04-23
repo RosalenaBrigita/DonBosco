@@ -6,7 +6,7 @@ namespace DonBosco.Quests
     {
         public void TriggeredByPlayer()
         {
-            Debug.Log("YEAH");
+            //Debug.Log("YEAH");
             FinishQuestStep();
         }
 

@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 using DonBosco.Quests;
-using System;
+using System.Collections.Generic;
 
 namespace DonBosco.UI
 {
@@ -13,14 +12,15 @@ namespace DonBosco.UI
         [SerializeField] private GameObject contentParent = null;
         [SerializeField] private GameObject questContentPrefab = null;
 
-        // Panel Detail
-        [SerializeField] private GameObject questDetailPanel = null; 
+        [Header("Detail Panel")]
+        [SerializeField] private GameObject questDetailPanel = null;
+        [SerializeField] private ScrollRect scrollRect;
         [SerializeField] private TMP_Text questNameText = null;
-        [SerializeField] private TMP_Text questDescriptionText = null;
+        [SerializeField] private TMP_Text questDescriptionText = null; // Changed from questDescriptionText
         [SerializeField] private TMP_Text questRewardText = null;
 
         private Dictionary<string, QuestContentUI> questContentUIs = new Dictionary<string, QuestContentUI>();
-
+        private Quest currentDisplayedQuest;
 
         void OnEnable()
         {
@@ -45,12 +45,11 @@ namespace DonBosco.UI
             }
         }
 
-
         private void InstantiateQuestContent(Quest quest)
         {
             GameObject questContent = Instantiate(questContentPrefab, contentParent.transform);
             QuestContentUI questContentUI = questContent.GetComponent<QuestContentUI>();
-            questContentUI.SetContent(quest, this); // Kirim referensi QuestWindowUI
+            questContentUI.SetContent(quest, this);
             questContentUIs.Add(quest.info.id, questContentUI);
         }
 
@@ -60,9 +59,45 @@ namespace DonBosco.UI
             {
                 questDetailPanel.SetActive(true);
                 questNameText.text = quest.info.questName;
-                questDescriptionText.text = quest.info.questDescription;
+
+                // Get current step info
+                int currentStepIndex = quest.currentStepIndex;
+                QuestStep currentStep = quest.info.questSteps[currentStepIndex];
+                QuestStepInfoSO stepInfo = currentStep.questStepInfo;
+
+                // Format description text
+                string formattedDescription = $"<color=#000000><b><u>{stepInfo.taskName}:</u></b></color>\n{stepInfo.taskDescription}";
                 questRewardText.text = quest.info.rewardName;
+
+                // Reset scroll position
+                scrollRect.normalizedPosition = new Vector2(0, 1);
+                UpdateScrollbarVisibility();
             }
+        }
+
+        private void UpdateScrollbarVisibility()
+        {
+            // Force layout update biar ukuran konten benar
+            LayoutRebuilder.ForceRebuildLayoutImmediate(questDescriptionText.rectTransform);
+
+            float contentHeight = questDescriptionText.rectTransform.rect.height;
+            float viewportHeight = scrollRect.viewport.rect.height;
+
+            bool needsScroll = contentHeight > viewportHeight;
+            scrollRect.verticalScrollbar.gameObject.SetActive(needsScroll);
+        }
+
+        private string GetCurrentStepDescription(Quest quest)
+        {
+            if (quest.currentStepIndex >= 0 &&
+                quest.currentStepIndex < quest.info.questSteps.Length)
+            {
+                QuestStep currentStep = quest.info.questSteps[quest.currentStepIndex];
+                return currentStep.questStepInfo != null ?
+                    currentStep.questStepInfo.taskDescription :
+                    "No step description available";
+            }
+            return "Quest step not found";
         }
 
         public void CloseQuestDetails()
@@ -70,8 +105,19 @@ namespace DonBosco.UI
             if (questDetailPanel != null)
             {
                 questDetailPanel.SetActive(false);
+                currentDisplayedQuest = null;
+            }
+        }
+
+        // Call this when quest step progresses
+        public void RefreshCurrentStep()
+        {
+            if (currentDisplayedQuest != null && questDetailPanel.activeSelf)
+            {
+                string stepDescription = GetCurrentStepDescription(currentDisplayedQuest);
+                questDescriptionText.text = stepDescription;
+                scrollRect.normalizedPosition = new Vector2(0, 1);
             }
         }
     }
-
 }

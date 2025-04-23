@@ -15,7 +15,7 @@ MonoBehaviour:
   <id>k__BackingField: Belanda
   questName: Kedatangan Belanda
   questDescription: 
-  initialState: 0
+  initialState: 1
   event_no: 1
   questSteps:
   - {fileID: 5382776944125324404, guid: 38fe0fb5afd946a478f390524ff02d71, type: 3}

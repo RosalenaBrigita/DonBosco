@@ -61,7 +61,11 @@ namespace DonBosco.Character
 
         private void Die()
         {
-            OnDeath?.Invoke();
+            // Tambahkan pengecekan tag Ally sebelum invoke OnDeath
+            if (!CompareTag("Ally"))
+            {
+                OnDeath?.Invoke();
+            }
             Destroy(gameObject);
         }
 
