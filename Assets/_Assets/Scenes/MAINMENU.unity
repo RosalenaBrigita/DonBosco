@@ -2004,9 +2004,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1817228804}
-        m_TargetAssemblyTypeName: DonBosco.API.Login, Assembly-CSharp
-        m_MethodName: OnQuitGameButtonClicked
+      - m_Target: {fileID: 1292167384}
+        m_TargetAssemblyTypeName: LoginManager, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10015,7 +10015,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19056252, y: 0.20751853}
   m_AnchorMax: {x: 0.80941653, y: 0.80500007}
-  m_AnchoredPosition: {x: 0.020019531, y: -15.553}
+  m_AnchoredPosition: {x: 0.020019531, y: -15.5529785}
   m_SizeDelta: {x: 2.995, y: 16.2504}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1874777754

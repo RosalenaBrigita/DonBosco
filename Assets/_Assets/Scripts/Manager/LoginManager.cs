@@ -218,6 +218,12 @@ public class LoginManager : MonoBehaviour
         }
     }
 
+    public void QuitGame()
+    {
+        QuitPrevention.RunOnQuit();
+        Application.Quit();
+    }
+
     private void UpdateUIAfterLogin()
     {
         // This will trigger the SaveManager to check for save data
