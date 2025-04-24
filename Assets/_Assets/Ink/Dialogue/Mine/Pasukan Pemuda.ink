@@ -1,3 +1,11 @@
+#speaker: Rohman #portrait:null
+Apa kita sudah aman?
+
+===AfterLatihanMenembak===
+#speaker:Rohman #audio:null #portrait:null
+Karman, ayo lain kali latihan menembak lagi. Jangan sampai tanganku kaku lagi.
+-> END
+
 ===MulaiLatihanMenembak===
 #speaker:Rohman #audio:null #portrait:null
 Eh, kau Karman ya? Wah, akhirnya datang juga. Kami kira kau bakal langsung ke markas logistik.

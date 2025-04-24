@@ -53,6 +53,7 @@ Ah, Karman. Bagaimana latihan tadi?
 Kemajuan cukup baik, Pak. Tembakan mereka sudah lebih terarah, tapi masih perlu latihan gerak sambil menembak.
 #speaker:M.Yasin #audio:null #portrait:m_yasin
 Sebelum kita susun strategi akhir, ada hal yang perlu kau tahu.
+~ set_damage_bonus = true
 -> PembahasanLanjutan
 
 ===LaporKeMYasin===
@@ -73,6 +74,7 @@ Besok, ceritakan pada mereka tentang malam ini-bagaimana kau mengantarkan nasi d
 (berdiri tegak) Siap, Pak.
 #speaker:M.Yasin #audio:null #portrait:m_yasin
 Sebelum kita susun strategi akhir, ada hal yang perlu kau tahu.
+~ set_health_bonus = true
 -> PembahasanLanjutan
 
 ===PembahasanLanjutan===

@@ -21,20 +21,25 @@ namespace DonBosco
 
         private int totalActivated = 0;
         private float spawnDelay = 2f;
-        private float minDelay = 0.7f;
+        private float minDelay = 0.5f;
 
         private int score = 0;
         private int finishedTargets = 0;
 
         void Start()
         {
-            //Time.timeScale = 0f; // Pause game saat info panel aktif
             InputManager.Instance.SetMovementActionMap(false);
             InputManager.Instance.SetUIActionMap(false);
             infoPanel.SetActive(true);
 
             if (finalPanel != null)
                 finalPanel.SetActive(false);
+
+            // Inisialisasi semua target
+            foreach (var target in targets)
+            {
+                target.gameObject.SetActive(false);
+            }
         }
 
         public void CloseInfoPanel()
@@ -55,11 +60,36 @@ namespace DonBosco
         {
             while (totalActivated < maxActivations)
             {
-                ActivateRandomTarget();
-                totalActivated++;
+                // Cari target yang TIDAK aktif dan TIDAK aktif di hierarchy
+                List<TargetController> availableTargets = new List<TargetController>();
+                foreach (var target in targets)
+                {
+                    if (!target.IsActive && !target.gameObject.activeInHierarchy)
+                        availableTargets.Add(target);
+                }
 
-                spawnDelay = Mathf.Max(minDelay, spawnDelay - 0.2f);
+                if (availableTargets.Count > 0)
+                {
+                    var randomTarget = availableTargets[Random.Range(0, availableTargets.Count)];
+                    randomTarget.gameObject.SetActive(true);
+                    randomTarget.ActivateTarget(OnTargetResult);
+                    totalActivated++;
+                }
+
+                spawnDelay = Mathf.Max(minDelay, spawnDelay - 0.3f); // Kurangi delay lebih halus
                 yield return new WaitForSeconds(spawnDelay);
+            }
+        }
+
+        void OnTargetResult(bool success)
+        {
+            if (success) score += 10;
+            UpdateScoreUI();
+
+            finishedTargets++;
+            if (finishedTargets >= maxActivations)
+            {
+                EndGame();
             }
         }
 
@@ -77,22 +107,6 @@ namespace DonBosco
             var randomTarget = inactiveTargets[Random.Range(0, inactiveTargets.Count)];
             randomTarget.gameObject.SetActive(true);
             randomTarget.ActivateTarget(OnTargetResult);
-        }
-
-        void OnTargetResult(bool success)
-        {
-            if (success)
-            {
-                score += 10;
-                UpdateScoreUI();
-            }
-
-            finishedTargets++;
-
-            if (finishedTargets >= maxActivations)
-            {
-                EndGame();
-            }
         }
 
         void UpdateScoreUI()

@@ -113162,7 +113162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlayableDirector: {fileID: 0}
   startTimelineOnStart: 1
-  needPlayerAnimator: 1
+  needPlayerAnimator: 0
   needCinemachineBrain: 1
   needTransitionOut: 1
   onDialogueEnded:

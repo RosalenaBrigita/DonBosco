@@ -78,7 +78,7 @@ namespace DonBosco.Character
                 dialogueManager.GetVariableState("set_damage_bonus") is Ink.Runtime.BoolValue boolDamage &&
                 boolDamage.value)
             {
-                bonusDamage = 1f;
+                bonusDamage = 2f;
                 Debug.Log($"[DAMAGE BONUS] Base: {bulletDamage}, Bonus: {bonusDamage}, Total: {bulletDamage + bonusDamage}");
             }
         }

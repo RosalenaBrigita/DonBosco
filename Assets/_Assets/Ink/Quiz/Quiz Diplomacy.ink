@@ -116,20 +116,37 @@ Itu adalah tawaran terbaik saya.
 === PilihTetapMeminta ===
 ~ temp moral = getCurrentMoral()
 
-{ moral >= 50: 
- #speaker: null #portrait: null
+{ moral >= 50:
+    #speaker: null #portrait: null
     Setelah berpikir panjang, Komandan Jepang akhirnya mengangguk dengan berat hati.
-    #speaker:Komandan Jepang #portrait:null
+    #speaker: Komandan Jepang #portrait: null
     Baiklah. Semua akan menjadi milik kalian.
     -> EndingSuksesTotal
-- else: 
-     #speaker: null #portrait: null
+- else:
+    -> CekBenderaSaatGagal
+}
+
+=== CekBenderaSaatGagal ===
+{ set_bendera:
+    #speaker: Komandan Jepang #portrait: null
+    Kalian datang dengan bendera. Itu menunjukkan kalian masih punya niat baik. Aku beri kalian satu kesempatan: ambil tawaran sebagian, atau pergi tanpa apa pun.
+    -> TanyaLagi
+- else:
+    #speaker: null #portrait: null
     (Komandan Jepang berdiri dengan amarah)
-    #speaker:Komandan Jepang #portrait:null
+    #speaker: Komandan Jepang #portrait: null
     Tidak ada lagi yang perlu dibicarakan! Keluar dari ruangan ini sekarang!
     -> EndingGagal
 }
 
+===TanyaLagi===
+    * [Setuju sebagian saja]
+        -> EndingTerpaksa
+    * [Tetap meminta semua]
+        #speaker: Komandan Jepang #portrait: null
+        Maka tidak ada lagi yang bisa dibicarakan.
+        -> EndingGagal
+        
 === PilihSetujuSebagian ===
 ~ temp moral = getCurrentMoral()
 
@@ -137,7 +154,7 @@ Itu adalah tawaran terbaik saya.
  #speaker: null #portrait: null
     Komandan Jepang mengangguk dengan lega.
     #speaker:Komandan Jepang #portrait:null
-    Kalian adalah negosiator yang bijaksana. Barang-barang akan diserahkan segera."
+    Kalian adalah negosiator yang bijaksana. Barang-barang akan diserahkan segera.
     -> EndingSuksesSebagian
 - else:
     Komandan Jepang tetap tampak tidak puas.
@@ -150,22 +167,59 @@ Itu adalah tawaran terbaik saya.
  #speaker: null #portrait: null
 Kalian berhasil mendapatkan seluruh senjata dan perbekalan tanpa perlawanan. Ini adalah kemenangan diplomasi yang luar biasa!
 ~ sukses_total = true
+{ set_bendera:
+    #speaker:Komandan Jepang #portrait:null
+    Karena kalian membawa bendera itu... aku tahu bahwa Republik ini benar-benar hidup. Sebagai tambahan, Aku akan berkata jujur... 
+    #speaker:Komandan Jepang #portrait:null
+    Tak lama lagi, kapal-kapal Belanda dan pasukan Sekutu akan tiba melalui pelabuhan. Mereka bilang ingin mengambil tawanan perang... tapi kita tahu itu hanya alasan.
+        #speaker:Komandan Jepang #portrait:null
+    Radio menangkap sinyal bahwa kapal Sekutu akan berlabuh di pelabuhan Tanjung Perak. Mereka membawa logistik dan satuan bersenjata lengkap.
+    #speaker:Komandan Jepang #portrait:null
+    Mereka ingin menginjakkan kaki lagi di tanah ini—seolah kemerdekaan kalian tak berarti. Bersiaplah. Kemenangan hari ini bukan akhir... tapi awal dari perjuangan yang lebih besar.
+    #speaker:Komandan Jepang #portrait:null
+    Jangan tertipu dengan bendera Inggris. Di balik mereka ada NICA—Belanda yang ingin kembali berkuasa. Kalian harus waspada terhadap tipu daya mereka.
+}
 -> END
 
 === EndingSuksesSebagian ===
  #speaker: null #portrait: null
  Sebagian perbekalan dan senjata kini berada di tangan kalian. Meskipun bukan kemenangan total, ini tetap pencapaian yang besar.
  ~ sukses_sebagian = true
+ 
+{ set_bendera:
+    #speaker:Komandan Jepang #portrait:null
+    Karena kalian membawa bendera itu... aku tahu bahwa Republik ini benar-benar hidup. Sebagai tambahan, Aku akan berkata jujur... 
+    #speaker:Komandan Jepang #portrait:null
+    Tak lama lagi, kapal-kapal Belanda dan pasukan Sekutu akan tiba melalui pelabuhan. Mereka bilang ingin mengambil tawanan perang... tapi kita tahu itu hanya alasan.
+        #speaker:Komandan Jepang #portrait:null
+    Radio menangkap sinyal bahwa kapal Sekutu akan berlabuh di pelabuhan Tanjung Perak. Mereka membawa logistik dan satuan bersenjata lengkap.
+    #speaker:Komandan Jepang #portrait:null
+    Mereka ingin menginjakkan kaki lagi di tanah ini—seolah kemerdekaan kalian tak berarti. Bersiaplah. Kemenangan hari ini bukan akhir... tapi awal dari perjuangan yang lebih besar.
+    #speaker:Komandan Jepang #portrait:null
+    Jangan tertipu dengan bendera Inggris. Di balik mereka ada NICA—Belanda yang ingin kembali berkuasa. Kalian harus waspada terhadap tipu daya mereka.
+}
 -> END
 
 === EndingTerpaksa ===
  #speaker: null #portrait: null
 Negosiasi berjalan sulit, tetapi setidaknya kalian mendapatkan sesuatu daripada tidak sama sekali. Ini adalah kompromi yang pahit.
 ~ ending_terpaksa = true
+{ set_bendera:
+    #speaker:Komandan Jepang #portrait:null
+    Karena kalian membawa bendera itu... aku tahu bahwa Republik ini benar-benar hidup. Sebagai tambahan, Aku akan berkata jujur... 
+    #speaker:Komandan Jepang #portrait:null
+    Tak lama lagi, kapal-kapal Belanda dan pasukan Sekutu akan tiba melalui pelabuhan. Mereka bilang ingin mengambil tawanan perang... tapi kita tahu itu hanya alasan.
+        #speaker:Komandan Jepang #portrait:null
+    Radio menangkap sinyal bahwa kapal Sekutu akan berlabuh di pelabuhan Tanjung Perak. Mereka membawa logistik dan satuan bersenjata lengkap.
+    #speaker:Komandan Jepang #portrait:null
+    Mereka ingin menginjakkan kaki lagi di tanah ini—seolah kemerdekaan kalian tak berarti. Bersiaplah. Kemenangan hari ini bukan akhir... tapi awal dari perjuangan yang lebih besar.
+    #speaker:Komandan Jepang #portrait:null
+    Jangan tertipu dengan bendera Inggris. Di balik mereka ada NICA—Belanda yang ingin kembali berkuasa. Kalian harus waspada terhadap tipu daya mereka.
+}
 -> END
 
 === EndingGagal ===
  #speaker: null #portrait: null
 Negosiasi gagal total. Tidak ada senjata atau perbekalan yang didapat. Kalian harus mencari cara lain untuk menghadapi situasi ini.
-~ ending_terpaksa = true
+~ ending_gagal = true
 -> END

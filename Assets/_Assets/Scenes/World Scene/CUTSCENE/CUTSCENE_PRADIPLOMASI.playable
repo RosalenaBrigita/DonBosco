@@ -156,10 +156,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 1.4333333333333333
+    m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -802901549931921598}
-    m_Duration: 67.83333333333333
+    m_Duration: 69.26666666666661
     m_TimeScale: 1
     m_ParentTrack: {fileID: -7888266089257295303}
     m_EaseInDuration: 0
@@ -878,6 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  localDialogue: {fileID: 4900000, guid: 5fef3d1520defa34cb43620372e82550, type: 3}
   npcID: 18
   knotPath: 
 --- !u!74 &-3669190231956635076
@@ -2680,6 +2681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  localDialogue: {fileID: 4900000, guid: 5fef3d1520defa34cb43620372e82550, type: 3}
   npcID: 18
   knotPath: MarkasBKR
 --- !u!114 &6292013762263855054

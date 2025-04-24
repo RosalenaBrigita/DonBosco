@@ -994,6 +994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  localDialogue: {fileID: 4900000, guid: e2ac9570100f1a1419e7b2df30390e03, type: 3}
   npcID: 16
   knotPath: ReportKeMYasin
 --- !u!114 &-2340431462679929354
@@ -1644,6 +1645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  localDialogue: {fileID: 4900000, guid: e2ac9570100f1a1419e7b2df30390e03, type: 3}
   npcID: 16
   knotPath: SetelahPenyelamatanTawanan
 --- !u!114 &11400000
@@ -2519,6 +2521,15 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3.7
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2597,6 +2608,15 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3.7
         value: 0
         inSlope: 0
         outSlope: 0

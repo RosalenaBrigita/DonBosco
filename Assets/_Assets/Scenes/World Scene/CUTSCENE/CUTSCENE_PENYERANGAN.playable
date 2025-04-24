@@ -1454,7 +1454,7 @@ MonoBehaviour:
     m_Start: 41.55
     m_ClipIn: 0
     m_Asset: {fileID: 3728773683311520024}
-    m_Duration: 17.550000000000004
+    m_Duration: 21.51666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4067267276274822346}
     m_EaseInDuration: 0
@@ -1657,7 +1657,7 @@ MonoBehaviour:
     m_Start: 53.06666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -5970700882958410970}
-    m_Duration: 6.033333333333331
+    m_Duration: 9.999999999999986
     m_TimeScale: 1
     m_ParentTrack: {fileID: -2853507163573577772}
     m_EaseInDuration: 0
@@ -1871,7 +1871,7 @@ MonoBehaviour:
     m_Start: 7.833333333333333
     m_ClipIn: 0
     m_Asset: {fileID: -1815082118485056531}
-    m_Duration: 30.650000000000002
+    m_Duration: 55.30114380773156
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1597100908406607113}
     m_EaseInDuration: 0
@@ -3123,6 +3123,24 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 60.2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 63.133335
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -3244,7 +3262,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 39.566666
+    m_StopTime: 63.133335
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -3294,6 +3312,24 @@ AnimationClip:
       - serializedVersion: 3
         time: 39.566666
         value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 60.2
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 63.133335
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3822,7 +3858,7 @@ MonoBehaviour:
     m_Start: 44.9
     m_ClipIn: 0
     m_Asset: {fileID: -2858109750302840675}
-    m_Duration: 14.200000000000003
+    m_Duration: 18.166666666666657
     m_TimeScale: 1
     m_ParentTrack: {fileID: 5633878135220543722}
     m_EaseInDuration: 0
@@ -4388,6 +4424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  localDialogue: {fileID: 4900000, guid: a0520842a60c2a64c8a6b3d3b0ad514b, type: 3}
   npcID: 14
   knotPath: 
 --- !u!114 &6888074127311779594

@@ -448,7 +448,25 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -557,6 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  localDialogue: {fileID: 4900000, guid: b0b604b2aa0bbe64ca8d249f0b3ed988, type: 3}
   npcID: 19
   knotPath: Kabar
 --- !u!114 &-3039051075711330191
@@ -4324,7 +4343,25 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -5095,6 +5132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6692869f4e9053d4986da9e2eb3eee51, type: 3}
   m_Name: StartDialogueAsset
   m_EditorClassIdentifier: 
+  localDialogue: {fileID: 4900000, guid: b0b604b2aa0bbe64ca8d249f0b3ed988, type: 3}
   npcID: 19
   knotPath: Prolog
 --- !u!114 &8744266926018399985

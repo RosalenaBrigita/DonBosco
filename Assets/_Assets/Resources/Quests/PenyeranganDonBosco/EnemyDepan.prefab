@@ -109,6 +109,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3444022686317210623}
     m_Modifications:
+    - target: {fileID: -8499972851062775173, guid: 988a61ce54cbee34c9e84efe5bcd324d, type: 3}
+      propertyPath: bulletDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 693004557380948444, guid: 988a61ce54cbee34c9e84efe5bcd324d, type: 3}
       propertyPath: startingDirection
       value: 3
@@ -759,6 +763,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3444022686317210623}
     m_Modifications:
+    - target: {fileID: -8499972851062775173, guid: 988a61ce54cbee34c9e84efe5bcd324d, type: 3}
+      propertyPath: bulletDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3889936734499895232, guid: 988a61ce54cbee34c9e84efe5bcd324d, type: 3}
       propertyPath: m_SortingOrder
       value: 10
@@ -1315,6 +1323,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3444022686317210623}
     m_Modifications:
+    - target: {fileID: -8499972851062775173, guid: 988a61ce54cbee34c9e84efe5bcd324d, type: 3}
+      propertyPath: bulletDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 693004557380948444, guid: 988a61ce54cbee34c9e84efe5bcd324d, type: 3}
       propertyPath: startingDirection
       value: 2
@@ -1413,6 +1425,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3444022686317210623}
     m_Modifications:
+    - target: {fileID: -8499972851062775173, guid: 988a61ce54cbee34c9e84efe5bcd324d, type: 3}
+      propertyPath: bulletDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3889936734499895232, guid: 988a61ce54cbee34c9e84efe5bcd324d, type: 3}
       propertyPath: m_SortingOrder
       value: 10
@@ -1785,6 +1801,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3444022686317210623}
     m_Modifications:
+    - target: {fileID: -8499972851062775173, guid: 988a61ce54cbee34c9e84efe5bcd324d, type: 3}
+      propertyPath: bulletDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3889936734499895232, guid: 988a61ce54cbee34c9e84efe5bcd324d, type: 3}
       propertyPath: m_SortingOrder
       value: 10

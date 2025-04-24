@@ -109,7 +109,7 @@ namespace DonBosco.Character
             if (dialogueManager.GetVariableState("set_health_bonus") is Ink.Runtime.BoolValue boolVal && boolVal.value)
             {
                 float before = healthSO.CurrentHealth;
-                healthSO.RegenHealth(15f);
+                healthSO.RegenHealth(5f);
                 float after = healthSO.CurrentHealth;
                 Debug.Log($"[HEALTH BONUS] Sebelum: {before}, Sesudah: {after}");
             }

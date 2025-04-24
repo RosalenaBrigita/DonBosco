@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LaporPerkembanganKeYasin
   m_EditorClassIdentifier: 
   questInfo: {fileID: 11400000, guid: 9813853b855319349858e72c69a314d9, type: 2}
-  taskName: LaporPerkembanganKeYasin
+  taskName: Lapor perkembangan ke M. Yasin
   taskDescription: Pergilah ke Kantor Polisi Istimewa dan temui M.Yasin

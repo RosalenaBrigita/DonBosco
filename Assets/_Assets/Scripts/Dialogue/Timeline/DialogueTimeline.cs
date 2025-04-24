@@ -30,13 +30,33 @@ namespace DonBosco.Dialogue
         private void OnEnable() {
             currentPlayableDirector.stopped += (director) => {
                 onDialogueEnded?.Invoke();
+            currentPlayableDirector.stopped += OnTimelineFinished;
             };
         }
 
         private void OnDisable() {
             currentPlayableDirector.stopped -= (director) => {
                 onDialogueEnded?.Invoke();
+                currentPlayableDirector.stopped -= OnTimelineFinished;
             };
+        }
+
+        // Method terpisah untuk handling stopped
+        private void OnTimelineFinished(PlayableDirector director)
+        {
+            Debug.Log("<color=green>[Timeline] Finished!</color>");
+
+            // Pastikan event terpanggil SEBELUM timeline dimatikan
+            onDialogueEnded?.Invoke();
+
+            // Nonaktifkan setelah 1 frame
+            StartCoroutine(DisableAfterDelay());
+        }
+
+        private IEnumerator DisableAfterDelay()
+        {
+            yield return null; // Tunggu 1 frame
+            gameObject.SetActive(false);
         }
 
         private void Start() {

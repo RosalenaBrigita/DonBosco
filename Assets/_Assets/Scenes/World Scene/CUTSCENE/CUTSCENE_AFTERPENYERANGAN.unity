@@ -8264,7 +8264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &462081838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8425,7 +8425,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 8.45
+  orthographic size: 18
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -8450,7 +8450,7 @@ Transform:
   m_GameObject: {fileID: 462081837}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.67, y: -25.04, z: -0.3362614}
+  m_LocalPosition: {x: 0.6999998, y: -17.9, z: -0.3362614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12522,7 +12522,7 @@ MonoBehaviour:
   startTimelineOnStart: 1
   needPlayerAnimator: 1
   needCinemachineBrain: 1
-  needTransitionOut: 0
+  needTransitionOut: 1
   onDialogueEnded:
     m_PersistentCalls:
       m_Calls:

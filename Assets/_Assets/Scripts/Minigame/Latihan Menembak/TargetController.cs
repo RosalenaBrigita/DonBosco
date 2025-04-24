@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections;
+using DonBosco.Audio;
 
 namespace DonBosco
 {
@@ -47,23 +48,24 @@ namespace DonBosco
 
         void OnClick()
         {
-            Finish(true); // klik berhasil
+            Finish(true);
+            AudioManager.Instance.Play("22calgun");
         }
 
         void Finish(bool success)
         {
             if (!IsActive) return;
 
-            if (timerRoutine != null)
-                StopCoroutine(timerRoutine);
-
+            StopCoroutine(timerRoutine);
             IsActive = false;
             targetButton.interactable = false;
             timerFill.fillAmount = 0f;
 
+            // Panggil callback sebelum reset
             onFinish?.Invoke(success);
+
+            // Reset target
             gameObject.SetActive(false);
         }
     }
-
 }

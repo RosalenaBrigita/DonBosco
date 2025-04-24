@@ -1,3 +1,21 @@
+#speaker: Jarot #portrait:null
+Apa benar Indonesia sudah merdeka?
+
+===QuestLatihanMenembak===
+#speaker: Jarot #portrait:null
+Bagaimana ini, apakah latihan ini cukup?
+-> END
+
+===Lapar===
+#speaker: Jarot #portrait:null
+Aku sudah lapar sekali, tolong ambilkan obat dan makanannya ya.
+->END
+
+===AfterQuestFokusKesehatan===
+#speaker: Jarot #portrait:null
+Akhirnya luka ku sembuh berkatmu, Karman. Terima kasih ya...
+-> END
+
 ===CekKesehatanPemuda===
 #speaker: Jarot #portrait:null
 Oh, Karman. Kau ditugaskan keliling, ya? Heh... jangan kaget lihat kondisi kami. Latihan tadi di tanah bekas bom, lebih banyak lumpur daripada tanahnya.

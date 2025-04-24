@@ -20,6 +20,11 @@ public class QuizDialogue : MonoBehaviour
 
     public void StartDialogue()
     {
+        Debug.Log("<color=orange>[Quiz] StartDialogue called!</color>");
+
+        // Force activate jika diperlukan
+        gameObject.SetActive(true);
+
         if (!dialogueLoaded)
         {
             StartCoroutine(LoadDialogueFromServer());
@@ -38,7 +43,7 @@ public class QuizDialogue : MonoBehaviour
 
         if (www.result != UnityWebRequest.Result.Success)
         {
-            Debug.LogWarning("Using fallback dialogue: " + www.error);
+            Debug.Log("Using fallback dialogue: " + www.error);
             CheckHasAnswered(); // Gunakan dialog offline
         }
         else
@@ -61,14 +66,51 @@ public class QuizDialogue : MonoBehaviour
 
     private void CheckHasAnswered()
     {
+        Debug.Log("1. Masuk CheckHasAnswered");
+
+        if (QuizManager.Instance == null)
+        {
+            Debug.LogError("QuizManager Instance NULL!");
+            return;
+        }
+
         if (!QuizManager.Instance.CheckHasAnswered(quizId))
         {
-            DialogueManager.GetInstance().BindExternalFunction("Quiz", (answer) => SaveAnswer(answer));
-            DialogueManager.GetInstance().EnterDialogueMode(quizDialogue).OnDialogueDone((variable) =>
+            Debug.Log("2. Quiz belum dijawab");
+
+            // Cek DialogueManager
+            var dm = DialogueManager.GetInstance();
+            if (dm == null)
             {
+                Debug.LogError("DialogueManager NULL!");
+                return;
+            }
+
+            // Cek quizDialogue
+            if (quizDialogue == null)
+            {
+                Debug.LogError("quizDialogue NULL!");
+                return;
+            }
+
+            Debug.Log("3. Binding function Quiz...");
+            dm.BindExternalFunction("Quiz", (answer) =>
+            {
+                Debug.Log($"4. Fungsi Quiz dipanggil: {answer}");
+                SaveAnswer(answer);
+            });
+
+            Debug.Log("5. Memulai dialog...");
+            dm.EnterDialogueMode(quizDialogue).OnDialogueDone((variable) =>
+            {
+                Debug.Log("6. Quiz selesai!");
                 OnQuizDone.Invoke();
                 if (hideUIScreenOnDone) UIManager.Instance.HideScreenUI();
             });
+        }
+        else
+        {
+            Debug.LogWarning("Quiz sudah dijawab sebelumnya");
         }
     }
 
