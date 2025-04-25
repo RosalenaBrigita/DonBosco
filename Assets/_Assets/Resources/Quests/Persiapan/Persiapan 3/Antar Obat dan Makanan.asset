@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Antar Obat dan Makanan
   m_EditorClassIdentifier: 
   questInfo: {fileID: 11400000, guid: e9cd5d5857384cb48b1abf47af76f8bb, type: 2}
-  taskName: Bicara dengan Pemuda di depan Kantor Polisi
-  taskDescription: Membantu menjaga kesehatan para pemuda sebelum malam penyerangan
-    Gudang Don Bosco. Luka ringan harus segera dirawat dan stamina dijaga.
+  taskName: Antar Obat dan Makanan
+  taskDescription: Antarkan Obat dan Makanan yang telah didapat kepada para pemuda
+    di depan Kantor polisi.

@@ -1,4 +1,4 @@
-#speaker: Jarot #portrait:null
+#speaker: null #portrait:null
 Apa benar Indonesia sudah merdeka?
 
 ===QuestLatihanMenembak===
@@ -73,6 +73,21 @@ Baik, Bu. Doakan kami malam ini, ya.
 (meletakkan tangan di bahu Karman) Hati-hati, Nak. Jangan lupa... kalian juga makan. Perang butuh tenaga.
 -> END
 
+===AfterDialogBuSarni===
+#speaker: Bu Sarni #portrait:wanita1
+Tolong antarkan makanan nya ke Pemuda di Kantor Polisi ya, Karman.
+-> END
+
+===CompleteDialogBuSarni===
+#speaker: Bu Sarni #portrait:wanita1
+Karman, kau datang sendiri lagi. Kali ini ada masalah apa?
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Tidak ada masalah, Bu. Aku hanya ingin menyampaikan pesan bahwa pemuda sudah memakan makanannya dengan lahap.
+Mereka tampak sangat menikmatinya tadi. Terima kasih sudah memasak untuk kita.
+#speaker: Bu Sarni #portrait:wanita1
+Aku senang dapat membantu kalian dengan kemampuan ku. 
+->END
+
 ===KembaliKePemuda===
 #speaker: Jarot #portrait:null
 Kau kembali! Kami sudah mulai khawatir
@@ -127,3 +142,18 @@ Bawa ini. Ada morfin terakhir untuk yang terluka berat. Kalian harus hidup. Sura
 #speaker: Karman #portrait:karman
 Baik, bu. Ibu juga hati-hati.
 -> END
+
+===AfterDialogBuSulastri===
+#speaker: Bu Sulastri #portrait:wanita2
+Tolong antarkan obatnya ke Pemuda di Kantor Polisi ya, Karman.
+-> END
+
+===CompleteDialogBuSulastri===
+#speaker: Bu Sulastri #portrait:wanita2
+Ada apa Karman? Apa ada pemuda yang terluka lagi.
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Bukan begitu, Bu. Aku hanya ingin menyampaikan pesan bahwa luka para pemuda sudah diobati dan kondisi kesehatan mereka sudah membaik.
+#speaker: Bu Sulastri #portrait:wanita2
+Oh begitu, aku senang bisa menyediakan obat untuk mereka. 
+->END
+

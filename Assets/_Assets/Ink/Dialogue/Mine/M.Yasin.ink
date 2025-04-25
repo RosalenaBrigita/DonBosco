@@ -46,6 +46,15 @@ Saya percayakan itu padamu.
 ~ start_quest = "FokusKesehatan"
 -> END
 
+===AfterBriefing===
+#speaker:M.Yasin #audio:null #portrait:m_yasin
+Ada apa Karman? Bukankah kau seharusnya mengecek kondisi para pemuda di depan? 
+#speaker: Karman #portrait:karman
+Aku hanya takut mengganggu mereka, Pak.
+#speaker:M.Yasin #audio:null #portrait:m_yasin
+Kalau begitu, pastikan kau membantu mereka. Mereka pasti akan menerima mu dengan baik.
+->END
+
 ===SetelahPersiapanMenembak===
 #speaker:M.Yasin #audio:null #portrait:m_yasin
 Ah, Karman. Bagaimana latihan tadi?
@@ -196,3 +205,8 @@ Pemuda-pemuda kita sudah di posisi. Kau yang memimpin serangan ini, Karman.
     ~ start_quest = "SerangDepan"
     ~ questDepan = true
     -> END
+
+===AfterStrategi===
+#speaker:M.Yasin #audio:null #portrait:m_yasin
+Segeralah pergi ke Donbosco dan jalankan strategi yang telah kita susun.
+->END

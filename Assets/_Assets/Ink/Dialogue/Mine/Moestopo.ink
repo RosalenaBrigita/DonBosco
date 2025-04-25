@@ -15,6 +15,20 @@ Banyak yang bersiap, Bung. Tapi juga banyak yang cemas. Pesawat-pesawat Sekutu m
 Ya… ini bukan waktu untuk lengah. Tapi juga bukan waktu untuk gegabah. Kita butuh tindakan yang bijak dan cepat.
 -> END
 
+===AfterAntarPesan===
+#speaker:Moestopo #audio:null #portrait:moestopo
+Kau tunggu apa lagi? Kita harus segera melakukan persiapan. Pergilah ke Kantor Polisi dan bicara pada M.Yasin.
+#speaker:Karman #audio:null #portrait:karman
+Baik, Pak. Saya akan segera menemui Pak Yasin.
+->END
+
+===AfterDiplomasi===
+#speaker:Moestopo #audio:null #portrait:moestopo
+Pergilah ke Donbosco bersama Bung Tomo dan M. Yasin. Tapi ingat Karman, kita datang dengan tujuan. Jangan sampai melakukan kesalahan.
+#speaker:Karman #audio:null #portrait:karman
+Baik, Pak. Saya akan melakukan diplomasi dengan baik agar tujuan kita bisa tercapai.
+->END
+
 ===Diplomasi===
 #speaker:Moestopo #audio:null #portrait:moestopo
 Gudang Don Bosco sekarang dikepung oleh pemuda-pemuda kita. 

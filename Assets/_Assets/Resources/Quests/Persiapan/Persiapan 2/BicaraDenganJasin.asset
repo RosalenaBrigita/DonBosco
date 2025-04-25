@@ -15,4 +15,5 @@ MonoBehaviour:
   questInfo: {fileID: 11400000, guid: c9aafd6c0fca8a54daed73550eb243f1, type: 2}
   taskName: Bicara dengan M.Jasin
   taskDescription: Pergi ke Kantor Polisi Istimewa dan lakukan persiapan penyerangan
-    dengan Jasin
+    dengan Jasin. Untuk melihat lokasi tujuan, kamu bisa cek Map yang ada di ujung
+    kiri layar.

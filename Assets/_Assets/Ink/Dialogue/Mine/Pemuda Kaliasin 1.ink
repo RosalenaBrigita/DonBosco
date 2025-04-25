@@ -59,3 +59,27 @@ Hmmm... aku cuma dengar dari tetangga. Tapi yang tinggal di dekat-dekat gudang i
 Coba sampeyan cari Bung Haris—rumahnya nggak jauh dari sini, dekat Pohon di ujung sana. 
 Dia yang lebih tahu cerita lengkapnya.
 -> END
+
+===SambonganActive1===
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Hai, bung. Apakah kau tahu sesuatu tentang perebutan Gudang Sambongan?
+#speaker:Riono #audio:null #portrait:null
+Wah, kau salah bung. Ini Kampung Kaliasin bukan Kampung Sambongan. Mungkin kau bisa tanya pada pemuda di seberang jalan.
+* [Baik, terima kasih]
+-> END
+
+===KaliasinActive2===
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Hai, bung. Apakah kau tahu sesuatu tentang perebutan Gudang Sambongan?
+#speaker:Haris #audio:null #portrait:null
+Wah, kau salah bung. Ini Kampung Kaliasin bukan Kampung Sambongan. Mungkin kau bisa tanya pada pemuda di seberang jalan.
+* [Baik, terima kasih]
+-> END
+
+===KaliasinActive3===
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Hai, bung. Apakah kau tahu sesuatu tentang perebutan Gudang Sambongan?
+#speaker:Darmo #audio:null #portrait:null
+Wah, kau salah bung. Ini Kampung Kaliasin bukan Kampung Sambongan. Mungkin kau bisa tanya pada pemuda di seberang jalan.
+* [Baik, terima kasih]
+-> END

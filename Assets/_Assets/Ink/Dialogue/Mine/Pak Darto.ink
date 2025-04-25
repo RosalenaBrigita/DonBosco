@@ -28,13 +28,34 @@ Betul, Nak. Dan ingat, hati-hati saat memasangnya. Jangan sampai tentara Jepang 
 Sudahkah kau memasang bendera di tiga tempat? Rakyat harus tahu bahwa kita tidak takut!
 -> END
 
+=== AfterMengibarkanBendera ===
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Pak Darto! Saya sudah pasang bendera di pos ronda, balai desa, dan rumah Bapak seperti yang diminta. Semuanya sudah berkibar dengan baik!
+
+#speaker:Pak Darto #portrait:pak_darto #audio:animal_crossing_low
+Bagus sekali, Karman! Kau bekerja dengan cepat. Apa ada kesulitan saat memasangnya?
+
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Sedikit menegangkan, Pak. Tapi untungnya tidak terjadi apa-apa pada saya.
+
+#speaker:Pak Darto #portrait:pak_darto #audio:animal_crossing_low
+Itulah makna perjuangan sebenarnya. Kau sudah membuktikan keberanianmu hari ini.
+
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Saya juga sempat memasang satu bendera kecil di pohon dekat jalan utama. Biar semua yang lewat bisa melihatnya!
+
+#speaker:Pak Darto #portrait:pak_darto #audio:animal_crossing_low
+Ini awal yang baik untuk menunjukkan semangat kemerdekaan kita.
+-> END
+
 === MengibarkanBenderaDone ===
 #speaker:Pak Darto #portrait:pak_darto #audio:animal_crossing_low
 Luar biasa, Karman! Bendera sudah berkibar di tiga tempat strategis. Sekarang seluruh kampung tahu bahwa kita siap melawan penjajah!
 #speaker:Karman #portrait:karman #audio:animal_crossing_mid
 Terima kasih, Pak. Saya juga merasa lebih semangat setelah melakukannya. Bendera itu memang sederhana, tapi artinya luar biasa.
 #speaker:Pak Darto #portrait:pak_darto #audio:animal_crossing_low
-Kadang hal kecil seperti itu bisa memberi harapan besar. Sekarang, pergilah ke markas Soengkono. Kau punya masa depan besar dalam perjuangan ini. Semoga Tuhan melindungimu!
+Kadang hal kecil seperti itu bisa memberi harapan besar. Sekarang, pergilah ke markas Soengkono. Kau punya masa depan besar dalam perjuangan ini. 
+Semoga Tuhan melindungimu!
 #speaker:Karman #portrait:karman #audio:animal_crossing_mid
 Terima kasih, Pak Darto. Sampai jumpa!
 -> END

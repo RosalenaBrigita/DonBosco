@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 1PerangDonBosco 1
   m_EditorClassIdentifier: 
   questInfo: {fileID: 11400000, guid: 3421827fd7c529848a6e31b285f246df, type: 2}
-  taskName: Kalahkan pasukan Jepang.
+  taskName: Kalahkan pasukan Jepang
   taskDescription: 

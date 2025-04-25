@@ -24,6 +24,7 @@ MonoBehaviour:
   - {fileID: 1967840160665085129, guid: b1db3b689f0f45b48bca9d7e1e3a6e27, type: 3}
   - {fileID: 1967840160665085129, guid: 135516b4e49b7a34f81bcd92c9d5a6c6, type: 3}
   - {fileID: 1967840160665085129, guid: 6456827eea2e1ad4cab8439de63e601f, type: 3}
+  - {fileID: 2698516821532083385, guid: 61c4e0de84a17784f92d84c0c95658fd, type: 3}
   prequisiteQuests: []
   rewardName: 
   rewardItems: []

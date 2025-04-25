@@ -35,56 +35,55 @@ namespace DonBosco.Quests
             StartDialogue();
         }
 
-        private void StartDialogue()
+        private void Start()
         {
-            Debug.Log($"StartDialogue called - useDB: {useDatabaseDialogue}, loaded: {dialogueLoaded}");
-
-            if (useDatabaseDialogue && !dialogueLoaded)
+            if (useDatabaseDialogue && npcId > 0)
             {
-                Debug.Log($"Attempting to load dialogue for NPC {npcId} from server");
-                StartCoroutine(LoadDialogueFromServer());
-                return;
+                StartCoroutine(PreloadDialogueFromServer());
             }
             else
             {
-                Debug.Log($"Using local dialogue asset: {(dialogue != null ? dialogue.name : "NULL")}");
+                dialogueLoaded = true;
+            }
+        }
+
+        private void StartDialogue()
+        {
+            if (!dialogueLoaded)
+            {
+                Debug.LogWarning("Dialogue belum siap. Masih loading dari server...");
+                return;
             }
 
             ProceedWithDialogue();
         }
 
-        private IEnumerator LoadDialogueFromServer()
+
+        private IEnumerator PreloadDialogueFromServer()
         {
             string url = $"{dialogueUrl}?npc_id={npcId}";
-            Debug.Log($"Loading from URL: {url}");
-
             UnityWebRequest www = UnityWebRequest.Get(url);
             yield return www.SendWebRequest();
 
-            Debug.Log($"Server response: {www.result}, Status: {www.responseCode}");
-
             if (www.result == UnityWebRequest.Result.Success)
             {
-                Debug.Log($"Raw response: {www.downloadHandler.text}");
-
                 NPCDialogueResponse response = JsonUtility.FromJson<NPCDialogueResponse>(www.downloadHandler.text);
                 if (!string.IsNullOrEmpty(response.ink_json))
                 {
                     dialogue = new TextAsset(response.ink_json);
-                    dialogueLoaded = true;
-                    Debug.Log($"Successfully loaded dialogue for NPC {npcId}. Text length: {response.ink_json.Length} chars");
+                    Debug.Log($"[Preload] Dialogue dari server berhasil untuk NPC {npcId}");
                 }
                 else
                 {
-                    Debug.LogWarning("Server returned empty ink_json");
+                    Debug.LogWarning("[Preload] Data kosong, pakai local");
                 }
             }
             else
             {
-                Debug.LogError($"Failed to load dialogue: {www.error}");
+                Debug.LogWarning($"[Preload] Gagal load dari server: {www.error}, pakai local");
             }
 
-            ProceedWithDialogue();
+            dialogueLoaded = true;
         }
 
         private void ProceedWithDialogue()

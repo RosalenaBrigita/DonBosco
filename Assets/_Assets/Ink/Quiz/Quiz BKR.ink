@@ -1,9 +1,11 @@
 EXTERNAL Quiz(id_answer)
-    
+INCLUDE ../Quests/QuestData.ink
+
 #speaker:Kapten Soengkono #audio:null #portrait:sungkono
 Sebelum kita bicara soal tugas...  
 Aku ingin tahu lebih dulu, Karman.
 #speaker:Kapten Soengkono
+~ set_quiz = true
 Kau sudah paham apa itu BKR, dan mengapa organisasi ini dibentuk?
 * [BKR adalah Barisan Kesatuan Rakyat]
     ~ Quiz("1_1")
@@ -27,7 +29,8 @@ Kau sudah paham apa itu BKR, dan mengapa organisasi ini dibentuk?
     Justru karena itulah aku ingin memastikan kalian yang bergabung benar-benar memahami sejarahnya. Dengarkan baik-baik...
     -> SejarahBKR
     
-=== SejarahBKR ===
+=== SejarahBKR
+~ set_quiz = false
 #speaker:Kapten Soengkono #audio:null #portrait:sungkono
 Setelah proklamasi pada 17 Agustus 1945, negeri kita belum sepenuhnya merdeka, Karman.
 #speaker:Kapten Soengkono #audio:null #portrait:sungkono

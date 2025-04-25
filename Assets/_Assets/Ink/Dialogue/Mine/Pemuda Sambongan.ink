@@ -1,7 +1,16 @@
 #speaker:Tohari #audio:null #portrait:null
 Akhirnya Indonesia sudah merdeka
+===KaliasinActive===
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Hai, bung. Apakah kau tahu sesuatu tentang perebutan Gudang Kaliasin?
+#speaker:Tohari #audio:null #portrait:null
+Wah, kau salah bung. Ini Kampung Sambongan bukan Kampung Kaliasin. Mungkin kau bisa tanya pada pemuda di seberang jalan.
+* [Baik, terima kasih]
+-> END
 
 ===AjakBicara===
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Hai, bung. Apakah kau tahu sesuatu tentang perebutan Gudang Sambongan?
 #speaker:Tohari #audio:null #portrait:null
 Hah, Sambongan... Tempat itu jadi saksi keberanian anak-anak Surabaya. 
 Tanggal 12 September 1945, malam hari. Kami bergerak diam-diam, menyusup dari sisi timur gudang.

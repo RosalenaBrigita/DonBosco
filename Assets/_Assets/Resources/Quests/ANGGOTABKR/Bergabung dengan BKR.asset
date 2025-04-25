@@ -14,8 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questInfo: {fileID: 11400000, guid: 4ed3a05648c4b8a42aeca74765528314, type: 2}
   taskName: 'Bergabung dengan BKR '
-  taskDescription: Pergi ke Markas BKR dan temui Kapten Soengkono. Pergi ke Markas
-    BKR dan temui Kapten Soengkono.Pergi ke Markas BKR dan temui Kapten Soengkono.Pergi
-    ke Markas BKR dan temui Kapten Soengkono.Pergi ke Markas BKR dan temui Kapten
-    Soengkono.Pergi ke Markas BKR dan temui Kapten Soengkono.Pergi ke Markas BKR
-    dan temui Kapten Soengkono.Pergi ke Markas BKR dan temui Kapten Soengkono.
+  taskDescription: Pergi ke Kantor BKR dan temui Kapten Soengkono. Klik map di ujung
+    kiri layar untuk melihat lokasi Kantor BKR.

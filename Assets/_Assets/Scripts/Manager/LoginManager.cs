@@ -220,8 +220,15 @@ public class LoginManager : MonoBehaviour
 
     public void QuitGame()
     {
-        QuitPrevention.RunOnQuit();
-        Application.Quit();
+        QuitPrevention quitHandler = FindObjectOfType<QuitPrevention>();
+        if (quitHandler != null)
+        {
+            quitHandler.RequestImmediateQuit(); // Langsung quit
+        }
+        else
+        {
+            Application.Quit(); // Fallback
+        }
     }
 
     private void UpdateUIAfterLogin()

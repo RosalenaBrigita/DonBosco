@@ -8,9 +8,9 @@ using DonBosco.UI;
 public class QuizDialogue : MonoBehaviour
 {
     public bool IsInteractable { get; set; } = true;
-    [SerializeField] private TextAsset quizDialogue; // Fallback jika offline
+    [SerializeField] private TextAsset quizDialogue; 
     [SerializeField] private int quizId;
-    [SerializeField] private int npcId; // ID NPC untuk ambil dari database
+    [SerializeField] private int npcId;
 
     public UnityEvent OnQuizDone;
     [SerializeField] private bool hideUIScreenOnDone = false;
@@ -18,16 +18,27 @@ public class QuizDialogue : MonoBehaviour
     private string dialogueUrl = "http://localhost/DonBosco/get_dialogue.php";
     private bool dialogueLoaded = false;
 
+    private void Start()
+    {
+        if (npcId > 0 && quizId > 0)
+        {
+            StartCoroutine(PreloadDialogueFromServer());
+        }
+        else
+        {
+            dialogueLoaded = true;
+        }
+    }
+
     public void StartDialogue()
     {
         Debug.Log("<color=orange>[Quiz] StartDialogue called!</color>");
-
-        // Force activate jika diperlukan
         gameObject.SetActive(true);
 
         if (!dialogueLoaded)
         {
-            StartCoroutine(LoadDialogueFromServer());
+            Debug.LogWarning("[Quiz] Dialogue belum siap, masih loading...");
+            return;
         }
         else
         {
@@ -35,33 +46,31 @@ public class QuizDialogue : MonoBehaviour
         }
     }
 
-    private IEnumerator LoadDialogueFromServer()
+    private IEnumerator PreloadDialogueFromServer()
     {
         string url = $"{dialogueUrl}?npc_id={npcId}&quiz_id={quizId}";
         UnityWebRequest www = UnityWebRequest.Get(url);
         yield return www.SendWebRequest();
 
-        if (www.result != UnityWebRequest.Result.Success)
-        {
-            Debug.Log("Using fallback dialogue: " + www.error);
-            CheckHasAnswered(); // Gunakan dialog offline
-        }
-        else
+        if (www.result == UnityWebRequest.Result.Success)
         {
             QuizDialogueResponse response = JsonUtility.FromJson<QuizDialogueResponse>(www.downloadHandler.text);
             if (!string.IsNullOrEmpty(response.ink_json))
             {
                 quizDialogue = new TextAsset(response.ink_json);
-                dialogueLoaded = true;
-                CheckHasAnswered();
+                Debug.Log($"[Preload] Quiz dialogue loaded untuk NPC {npcId}, Quiz {quizId}");
+            }
+            else
+            {
+                Debug.LogWarning("[Preload] JSON kosong, pakai fallback");
             }
         }
-    }
+        else
+        {
+            Debug.LogWarning($"[Preload] Gagal load: {www.error}, pakai fallback");
+        }
 
-    [System.Serializable]
-    private class QuizDialogueResponse
-    {
-        public string ink_json;
+        dialogueLoaded = true;
     }
 
     private void CheckHasAnswered()
@@ -120,5 +129,11 @@ public class QuizDialogue : MonoBehaviour
         int quizId = int.Parse(answerSplit[0]);
         int quizAnswer = int.Parse(answerSplit[1]);
         QuizManager.Instance.SaveAnswer(quizId, quizAnswer);
+    }
+
+    [System.Serializable]
+    private class QuizDialogueResponse
+    {
+        public string ink_json;
     }
 }

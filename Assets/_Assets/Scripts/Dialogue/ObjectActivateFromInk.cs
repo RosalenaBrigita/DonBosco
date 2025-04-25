@@ -1,22 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DonBosco.Dialogue;
 
 public class ObjectActivateFromInk : MonoBehaviour
 {
-    [SerializeField] private GameObject objectToActivate; 
+    [SerializeField] private GameObject objectToActivate;
     [SerializeField] private string inkVariableName = "set_bendera";
+    [SerializeField] private float checkInterval = 0.3f; // Interval pengecekan (optimasi performa)
+
+    private bool lastState;
+    private float timer;
 
     private void Start()
     {
         if (objectToActivate == null)
         {
             Debug.LogError("Object to activate is not assigned!", this);
+            enabled = false; // Nonaktifkan script jika object null
             return;
         }
 
         CheckAndSetInitialState();
+        lastState = objectToActivate.activeSelf;
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer >= checkInterval)
+        {
+            timer = 0f;
+            CheckInkVariable();
+        }
+    }
+
+    private void CheckInkVariable()
+    {
+        var dialogueManager = DialogueManager.GetInstance();
+        if (dialogueManager == null) return;
+
+        if (dialogueManager.GetVariableState(inkVariableName) is Ink.Runtime.BoolValue boolVal)
+        {
+            bool newState = boolVal.value;
+            if (newState != lastState)
+            {
+                objectToActivate.SetActive(newState);
+                lastState = newState;
+                Debug.Log($"{inkVariableName} changed to: {newState}");
+            }
+        }
     }
 
     private void CheckAndSetInitialState()
@@ -29,15 +60,11 @@ public class ObjectActivateFromInk : MonoBehaviour
             return;
         }
 
-        if (dialogueManager.GetVariableState(inkVariableName) is Ink.Runtime.BoolValue boolVal && boolVal.value)
+        if (dialogueManager.GetVariableState(inkVariableName) is Ink.Runtime.BoolValue boolVal)
         {
             objectToActivate.SetActive(boolVal.value);
-            Debug.Log($"Set {objectToActivate.name} active state to: {boolVal.value} (based on Ink variable)");
-        }
-        else
-        {
-            Debug.LogWarning($"Ink variable '{inkVariableName}' not found or not a boolean, using default inactive state");
-            objectToActivate.SetActive(false);
+            lastState = boolVal.value;
+            Debug.Log($"Initial state set to: {boolVal.value}");
         }
     }
 }

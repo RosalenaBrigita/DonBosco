@@ -11,3 +11,4 @@ VAR ending_terpaksa = false
 VAR ending_gagal = false
 VAR sukses_total = false
 VAR sukses_sebagian = false
+VAR set_quiz = false

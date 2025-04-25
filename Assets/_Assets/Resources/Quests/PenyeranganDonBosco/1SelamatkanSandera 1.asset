@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questInfo: {fileID: 11400000, guid: 3421827fd7c529848a6e31b285f246df, type: 2}
   taskName: Selamatkan sandera
-  taskDescription: 
+  taskDescription: Pilih jalur paling aman untuk menyelamatkan sandera. klik untuk
+    menjalankan pasukan.

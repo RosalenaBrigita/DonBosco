@@ -54,3 +54,12 @@ Siap, Komandan! Nanti kami lanjut latihan merayap setelah maghrib.
 #speaker:Karman #portrait:karman
 Baik. Hati-hati, dan... jangan sampai latihan malah membuat kalian kelelahan. Kita butuh tenaga penuh.
 -> END
+
+===FokusKesehatan===
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Bagaimana keadaan kalian?
+#speaker:Rohman #audio:null #portrait:null
+Oh, Karman? Kami di sini baik-baik saja, tapi ku dengar para pemuda di sebelah kiri Kantor ini sedang dalam kesulitan.
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Baiklah, aku akan kesana untuk memeriksa mereka.
+->END

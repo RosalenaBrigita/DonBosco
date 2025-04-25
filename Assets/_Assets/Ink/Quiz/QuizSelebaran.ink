@@ -3,6 +3,7 @@ INCLUDE ../Quests/QuestData.ink
 
 #speaker:Moestopo #audio:null #portrait:moestopo
 Karman! Kau datang di waktu yang tepat. Kami baru saja menerima kabar tentang selebaran yang dijatuhkan dari udara...  
+~ set_quiz = true
 Aku belum tahu pasti isinya. Apa kau melihatnya sendiri?
 
 * [Isinya memerintahkan rakyat untuk menyerah.]
@@ -29,6 +30,7 @@ Aku belum tahu pasti isinya. Apa kau melihatnya sendiri?
     -> Lanjut
 
 ===Lanjut===
+~ set_quiz = false
 #speaker:Moestopo #audio:null #portrait:moestopo
 Gudang Don Bosco bukan sekadar gudang. Itu adalah pusat kekuatan Jepang terakhir di Surabaya.  
 Senjata, amunisi, makanan—semuanya ditumpuk di sana. Jika kita berhasil menguasainya…  

@@ -1995,7 +1995,22 @@ MonoBehaviour:
     onDialogueDone:
       m_PersistentCalls:
         m_Calls: []
-  conversationStates: []
+  conversationStates:
+  - questConditions:
+    - questInfo: {fileID: 11400000, guid: c9aafd6c0fca8a54daed73550eb243f1, type: 2}
+      questState: 3
+      questStepIndex: 0
+    knotPath: AfterBriefing
+  - questConditions:
+    - questInfo: {fileID: 11400000, guid: 9813853b855319349858e72c69a314d9, type: 2}
+      questState: 3
+      questStepIndex: 3
+    knotPath: AfterStrategi
+  - questConditions:
+    - questInfo: {fileID: 11400000, guid: e9cd5d5857384cb48b1abf47af76f8bb, type: 2}
+      questState: 3
+      questStepIndex: 4
+    knotPath: AfterStrategi
   externalFunctions: []
 --- !u!1 &611818695
 GameObject:

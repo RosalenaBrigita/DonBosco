@@ -18,3 +18,12 @@ Tidak perlu ragu... Ini hak kita. Ini hak negara kita.
     * [Kibarkan bendera]
 -> END    
 
+===AfterKibarBendera===
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Nah, kalau begini pasti para pemuda Surabaya lebih semangat membela tanah air kita dari penjajah.
+-> END
+
+===AfterKibarBendera1===
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Benderanya sudah berkibar, aku harap ini bisa membangun semangat pemuda.
+-> END

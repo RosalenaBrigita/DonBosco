@@ -14,7 +14,8 @@ Kau bukan hanya pejuang... kau pemikir medan tempur.
 Kau dapat membaca situasi dengan tajam. Atas jasamu, kami menobatkanmu sebagai Pahlawan Taktik.
 Gudang Don Bosco bukan sembarang tempat—di dalamnya tersimpan senapan Jepang, amunisi, dan bahan logistik. Kita berhasil merebutnya dalam satu malam. Itu luar biasa.
 #speaker:null #portrait:null #audio:null
-Sebanyak empat gerbong kereta berisi senjata hasil rampasan dikirim ke Stasiun Sidotopo. Dari sana, dengan kereta malam khusus, senjata dikirim ke markas perlawanan di Jakarta untuk memperkuat pemuda di ibukota.
+Sebanyak empat gerbong kereta berisi senjata hasil rampasan dikirim ke Stasiun Sidotopo. D
+ari sana, dengan kereta malam khusus, senjata dikirim ke markas perlawanan di Jakarta untuk memperkuat pemuda di ibukota.
 #speaker:null #portrait:null #audio:null
 Sebagian senjata disimpan di rumah-rumah warga yang sudah disiapkan secara rahasia, termasuk di gang-gang kecil dan gudang tersembunyi di Tambaksari.
 #speaker:null #portrait:null #audio:null

@@ -1,13 +1,14 @@
-#speaker: #portrait:null #audio:null
+#speaker:null #portrait:null #audio:null
 Tahun 1945. Indonesia baru saja memproklamasikan kemerdekaannya. Jakarta telah bersuara… namun di Surabaya, perjuangan belum usai.
-Kota ini dipenuhi semangat, harapan—dan ketegangan. Jepang memang telah menyerah, namun pasukannya masih berjaga. Di sisi lain, Belanda bersiap kembali menancapkan kuku kekuasaan.
+Kota ini dipenuhi semangat, harapan—dan ketegangan. Jepang memang telah menyerah, namun pasukannya masih berjaga. 
+Di sisi lain, Belanda bersiap kembali menancapkan kuku kekuasaan.
 Rakyat tak tinggal diam. Semangat juang membara di dada pemuda-pemudi.
 Di sebuah rumah sederhana, seorang pemuda bernama Karman tengah termenung. Suara radio tua memecah keheningan.
 Kabar yang mengalir dari radio itu… akan mengubah hidupnya selamanya.
 -> END
 
 === part2 ===
-#speaker: #portrait:null #audio:null
+#speaker:null #portrait:null #audio:null
 bzzt bzzt...
 Saudara-saudara... bangsa Indonesia telah merdeka!
 

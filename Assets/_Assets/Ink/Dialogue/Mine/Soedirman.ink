@@ -1,3 +1,6 @@
+#speaker:Sudirman #audio:null #portrait:sudirman
+Pesawat Belanda itu sangat mengganggu ku. Kita tidak bisa membiarkan mereka kembali ke Indonesia.
+
 ===AjakBicara===
 #speaker:Sudirman #audio:null #portrait:sudirman
 Lihatlah ke langit, Bung... Pesawat-pesawat itu bukan hanya bayangan besi. Itu adalah peringatan—bahwa penjajah belum menyerah.

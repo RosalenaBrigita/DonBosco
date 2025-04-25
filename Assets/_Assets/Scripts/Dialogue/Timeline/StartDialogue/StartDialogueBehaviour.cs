@@ -24,10 +24,6 @@ namespace DonBosco.Dialogue
                     timeline.StartCoroutine(TryLoadDialogue(timeline));
                 }
             }
-            else if (IsReady())
-            {
-                TriggerDialogue();
-            }
         }
 
         private IEnumerator TryLoadDialogue(DialogueTimeline timeline)
@@ -47,7 +43,6 @@ namespace DonBosco.Dialogue
                 }
 
                 isLoaded = true;
-                TriggerDialogue();
             });
         }
 

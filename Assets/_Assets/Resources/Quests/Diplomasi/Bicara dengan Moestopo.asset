@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questInfo: {fileID: 11400000, guid: c8e969ed63bac4347a6abb821ed1605f, type: 2}
   taskName: Bicara dengan Moestopo di Kantor BKR
-  taskDescription: 
+  taskDescription: Pergi ke Kantor BKR dan bicara dengan Moestopo. Informasi tentang
+    lokasi dapat dilihat dari map di ujung layar.

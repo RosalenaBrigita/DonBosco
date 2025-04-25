@@ -214,4 +214,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  conversationStates: []
+  conversationStates:
+  - questConditions:
+    - questInfo: {fileID: 11400000, guid: 4ed3a05648c4b8a42aeca74765528314, type: 2}
+      questState: 1
+      questStepIndex: 1
+    knotPath: CompleteGabung

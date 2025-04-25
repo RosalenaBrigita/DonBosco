@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Jahit
   m_EditorClassIdentifier: 
   questInfo: {fileID: 11400000, guid: 86e126fa58a89034a843da277c1a0d72, type: 2}
-  taskName: Jahit kain merah dan putih menjadi tiga bendera
-  taskDescription: 
+  taskName: Jahit tiga bendera
+  taskDescription: Berinteraksi dengan alat jahit di atas meja (Rumah Karman) untuk
+    menjahit 3 Bendera Merah Putih.

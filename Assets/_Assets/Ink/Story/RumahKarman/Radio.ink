@@ -35,13 +35,12 @@ Tidak ada yang mundur — kita maju bersama!
 
 
 === Quest_PergiKeMarkasBKR ===
-#speaker:null #portrait:null #audio:radio_buzz
+#speaker:null #portrait:null #audio:null
 Bzzzzt... krrkkhh... *klik.*
 #speaker:null #portrait:null #audio:null
 Suara radio perlahan memudar. Karman terdiam sejenak, menatap lantai kayu yang retak dan tua.
 #speaker:Karman #portrait:karman #audio:animal_crossing_mid
-Markas BKR...  
-Jadi ini waktunya.
+Markas BKR...  Jadi ini waktunya.
 #speaker:Karman #portrait:karman #audio:animal_crossing_mid
 Kalau pasukan asing benar-benar bergerak, mereka butuh semua bantuan yang bisa mereka dapatkan.
 #speaker:Karman #portrait:karman #audio:animal_crossing_mid

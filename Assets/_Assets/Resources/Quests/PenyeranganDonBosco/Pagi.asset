@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Pagi
   m_EditorClassIdentifier: 
   questInfo: {fileID: 11400000, guid: 17777b6fe33181c48b198d36cd1d9db7, type: 2}
-  taskName: Pergi dan tunggu sampai pagi
+  taskName: Pergi ke gudang Donbosco dan tunggu sampai pagi
   taskDescription: 

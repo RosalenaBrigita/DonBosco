@@ -2,6 +2,20 @@
 Apa yang kau butuhkan, Bung?
 -> END
 
+===CompletePesawat===
+#speaker:Kapten Soengkono #audio:null #portrait:sungkono
+Tolong segera antarkan kabar ini ke Moestopo di kantor BKR, Karman.
+#speaker:Karman #audio:null #portrait:karman
+Baik kapten, aku akan segera kesana.
+->END
+
+===CompleteGabung===
+#speaker:Kapten Soengkono #audio:null #portrait:sungkono
+Pergilah ke Lapangan Tambaksari, Bung Tomo sedang melakukan Rapat Akbar di sana. Kau pasti mendapatkan sesuatu sepulang dari sana.
+#speaker:Karman #audio:null #portrait:karman
+Baik kapten, aku akan segera kesana.
+->END
+
 === GabungBKR ===
 #speaker:Kapten Soengkono #audio:null #portrait:sungkono
 Karman! Akhirnya kau datang. Aku sudah dengar banyak tentangmu.
