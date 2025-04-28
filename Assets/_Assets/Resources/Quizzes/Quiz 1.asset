@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: Apakah kau tahu apa itu BKR dan kenapa organisasi ini dibentuk?
   answers:
-  - 'BKR adalah Barisan Kesatuan Rakyat '
-  - BKR adalah Barisan Kemanusiaan Republik
+  - BKR adalah Barisan Kesatuan Rakyat yang dibentuk untuk menjaga keamanan rakyat
+    setelah proklamasi
+  - BKR adalah Barisan Kemanusiaan Republik, kelompok pemuda yang dilatih oleh Jepang
+    untuk menjaga ketertiban
   correctAnswer: 1
   points: 20
   quizType: 0

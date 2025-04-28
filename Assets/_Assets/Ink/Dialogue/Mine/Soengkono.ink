@@ -75,6 +75,7 @@ Kita tak bisa hanya diam. Aku butuh kau untuk menyampaikan pesan ini kepada Moes
     Saya paham, Kapten. Ini bukan hanya pesan biasa, ini soal perjuangan. Saya akan pastikan Moestopo menerimanya, secepat mungkin.
     
     #speaker:Kapten Soengkono #audio:null #portrait:sungkono
-    Bagus, Karman. Kau pemuda yang bisa diandalkan. Tapi hati-hati di jalan—jalan-jalan mulai diawasi. Dan ingat, satu pesan ini... bisa mengubah langkah kita selanjutnya.
+    Bagus, Karman. Kau pemuda yang bisa diandalkan. Ambillah selebaran ini dan sampaikan pada Moestopo. 
+    Dan ingat, satu pesan ini... bisa mengubah langkah kita selanjutnya.
 
 -> END

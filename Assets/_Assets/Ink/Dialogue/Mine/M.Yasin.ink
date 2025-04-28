@@ -92,7 +92,7 @@ Kita tidak bisa menyusun serangan besar-besaran layaknya tentara resmi. Maka kit
 
 Kita akan menyelinap diam-diam dan menyerang ketika mereka sedang lengah. Serangan kita akan berlangsung cepat, tak lebih dari satu jam. 
 Lewat dari itu, bala bantuan mereka bisa tiba, dan kita bisa terkepung.
-
+Pemuda-pemuda dari berbagai kampung di Surabaya sudah kita kumpulkan. Mereka penuh semangat, apalagi setelah mendengar seruan Bung Tomo di radio yang membakar semangat rakyat.
 Kita hanya membawa senjata ringan: karabin tua, granat tangan buatan rakyat, dan pisau bayonet. 
 Dua truk akan ikut dari belakang, menunggu aba-aba untuk masuk dan mengangkut apa pun yang bisa dibawa.
 
@@ -100,11 +100,15 @@ Dua truk akan ikut dari belakang, menunggu aba-aba untuk masuk dan mengangkut ap
 
 ===InfoPenjagaan===
 #speaker:M.Yasin #audio:null #portrait:m_yasin
-Kita belum punya data lengkap. Tapi dari laporan yang dikirim intel kita, mereka sedang dalam masa transisi jaga. 
+Dari informasi yang kita dapat lewat karyawan sipil, Gudang Don Bosco di Sawahan dijaga oleh satu peleton Heiho Jepang. 
+Namun, kita belum punya data lengkap tentang pola mereka.
+Dari laporan yang dikirim intel kita, mereka sedang dalam masa transisi jaga.
 Beberapa pasukan Heiho Jepang mulai direlokasi karena kekalahan di front Pasifik.
-
 Mereka mulai lengah. Mengira rakyat Surabaya tak punya daya. Itu kesombongan mereka yang bisa jadi celah kita.
-
+#speaker:M.Yasin #audio:null #portrait:m_yasin
+Karman, guru-guru dari sekolah teknik Don Bosco, termasuk Subianto dan Mamahit, akan ikut turun tangan.
+Mereka memimpin pengorganisasian para pemuda, membantu menyiapkan logistik dan rencana serangan.
+Apakah kalian mendapat suatu informasi yang berguna dalam misi ini?
 #speaker:Subianto #audio:null #portrait:null
 Aku pernah menyusup ke area sekitar gudang itu. Penjagaan di malam hari berkurang. 
 Pos jaga sering kali kosong selama beberapa menit karena pergantian shift. Banyak dari mereka terlalu percaya diri.
@@ -119,8 +123,9 @@ Biasanya selepas tengah malam, mereka mulai lengah. Beberapa bahkan tertidur di 
 Saat itulah kita menyerang—bagaikan badai dalam senyap.
 
 #speaker:Mamahit #audio:null #portrait:null
-Truk telah disiapkan, bahan bakarnya penuh, dan supir sudah paham rute pelarian. 
-Tapi saat evakuasi nanti, kita butuh satu orang untuk memastikan tak ada senjata, amunisi, atau bahkan dokumen penting yang tertinggal.
+Logistik sudah kami atur. Bahan bakar truk penuh, rute pelarian disiapkan, dan para supir sudah paham tugas mereka.
+Bantuan moral dari Bung Tomo juga telah membakar semangat kita.
+Tapi saat evakuasi nanti, kita butuh satu orang untuk memastikan tak ada senjata, amunisi, atau dokumen penting yang tertinggal.
 
 * [Saya bisa bantu mengatur logistik juga, Pak?] -> FokusTugas
 
@@ -129,6 +134,7 @@ Tapi saat evakuasi nanti, kita butuh satu orang untuk memastikan tak ada senjata
 Tidak, Karman. Fokusmu tetap di garis depan. Kau bagian dari tim serbu, dan kami butuh pemimpin muda yang berani di sana.
 
 #speaker:M.Yasin #audio:null #portrait:m_yasin
+Aku sendiri, M. Yasin, sebagai pemimpin Polisi Istimewa Surabaya, telah ditunjuk sebagai komandan dalam penyerangan ini.
 Serahkan soal logistik pada kami. Mamahit dan timnya sudah hafal rute dan metode pengangkutan. 
 Kau bantu kami dengan membuka jalan, dan jika memungkinkan, kawal mereka saat kembali.
 

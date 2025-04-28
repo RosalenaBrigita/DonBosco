@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e8c4910fe3a07344bede3706b6ac9e2, type: 3}
   m_Name: Quiz 2
   m_EditorClassIdentifier: 
-  question: Selebaran apa?
+  question: 'Selebaran apa yang ditemukan di lapangan Tambaksari? '
   answers:
-  - menyerah
-  - ancaman
+  - Selebaran itu menyerukan agar rakyat menyerah kepada kekuatan Sekutu
+  - Selebaran itu berisi ancaman tentang kedatangan Sekutu dan perintah untuk bersiap
+    siap
   correctAnswer: 2
   points: 20
   quizType: 0

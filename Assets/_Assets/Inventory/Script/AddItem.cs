@@ -28,6 +28,8 @@ public class AddItem : MonoBehaviour
             {
                 wasAdded = true; // Mark as added
                 Debug.Log(item.Quantity + " " + item.InventoryItem.name + " telah ditambahkan ke inventory!");
+
+                inventoryController.ShowItemAddedPanel(item.InventoryItem);
             }
             else
             {

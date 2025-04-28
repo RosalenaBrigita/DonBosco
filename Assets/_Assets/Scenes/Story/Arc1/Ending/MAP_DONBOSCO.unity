@@ -48999,6 +48999,69 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &2004373122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2004373124}
+  - component: {fileID: 2004373123}
+  m_Layer: 0
+  m_Name: Quiz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2004373123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004373122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f970392f5a49449bbdc765dda6d60d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quizDialogue: {fileID: 4900000, guid: bdf0615b81c613442826b06d02a91ea7, type: 3}
+  quizId: 3
+  npcId: 0
+  OnQuizDone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 877677487}
+        m_TargetAssemblyTypeName: DonBosco.SceneLoaderAgent, Assembly-CSharp
+        m_MethodName: ExecuteLoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hideUIScreenOnDone: 1
+--- !u!4 &2004373124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004373122}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 58.8101, y: 131.49548, z: 3.055558}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2105712896
 GameObject:
   m_ObjectHideFlags: 0
@@ -51207,3 +51270,4 @@ SceneRoots:
   - {fileID: 30537818}
   - {fileID: 564492533}
   - {fileID: 722062670}
+  - {fileID: 2004373124}

@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e8c4910fe3a07344bede3706b6ac9e2, type: 3}
   m_Name: Quiz 3
   m_EditorClassIdentifier: 
-  question: Apa perintah Moestopo kepada Moh. Jasin?
+  question: 'Mengapa Don Bosco menjadi target utama dalam perebutan gudang senjata? '
   answers:
-  - Memimpin penyerbuan gudang Don Bosco
-  - Meminta persenjataan dari pasukan Jepang
+  - Karena merupakan gudang senjata terbesar di Asia Tenggara
+  - Karena hanya menyimpan senjata-senjata kecil untuk latihan
   correctAnswer: 1
   points: 20
+  quizType: 0
+  moralEffect: 0

@@ -67,6 +67,10 @@ namespace DonBosco.UI
 
                 // Format description text
                 string formattedDescription = $"<color=#000000><b><u>{stepInfo.taskName}:</u></b></color>\n{stepInfo.taskDescription}";
+
+                // SET disini nih
+                questDescriptionText.text = formattedDescription;
+
                 questRewardText.text = quest.info.rewardName;
 
                 // Reset scroll position
@@ -74,6 +78,7 @@ namespace DonBosco.UI
                 UpdateScrollbarVisibility();
             }
         }
+
 
         private void UpdateScrollbarVisibility()
         {

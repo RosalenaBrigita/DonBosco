@@ -20,6 +20,9 @@ namespace Inventory
         [SerializeField]
         private InventorySO inventoryData;
 
+        [SerializeField] private GameObject itemAddedPanelPrefab;
+        [SerializeField] private Transform panelParent;
+
         public List<InventoryItem> initialItems = new List<InventoryItem>();
 
         [SerializeField]
@@ -244,6 +247,40 @@ namespace Inventory
         public InventorySO GetInventorySO()
         {
             return inventoryData;
+        }
+
+        public void ShowItemAddedPanel(ItemSO item)
+        {
+            if (itemAddedPanelPrefab == null || panelParent == null)
+            {
+                Debug.LogWarning("ItemAddedPanelPrefab atau PanelParent belum diassign di Inspector!");
+                return;
+            }
+
+            GameObject panelInstance = Instantiate(itemAddedPanelPrefab, panelParent);
+
+            // Cari component di panel
+            UnityEngine.UI.Image itemImage = panelInstance.transform.Find("ImageItem").GetComponent<UnityEngine.UI.Image>();
+            TMPro.TMP_Text itemName = panelInstance.transform.Find("ItemName").GetComponent<TMPro.TMP_Text>();
+
+            if (itemImage != null)
+            {
+                itemImage.sprite = item.ItemImage;
+            }
+
+            if (itemName != null)
+            {
+                itemName.text = item.Name;
+            }
+
+            // Auto destroy panel setelah beberapa detik
+            StartCoroutine(HidePanelAfterDelay(panelInstance, 2f)); // 2 detik
+        }
+
+        private IEnumerator HidePanelAfterDelay(GameObject panel, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            Destroy(panel);
         }
 
         public async Task Save(SaveData saveData)

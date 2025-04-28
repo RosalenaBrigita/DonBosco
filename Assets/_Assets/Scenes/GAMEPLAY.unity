@@ -5394,7 +5394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: desc desc
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 16708e62bf30e8e43a998ae2376dfbd2, type: 2}
   m_sharedMaterial: {fileID: 8615520201176776104, guid: 16708e62bf30e8e43a998ae2376dfbd2, type: 2}
@@ -10765,6 +10765,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 83082368}
   inventoryData: {fileID: 11400000, guid: 90230b147ccaa374bafc3b06b2522943, type: 2}
+  itemAddedPanelPrefab: {fileID: 3923168394768739555, guid: d819d9976e7a30d4794865bc4449f943, type: 3}
+  panelParent: {fileID: 721386406}
   initialItems:
   - quantity: 1
     item: {fileID: 11400000, guid: 20a4d7130f851724989358894e0f73b4, type: 2}
@@ -21291,7 +21293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1b4d188768cd47b1561aabd1c0db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingScene: MAP_DONBOSCO
+  startingScene: MAP_RUMAHKARMANtes
 --- !u!4 &2075377686
 Transform:
   m_ObjectHideFlags: 0

@@ -14748,13 +14748,13 @@ MonoBehaviour:
   startTimelineOnStart: 1
   needPlayerAnimator: 1
   needCinemachineBrain: 1
-  needTransitionOut: 1
+  needTransitionOut: 0
   onDialogueEnded:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2018806044}
-        m_TargetAssemblyTypeName: DonBosco.SceneLoaderAgent, Assembly-CSharp
-        m_MethodName: ExecuteLoadScene
+      - m_Target: {fileID: 958690692}
+        m_TargetAssemblyTypeName: QuizDialogue, Assembly-CSharp
+        m_MethodName: StartDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14807,18 +14807,6 @@ PlayableDirector:
     value: {fileID: 1893340215}
   - key: {fileID: -6866565180257581801, guid: 0adb47f0edaa83d428193bff36085fd0, type: 2}
     value: {fileID: 1893340217}
-  - key: {fileID: -7873283229980030028, guid: 0adb47f0edaa83d428193bff36085fd0, type: 2}
-    value: {fileID: 461528698}
-  - key: {fileID: 6019361371167757346, guid: 0adb47f0edaa83d428193bff36085fd0, type: 2}
-    value: {fileID: 461528700}
-  - key: {fileID: 5731832340995264077, guid: 0adb47f0edaa83d428193bff36085fd0, type: 2}
-    value: {fileID: 1506209317}
-  - key: {fileID: 589980743094822828, guid: 0adb47f0edaa83d428193bff36085fd0, type: 2}
-    value: {fileID: 1529928200}
-  - key: {fileID: -1730864452962376923, guid: 0adb47f0edaa83d428193bff36085fd0, type: 2}
-    value: {fileID: 1705103959}
-  - key: {fileID: 4795385523530346487, guid: 0adb47f0edaa83d428193bff36085fd0, type: 2}
-    value: {fileID: 1705103961}
   m_ExposedReferences:
     m_References:
     - fa42a88a26d1d0b44bd927f50f2f9717: {fileID: 770142399}
@@ -17514,7 +17502,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &461528699
 RectTransform:
   m_ObjectHideFlags: 0
@@ -46602,7 +46590,7 @@ Transform:
   m_GameObject: {fileID: 592207561}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3, y: -19, z: 0}
+  m_LocalPosition: {x: -1.3, y: -21.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57170,6 +57158,167 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &950589418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 950589420}
+  - component: {fileID: 950589419}
+  - component: {fileID: 950589421}
+  - component: {fileID: 950589422}
+  m_Layer: 0
+  m_Name: TimelineEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &950589419
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950589418}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: f694389cdf64a0f4d83566dc3c4d1b27, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -3484126850495442863, guid: f694389cdf64a0f4d83566dc3c4d1b27, type: 2}
+    value: {fileID: 1893340215}
+  - key: {fileID: 8538383976983883987, guid: f694389cdf64a0f4d83566dc3c4d1b27, type: 2}
+    value: {fileID: 1893340217}
+  - key: {fileID: 8552075880430224140, guid: f694389cdf64a0f4d83566dc3c4d1b27, type: 2}
+    value: {fileID: 1705103961}
+  - key: {fileID: -3877252891673481757, guid: f694389cdf64a0f4d83566dc3c4d1b27, type: 2}
+    value: {fileID: 1529928200}
+  - key: {fileID: 6806940590762662380, guid: f694389cdf64a0f4d83566dc3c4d1b27, type: 2}
+    value: {fileID: 1506209317}
+  - key: {fileID: -5396289142025332447, guid: f694389cdf64a0f4d83566dc3c4d1b27, type: 2}
+    value: {fileID: 461528698}
+  - key: {fileID: 3619636712315180738, guid: f694389cdf64a0f4d83566dc3c4d1b27, type: 2}
+    value: {fileID: 461528700}
+  - key: {fileID: 586751333946987341, guid: f694389cdf64a0f4d83566dc3c4d1b27, type: 2}
+    value: {fileID: 1705103959}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &950589420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950589418}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25.514896, y: 4.1852927, z: -0.10941794}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &950589421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950589418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3e915d770ac02499984fcad2078d9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenesToLoad:
+  - CREDIT
+  scenesToUnload:
+  - CUTSCENE_POSTDIPLOMASI
+  resumeGameOnLoadDone: 1
+--- !u!114 &950589422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950589418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 361b441c536f0624a80985d42deb729b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playableDirector: {fileID: 950589419}
+  sceneLoaderAgent: {fileID: 950589421}
+--- !u!1 &958690691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 958690693}
+  - component: {fileID: 958690692}
+  m_Layer: 0
+  m_Name: Quiz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &958690692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958690691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f970392f5a49449bbdc765dda6d60d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quizDialogue: {fileID: 4900000, guid: bdf0615b81c613442826b06d02a91ea7, type: 3}
+  quizId: 3
+  npcId: 0
+  OnQuizDone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 950589419}
+        m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hideUIScreenOnDone: 1
+--- !u!4 &958690693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958690691}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 58.8101, y: 131.49548, z: 3.055558}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963485259
 GameObject:
   m_ObjectHideFlags: 0
@@ -62299,7 +62448,7 @@ Transform:
   m_GameObject: {fileID: 1219410970}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.26, y: -18.93, z: 0}
+  m_LocalPosition: {x: -3.33, y: -20.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -114629,7 +114778,7 @@ Transform:
   m_GameObject: {fileID: 1486549140}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -1.34, y: -23.55, z: 0}
+  m_LocalPosition: {x: 2.31, y: -24.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -114654,7 +114803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1506209318
 RectTransform:
   m_ObjectHideFlags: 0
@@ -114963,7 +115112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1529928201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -129840,7 +129989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1705103960
 RectTransform:
   m_ObjectHideFlags: 0
@@ -131617,7 +131766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1893340216
 RectTransform:
   m_ObjectHideFlags: 0
@@ -134892,8 +135041,10 @@ SceneRoots:
   - {fileID: 636284254}
   - {fileID: 1151912834}
   - {fileID: 675091996}
-  - {fileID: 298371145}
   - {fileID: 592207565}
   - {fileID: 1486549144}
   - {fileID: 1219410975}
   - {fileID: 2018806045}
+  - {fileID: 958690693}
+  - {fileID: 298371145}
+  - {fileID: 950589420}
