@@ -191,7 +191,7 @@
                 {
                     "name": "",
                     "id": "347a21c3-a8b9-48f1-a44e-55a941be5496",
-                    "path": "<Mouse>/middleButton",
+                    "path": "<Pen>/tip",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -418,15 +418,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Inventory",
-                    "type": "Button",
-                    "id": "23831762-8a22-42a0-8fe2-69964812a010",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -482,17 +473,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "LeftClick",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a4159c55-3208-4629-95d0-0dc77fa6c100",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

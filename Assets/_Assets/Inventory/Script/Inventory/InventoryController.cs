@@ -9,6 +9,7 @@ using UnityEngine;
 using DonBosco.SaveSystem;
 using DonBosco;
 using System.Threading.Tasks;
+using UnityEngine.UI;
 
 namespace Inventory
 {
@@ -16,6 +17,7 @@ namespace Inventory
     {
         [SerializeField]
         public UIInventoryPage inventoryUI;
+        public Button button;
 
         [SerializeField]
         private InventorySO inventoryData;
@@ -51,6 +53,7 @@ namespace Inventory
         {
             SaveManager.Instance.Subscribe(this);
             PrepareUI();
+            button.gameObject.SetActive(false); 
             PrepareInventoryData();
 
             // Pastikan ada instance dari DialogueManager
@@ -225,23 +228,22 @@ namespace Inventory
             if (inventoryUI.isActiveAndEnabled == false)
             {
                 inventoryUI.Show();
+                button.gameObject.SetActive(true); 
+
                 foreach (var item in inventoryData.GetCurrentInventoryState())
                 {
                     inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
                 }
 
-                // **Matikan input gerak, aktifkan input UI**
-                DonBosco.InputManager.Instance.SetMovementActionMap(false);
-                DonBosco.InputManager.Instance.SetUIActionMap(true);
+                // Matikan input gerak
+                //DonBosco.InputManager.Instance.SetMovementActionMap(false);
             }
-            else
-            {
-                inventoryUI.Hide();
+        }
 
-                // **Kembalikan ke input gerak**
-                DonBosco.InputManager.Instance.SetMovementActionMap(true);
-                DonBosco.InputManager.Instance.SetUIActionMap(false);
-            }
+        public void HideInventory()
+        {
+            inventoryUI.Hide();
+            button.gameObject.SetActive(false); 
         }
 
         public InventorySO GetInventorySO()

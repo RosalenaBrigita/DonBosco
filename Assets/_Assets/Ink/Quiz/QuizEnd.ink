@@ -8,6 +8,7 @@ Bagaimana jika sejak awal Indonesia tidak dijajah?
 Apa jadinya Indonesia tanpa para pejuang yang telah berjasa besar?
 Bagaimana jika Indonesia tidak pernah mendapat kemerdekaan?
 Perundingan di Don Bosco bersama atasan Jepang juga memunculkan pertanyaan di kepalamu.
+~ set_quiz = true
 Mengapa Don Bosco menjadi target utama dalam perebutan gudang senjata? 
 * [Karena merupakan gudang senjata terbesar di Asia Tenggara]
     ~ Quiz("3_1")
@@ -51,4 +52,5 @@ Siapa yang menandatangani surat diplomasi dengan Komandan Batalyon Jepang, Mayor
     ~ Quiz("8_2")
     Benar. Surat perjanjian diplomasi dengan Komandan Batalyon Jepang, Mayor Hashimoto, ditandatangani oleh M. Yasin dan Bung Tomo.
     Mereka mewakili pejuang Indonesia dalam upaya damai sebelum terjadinya perebutan secara terbuka.
+~ set_quiz = false
     ->END
