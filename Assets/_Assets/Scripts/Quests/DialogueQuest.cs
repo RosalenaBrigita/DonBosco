@@ -19,6 +19,10 @@ namespace DonBosco.Quests
         [SerializeField] protected ConversationState[] conversationStates;
         [SerializeField] protected ExternalFunction[] externalFunctions;
 
+        // getter
+        public ConversationState[] GetConversationStates() => conversationStates;
+        public DialogueQuestConversation[] GetDialogueQuestConversations() => dialogueQuestConversations;
+
         private Collider2D _collider;
         private DialogueQuestConversation currentDialogueQuestConversation;
         private ConversationState currentState;
