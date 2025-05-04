@@ -15,6 +15,7 @@ MonoBehaviour:
   <id>k__BackingField: SerangBelakang
   questName: Serang Gudang DonBosco dari Belakang
   questDescription: 
+  questType: 0
   initialState: 0
   event_no: 4
   questSteps:

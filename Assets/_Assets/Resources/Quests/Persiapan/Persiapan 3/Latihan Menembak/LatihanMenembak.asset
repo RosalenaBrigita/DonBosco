@@ -17,6 +17,7 @@ MonoBehaviour:
   questDescription: Latih kemampuan menembak bersama pasukan untuk mempersiapkan
     penyerbuan Gudang Don Bosco. Koordinasikan latihan dan laporkan hasilnya ke M.
     Yasin.
+  questType: 0
   initialState: 0
   event_no: 3
   questSteps:

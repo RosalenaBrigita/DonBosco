@@ -15,6 +15,7 @@ MonoBehaviour:
   <id>k__BackingField: KedatanganBelanda
   questName: Kedatangan Belanda
   questDescription: Belanda menginjakkan kaki di tanah Indonesia untuk sekali lagi
+  questType: 0
   initialState: 0
   event_no: 10
   questSteps:

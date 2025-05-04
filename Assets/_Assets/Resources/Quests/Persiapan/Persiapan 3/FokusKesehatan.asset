@@ -16,6 +16,7 @@ MonoBehaviour:
   questName: Periksa kondisi pasukan
   questDescription: Beberapa pasukan mengalami kelelahan dan luka ringan. Bantu distribusikan
     obat-obatan dan pastikan mereka siap untuk malam penyerbuan.
+  questType: 0
   initialState: 0
   event_no: 0
   questSteps:

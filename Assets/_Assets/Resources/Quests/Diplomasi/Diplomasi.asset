@@ -15,6 +15,7 @@ MonoBehaviour:
   <id>k__BackingField: Diplomasi
   questName: Diplomasi DonBosco
   questDescription: 
+  questType: 0
   initialState: 0
   event_no: 5
   questSteps:

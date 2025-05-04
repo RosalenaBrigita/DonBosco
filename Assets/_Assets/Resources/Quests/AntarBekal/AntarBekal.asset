@@ -15,6 +15,7 @@ MonoBehaviour:
   <id>k__BackingField: AntarBekal
   questName: Jasa Antar
   questDescription: 
+  questType: 0
   initialState: 0
   event_no: 3
   questSteps:

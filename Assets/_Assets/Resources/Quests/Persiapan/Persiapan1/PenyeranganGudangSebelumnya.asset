@@ -15,6 +15,7 @@ MonoBehaviour:
   <id>k__BackingField: PenyeranganGudangSebelumnya
   questName: Penyerangan Gudang Sebelumnya
   questDescription: 
+  questType: 1
   initialState: 0
   event_no: 5
   questSteps:

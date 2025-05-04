@@ -16,6 +16,7 @@ MonoBehaviour:
   questName: Mengibarkan Bendera Merah Putih
   questDescription: Karman diminta oleh Pak Darto untuk menjahit dan memasang bendera
     merah putih di tiga tempat strategis.
+  questType: 1
   initialState: 0
   event_no: 4
   questSteps:

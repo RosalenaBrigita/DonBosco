@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Radio
   m_EditorClassIdentifier: 
   <id>k__BackingField: Radio
-  questName: Dengarkan dengan radio
+  questName: Dengarkan radio
   questDescription: Suara dari radio tua terdengar samar di kejauhan. Mungkin ada
     kabar penting... Dekatilah radio itu dan dengarkan lebih jelas. Masih ingat caranya?
     Gunakan W, A, S, D untuk bergerak, tahan Shift untuk berlari, klik kanan untuk
     melakukan dash, dan tekan F untuk berinteraksi.
+  questType: 0
   initialState: 1
   event_no: 6
   questSteps:

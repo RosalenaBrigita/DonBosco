@@ -21,6 +21,11 @@ namespace DonBosco.UI
             this.questWindowUI = questWindow;
             QuestStateChange(quest);
 
+            if (quest.info.questType == QuestType.MainQuest)
+            {
+                titleText.color = Color.red;
+            }
+            
             // Pastikan button bisa diklik
             if (questButton != null)
             {

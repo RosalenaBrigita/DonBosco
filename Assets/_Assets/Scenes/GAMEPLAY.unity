@@ -8603,7 +8603,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1 &740899894
 GameObject:
@@ -10073,7 +10073,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 10
+  m_CameraDistance: 11
   m_DeadZoneWidth: 0.081
   m_DeadZoneHeight: 0.081
   m_DeadZoneDepth: 0
@@ -15511,19 +15511,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 19.7949
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -15.66365
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

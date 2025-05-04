@@ -16,6 +16,7 @@ MonoBehaviour:
   questName: Pergi mengintai Donbosco
   questDescription: Pergi ke gedung Donbosco untuk melihat keadaan. Tapi jangan serang
     karena kita akan menunggu hingga matahari terbit.
+  questType: 0
   initialState: 0
   event_no: 4
   questSteps:

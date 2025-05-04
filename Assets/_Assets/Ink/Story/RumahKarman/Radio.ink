@@ -1,35 +1,15 @@
 === Quest_BergabungBKR ===
-#speaker:Radio #portrait:null #audio:null
-Perhatian! Perhatian!
-#speaker:Radio #portrait:null #audio:null
-Disampaikan kabar penting bagi seluruh rakyat Surabaya!
-#speaker:Radio #portrait:null #audio:null
+#speaker:Bung Tomo #portrait:soetomo #audio:soetomo
+Perhatian! Perhatian! Disampaikan kabar penting bagi seluruh rakyat Surabaya!
 Pada tanggal 17 Agustus, di Jakarta, Bung Karno telah membacakan Proklamasi Kemerdekaan Republik Indonesia.
-#speaker:Radio #portrait:null #audio:null
 Bangsa kita… telah merdeka! Bebas dari belenggu penjajahan.
-#speaker:Radio #portrait:null #audio:null
-Namun saudara-saudara… perjuangan belum usai.
-#speaker:Radio #portrait:null #audio:null
-Meski Jepang telah menyatakan menyerah, pasukan mereka dan gudang senjatanya masih berada di tanah air kita.
-#speaker:Radio #portrait:null #audio:null
-Oleh sebab itu, wahai pemuda-pemudi Surabaya…
-#speaker:Radio #portrait:null #audio:null
-Mari bangkit! Bersatulah dalam Barisan Keamanan Rakyat — BKR.
-#speaker:Radio #portrait:null #audio:null
+Namun saudara-saudara… perjuangan belum usai. Meski Jepang telah menyatakan menyerah, pasukan mereka dan gudang senjatanya masih berada di tanah air kita.
+Oleh sebab itu, wahai pemuda-pemudi Surabaya… Mari bangkit! Bersatulah dalam Barisan Keamanan Rakyat — BKR.
 Sebuah pasukan rakyat untuk menjaga dan mempertahankan kemerdekaan yang telah kita raih bersama.
-#speaker:Radio #portrait:null #audio:null
-Bagi siapa saja yang bersedia memperjuangkan tanah air...
-#speaker:Radio #portrait:null #audio:null
-Segeralah menuju markas BKR dan temui Pak Soengkono.
-#speaker:Radio #portrait:null #audio:null
+Bagi siapa saja yang bersedia memperjuangkan tanah air... Segeralah menuju markas BKR dan temui Pak Soengkono.
 Sebarkan kabar ini kepada siapa pun yang kau jumpai!
-#speaker:Radio #portrait:null #audio:null
-Melawan penjajahan adalah tanggung jawab kita bersama.
-#speaker:Radio #portrait:null #audio:null
-Demi tanah air… demi masa depan…
-#speaker:Radio #portrait:null #audio:null
+Melawan penjajahan adalah tanggung jawab kita bersama. Demi tanah air… demi masa depan…
 Merdeka!
-#speaker:Radio #portrait:null #audio:null
 Tidak ada yang mundur — kita maju bersama!
 -> END
 

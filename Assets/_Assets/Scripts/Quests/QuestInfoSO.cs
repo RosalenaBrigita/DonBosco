@@ -12,6 +12,7 @@ namespace DonBosco.Quests
         [field: SerializeField] public string id { get; private set; }
         public string questName;
         public string questDescription;
+        public QuestType questType;
         public QuestState initialState;
         public int event_no; //event no is the event number in the event log (from API)
 
@@ -68,5 +69,11 @@ namespace DonBosco.Quests
             UnityEditor.EditorUtility.SetDirty(this);
 #endif
         }
+    }
+
+    public enum QuestType
+    {
+        MainQuest,
+        SideQuest
     }
 }
