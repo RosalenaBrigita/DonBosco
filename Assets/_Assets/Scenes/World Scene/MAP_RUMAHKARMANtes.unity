@@ -5183,7 +5183,7 @@ MonoBehaviour:
     - questInfo: {fileID: 11400000, guid: 4ed3a05648c4b8a42aeca74765528314, type: 2}
       questState: 1
       questStepIndex: 0
-    knotPath: Quest_PergiKeMarkasBKR
+    knotPath: reminder
   externalFunctions: []
 --- !u!58 &1095827919
 CircleCollider2D:

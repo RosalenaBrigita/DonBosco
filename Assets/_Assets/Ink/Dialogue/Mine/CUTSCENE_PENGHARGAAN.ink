@@ -1,12 +1,19 @@
 INCLUDE ../../Quests/QuestData.ink
 
-#speaker:Soetomo #audio:null #portrait:soetomo
-Saudara-saudara... malam penyerangan itu adalah titik balik perjuangan kita.
-Gudang yang kita rebut bukan sembarang gudang. Itu adalah gudang senjata terbesar milik Jepang di Asia Tenggara.
-Berisi ribuan peluru, senapan, bahkan meriam ringan. Kalau itu jatuh ke tangan sekutu—semuanya habis. Tapi karena kalian, kita lebih dulu mengamankannya.
+#speaker:Bung Tomo #audio:soetomo #portrait:soetomo
+Saudara-saudara... malam penyerangan itu adalah titik balik perjuangan kita. Gudang yang kita rebut bukan sembarang gudang.  
+
+#speaker:Bung Tomo #audio:soetomo #portrait:soetomo
+Keberhasilan ini memberi semangat baru bagi rakyat Surabaya.  
+Rakyat mulai percaya bahwa kita bukan hanya bisa melawan, tapi bisa menang. Dan keyakinan itu—itulah kekuatan kita yang sesungguhnya.
+
+#speaker:Bung Tomo #audio:soetomo #portrait:soetomo
+Itu adalah gudang senjata terbesar milik Jepang di Asia Tenggara.  
+Berisi ribuan peluru, senapan, bahkan meriam ringan.  
+Kalau itu jatuh ke tangan sekutu—semuanya habis. Tapi karena kalian, kita lebih dulu mengamankannya.
 
 {questBelakang: 
-#speaker:Soetomo #audio:null #portrait:soetomo
+#speaker:Bung Tomo #audio:soetomo #portrait:soetomo
 Karman... strategi penyerangan dari belakang menunjukkan kecermatan dan perhitungan matang. 
 Pasukan musuh lengah, tak menyangka serangan dari arah yang tidak terjaga.
 Berkat keputusanmu, gudang bisa direbut dalam waktu singkat, dengan korban yang jauh lebih sedikit.
@@ -14,8 +21,8 @@ Kau bukan hanya pejuang... kau pemikir medan tempur.
 Kau dapat membaca situasi dengan tajam. Atas jasamu, kami menobatkanmu sebagai Pahlawan Taktik.
 Gudang Don Bosco bukan sembarang tempat—di dalamnya tersimpan senapan Jepang, amunisi, dan bahan logistik. Kita berhasil merebutnya dalam satu malam. Itu luar biasa.
 #speaker:null #portrait:null #audio:null
-Sebanyak empat gerbong kereta berisi senjata hasil rampasan dikirim ke Stasiun Sidotopo. D
-ari sana, dengan kereta malam khusus, senjata dikirim ke markas perlawanan di Jakarta untuk memperkuat pemuda di ibukota.
+Sebanyak empat gerbong kereta berisi senjata hasil rampasan dikirim ke Stasiun Sidotopo.
+Dari sana, dengan kereta malam khusus, senjata dikirim ke markas perlawanan di Jakarta untuk memperkuat pemuda di ibukota.
 #speaker:null #portrait:null #audio:null
 Sebagian senjata disimpan di rumah-rumah warga yang sudah disiapkan secara rahasia, termasuk di gang-gang kecil dan gudang tersembunyi di Tambaksari.
 #speaker:null #portrait:null #audio:null
@@ -23,7 +30,7 @@ Senjata bukan hanya kekuatan, tapi simbol harapan. Dan malam itu, rakyat Surabay
 }
 
 {questDepan:
-#speaker:Soetomo #audio:null #portrait:soetomo
+#speaker:Bung Tomo #audio:soetomo #portrait:soetomo
 Karman... saat memilih jalur depan, banyak yang meragukan. Tapi kau maju paling depan.
 Keberanianmu—dan keberanian rekan-rekanmu—membuat musuh kehilangan kendali.
 Pasukan kita mungkin tidak sebanyak mereka, tapi semangat kalian tak tertandingi.
@@ -38,16 +45,17 @@ Namun karena serangan frontal lebih brutal, beberapa senjata mengalami kerusakan
 Pagi itu, Surabaya tahu: keberanian bukan sekadar maju, tapi berani kehilangan demi kemenangan bersama.
 }
 
-#speaker:Soetomo #audio:null #portrait:soetomo
+#speaker:Bung Tomo #audio:soetomo #portrait:soetomo
 Tapi hari ini… hari ini adalah milik para pemuda seperti kalian.
-#speaker:Soetomo #audio:null #portrait:soetomo
+
+#speaker:Bung Tomo #audio:soetomo #portrait:soetomo
 Perjuangan kita belum selesai. Hari ini kita rayakan keberhasilan kecil... besok kita hadapi tantangan yang lebih besar.
 
 #speaker:Pemuda #audio:null #portrait:pejuang
 Hidup pemuda Surabaya!
+
 #speaker:Pemuda #audio:null #portrait:pejuang
 Merdeka!
-
 -> END
 
 

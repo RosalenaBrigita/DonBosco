@@ -6864,7 +6864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d7f911178cdb647a59ef4b2449e29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.035
+  typingSpeed: 0.05
   loadGlobalsJSON: {fileID: 4900000, guid: 6f50f68f8a0142349a2d422a90d6f6e7, type: 3}
   dialoguePanel: {fileID: 1302350758}
   continueIcon: {fileID: 1712374446}
@@ -6893,6 +6893,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: faa8e49850db461449310a4911fab9a3, type: 2}
   - {fileID: 11400000, guid: 35df60d1c994d754f94032202b81c236, type: 2}
   - {fileID: 11400000, guid: 0157e2317ebb1cd4aab39344fa85efc6, type: 2}
+  - {fileID: 11400000, guid: be209f28881a7134089fb01770bb6a1d, type: 2}
+  - {fileID: 11400000, guid: 5b50c5b5691b8d446acd3f4831b76e34, type: 2}
+  - {fileID: 11400000, guid: 49a4df1932d407f41808875e33b85119, type: 2}
+  - {fileID: 11400000, guid: e1cb814e1474b0a4b987163b03329dda, type: 2}
+  - {fileID: 11400000, guid: b0c54f91d928e9f49b279957aa04ead8, type: 2}
+  - {fileID: 11400000, guid: 3798e5edec7fdb240800f7b9643354e9, type: 2}
   isTimelineControlled: 0
 --- !u!82 &571052008
 AudioSource:
@@ -15511,19 +15517,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 19.7949
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061109871504383369, guid: 25da3bfc66f58d242bf1257bccc6e573, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.66365
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

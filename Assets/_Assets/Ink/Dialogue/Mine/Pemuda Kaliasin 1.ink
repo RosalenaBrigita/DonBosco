@@ -6,17 +6,17 @@ Akhirnya Indonesia sudah merdeka
 #speaker:Karman #audio:null #portrait:karman
 Permisi, Bung. Aku sedang cari kabar tentang penyerangan di gudang Kaliasin. Sampeyan tahu sesuatu?
 
-#speaker:Riono #audio:null #portrait:null
+#speaker:Riono #audio:animal_crossing_high #portrait:null
 Hmmm... soal penyerangan itu, aku cuma dengar-dengar aja dari anak-anak yang lewat. 
 Kurasa bukan aku orang yang tepat buat cerita soal itu. 
 Coba sampeyan tanya yang lain, mungkin ada yang lihat langsung kejadianya.
 -> END
 
 ===AjakBicara2===
-#speaker:Karman #audio:null #portrait:karman
+#speaker:Karman #audio:animal_crossing_mid #portrait:karman
 Halo, Bung. Tadi aku dengar ada penyerangan di Kaliasin. Apa sampeyan tahu apa yang sebenarnya terjadi?
 
-#speaker:Haris #audio:null #portrait:null
+#speaker:Haris #audio:animal_crossing_high #portrait:null
 Oalah, iya, Bung. Aku masih ingat betul malam itu... tanggal 14 September.  
 Kami—para pemuda bersama Polisi Istimewa—bergerak dengan rencana yang matang.  
 Pimpinan kami waktu itu, Bung Sucipto Danukusumo, ngatur segalanya dengan sangat rapi.
@@ -51,10 +51,10 @@ Terima kasih banyak, Bung. Ceritamu sangat berarti untuk rencana kami selanjutny
 
 
 ===AjakBicara3===
-#speaker:Karman #audio:null #portrait:karman
+#speaker:Karman #audio:animal_crossing_mid #portrait:karman
 Aku sedang kumpulkan cerita soal penyerangan Kaliasin. Bung, sampeyan tahu sesuatu?
 
-#speaker:Darmo #audio:null #portrait:null
+#speaker:Darmo #audio:animal_crossing_high #portrait:null
 Hmmm... aku cuma dengar dari tetangga. Tapi yang tinggal di dekat-dekat gudang itu, katanya sempat lihat semuanya. 
 Coba sampeyan cari Bung Haris—rumahnya nggak jauh dari sini, dekat Pohon di ujung sana. 
 Dia yang lebih tahu cerita lengkapnya.
@@ -63,23 +63,23 @@ Dia yang lebih tahu cerita lengkapnya.
 ===SambonganActive1===
 #speaker:Karman #portrait:karman #audio:animal_crossing_mid
 Hai, bung. Apakah kau tahu sesuatu tentang perebutan Gudang Sambongan?
-#speaker:Riono #audio:null #portrait:null
+#speaker:Riono #audio:animal_crossing_high #portrait:null
 Wah, kau salah bung. Ini Kampung Kaliasin bukan Kampung Sambongan. Mungkin kau bisa tanya pada pemuda di seberang jalan.
 * [Baik, terima kasih]
 -> END
 
-===KaliasinActive2===
+===SanbonganActive2===
 #speaker:Karman #portrait:karman #audio:animal_crossing_mid
 Hai, bung. Apakah kau tahu sesuatu tentang perebutan Gudang Sambongan?
-#speaker:Haris #audio:null #portrait:null
+#speaker:Haris #audio:animal_crossing_high #portrait:null
 Wah, kau salah bung. Ini Kampung Kaliasin bukan Kampung Sambongan. Mungkin kau bisa tanya pada pemuda di seberang jalan.
 * [Baik, terima kasih]
 -> END
 
-===KaliasinActive3===
+===SambonganActive3===
 #speaker:Karman #portrait:karman #audio:animal_crossing_mid
 Hai, bung. Apakah kau tahu sesuatu tentang perebutan Gudang Sambongan?
-#speaker:Darmo #audio:null #portrait:null
+#speaker:Darmo #audio:animal_crossing_high #portrait:null
 Wah, kau salah bung. Ini Kampung Kaliasin bukan Kampung Sambongan. Mungkin kau bisa tanya pada pemuda di seberang jalan.
 * [Baik, terima kasih]
 -> END

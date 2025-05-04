@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 4900000, guid: a20f5da4eed26ed4fb09eb307e863254, type: 3}
-  npcID: 0
+  npcID: 3
   dialogueQuestConversations:
   - conditions:
     - questInfo: {fileID: 11400000, guid: 4ed3a05648c4b8a42aeca74765528314, type: 2}
@@ -1107,22 +1107,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  conversationStates:
-  - questConditions:
-    - questInfo: {fileID: 11400000, guid: 981f21d3f680ad14bb25e65e487ca8b2, type: 2}
-      questState: 1
-      questStepIndex: 1
-    knotPath: PesawatSelebaran
-  - questConditions:
-    - questInfo: {fileID: 11400000, guid: 981f21d3f680ad14bb25e65e487ca8b2, type: 2}
-      questState: 2
-      questStepIndex: 2
-    knotPath: PesawatSelebaran
-  - questConditions:
-    - questInfo: {fileID: 11400000, guid: 981f21d3f680ad14bb25e65e487ca8b2, type: 2}
-      questState: 3
-      questStepIndex: 3
-    knotPath: StartRapat
+  conversationStates: []
   externalFunctions:
   - functionName: ChangeScene
     onFunctionCalled:

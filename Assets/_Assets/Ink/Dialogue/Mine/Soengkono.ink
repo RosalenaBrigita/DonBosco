@@ -1,81 +1,95 @@
-#speaker:Kapten Soengkono #audio:null #portrait:sungkono
-Apa yang kau butuhkan, Bung?
+#speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+Ada yang bisa kubantu, Karman? Situasi makin genting—jika kau butuh arahan, katakan saja.
 -> END
 
-===CompletePesawat===
-#speaker:Kapten Soengkono #audio:null #portrait:sungkono
-Tolong segera antarkan kabar ini ke Moestopo di kantor BKR, Karman.
-#speaker:Karman #audio:null #portrait:karman
-Baik kapten, aku akan segera kesana.
-->END
 
-===CompleteGabung===
-#speaker:Kapten Soengkono #audio:null #portrait:sungkono
-Pergilah ke Lapangan Tambaksari, Bung Tomo sedang melakukan Rapat Akbar di sana. Kau pasti mendapatkan sesuatu sepulang dari sana.
-#speaker:Karman #audio:null #portrait:karman
-Baik kapten, aku akan segera kesana.
-->END
+=== CompletePesawat ===
+#speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+Karman, selebaran itu bukan isapan jempol. Tolong... segeralah ke kantor BKR dan sampaikan pada Moestopo.  
+Ia harus tahu secepatnya agar bisa ambil sikap.
+
+#speaker:Karman #audio:animal_crossing_mid #portrait:karman
+Baik, Kapten. Aku berangkat sekarang juga.
+-> END
+
+
+=== CompleteGabung ===
+#speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+Sekarang pergilah ke Lapangan Tambaksari. Bung Tomo sedang menggelar rapat akbar.  
+Kau mungkin bisa dapat petunjuk baru dari sana... atau semangat yang lebih besar untuk terus maju.
+
+#speaker:Karman #audio:animal_crossing_mid #portrait:karman
+Baik, Kapten. Aku akan segera ke sana.
+-> END
 
 === GabungBKR ===
-#speaker:Kapten Soengkono #audio:null #portrait:sungkono
-Karman! Akhirnya kau datang. Aku sudah dengar banyak tentangmu.
-#speaker:Kapten Soengkono
-Katanya kau pemuda yang berani, keras kepala… dan tak pernah lari dari masalah.
-#speaker:Karman #audio:null #portrait:karman
-Heh... Saya cuma melakukan apa yang menurut saya benar, Kapten.
-#speaker:Kapten Soengkono #audio:null #portrait:sungkono
-Dan itu yang kami butuhkan sekarang.
-#speaker:Kapten Soengkono #audio:null #portrait:sungkono
-Negeri ini butuh lebih dari sekadar semangat. Ia butuh tindakan.  
-Jadi, Karman... apakah kau siap?
+#speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+Karman! Kau akhirnya datang. Namamu sudah lebih dulu terdengar di telingaku.
+#speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+Katanya kau pemuda keras kepala—tapi tak pernah mundur kalau bicara soal kebenaran.
+#speaker:Karman #audio:animal_crossing_mid #portrait:karman
+Saya cuma melakukan apa yang menurut hati saya benar, Kapten.
+#speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+Dan justru itu yang dibutuhkan negeri ini. Kau tahu, Kemerdekaan bukan hadiah. Ia harus dijaga dan diperjuangkan.
+#speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+Jadi, Karman... kau sudah siap?
 * [Saya siap. Katakan saja apa yang harus saya lakukan.]
     -> SiapGabung
 * [Kalau saya tak datang... lalu siapa lagi?]
     -> SiapGabung
-* [Belum tahu apakah saya pantas... tapi saya akan coba.]
+* [Saya belum yakin pantas... tapi saya takkan lari.]
     -> SiapGabung
 
 === SiapGabung ===
-#speaker:Kapten Soengkono #audio:null #portrait:sungkono
+#speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
 Jawaban yang bagus.  
-Kau memang belum sepenuhnya siap... tapi siapa di antara kita yang benar-benar siap?
-#speaker:Kapten Soengkono #audio:null #portrait:sungkono
-Yang penting, kau di sini. Dan kau bersedia. Itu sudah cukup untuk mulai.
+Tak ada satu pun dari kita yang benar-benar siap, Karman.
+#speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+Tapi yang penting, kau sudah melangkah. Itu awal dari segalanya.
+#speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+Mulai hari ini, kau bagian dari Barisan Keamanan Rakyat. Ayo, kita punya banyak yang harus dilakukan.
 -> END
 
-===AjakBicara===
-#speaker:Kapten Soengkono #audio:null #portrait:sungkono
-Karman, keadaan semakin mendesak. Kau lihat sendiri, pesawat-pesawat itu bukan sekadar pamer kekuatan—mereka adalah tanda. Sekutu akan segera datang ke Surabaya.
+=== AjakBicara ===
+#speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+Karman... kau lihat pesawat tadi? Itu bukan hanya pamer kekuatan. Itu peringatan.  
+Pasukan Sekutu akan benar-benar menginjakkan kaki di Surabaya dan mereka tidak datang untuk memberi selamat.
 
-#speaker:Kapten Soengkono #audio:null #portrait:sungkono
-Kita tak bisa hanya diam. Aku butuh kau untuk menyampaikan pesan ini kepada Moestopo di Markas BKR. Dia harus segera tahu.
+#speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+Kita tak punya banyak waktu. Aku butuh kau untuk menyampaikan pesan ini pada Moestopo di Markas BKR.  
+Dia harus tahu secepatnya.
 
 * [Siap, Kapten. Tapi... siapa itu Moestopo sebenarnya?]
-    #speaker:Kapten Soengkono #audio:null #portrait:sungkono
-    Pertanyaan yang bagus. Dr. Moestopo adalah pemimpin BKR Surabaya. 
-    Orang yang cerdas dan berani. Dulu dia seorang dokter gigi, tapi sekarang... 
-    dialah benteng pertahanan rakyat di kota ini.
-    #speaker:Karman #audio:null #portrait:karman
+    #speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+    Pertanyaan bagus. Dr. Moestopo dulunya dokter gigi, kini pemimpin BKR Surabaya.  
+    Orangnya cerdas, berani, dan tak pernah ragu berdiri paling depan dalam bahaya.
+    
+    #speaker:Karman #audio:animal_crossing_mid #portrait:karman
     Seorang dokter jadi pemimpin pasukan?
-    #speaker:Kapten Soengkono #audio:null #portrait:sungkono
-    Di masa perang, keberanian lebih penting daripada gelar. Dan Moestopo punya keduanya.
+    
+    #speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+    Di tengah perang, bukan gelar yang bicara. Yang bicara adalah keberanian dan keteguhan hati.  
+    Dan Moestopo punya keduanya.
     -> Lanjut
 
 * [Aku belum pernah bertemu langsung dengan Moestopo]
-    #speaker:Kapten Soengkono #audio:null #portrait:sungkono
-    Tak apa, banyak yang belum. Tapi kau akan tahu saat melihatnya. Wibawanya... tak bisa disangkal.
-    Dia bukan hanya memimpin pasukan, tapi menyatukan semangat rakyat.
-    #speaker:Karman #audio:null #portrait:karman
-    Baik, aku akan cari tahu sendiri. 
+    #speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+    Tak masalah. Banyak yang belum, tapi sekali kau bertemu dengannya...  
+    kau akan tahu — orang ini bukan biasa. Wibawanya... memancar dari caranya memimpin dan menyatu dengan rakyat.
+
+    #speaker:Karman #audio:animal_crossing_mid #portrait:karman
+    Baik, aku akan cari tahu sendiri.  
     -> Lanjut
 
-===Lanjut===
-* [Aku siap mengantarkan pesannya]
-    #speaker:Karman #audio:null #portrait:karman
-    Saya paham, Kapten. Ini bukan hanya pesan biasa, ini soal perjuangan. Saya akan pastikan Moestopo menerimanya, secepat mungkin.
-    
-    #speaker:Kapten Soengkono #audio:null #portrait:sungkono
-    Bagus, Karman. Kau pemuda yang bisa diandalkan. Ambillah selebaran ini dan sampaikan pada Moestopo. 
-    Dan ingat, satu pesan ini... bisa mengubah langkah kita selanjutnya.
 
+=== Lanjut ===
+* [Aku siap mengantarkan pesannya]
+    #speaker:Karman #audio:animal_crossing_mid #portrait:karman
+    Saya mengerti, Kapten. Ini bukan sekadar pesan biasa, melainkan soal masa depan. Saya akan pastikan pesan ini sampai ke tangan Moestopo.
+    #speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+    Itu yang ingin kudengar. Ambil selebaran ini—kau tahu, yang disebar lewat udara tadi.  
+    Tunjukkan padanya... dan sampaikan bahwa kita tak tinggal diam.
+    #speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono
+    Satu pesan bisa jadi titik balik, Karman. Jangan anggap remeh. Kami mengandalkanmu.
 -> END
+

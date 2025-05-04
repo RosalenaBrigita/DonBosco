@@ -1981,6 +1981,8 @@ MonoBehaviour:
     questStepActions:
     - questStepInfo: {fileID: 11400000, guid: 299540893ddf8054e8e3bbbca3c948f8, type: 2}
       dialogueQuestBehaviour: 2
+    - questStepInfo: {fileID: 11400000, guid: 05d3615908226524f8b2c25c1028fc47, type: 2}
+      dialogueQuestBehaviour: 2
     onDialogueDone:
       m_PersistentCalls:
         m_Calls: []
@@ -1991,6 +1993,8 @@ MonoBehaviour:
     knotPath: LaporKeMYasin
     questStepActions:
     - questStepInfo: {fileID: 11400000, guid: 49767d90763bff94d8ae6b60846d089f, type: 2}
+      dialogueQuestBehaviour: 2
+    - questStepInfo: {fileID: 11400000, guid: 05d3615908226524f8b2c25c1028fc47, type: 2}
       dialogueQuestBehaviour: 2
     onDialogueDone:
       m_PersistentCalls:
@@ -2042,13 +2046,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepObjects:
-  - questId: LatihanMenembak
-    requiredStepIndex: 3
+  - questId: FokusKesehatan
+    requiredStepIndex: 4
     objectsToActivate:
     - {fileID: 1807937635}
     - {fileID: 1461845997}
-  - questId: FokusKesehatan
-    requiredStepIndex: 4
+  - questId: LatihanMenembak
+    requiredStepIndex: 3
     objectsToActivate:
     - {fileID: 1807937635}
     - {fileID: 1461845997}
@@ -10158,7 +10162,7 @@ Animator:
   m_GameObject: {fileID: 1461845997}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9a10ac86cb37dfd40838f0316429a2af, type: 2}
+  m_Controller: {fileID: 9100000, guid: e5ef34a2557e04b4396e0c79e83e0367, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -10210,7 +10214,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -1146868168, guid: a74b855aa8a3a554db7b7d50d80bd01d, type: 3}
+  m_Sprite: {fileID: 1349261670, guid: d680aaeee6baa894fa1a6a630ca9de19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
