@@ -1843,11 +1843,25 @@ MonoBehaviour:
     isLoop: 0
     playOnAwake: 0
     volume: 0.744
+  - audioType: 1
+    source: {fileID: 0}
+    clipName: Diplomacy
+    audioClip: {fileID: 8300000, guid: 1ce5636f85d98df4f96491f5eafe0b98, type: 3}
+    isLoop: 1
+    playOnAwake: 0
+    volume: 0.744
   - audioType: 0
     source: {fileID: 0}
     clipName: collect
     audioClip: {fileID: 8300000, guid: 892f627d9b34934479706cec9a55281d, type: 3}
     isLoop: 0
+    playOnAwake: 0
+    volume: 0.744
+  - audioType: 1
+    source: {fileID: 0}
+    clipName: 1Diplomacy
+    audioClip: {fileID: 8300000, guid: 647214468076215439618d014c91f0ff, type: 3}
+    isLoop: 1
     playOnAwake: 0
     volume: 0.744
   fadeDuration: 1

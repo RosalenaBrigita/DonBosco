@@ -66,17 +66,20 @@ Sebelum kita susun strategi akhir, ada hal yang perlu kau tahu.
 Karman. Kondisi pasukan bagaimana?
 
 #speaker:Karman #audio:animal_crossing_mid #portrait:karman
-Luka-luka kecil sudah diobati, Pak. Mereka juga baru makan. Tapi... (berhenti sejenak) Beberapa masih ragu. Pemuda B tadi bilang, dia khawatir ini bisa jadi makan terakhir mereka.
+Luka-luka kecil sudah diobati, Pak. Mereka juga baru makan. Tapi...
+Beberapa masih ragu. Pemuda tadi bilang, dia khawatir ini bisa jadi makan terakhir mereka.
 
 #speaker:M.Yasin #audio:m_yasin #portrait:m_yasin
 (mengangguk pelan) Itu wajar. Kau sudah beri mereka kehangatan. Sekarang... (menatap mata Karman) apa kau juga punya keraguan?
 #speaker:Karman #audio:animal_crossing_mid #portrait:karman
 Tidak, Pak. Tapi... bisakah kita pastikan mereka semua pulang? Setidaknya, pulang dengan cerita.
+#speaker:M.Yasin #audio:null #portrait:m_yasin
+(meletakkan tangan di bahu Karman)
 #speaker:M.Yasin #audio:m_yasin #portrait:m_yasin
-(meletakkan tangan di bahu Karman) Itulah mengapa kau kutugaskan di logistik. Kau ingat mereka bukan sekadar angka.
+Itulah mengapa kau kutugaskan di logistik. Kau ingat mereka bukan sekadar angka.
 Besok, ceritakan pada mereka tentang malam ini-bagaimana kau mengantarkan nasi dan harapan.
 #speaker:Karman #audio:animal_crossing_mid #portrait:karman
-(berdiri tegak) Siap, Pak.
+Siap, Pak.
 #speaker:M.Yasin #audio:m_yasin #portrait:m_yasin
 Sebelum kita susun strategi akhir, ada hal yang perlu kau tahu.
 ~ set_health_bonus = true
@@ -88,7 +91,8 @@ Kita tidak bisa menyusun serangan besar-besaran layaknya tentara resmi. Maka kit
 
 Kita akan menyelinap diam-diam dan menyerang ketika mereka sedang lengah. Serangan kita akan berlangsung cepat, tak lebih dari satu jam. 
 Lewat dari itu, bala bantuan mereka bisa tiba, dan kita bisa terkepung.
-Pemuda-pemuda dari berbagai kampung di Surabaya sudah kita kumpulkan. Mereka penuh semangat, apalagi setelah mendengar seruan Bung Tomo di radio yang membakar semangat rakyat.
+Pemuda-pemuda dari berbagai kampung di Surabaya sudah kita kumpulkan. 
+Mereka penuh semangat, apalagi setelah mendengar seruan Bung Tomo di radio yang membakar semangat rakyat.
 Kita hanya membawa senjata ringan: karabin tua, granat tangan buatan rakyat, dan pisau bayonet. 
 Dua truk akan ikut dari belakang, menunggu aba-aba untuk masuk dan mengangkut apa pun yang bisa dibawa.
 
@@ -199,6 +203,7 @@ Pemuda-pemuda kita sudah di posisi. Kau yang memimpin serangan ini, Karman.
 ===KonfirmasiTungguPagi===
 * [Ya, kita tunggu sampai pagi.]
     ~ start_quest = "TungguPagi"
+    ~ tungguPagi = true
     -> END
 
 * [Tidak, saya ubah rencana.] -> PilihStrategiTanpaTunggu

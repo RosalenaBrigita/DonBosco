@@ -5,6 +5,7 @@ VAR set_health_bonus = false
 VAR set_damage_bonus = false
 VAR questBelakang = false
 VAR questDepan = false
+VAR tungguPagi = false
 VAR sopan = false
 VAR tidak_sopan = false
 VAR ending_terpaksa = false

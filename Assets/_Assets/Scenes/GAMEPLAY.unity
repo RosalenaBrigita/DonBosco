@@ -6864,7 +6864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d7f911178cdb647a59ef4b2449e29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0.05
+  typingSpeed: 0.055
   loadGlobalsJSON: {fileID: 4900000, guid: 6f50f68f8a0142349a2d422a90d6f6e7, type: 3}
   dialoguePanel: {fileID: 1302350758}
   continueIcon: {fileID: 1712374446}
@@ -6884,12 +6884,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cafd91373050aca4c9a4c0937f886e8e, type: 2}
   - {fileID: 11400000, guid: efbab583eb9660546879945633633739, type: 2}
   - {fileID: 11400000, guid: 40155f59ebfe76d4dae3f973254e6ee0, type: 2}
-  - {fileID: 11400000, guid: 7ec5b480d4f4a904aa776d23b49f742b, type: 2}
-  - {fileID: 11400000, guid: af0e5bb7705944941a6d7cc9dc38de17, type: 2}
-  - {fileID: 11400000, guid: fa202652012856a46a9b4fff1072106b, type: 2}
+  - {fileID: 11400000, guid: a0828d4a3d9712743963dfa995ed7df3, type: 2}
+  - {fileID: 11400000, guid: fa1c0b113520b1547bdac8da99212e4e, type: 2}
+  - {fileID: 11400000, guid: 63fd439c7b4b81b488939137c6d850a4, type: 2}
   - {fileID: 11400000, guid: 34005c42be6d87a418c5a8b9bfb0fced, type: 2}
   - {fileID: 11400000, guid: 7876813c4a6a9d4488f9d2340a5988dc, type: 2}
-  - {fileID: 11400000, guid: e1e47983a2c208b4ca97839c6c3450eb, type: 2}
+  - {fileID: 11400000, guid: 77e8df81035fbb14a88b778195d37229, type: 2}
   - {fileID: 11400000, guid: faa8e49850db461449310a4911fab9a3, type: 2}
   - {fileID: 11400000, guid: 35df60d1c994d754f94032202b81c236, type: 2}
   - {fileID: 11400000, guid: 0157e2317ebb1cd4aab39344fa85efc6, type: 2}
@@ -6897,8 +6897,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5b50c5b5691b8d446acd3f4831b76e34, type: 2}
   - {fileID: 11400000, guid: 49a4df1932d407f41808875e33b85119, type: 2}
   - {fileID: 11400000, guid: e1cb814e1474b0a4b987163b03329dda, type: 2}
-  - {fileID: 11400000, guid: b0c54f91d928e9f49b279957aa04ead8, type: 2}
-  - {fileID: 11400000, guid: 3798e5edec7fdb240800f7b9643354e9, type: 2}
+  - {fileID: 11400000, guid: 38f15149195f2314aaec03f8c49f50f2, type: 2}
+  - {fileID: 11400000, guid: 3a522e687509f5e4baf0a2634cc0341c, type: 2}
   isTimelineControlled: 0
 --- !u!82 &571052008
 AudioSource:
@@ -21445,7 +21445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1b4d188768cd47b1561aabd1c0db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingScene: tes_prolog
+  startingScene: MAP_KANTORPOLISI
 --- !u!4 &2075377686
 Transform:
   m_ObjectHideFlags: 0

@@ -11,11 +11,11 @@ Tapi kerumunan ini bukan pasukan. Di sini ada anak-anak, orang tua, dan warga si
 Pemimpin rakyat kini dihadapkan pada pilihan sulit: melanjutkan pertempuran… atau membuka jalan diplomasi.
 #speaker:null #portrait:null #audio:null
 Diplomasi bukan tanda kelemahan. Tapi jalan untuk menyelamatkan lebih banyak nyawa, saat kekuatan bukan lagi satu-satunya jawaban.
-#speaker:Moestopo #audio:null #portrait:moestopo
+#speaker:Moestopo #audio:moestopo #portrait:moestopo
 Kita sudah mencoba keberanian dalam senyapnya malam.
-#speaker:M.Yasin #audio:null #portrait:m_yasin
+#speaker:M.Yasin #audio:m_yasin #portrait:m_yasin
 Kini… kami akan mencoba keteguhan dalam kata-kata.
-#speaker:Soetomo #audio:null #portrait:soetomo
+#speaker:Soetomo #audio:soetomo #portrait:soetomo
 Jika itu bisa mencegah satu nyawa melayang… maka layak untuk diperjuangkan.
 ~ start_quest = "Diplomasi"
 

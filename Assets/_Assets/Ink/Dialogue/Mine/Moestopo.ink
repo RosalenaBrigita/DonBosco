@@ -102,7 +102,8 @@ Kita tidak akan menyerbu kali ini. Kita akan berunding. Diplomasi mungkin tidak 
 
 ===Diplomasi3===
 #speaker:Moestopo #audio:moestopo #portrait:moestopo
-Bung Tomo, M. Yasin, dan Karman. Kalian akan jadi utusan kita. Lakukan ini dengan kehormatan. Kalau bisa tanpa setetes darah, maka itulah kemenangan terbesar kita.
+Bung Tomo, M. Yasin, dan Karman. Kalian akan jadi utusan kita. Lakukan ini dengan kehormatan.
+Kalau bisa tanpa setetes darah, maka itulah kemenangan terbesar kita.
 * [Saya mengerti. Saya siap belajar dari kalian.]
     #speaker:Moestopo #audio:moestopo #portrait:moestopo
     Bagus, Karman. Ini bukan hanya tentang bicara—ini tentang menunjukkan bahwa kita punya harga diri.

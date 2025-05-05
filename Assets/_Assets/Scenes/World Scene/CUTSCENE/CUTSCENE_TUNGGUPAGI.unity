@@ -79570,6 +79570,7 @@ GameObject:
   - component: {fileID: 1148809122}
   - component: {fileID: 1148809121}
   - component: {fileID: 1148809120}
+  - component: {fileID: 1148809123}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -79597,9 +79598,9 @@ MonoBehaviour:
   onDialogueEnded:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1438252583}
-        m_TargetAssemblyTypeName: DonBosco.SceneLoaderAgent, Assembly-CSharp
-        m_MethodName: ExecuteLoadScene
+      - m_Target: {fileID: 1148809123}
+        m_TargetAssemblyTypeName: DonBosco.MapTransporter, Assembly-CSharp
+        m_MethodName: TransportPlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -79730,6 +79731,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1148809123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148809119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59dd30588340b1a49b1ca34b0cc445d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportInfos: []
+  defaultTeleportInfo:
+    questConditions: []
+    sceneLoaderAgent: {fileID: 1438252583}
+    playerPositionTeleporter: {fileID: 1438252582}
+  defaultQuestConditions: []
+  warningPanel: {fileID: 0}
 --- !u!1001 &1163481487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84487,12 +84507,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438252580}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6cf0738c0919dd4493e35ffa1087566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportPosition: {x: -1, y: -15, z: 0}
+  teleportPosition: {x: 50, y: 26, z: 0}
 --- !u!114 &1438252583
 MonoBehaviour:
   m_ObjectHideFlags: 0

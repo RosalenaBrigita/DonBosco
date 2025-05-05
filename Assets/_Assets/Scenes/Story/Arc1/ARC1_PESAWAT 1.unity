@@ -43178,8 +43178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e8463e621d97364097d104ecfc028ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipName: {fileID: 8300000, guid: 3c8c8676aeb82ae4c83426a87d6ab017, type: 3}
-  playOnAwake: 0
+  clipName: {fileID: 8300000, guid: 1ce5636f85d98df4f96491f5eafe0b98, type: 3}
+  playOnAwake: 1
   stopOnDisable: 0
 --- !u!4 &539774712
 Transform:
