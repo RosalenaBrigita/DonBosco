@@ -1,4 +1,4 @@
-#speaker:Rohman #audio:celeste_low #portrait:null
+#speaker:Rohman #audio:animal_crossing_mid2 #portrait:null
 Apa kita sudah aman?
 
 ===AfterLatihanMenembak===
@@ -33,9 +33,9 @@ Hah... akhirnya selesai juga. Tangan ini sudah pegal-pegal, tapi setidaknya bidi
 
 #speaker:Rohman #audio:animal_crossing_mid2 #portrait:null
 Tembakanmu tadi di sudut kanan hampir tepat di tengah, Karman. Kau ternyata jago juga!
-
-#speaker:Karman #audio:animal_crossing_mid #portrait:karman
+#speaker:Karman #audio:null #portrait:karman
 (tersenyum sambil memijat bahu) 
+#speaker:Karman #audio:animal_crossing_mid #portrait:karman
 Masih kurang. Kalau di medan sungguhan, kita harus bisa menembak sambil berlindung. Gerakannya harus lebih lincah...
 
 #speaker:Kadir #audio:animal_crossing_mid3 #portrait:null

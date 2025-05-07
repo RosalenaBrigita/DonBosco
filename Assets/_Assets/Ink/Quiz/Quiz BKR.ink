@@ -63,7 +63,7 @@ Di kota ini, BKR resmi berdiri pada 9 September. Aku, Moestopo, Sudirman, dan Jo
 Dr. Moestopo kami percayakan sebagai pemimpin. Kami semua punya satu tujuan: mempertahankan kemerdekaan ini. Dengan segala cara yang kami bisa.
 
 * [Jadi, BKR bukan sekadar organisasi biasa?]
-    #speaker:Karman #audio:animal_crossing_mid #portrait:karmann
+    #speaker:Karman #audio:animal_crossing_mid #portrait:karman
     Ini benar-benar untuk melindungi rakyat... dan melawan penjajah?
 
     #speaker:Kapten Soengkono #audio:sungkono #portrait:sungkono

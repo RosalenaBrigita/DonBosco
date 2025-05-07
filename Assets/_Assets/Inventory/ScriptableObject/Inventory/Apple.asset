@@ -15,10 +15,8 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 5
   <Name>k__BackingField: Apple
-  <Description>k__BackingField: Add HP 10%
-  <ItemImage>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  <Description>k__BackingField: Menambah 16% HP
+  <ItemImage>k__BackingField: {fileID: 21300000, guid: e05aa40be7f5eea4da1a877456c8705b, type: 3}
   <DefaultParametersList>k__BackingField: []
-  modifiersData:
-  - statModifier: {fileID: 0}
-    value: 1
+  healAmount: 4
   <actionSFX>k__BackingField: {fileID: 0}

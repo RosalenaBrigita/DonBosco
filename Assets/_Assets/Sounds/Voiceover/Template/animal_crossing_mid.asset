@@ -24,8 +24,9 @@ MonoBehaviour:
   dialogueAlphabetSoundClips: []
   frequencyLevel: 1
   minPitch: 1
-  maxPitch: 1.2
-  stopAudioSource: 0
+  maxPitch: 1.1
+  stopAudioSourceInstantly: 0
+  readWaitForAudioBefore: 0
   readPunctuation: 0
-  makePredictable: 1
+  hashcodeIndexing: 1
   predictPitch: 0

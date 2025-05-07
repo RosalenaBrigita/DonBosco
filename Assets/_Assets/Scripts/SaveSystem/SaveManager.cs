@@ -8,6 +8,7 @@ using UnityEngine;
 using Inventory;
 using Inventory.Model;
 using UnityEngine.Networking;
+using DonBosco.Quests;
 
 //#if UNITY_EDITOR
 using UnityEngine.SceneManagement;
@@ -482,7 +483,6 @@ namespace DonBosco.SaveSystem
 
             if (isLoggedIn)
             {
-                // Jika pemain sudah login, hapus data berdasarkan ID akun
                 if (!string.IsNullOrEmpty(currentAccountID) && int.TryParse(currentAccountID, out int userId))
                 {
                     DeleteCloudSave();
@@ -490,29 +490,33 @@ namespace DonBosco.SaveSystem
                 }
                 else
                 {
-                    Debug.LogError("Current Account ID is null, empty, or not a valid number.");
+                    Debug.LogError("Current Account ID is invalid");
                     return;
                 }
-
             }
             else
             {
-                // Jika pemain belum login, hapus data dari file default
-                path = Application.persistentDataPath + "/" + FILENAME;
+                path = Application.persistentDataPath + FILENAME;
             }
 
-            // Hapus file jika ada
+            // Hapus file save
             if (System.IO.File.Exists(path))
             {
                 System.IO.File.Delete(path);
-                HasSaveData = false;
-                saveData = null;
-                OnSaveDataUpdated?.Invoke(false);
             }
-            else
+
+            // Reset semua sistem
+            if (QuestManager.Instance != null)
             {
-                Debug.LogError("Filesave to delete does not exist: " + path);
+                QuestManager.Instance.ForceResetAllQuests(); // <-- INI YANG DITAMBAHKAN
             }
+
+            // Update state
+            HasSaveData = false;
+            saveData = null;
+            OnSaveDataUpdated?.Invoke(false);
+            
+            Debug.Log("Save data deleted and systems reset");
         }
 
         public async Task<bool> DeleteCloudSave()

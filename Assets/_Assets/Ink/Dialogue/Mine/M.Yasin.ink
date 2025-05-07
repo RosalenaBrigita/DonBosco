@@ -70,7 +70,7 @@ Luka-luka kecil sudah diobati, Pak. Mereka juga baru makan. Tapi...
 Beberapa masih ragu. Pemuda tadi bilang, dia khawatir ini bisa jadi makan terakhir mereka.
 
 #speaker:M.Yasin #audio:m_yasin #portrait:m_yasin
-(mengangguk pelan) Itu wajar. Kau sudah beri mereka kehangatan. Sekarang... (menatap mata Karman) apa kau juga punya keraguan?
+Itu wajar. Kau sudah beri mereka kehangatan. Sekarang... apa kau juga punya keraguan?
 #speaker:Karman #audio:animal_crossing_mid #portrait:karman
 Tidak, Pak. Tapi... bisakah kita pastikan mereka semua pulang? Setidaknya, pulang dengan cerita.
 #speaker:M.Yasin #audio:null #portrait:m_yasin

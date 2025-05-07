@@ -126,6 +126,21 @@ namespace DonBosco.Quests
         {
             return (currentStepIndex == stepIndex);
         }
+
+        public void ForceReset()
+        {
+            // Reset ke state awal dari SO
+            state = info.initialState;
+            currentStepIndex = 0;
+            
+            // Reset semua step state
+            for (int i = 0; i < questStepStates.Length; i++)
+            {
+                questStepStates[i] = new QuestStepState();
+            }
+            
+            Debug.Log($"Quest {info.id} reset to initial state");
+        }
     }
 
 }

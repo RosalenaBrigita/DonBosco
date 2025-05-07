@@ -246,6 +246,20 @@ namespace DonBosco.Quests
             return null;
         }
 
+        public void ForceResetAllQuests()
+        {
+            loadedQuests.Clear();
+            DestroyAllQuestSteps();
+            
+            // Reset setiap quest individual
+            foreach(var quest in questMap.Values)
+            {
+                quest.ForceReset(); // Panggil method reset baru
+                GameEventsManager.Instance.questEvents.QuestStateChange(quest);
+            }
+            
+            Debug.Log("All quests hard reset completed");
+        }
 
         public void DestroyAllQuestSteps()
         {

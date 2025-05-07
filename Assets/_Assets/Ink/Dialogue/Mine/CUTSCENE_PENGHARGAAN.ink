@@ -35,13 +35,16 @@ Senjata bukan hanya kekuatan, tapi simbol harapan. Dan malam itu, rakyat Surabay
 Karman... saat memilih jalur depan, banyak yang meragukan. Tapi kau maju paling depan.
 Keberanianmu—dan keberanian rekan-rekanmu—membuat musuh kehilangan kendali.
 Pasukan kita mungkin tidak sebanyak mereka, tapi semangat kalian tak tertandingi.
-Keberanian seperti ini yang membuat penjajah gemetar. Karman, malam ini kau bukan hanya bertarung—kau memberi harapan. Kami menobatkanmu sebagai Pahlawan Keberanian.
+Keberanian seperti ini yang membuat penjajah gemetar. Karman, malam ini kau bukan hanya bertarung—kau memberi harapan. 
+Kami menobatkanmu sebagai Pahlawan Keberanian.
 Meskipun korban berjatuhan, gudang berhasil dikuasai. Ini kemenangan penuh pengorbanan.
 
 #speaker:null #portrait:null #audio:null
-Seperti halnya taktik rahasia, senjata yang berhasil direbut langsung diamankan oleh pasukan logistik dan rakyat. Empat gerbong senjata dikirim ke Jakarta lewat jalur rel di Sidotopo.
+Seperti halnya taktik rahasia, senjata yang berhasil direbut langsung diamankan oleh pasukan logistik dan rakyat. 
+Empat gerbong senjata dikirim ke Jakarta lewat jalur rel di Sidotopo.
 #speaker:null #portrait:null #audio:null
-Namun karena serangan frontal lebih brutal, beberapa senjata mengalami kerusakan. Bagian dari amunisi diamankan di tempat perlindungan rakyat dan pos pertahanan lokal.
+Namun karena serangan frontal lebih brutal, beberapa senjata mengalami kerusakan. 
+Bagian dari amunisi diamankan di tempat perlindungan rakyat dan pos pertahanan lokal.
 #speaker:null #portrait:null #audio:null
 Pagi itu, Surabaya tahu: keberanian bukan sekadar maju, tapi berani kehilangan demi kemenangan bersama.
 }

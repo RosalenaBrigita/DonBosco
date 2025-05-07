@@ -1843,13 +1843,6 @@ MonoBehaviour:
     isLoop: 0
     playOnAwake: 0
     volume: 0.744
-  - audioType: 1
-    source: {fileID: 0}
-    clipName: Diplomacy
-    audioClip: {fileID: 8300000, guid: 1ce5636f85d98df4f96491f5eafe0b98, type: 3}
-    isLoop: 1
-    playOnAwake: 0
-    volume: 0.744
   - audioType: 0
     source: {fileID: 0}
     clipName: collect
@@ -1859,8 +1852,36 @@ MonoBehaviour:
     volume: 0.744
   - audioType: 1
     source: {fileID: 0}
+    clipName: Diplomacy
+    audioClip: {fileID: 8300000, guid: 1ce5636f85d98df4f96491f5eafe0b98, type: 3}
+    isLoop: 1
+    playOnAwake: 0
+    volume: 0.744
+  - audioType: 1
+    source: {fileID: 0}
     clipName: 1Diplomacy
     audioClip: {fileID: 8300000, guid: 647214468076215439618d014c91f0ff, type: 3}
+    isLoop: 1
+    playOnAwake: 0
+    volume: 0.744
+  - audioType: 1
+    source: {fileID: 0}
+    clipName: menembak
+    audioClip: {fileID: 8300000, guid: 63d602da1805ea242a928df81e6f97ec, type: 3}
+    isLoop: 1
+    playOnAwake: 0
+    volume: 0.744
+  - audioType: 1
+    source: {fileID: 0}
+    clipName: sewing
+    audioClip: {fileID: 8300000, guid: 83b8020d95af54a4c96a7939162bd71c, type: 3}
+    isLoop: 1
+    playOnAwake: 0
+    volume: 0.744
+  - audioType: 1
+    source: {fileID: 0}
+    clipName: tambaksari
+    audioClip: {fileID: 8300000, guid: ca716a1fa44836b41bd201680e33a4d4, type: 3}
     isLoop: 1
     playOnAwake: 0
     volume: 0.744

@@ -18,9 +18,8 @@ namespace DonBosco.Character
         [SerializeField] private GameObject gameOverPanel;
 
         [Header("Health")]
-        [SerializeField] private float maxHealth = 20f;
-        private float currentHealth = 20f;
-
+        [SerializeField] private float maxHealth = 25f;
+        private float currentHealth = 25f;
 
         #region MonoBehaviour
 

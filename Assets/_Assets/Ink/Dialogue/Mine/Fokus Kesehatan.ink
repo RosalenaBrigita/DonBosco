@@ -20,18 +20,22 @@ Akhirnya luka ku sembuh berkatmu, Karman. Terima kasih ya...
 ===CekKesehatanPemuda===
 #speaker: Jarot #portrait:null #audio: animal_crossing_mid2
 Oh, Karman. Kau ditugaskan keliling, ya? Heh... jangan kaget lihat kondisi kami. Latihan tadi di tanah bekas bom, lebih banyak lumpur daripada tanahnya.
-
+#speaker:Togar #portrait:null #audio:null
+(memegangi pergelangan kaki) 
 #speaker: Togar #portrait:null #audio: animal_crossing_mid3
-(memegangi pergelangan kaki) Aku terjatuh di rel kereta tadi. Besinya tajam... (tersenyum kecut) Tapi kata komandan, luka kecil begini bukti kita serius berjuang.
-
+Aku terjatuh di rel kereta tadi. Besinya tajam... Tapi kata komandan, luka kecil begini bukti kita serius berjuang.
+#speaker:Karman #portrait:karman #audio:null
+(mendekati dan memeriksa)
 #speaker: Karman #portrait:karman #audio: animal_crossing_mid
-(mendekati dan memeriksa) Luka di kakimu sudah kotor, Togar. Harus segera dibersihkan sebelum infeksi.
+ Luka di kakimu sudah kotor, Togar. Harus segera dibersihkan sebelum infeksi.
 
+#speaker:Jarot #portrait:null #audio:null
+(membuka lengan bajunya)
 #speaker: Jarot #portrait:null #audio: animal_crossing_mid2
-(membuka lengan bajunya) Aku juga kena pecahan kaca waktu merayap di gudang yang runtuh. Bu Sulastri sempat kasih perban tadi pagi, tapi...
+ Aku juga kena pecahan kaca waktu merayap di gudang yang runtuh. Bu Sulastri sempat kasih perban tadi pagi, tapi...
 
 #speaker: Togar #portrait:null #audio: animal_crossing_mid3
-(menginterupsi) Tapi perbannya habis untuk korban tembakan di Jembatan Merah. Sekarang cuma dibalut kain biasa.
+Tapi perbannya habis untuk korban tembakan di Jembatan Merah. Sekarang cuma dibalut kain biasa.
 
 #speaker: Jarot #portrait:null #audio: animal_crossing_mid2
 Dan satu lagi, Karman. Ada bekal makan malam yang belum sempat diantar dari dapur ke sini.
@@ -97,7 +101,7 @@ Aku senang dapat membantu kalian dengan kemampuan ku.
 Kau kembali! Kami sudah mulai khawatir
 * [Berikan nasi bungkus]
 
-#speaker: Karman #portrait:karman #audio: animal_crossing_mid
+#speaker: Karman #portrait:karman #audio: null
 (mengeluarkan nasi bungkus) 
 
 #speaker: Karman #portrait:karman #audio: animal_crossing_mid
@@ -105,23 +109,20 @@ Ini, makan dulu.
 -> BerikanObat
 
 ===BerikanObat===
-* [Berikan obat]
-
-#speaker: Karman #portrait:karman #audio: animal_crossing_mid
-(mengeluarkan obat) 
-
-#speaker: Karman #portrait:karman #audio: animal_crossing_mid
-Ini segera pakai untuk mengobati lukamu.
-
+(mengunyah nasi)
 #speaker: Togar #portrait:null #audio: animal_crossing_mid3
-(mengunyah nasi) Ini... enak sekali. Rasanya seperti makan terakhir—eh, maksudku...
+Ini... enak sekali. Rasanya seperti makan terakhir. Eh, maksudku...
 
 #speaker: Jarot #portrait:null #audio: animal_crossing_mid2
-(Diam sejenak) Terima kasih, Karman. Tadi... aku sempat berpikir, bagaimana jika besok kita tidak bisa makan lagi? Tapi kau datang membawa ini. (tersenyum getir)
+Terima kasih, Karman. Tadi... aku sempat berpikir, bagaimana jika besok kita tidak bisa makan lagi? Tapi kau datang membawa ini.
 
+* [Berikan obat]
+#speaker: Karman #portrait:karman #audio: null
+(mengeluarkan obat) 
+#speaker: Karman #portrait:karman #audio: animal_crossing_mid
+Ini segera pakai untuk mengobati lukamu.
 #speaker: Togar #portrait:null #audio: animal_crossing_mid3
-(ketika diobati) Aduh! Obatnya lebih sakit daripada lukanya! Hahaha... tapi terima kasih, Karman.
-
+Aduh! Obatnya lebih sakit daripada lukanya! Hahaha... tapi terima kasih, Karman.
 #speaker: Karman #portrait:karman #audio: animal_crossing_mid
 Kita akan makan lagi bersama setelah menang, aku janji. Sekarang istirahatlah, aku harus lapor ke Pak Yasin.
 -> END

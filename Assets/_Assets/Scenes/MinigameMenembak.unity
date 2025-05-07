@@ -605,6 +605,53 @@ MonoBehaviour:
   finalScoreText: {fileID: 1317406489}
   infoPanel: {fileID: 163580742}
   questStepToAdvance: {fileID: 11400000, guid: 02a850b5297c31c449be5bd2edc93008, type: 2}
+--- !u!1 &353828226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 353828228}
+  - component: {fileID: 353828227}
+  m_Layer: 0
+  m_Name: AudioPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &353828227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353828226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e8463e621d97364097d104ecfc028ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipName: {fileID: 8300000, guid: 63d602da1805ea242a928df81e6f97ec, type: 3}
+  playOnAwake: 1
+  stopOnDisable: 1
+--- !u!4 &353828228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353828226}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1200.3202, y: 1923.282, z: 1.1050278}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &359635821
 GameObject:
   m_ObjectHideFlags: 0
@@ -4026,3 +4073,4 @@ SceneRoots:
   - {fileID: 982700996}
   - {fileID: 1781258276}
   - {fileID: 451215715}
+  - {fileID: 353828228}

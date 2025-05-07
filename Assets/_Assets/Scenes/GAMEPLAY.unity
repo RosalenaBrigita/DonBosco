@@ -6886,18 +6886,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 40155f59ebfe76d4dae3f973254e6ee0, type: 2}
   - {fileID: 11400000, guid: a0828d4a3d9712743963dfa995ed7df3, type: 2}
   - {fileID: 11400000, guid: fa1c0b113520b1547bdac8da99212e4e, type: 2}
-  - {fileID: 11400000, guid: 63fd439c7b4b81b488939137c6d850a4, type: 2}
+  - {fileID: 11400000, guid: 7d2f71b90b5afbe44b2e3eec26c06960, type: 2}
   - {fileID: 11400000, guid: 34005c42be6d87a418c5a8b9bfb0fced, type: 2}
   - {fileID: 11400000, guid: 7876813c4a6a9d4488f9d2340a5988dc, type: 2}
   - {fileID: 11400000, guid: 77e8df81035fbb14a88b778195d37229, type: 2}
-  - {fileID: 11400000, guid: faa8e49850db461449310a4911fab9a3, type: 2}
-  - {fileID: 11400000, guid: 35df60d1c994d754f94032202b81c236, type: 2}
+  - {fileID: 11400000, guid: 9f88ed341ef75c2478d2f3f9c7c3adda, type: 2}
+  - {fileID: 11400000, guid: f1f1afeafa6114f42811fd8302505f8a, type: 2}
   - {fileID: 11400000, guid: 0157e2317ebb1cd4aab39344fa85efc6, type: 2}
-  - {fileID: 11400000, guid: be209f28881a7134089fb01770bb6a1d, type: 2}
-  - {fileID: 11400000, guid: 5b50c5b5691b8d446acd3f4831b76e34, type: 2}
-  - {fileID: 11400000, guid: 49a4df1932d407f41808875e33b85119, type: 2}
-  - {fileID: 11400000, guid: e1cb814e1474b0a4b987163b03329dda, type: 2}
-  - {fileID: 11400000, guid: 38f15149195f2314aaec03f8c49f50f2, type: 2}
+  - {fileID: 11400000, guid: 7898576763c813b43bff7e36e8932b69, type: 2}
+  - {fileID: 11400000, guid: c695e63317e59bc409d7029e717b7a7f, type: 2}
+  - {fileID: 11400000, guid: 11585a39ff6e0654eb7927c611ed0319, type: 2}
+  - {fileID: 11400000, guid: df99b711f1920fd4a9b4d920a8059041, type: 2}
+  - {fileID: 11400000, guid: 19684f381b2b58e4897a965d1e0f3300, type: 2}
   - {fileID: 11400000, guid: 3a522e687509f5e4baf0a2634cc0341c, type: 2}
   isTimelineControlled: 0
 --- !u!82 &571052008
@@ -21445,7 +21445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1b4d188768cd47b1561aabd1c0db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingScene: MAP_KANTORPOLISI
+  startingScene: tes_prolog
 --- !u!4 &2075377686
 Transform:
   m_ObjectHideFlags: 0

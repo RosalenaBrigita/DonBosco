@@ -23,8 +23,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bb619f478c51c9a4d9d0250b61f71e0e, type: 3}
   dialogueAlphabetSoundClips: []
   frequencyLevel: 1
-  minPitch: 0.75
-  maxPitch: 0.9
+  minPitch: 0.5
+  maxPitch: 0.6
   stopAudioSourceInstantly: 0
   readWaitForAudioBefore: 0
   readPunctuation: 0
