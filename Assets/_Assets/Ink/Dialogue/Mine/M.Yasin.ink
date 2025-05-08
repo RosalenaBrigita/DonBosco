@@ -206,9 +206,12 @@ Pemuda-pemuda kita sudah di posisi. Kau yang memimpin serangan ini, Karman.
     ~ tungguPagi = true
     -> END
 
-* [Tidak, saya ubah rencana.] -> PilihStrategiTanpaTunggu
+* [Tidak, saya ubah rencana.] 
+    -> PilihStrategiTanpaTunggu
 
 ===PilihStrategiTanpaTunggu===
+#speaker:M.Yasin #audio:m_yasin #portrait:m_yasin
+Jadi, apa pilihan mu Karman?
 * [Kita serang dari belakang]
     #speaker:Karman #audio:animal_crossing_mid #portrait:karman
     Kita serang dari belakang. Itu jalur yang paling aman.

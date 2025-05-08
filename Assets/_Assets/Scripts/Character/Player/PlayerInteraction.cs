@@ -15,7 +15,7 @@ namespace DonBosco.Character
         [Header("References")]
         [SerializeField] private GameObject hintPrefab;
         [Header("Settings")]
-        [SerializeField] private float interactionRadius = 5f;
+        [SerializeField] private float interactionRadius = 6f;
         [SerializeField] private LayerMask interactionLayer = ~0;
         //[SerializeField] private KeyCode interactKey = KeyCode.E;
 
