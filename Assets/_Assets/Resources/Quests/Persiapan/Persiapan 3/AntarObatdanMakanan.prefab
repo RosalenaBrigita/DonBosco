@@ -9,9 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5461928148679585949}
-  - component: {fileID: 8425040037394485845}
-  - component: {fileID: 8762474354676534817}
-  - component: {fileID: 80892773916225571}
+  - component: {fileID: 1748093694390828240}
   m_Layer: 0
   m_Name: AntarObatdanMakanan
   m_TagString: Untagged
@@ -34,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8425040037394485845
+--- !u!114 &1748093694390828240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,97 +41,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6927534392231164809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f81db565b5f41e43a780d1599370e71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disableInputMoveOnEnter: 1
-  onPlayerEnter:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8762474354676534817}
-        m_TargetAssemblyTypeName: DonBosco.Quests.NPCQuestStep, Assembly-CSharp
-        m_MethodName: Interact
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8762474354676534817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6927534392231164809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21bc0badfa56564faf2c3d6b11b133b, type: 3}
+  m_Script: {fileID: 11500000, guid: b2d250fbbcb7db94ab8ba891306a61dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   questStepInfo: {fileID: 11400000, guid: c742f42f38488a44c941d3e78ca380ad, type: 2}
   scene: MAP_JALAN 1
-  dialogue: {fileID: 4900000, guid: edb434db5c1d3c546a02de95e1041980, type: 3}
-  npcId: 23
-  useDatabaseDialogue: 1
-  dialogueQuestConversations:
-  - conditions:
-    - questInfo: {fileID: 11400000, guid: e9cd5d5857384cb48b1abf47af76f8bb, type: 2}
-      questState: 1
-      questStepIndex: 3
-    knotPath: KembaliKePemuda
-    questStepActions:
-    - questStepInfo: {fileID: 11400000, guid: c742f42f38488a44c941d3e78ca380ad, type: 2}
-      dialogueQuestBehaviour: 1
-    onDialogueDone:
-      m_PersistentCalls:
-        m_Calls: []
-  conversationStates: []
---- !u!61 &80892773916225571
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6927534392231164809}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.86, y: 5.78}
-  m_EdgeRadius: 0

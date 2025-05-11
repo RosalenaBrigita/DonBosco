@@ -23,7 +23,7 @@ MonoBehaviour:
   - {fileID: 8781499115352855120, guid: 99d074d37bbc45a4e8a358c07ab67abc, type: 3}
   - {fileID: 7187005035278949759, guid: 77b417c838a993d428a9fca77f7085c9, type: 3}
   - {fileID: 7135603525305923660, guid: 04a1f36ade1673c4683a42c5cc2e2261, type: 3}
-  - {fileID: 8762474354676534817, guid: bf5342fd630fa684086d6a0e72da12fd, type: 3}
+  - {fileID: 1748093694390828240, guid: bf5342fd630fa684086d6a0e72da12fd, type: 3}
   - {fileID: 1946433467449404756, guid: 042830d98c8059348a684efc2efab50f, type: 3}
   prequisiteQuests: []
   rewardName: 

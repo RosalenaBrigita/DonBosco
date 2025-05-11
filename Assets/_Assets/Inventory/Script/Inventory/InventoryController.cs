@@ -52,6 +52,7 @@ namespace Inventory
         private void Start()
         {
             SaveManager.Instance.Subscribe(this);
+            SaveManager.Instance.LoadEquippedItems(gameObject);
             PrepareUI();
             button.gameObject.SetActive(false); 
             PrepareInventoryData();

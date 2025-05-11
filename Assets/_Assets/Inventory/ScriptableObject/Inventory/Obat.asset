@@ -17,7 +17,7 @@ MonoBehaviour:
   <Name>k__BackingField: Obat-obatan
   <Description>k__BackingField: Obat yang didapat dari Bu Sulastri. Dapat digunakan
     untuk menyembuhkan luka.
-  <ItemImage>k__BackingField: {fileID: -872161221, guid: 063dd41408c66b149a3a12de99654be7, type: 3}
+  <ItemImage>k__BackingField: {fileID: -208156729, guid: bde12747f10869e4bb365cf6d7306d53, type: 3}
   <DefaultParametersList>k__BackingField: []
   healAmount: 5
   <actionSFX>k__BackingField: {fileID: 0}

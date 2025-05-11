@@ -2,6 +2,26 @@
 #audio: celeste_low2
 Apa benar Indonesia sudah merdeka?
 
+===sarni1===
+#speaker:Sarni #audio:animal_crossing_high2 #portrait:wanita1
+Nak, sejak Indonesia merdeka ini rasanya lega...  
+Tapi hati ini masih was-was. Jepang memang kalah, tapi belum pergi semua.  
+Ibu cuma bisa berdoa supaya kalian—anak muda—selamat jaga kampung.
+-> END
+
+===sulastri1===
+#speaker: Bu Sulastri #portrait:wanita2 #audio: animal_crossing_high3
+Kalau malam, aku masih suka lihat pemuda ronda keliling kampung.  
+Katanya sih, ada kabar bakal ada penyerangan—tapi belum jelas.  
+Kita tunggu saja, mudah-mudahan aman-aman aja ya, Bung.
+-> END
+
+===jarot1===
+#speaker: Jarot #portrait:null #audio: animal_crossing_mid2
+Aku denger-denger, ada rencana besar malam ini. Tapi ya itu… masih rahasia.  
+Kalau bener, semoga berhasil. Soalnya senjata kita mulai tipis, Bung.
+-> END
+
 ===QuestLatihanMenembak===
 #speaker: Jarot #portrait:null #audio: animal_crossing_mid2
 Bagaimana ini, apakah latihan ini cukup?
@@ -123,8 +143,12 @@ Terima kasih, Karman. Tadi... aku sempat berpikir, bagaimana jika besok kita tid
 Ini segera pakai untuk mengobati lukamu.
 #speaker: Togar #portrait:null #audio: animal_crossing_mid3
 Aduh! Obatnya lebih sakit daripada lukanya! Hahaha... tapi terima kasih, Karman.
-#speaker: Karman #portrait:karman #audio: animal_crossing_mid
+#speaker: Karman #portrait:karman #audio: animal_crossing_mid0
 Kita akan makan lagi bersama setelah menang, aku janji. Sekarang istirahatlah, aku harus lapor ke Pak Yasin.
+#speaker: Jarot #portrait:null #audio: animal_crossing_mid2
+Tunggu, Karman. Ini, bawalah nasi bungkus ini. Kau juga butuh tenaga. Gunakan saat penyerangan ke Don Bosco nanti malam.
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Wah terima kasih. aku akan simpan di tas dulu
 -> END
 
 ===DialogDenganBuSulastri===

@@ -10852,6 +10852,7 @@ GameObject:
   - component: {fileID: 1046878831}
   - component: {fileID: 1046878830}
   - component: {fileID: 1046878840}
+  - component: {fileID: 1046878841}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -11141,6 +11142,18 @@ MonoBehaviour:
   allowedScenes:
   - MAP_DB_EXTERIOR 1
   - MAP_DB_EXTERIOR
+--- !u!114 &1046878841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046878827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0682c3aa9b857164a8963812ca0db292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1052082003
 GameObject:
   m_ObjectHideFlags: 0
@@ -21445,7 +21458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1b4d188768cd47b1561aabd1c0db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingScene: tes_prolog
+  startingScene: MAP_RUMAHKARMANtes
 --- !u!4 &2075377686
 Transform:
   m_ObjectHideFlags: 0

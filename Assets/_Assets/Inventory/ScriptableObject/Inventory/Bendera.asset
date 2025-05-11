@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b09b8ad46f2a744977c0bff23698cf, type: 3}
+  m_Name: Bendera
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 0
+  <MaxStackSize>k__BackingField: 1
+  <Name>k__BackingField: Aksesoris Bendera
+  <Description>k__BackingField: Dapat digunakan selama permainan sebagai aksesoris
+    tas.
+  <ItemImage>k__BackingField: {fileID: 1043155289, guid: 3405cbd2a6f6e1a438ed4e3b4768638d, type: 3}
+  <DefaultParametersList>k__BackingField: []
+  itemPrefab: {fileID: 4817158314097680131, guid: ef416cb8d81ac9843b36e036fb172097, type: 3}
+  <actionSFX>k__BackingField: {fileID: 0}

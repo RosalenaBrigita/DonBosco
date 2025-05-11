@@ -39,6 +39,7 @@ namespace DonBosco
 
         #region Object
         public List<ObjectStateData> objectStates = new List<ObjectStateData>();
+        public List<EquippedItemData> equippedItems = new List<EquippedItemData>();
         public List<ActivationStateData> activationStates = new List<ActivationStateData>();
         #endregion 
 
@@ -82,5 +83,12 @@ namespace DonBosco
             isColliderActive = colliderActive;
         }
     }
+
+    [System.Serializable]
+    public class EquippedItemData
+        {
+            public int itemID;
+            public string parentPath;
+        }
 
 }

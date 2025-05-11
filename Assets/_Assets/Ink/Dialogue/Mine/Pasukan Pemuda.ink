@@ -50,9 +50,10 @@ jangan lupa periksa luka atau lecet di tangan.
 
 #speaker:Kadir #audio:animal_crossing_mid3 #portrait:null
 Siap, Komandan! Nanti kami lanjut latihan merayap setelah maghrib.
-
+#speaker:Rohman #audio:animal_crossing_mid2 #portrait:null
+Luka mu juga harus diperiksa, Karman. ini ambillah plester. Bisa kau gunakan untuk menambah darah saat penyerangan nanti malam.
 #speaker:Karman #audio:animal_crossing_mid #portrait:karman
-Baik. Hati-hati, dan... jangan sampai latihan malah membuat kalian kelelahan. Kita butuh tenaga penuh.
+Terima kasih. Hati-hati, dan... jangan sampai latihan malah membuat kalian kelelahan. Kita butuh tenaga penuh.
 -> END
 
 ===FokusKesehatan===

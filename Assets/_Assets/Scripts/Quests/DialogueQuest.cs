@@ -170,17 +170,6 @@ namespace DonBosco.Quests
         {
             DialogueManager.Instance.OnDialogueEnded -= OnDialogueEnded;
             currentDialogueQuestConversation.onDialogueDone?.Invoke();
-
-            // Cari komponen AddItem di objek yang sama
-            AddItem addItemComponent = GetComponent<AddItem>();
-            if (addItemComponent != null)
-            {
-                addItemComponent.AddItemToInventory();
-            }
-            else
-            {
-                Debug.LogWarning("AddItem tidak ditemukan pada objek ini.");
-            }
         }
 
         private void GetCurrentState()

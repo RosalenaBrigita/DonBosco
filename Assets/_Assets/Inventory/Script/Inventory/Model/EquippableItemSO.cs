@@ -1,13 +1,17 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DonBosco.SaveSystem;
 
 namespace Inventory.Model
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "Items/Equippable Item")]
     public class EquippableItemSO : ItemSO, IDestroyableItem, IItemAction
     {
+        [SerializeField] 
+        private GameObject itemPrefab;
+        public GameObject ItemPrefab => itemPrefab;
+
         public string ActionName => "Equip";
 
         [field: SerializeField]
@@ -15,14 +19,19 @@ namespace Inventory.Model
 
         public bool PerformAction(GameObject character, List<ItemParameter> itemState = null)
         {
-            AgentWeapon weaponSystem = character.GetComponent<AgentWeapon>();
-            if (weaponSystem != null)
+            if (itemPrefab == null)
             {
-                weaponSystem.SetWeapon(this, itemState == null ?
-                    DefaultParametersList : itemState);
-                return true;
+                Debug.LogWarning($"ItemPrefab kosong pada {Name}");
+                return false;
             }
-            return false;
+
+            Transform targetParent = character.transform.Find("Visual") ?? character.transform;
+            Instantiate(itemPrefab, targetParent);
+            
+            SaveManager.Instance.SaveEquippedItem(ID, targetParent.name);
+            Debug.Log($"{Name} (ID:{ID}) di-equip ke {targetParent.name}");
+            
+            return true;
         }
     }
 }

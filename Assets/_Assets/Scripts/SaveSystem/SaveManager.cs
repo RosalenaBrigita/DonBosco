@@ -157,6 +157,61 @@ namespace DonBosco.SaveSystem
             return objectState != null && objectState.isDisabled;
         }
 
+       public void SaveEquippedItem(int itemID, string parentPath)
+        {
+            if (saveData == null)
+                saveData = new SaveData();
+
+            if (saveData.equippedItems == null)
+                saveData.equippedItems = new List<EquippedItemData>(); // Perhatikan perubahan disini
+
+            // Hapus duplikat
+            saveData.equippedItems.RemoveAll(x => x.itemID == itemID);
+            
+            // Tambahkan data baru
+            saveData.equippedItems.Add(new EquippedItemData // Perhatikan perubahan disini
+            {
+                itemID = itemID,
+                parentPath = parentPath
+            });
+
+        }
+
+        public void LoadEquippedItems(GameObject player)
+        {
+            if (saveData?.equippedItems == null)
+            {
+                Debug.Log("Tidak ada equipped items untuk dimuat");
+                return;
+            }
+
+            Debug.Log($"Memuat {saveData.equippedItems.Count} equipped items");
+
+            foreach (var itemData in saveData.equippedItems)
+            {
+                var item = ItemDatabase.Instance.GetItemByID(itemData.itemID) as EquippableItemSO;
+                
+                if (item?.ItemPrefab == null)
+                {
+                    Debug.LogWarning($"Item ID:{itemData.itemID} tidak ditemukan");
+                    continue;
+                }
+
+                Transform parent = player.transform.Find(itemData.parentPath) ?? player.transform;
+                Instantiate(item.ItemPrefab, parent);
+                Debug.Log($"Memuat {item.Name} ke {itemData.parentPath}");
+            }
+        }
+
+        public void ResetAllEquippedItems()
+        {
+            if (saveData?.equippedItems != null)
+            {
+                saveData.equippedItems.Clear();
+                SaveGame();
+            }
+        }
+
         public async Task SaveGame()
         {
             // Pastikan saveData tidak null

@@ -28,6 +28,21 @@ Betul, Nak. Dan ingat, hati-hati saat memasangnya. Jangan sampai tentara Jepang 
 Sudahkah kau memasang bendera di tiga tempat? Rakyat harus tahu bahwa kita tidak takut!
 -> END
 
+=== MengibarkanBendera1 ===
+#speaker:Pak Darto #portrait:pak_darto #audio:animal_crossing_low
+Sudahkah kau memasang bendera di pos ronda?
+-> END
+
+=== MengibarkanBendera2 ===
+#speaker:Pak Darto #portrait:pak_darto #audio:animal_crossing_low
+Sudahkah kau memasang bendera di balai desa?
+-> END
+
+=== MengibarkanBendera3 ===
+#speaker:Pak Darto #portrait:pak_darto #audio:animal_crossing_low
+Sudahkah kau memasang bendera di rumah ku?
+-> END
+
 === AfterMengibarkanBendera ===
 #speaker:Karman #portrait:karman #audio:animal_crossing_mid
 Pak Darto! Saya sudah pasang bendera di pos ronda, balai desa, dan rumah Bapak seperti yang diminta. Semuanya sudah berkibar dengan baik!
@@ -46,6 +61,14 @@ Saya juga sempat memasang satu bendera kecil di pohon dekat jalan utama. Biar se
 
 #speaker:Pak Darto #portrait:pak_darto #audio:animal_crossing_low
 Ini awal yang baik untuk menunjukkan semangat kemerdekaan kita.
+#speaker:Pak Darto #portrait:pak_darto #audio:animal_crossing_low
+Oh iya, ini ada sedikit hadiah dariku, aksesoris bendera kecil. Pasanglah di tasmu, biar semua orang tahu kau bagian dari perjuangan ini.
+* [Ambil aksesoris bendera]
+#speaker:Karman #portrait:karman #audio:animal_crossing_mid
+Wah, terima kasih banyak, Pak! Saya akan memakainya dengan bangga!
+
+#speaker:Pak Darto #portrait:pak_darto #audio:animal_crossing_low
+Bukan soal ukurannya, Karman. Yang penting semangatnya. Bendera kecil itu bisa membangkitkan harapan besar.
 -> END
 
 === MengibarkanBenderaDone ===

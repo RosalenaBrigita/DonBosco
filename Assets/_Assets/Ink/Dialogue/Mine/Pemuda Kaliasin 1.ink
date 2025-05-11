@@ -2,6 +2,21 @@
 Akhirnya Indonesia sudah merdeka
 -> END
 
+===riono1===
+#speaker:Riono #audio:animal_crossing_mid2 #portrait:null
+Akhir-akhir ini suasana kampung mulai tenang, tapi rasanya perjuangan belum benar-benar selesai, ya.
+-> END
+
+===haris1===
+#speaker:Haris #audio:animal_crossing_mid3 #portrait:null
+Sekarang kita sudah merdeka, Bung. Tapi kadang aku masih dengar letupan kecil di kejauhan. Entah siapa yang belum rela.
+->END
+
+===darmo1===
+#speaker:Darmo #audio:animal_crossing_high #portrait:null
+Setelah proklamasi, banyak pemuda mulai berani bergerak. Tapi tetap harus waspada... Jepang belum sepenuhnya angkat kaki.
+->END
+
 ===AjakBicara===
 #speaker:Karman #audio:animal_crossing_mid #portrait:karman
 Permisi, Bung. Aku sedang cari kabar tentang penyerangan di gudang Kaliasin. Sampeyan tahu sesuatu?
