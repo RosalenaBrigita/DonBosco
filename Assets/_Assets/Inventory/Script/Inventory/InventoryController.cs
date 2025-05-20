@@ -144,13 +144,6 @@ namespace Inventory
                 inventoryUI.ShowItemAction(itemIndex);
                 inventoryUI.AddAction(itemAction.ActionName, () => PerformAction(itemIndex));
             }
-
-            IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
-            if (destroyableItem != null)
-            {
-                inventoryUI.AddAction("Drop", () => DropItem(itemIndex, inventoryItem.quantity));
-            }
-
         }
 
         private void DropItem(int itemIndex, int quantity)

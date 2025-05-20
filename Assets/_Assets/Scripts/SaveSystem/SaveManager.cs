@@ -203,13 +203,12 @@ namespace DonBosco.SaveSystem
             }
         }
 
-        public void ResetAllEquippedItems()
+        public void RemoveEquippedItem(int itemID)
         {
-            if (saveData?.equippedItems != null)
-            {
-                saveData.equippedItems.Clear();
-                SaveGame();
-            }
+            if (saveData?.equippedItems == null)
+                return;
+
+            saveData.equippedItems.RemoveAll(x => x.itemID == itemID);
         }
 
         public async Task SaveGame()

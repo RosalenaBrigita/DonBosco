@@ -11105,6 +11105,9 @@ MonoBehaviour:
   - quantity: 1
     item: {fileID: 11400000, guid: 20a4d7130f851724989358894e0f73b4, type: 2}
     itemState: []
+  - quantity: 1
+    item: {fileID: 11400000, guid: eacab467575ea3c4caffe489154eb1de, type: 2}
+    itemState: []
   dropClip: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!114 &1046878831
