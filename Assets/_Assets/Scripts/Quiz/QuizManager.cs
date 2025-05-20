@@ -17,7 +17,7 @@ public class QuizManager : MonoBehaviour, ISaveLoad
     private int[] quizAnswers;
     public int[] QuizAnswers { get { return quizAnswers; } }
 
-
+    private bool isInitialized = false;
 
     void Awake()
     {
@@ -26,7 +26,7 @@ public class QuizManager : MonoBehaviour, ISaveLoad
 
     void Start()
     {
-        GetQuizResources();
+        InitializeQuizzes();
     }
 
     void OnEnable()
@@ -43,11 +43,24 @@ public class QuizManager : MonoBehaviour, ISaveLoad
         GameEventsManager.Instance.miscEvents.onChangeData -= LoadQuizData;
     }
 
-
-    private void GetQuizResources()
+    private void InitializeQuizzes()
     {
+        if (isInitialized) return;
+        
         quizSOs = Resources.LoadAll<QuizSO>("Quizzes");
         quizAnswers = new int[quizSOs.Length];
+        ResetAllAnswers(); // Reset saat pertama kali inisialisasi
+        isInitialized = true;
+    }
+
+    public void ResetAllAnswers()
+    {
+        if (quizAnswers == null) return;
+        
+        for (int i = 0; i < quizAnswers.Length; i++)
+        {
+            quizAnswers[i] = 0;
+        }
     }
 
     public bool CheckHasAnswered(int quizId)
@@ -79,25 +92,13 @@ public class QuizManager : MonoBehaviour, ISaveLoad
     #region ISaveLoad
     public async Task Load(SaveData saveData)
     {
-        GetQuizResources();
+        InitializeQuizzes(); // Pastikan sudah diinisialisasi
 
-        if (saveData != null)
+        if (saveData != null && saveData.quizAnswers != null)
         {
-            int[] loadedAnswers = saveData.quizAnswers;
-            int count = Mathf.Min(this.quizAnswers.Length, loadedAnswers.Length);
-
-            for (int i = 0; i < count; i++)
-            {
-                this.quizAnswers[i] = loadedAnswers[i];
-            }
-
-            // Untuk quiz yang baru ditambahkan (misalnya quiz ke-10), default-in jadi 0 (belum dijawab)
-            for (int i = count; i < this.quizAnswers.Length; i++)
-            {
-                this.quizAnswers[i] = 0;
-            }
+            int count = Mathf.Min(quizAnswers.Length, saveData.quizAnswers.Length);
+            Array.Copy(saveData.quizAnswers, quizAnswers, count);
         }
-
         await Task.CompletedTask;
     }
 

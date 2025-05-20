@@ -566,6 +566,11 @@ namespace DonBosco.SaveSystem
                 QuestManager.Instance.ForceResetAllQuests(); // <-- INI YANG DITAMBAHKAN
             }
 
+            if (QuizManager.Instance != null)
+            {
+                QuizManager.Instance.ResetAllAnswers();
+            }
+
             // Update state
             HasSaveData = false;
             saveData = null;
