@@ -19,6 +19,7 @@ namespace DonBosco
 
 
         #region Game Data
+        public Vector2 playerIconPosition;
         public string dialogueVariables = null;
         public List<string> seenCharacterIDs = new List<string>();
         #endregion

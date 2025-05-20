@@ -1,11 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using DonBosco.SaveSystem;
+using System.Threading.Tasks;
 
 namespace DonBosco
 {
-    public class MapManager : MonoBehaviour
+    public class MapManager : MonoBehaviour, ISaveLoad
     {
         [Header("UI Map")]
         [SerializeField] private GameObject Map;                 // Panel map
@@ -23,8 +27,45 @@ namespace DonBosco
         [SerializeField] private Vector2 uiBottomLeft = new Vector2(-934f, -509f);
         [SerializeField] private Vector2 uiTopRight = new Vector2(934f, 509f);
 
+        [Header("Scene yang Diizinkan")]
+        [SerializeField] private string[] allowedScenes;
+
         private Vector2 scale;
         private Vector2 offset;
+        private bool isAllowedScene = false;
+
+        private void OnEnable()
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            SaveManager.Instance.Subscribe(this);
+            CheckScene(); // Cek saat pertama aktif
+        }
+
+        private void OnDisable()
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            SaveManager.Instance.Unsubscribe(this);
+        }
+
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            CheckScene();
+        }
+
+        private void CheckScene()
+        {
+            isAllowedScene = false;
+
+            for (int i = 0; i < SceneManager.sceneCount; i++)
+            {
+                Scene scene = SceneManager.GetSceneAt(i);
+                if (Array.Exists(allowedScenes, s => s.Equals(scene.name, StringComparison.OrdinalIgnoreCase)))
+                {
+                    isAllowedScene = true;
+                    break;
+                }
+            }
+        }
 
         private void Start()
         {
@@ -42,10 +83,8 @@ namespace DonBosco
 
         private void Update()
         {
-            if (Map.activeSelf)
-            {
-                UpdatePlayerIconPosition();
-            }
+            if (!isAllowedScene) return;
+            UpdatePlayerIconPosition(); 
         }
 
         private void HideInfo()
@@ -76,7 +115,6 @@ namespace DonBosco
         {
             Vector2 worldPos = new Vector2(player.position.x, player.position.y);
 
-            // Mapping world ke UI menggunakan skala dan offset
             Vector2 uiPos = new Vector2(
                 worldPos.x * scale.x + offset.x,
                 worldPos.y * scale.y + offset.y
@@ -85,5 +123,22 @@ namespace DonBosco
             uiPos.y += -100f;
             playerIcon.anchoredPosition = uiPos;
         }
+
+        #region SaveLoad
+        public async Task Save(SaveData saveData)
+        {
+            saveData.playerIconPosition = playerIcon.anchoredPosition;
+            await Task.CompletedTask;
+        }
+
+        public async Task Load(SaveData saveData)
+        {
+            if(saveData == null)
+                return;
+            
+            playerIcon.anchoredPosition = saveData.playerIconPosition;
+            await Task.CompletedTask;
+        }
+        #endregion
     }
 }
