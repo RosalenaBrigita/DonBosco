@@ -15,6 +15,7 @@ namespace DonBosco
         [SerializeField] private GameObject Map;                 // Panel map
         [SerializeField] private Button Info;                    // Tombol info
         [SerializeField] private RectTransform playerIcon;       // Ikon player di map
+        [SerializeField] private Button Tutorial;  
 
         [Header("Referensi Dunia Nyata")]
         [SerializeField] private Transform player;               // Transform player
@@ -90,11 +91,13 @@ namespace DonBosco
         private void HideInfo()
         {
             Info.gameObject.SetActive(false);
+            Tutorial.gameObject.SetActive(false);
         }
 
         private void ShowInfo()
         {
             Info.gameObject.SetActive(true);
+            Tutorial.gameObject.SetActive(true);
         }
 
         public void HideMapDetail()

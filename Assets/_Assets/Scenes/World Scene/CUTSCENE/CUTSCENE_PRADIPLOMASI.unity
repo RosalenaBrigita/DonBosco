@@ -18498,13 +18498,14 @@ GameObject:
   - component: {fileID: 581604927}
   - component: {fileID: 581604926}
   - component: {fileID: 581604925}
+  - component: {fileID: 581604928}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &581604924
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18642,6 +18643,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581604923}
   m_CullTransparentMesh: 1
+--- !u!114 &581604928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581604923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b124d2ea2554948b535efda9959f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.05
 --- !u!1 &595701562
 GameObject:
   m_ObjectHideFlags: 0
@@ -99754,13 +99768,14 @@ GameObject:
   - component: {fileID: 990664806}
   - component: {fileID: 990664805}
   - component: {fileID: 990664807}
+  - component: {fileID: 990664808}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &990664804
 RectTransform:
   m_ObjectHideFlags: 0
@@ -99899,6 +99914,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &990664808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990664803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b124d2ea2554948b535efda9959f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.05
 --- !u!1 &1005751318
 GameObject:
   m_ObjectHideFlags: 0
@@ -99911,13 +99939,14 @@ GameObject:
   - component: {fileID: 1005751321}
   - component: {fileID: 1005751320}
   - component: {fileID: 1005751322}
+  - component: {fileID: 1005751323}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1005751319
 RectTransform:
   m_ObjectHideFlags: 0
@@ -100055,6 +100084,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1005751323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005751318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b124d2ea2554948b535efda9959f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.05
 --- !u!1 &1032927960
 GameObject:
   m_ObjectHideFlags: 0
@@ -124500,13 +124542,14 @@ GameObject:
   - component: {fileID: 1443124334}
   - component: {fileID: 1443124333}
   - component: {fileID: 1443124335}
+  - component: {fileID: 1443124336}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1443124332
 RectTransform:
   m_ObjectHideFlags: 0
@@ -124645,6 +124688,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1443124336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443124331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b124d2ea2554948b535efda9959f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.05
 --- !u!1 &1461743421
 GameObject:
   m_ObjectHideFlags: 0
@@ -132479,12 +132535,8 @@ PlayableDirector:
     value: {fileID: 426925393}
   - key: {fileID: -3024185553410639418, guid: 0332995884552464eb2a82ce988297e9, type: 2}
     value: {fileID: 1005751318}
-  - key: {fileID: 6583498685478699848, guid: 0332995884552464eb2a82ce988297e9, type: 2}
-    value: {fileID: 1005751322}
   - key: {fileID: -2511484720188569449, guid: 0332995884552464eb2a82ce988297e9, type: 2}
     value: {fileID: 990664803}
-  - key: {fileID: -1101159675593505154, guid: 0332995884552464eb2a82ce988297e9, type: 2}
-    value: {fileID: 990664807}
   - key: {fileID: 6734242510052212187, guid: 0332995884552464eb2a82ce988297e9, type: 2}
     value: {fileID: 1443124331}
   - key: {fileID: 3895465031975085543, guid: 0332995884552464eb2a82ce988297e9, type: 2}

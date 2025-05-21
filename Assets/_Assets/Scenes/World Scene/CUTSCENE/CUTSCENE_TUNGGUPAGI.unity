@@ -57422,6 +57422,7 @@ GameObject:
   - component: {fileID: 447663648}
   - component: {fileID: 447663647}
   - component: {fileID: 447663646}
+  - component: {fileID: 447663649}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -57567,6 +57568,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447663644}
   m_CullTransparentMesh: 1
+--- !u!114 &447663649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447663644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b124d2ea2554948b535efda9959f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.05
 --- !u!1 &460968544
 GameObject:
   m_ObjectHideFlags: 0
@@ -60642,6 +60656,7 @@ GameObject:
   - component: {fileID: 619978490}
   - component: {fileID: 619978489}
   - component: {fileID: 619978488}
+  - component: {fileID: 619978491}
   m_Layer: 5
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -60787,6 +60802,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619978486}
   m_CullTransparentMesh: 1
+--- !u!114 &619978491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619978486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b124d2ea2554948b535efda9959f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.05
 --- !u!1 &626951530
 GameObject:
   m_ObjectHideFlags: 0
@@ -79703,12 +79731,8 @@ PlayableDirector:
     value: {fileID: 1602187716}
   - key: {fileID: 6301687040272851341, guid: 324972668623b554cbe149219497e4d1, type: 2}
     value: {fileID: 447663644}
-  - key: {fileID: 6880649459184306540, guid: 324972668623b554cbe149219497e4d1, type: 2}
-    value: {fileID: 447663646}
   - key: {fileID: 2708533028435670101, guid: 324972668623b554cbe149219497e4d1, type: 2}
     value: {fileID: 619978486}
-  - key: {fileID: 1504709803369299455, guid: 324972668623b554cbe149219497e4d1, type: 2}
-    value: {fileID: 619978488}
   - key: {fileID: 1722774159583311560, guid: 324972668623b554cbe149219497e4d1, type: 2}
     value: {fileID: 1790965527}
   - key: {fileID: 6059102117264855994, guid: 324972668623b554cbe149219497e4d1, type: 2}
@@ -85844,7 +85868,7 @@ GameObject:
   - component: {fileID: 1654822594}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89016,6 +89040,7 @@ GameObject:
   - component: {fileID: 1790965531}
   - component: {fileID: 1790965530}
   - component: {fileID: 1790965529}
+  - component: {fileID: 1790965532}
   m_Layer: 5
   m_Name: Text (TMP) (3)
   m_TagString: Untagged
@@ -89162,6 +89187,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790965527}
   m_CullTransparentMesh: 1
+--- !u!114 &1790965532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790965527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b124d2ea2554948b535efda9959f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.05
 --- !u!1001 &1801510224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89270,6 +89308,7 @@ GameObject:
   - component: {fileID: 1809596078}
   - component: {fileID: 1809596077}
   - component: {fileID: 1809596079}
+  - component: {fileID: 1809596080}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -89415,6 +89454,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1809596080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809596075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b124d2ea2554948b535efda9959f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.05
 --- !u!1001 &1809773541
 PrefabInstance:
   m_ObjectHideFlags: 0

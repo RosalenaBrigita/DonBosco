@@ -53,7 +53,7 @@ namespace DonBosco
             SewingMinigame sewingGame = FindObjectOfType<SewingMinigame>();
             if (sewingGame != null)
             {
-                Debug.Log("okelah bro");
+                //Debug.Log("okelah bro");
                 sewingGame.ChangeMapInput();
             }
 

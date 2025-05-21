@@ -8,6 +8,9 @@ namespace Inventory.UI
     public class UIInventoryPage : MonoBehaviour
     {
         [SerializeField]
+        private GameObject panel;
+
+        [SerializeField]
         private UIInventoryItem itemPrefab;
 
         [SerializeField]
@@ -138,6 +141,7 @@ namespace Inventory.UI
 
         public void Show()
         {
+            panel.SetActive(true);
             gameObject.SetActive(true);
             ResetSelection();
         }
@@ -170,6 +174,7 @@ namespace Inventory.UI
 
         public void Hide()
         {
+            panel.SetActive(false);
             actionPanel.Toggle(false);
             gameObject.SetActive(false);
             ResetDraggedItem();
