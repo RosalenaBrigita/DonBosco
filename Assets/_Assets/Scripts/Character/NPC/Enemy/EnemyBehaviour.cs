@@ -100,6 +100,17 @@ namespace DonBosco.Character
         {
             healthSO.TakeDamage(damage);
             gameObject.GetComponent<NPCAttack>().GetAttacked(source);
+
+            // Trigger efek damage
+            var damageEffect = GetComponent<DamageEffect>();
+            if (damageEffect != null)
+            {
+                damageEffect.TriggerDamageEffect();
+            }
+            else
+            {
+                Debug.LogWarning("DamageEffect component missing!", gameObject);
+            }
         }
 
         void CheckInkBonusEffects()

@@ -61,6 +61,15 @@ namespace DonBosco
                 return;
             }
 
+            if (ignoreMask == (ignoreMask | (1 << other.gameObject.layer)))
+            {
+                if (owner != null && owner.CompareTag("Player"))
+                {
+                    Debug.Log($"[IGNORED] Bullet mengabaikan: {other.gameObject.name} (Layer: {LayerMask.LayerToName(other.gameObject.layer)})");
+                }
+                return;
+            }
+
             if (damageMask == (damageMask | (1 << other.gameObject.layer)))
             {
                 IDamageable damageable = other.gameObject.GetComponent<IDamageable>();

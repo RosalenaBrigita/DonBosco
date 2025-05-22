@@ -1931,6 +1931,13 @@ MonoBehaviour:
     isLoop: 1
     playOnAwake: 0
     volume: 0.744
+  - audioType: 1
+    source: {fileID: 0}
+    clipName: penyerangan
+    audioClip: {fileID: 8300000, guid: 766af66c5c260b24aab6d2ddfcacfab0, type: 3}
+    isLoop: 1
+    playOnAwake: 0
+    volume: 0.744
   fadeDuration: 1
 --- !u!4 &1485057706
 Transform:

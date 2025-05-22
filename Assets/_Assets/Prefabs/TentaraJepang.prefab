@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 2716345598712063782}
   - component: {fileID: 3803508816502406302}
   - component: {fileID: 3741357046339486373}
+  - component: {fileID: 2478735610261110039}
   m_Layer: 8
   m_Name: TentaraJepang
   m_TagString: Untagged
@@ -295,3 +296,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingDirection: 0
   followPlayerOnStart: 0
+--- !u!114 &2478735610261110039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3507232958595968346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee946bb7045c1945a0f5b513310916d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashDuration: 0.15
+  flashColor: {r: 1, g: 0.2, b: 0.2, a: 1}
